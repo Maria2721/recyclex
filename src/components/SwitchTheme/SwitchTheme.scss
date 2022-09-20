@@ -1,0 +1,51 @@
+@import "../../styles/vars";
+
+.react-switch {
+    display: block !important;
+    margin-top: 3px;
+}
+
+.react-switch-bg {
+    width: 72px !important;
+    height: 40px !important;
+    border-radius: 20px !important;
+}
+
+.react-switch-handle {
+    width: 28px !important;
+    height: 28px !important;
+    top: 6px !important;
+    left: 6px !important;
+}
+
+
+@media (max-width: $tablet)  {
+    .react-switch-bg {
+        width: 50px !important;
+        height: 30px !important;
+        border-radius: 15px !important;
+    }
+
+    .react-switch-handle {
+        width: 20px !important;
+        height: 20px !important;
+        top: 5px !important;
+        left: 5px !important;
+    }
+    
+}
+
+@media (max-width: $smallMobile)  {
+    .react-switch-bg {
+        width: 30px !important;
+        height: 20px !important;
+        border-radius: 15px !important;
+    }
+
+    .react-switch-handle {
+        width: 13px !important;
+        height: 13px !important;
+        top: 3.5px !important;
+        left: 3px !important;
+    }
+}

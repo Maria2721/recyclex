@@ -1,20 +1,21 @@
-import { Link, NavLink} from 'react-router-dom';
 import "./Header.scss";
+import { Link } from "react-router-dom";
+import { ReactComponent as Logo} from "../../assets/imgs/logo_black.svg";
+import SwitchTheme from "../SwitchTheme/SwitchTheme";
 
 
 export default function Header() {
   return (
-    <header className="header">
-      <Link className="header__logo" to="/">
-        <img src="../../assets/imgs/logo__black.svg" width="190"alt="Логотип Recyclex"></img>
-      </Link>
-      <nav className="app__menu">
-        <ul>
-          <li><NavLink to="/project">О проекте</NavLink></li>
-          <li><NavLink to="/work">Схема работы</NavLink></li>
-          <li><NavLink to="/contacts">Контакты</NavLink></li>
-        </ul>
-      </nav>
+    <header className="header container">
+      <div className="header__inner container__row">
+          <SwitchTheme/>
+        <nav className="header__nav">
+          <Link to="/about-project" className="header__link">О проекте</Link>
+          <Link to="/" className="header__link">Схема работы</Link>
+          <Link to="/" className="header__link">Контакты</Link>
+        </nav>
+        <Link to="/"><Logo className="header__logo"/></Link>
+      </div>
     </header>
   );
 }
