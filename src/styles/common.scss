@@ -1,5 +1,6 @@
 @import "vars";
 @import "fonts";
+@import "btn";
 
 * {
   margin: 0;
@@ -7,7 +8,7 @@
 }
 
 #root {
-  height: 100vh;
+  height: 100%;
 }
 
 html,
@@ -32,11 +33,7 @@ main {
 }
 
 .container__row {
-  width: 80%;
-}
-
-.container__row_wide {
-  width: 100%;
+  width: 90%;
 }
 
 button:hover {
@@ -49,5 +46,17 @@ a {
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+h1 {
+  font-size: 48px;
+
+  @media (max-width: $tablet)  {
+    font-size: 40px;
+  }
+
+  @media (max-width: $mobile)  {
+    font-size: 16px;
   }
 }
