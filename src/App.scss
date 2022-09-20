@@ -1,5 +1,9 @@
 @import "./styles/_vars.scss";
 
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
   text-align: center;
 }

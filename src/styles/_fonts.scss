@@ -2,8 +2,26 @@
 
 @font-face {
     font-family: $generalFont;
-    src: url('../assets//fonts/CenturyGothic/CenturyGothic.woff2') format('woff2'),
-        url('../assets//fonts/CenturyGothic/CenturyGothic.woff') format('woff');
+    src: url('../assets/fonts/CenturyGothic-Bold.woff2') format('woff2'),
+        url('../assets/fonts/CenturyGothic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../assets/fonts/CenturyGothic-BoldItalic.woff2') format('woff2'),
+        url('../assets/fonts/CenturyGothic-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('../assets/fonts/CenturyGothic.woff2') format('woff2'),
+        url('../assets/fonts/CenturyGothic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -11,10 +29,10 @@
 
 @font-face {
     font-family: 'Century Gothic';
-    src: url('../assets//fonts/CenturyGothic/CenturyGothic-Bold.woff2') format('woff2'),
-        url('../assets//fonts/CenturyGothic/CenturyGothic-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+    src: url('../assets/fonts/CenturyGothic-Italic.woff2') format('woff2'),
+        url('../assets/fonts/CenturyGothic-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
     font-display: swap;
 }
 

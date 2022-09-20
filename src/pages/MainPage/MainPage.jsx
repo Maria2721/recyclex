@@ -2,7 +2,7 @@ import "./MainPage.scss";
 
 export default function MainPage() {
   return (
-    <main>
-    </main>
+      <div className="container__row">
+      </div>
   );
 }
