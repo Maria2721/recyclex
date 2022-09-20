@@ -10,9 +10,9 @@ export default function Header() {
       </Link>
       <nav className="app__menu">
         <ul>
-          <li><NavLink to="#project">О проекте</NavLink></li>
-          <li><NavLink to="#work">Схема работы</NavLink></li>
-          <li><NavLink to="#contacts">Контакты</NavLink></li>
+          <li><NavLink to="/project">О проекте</NavLink></li>
+          <li><NavLink to="/work">Схема работы</NavLink></li>
+          <li><NavLink to="/contacts">Контакты</NavLink></li>
         </ul>
       </nav>
     </header>

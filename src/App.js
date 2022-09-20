@@ -18,11 +18,6 @@ function App() {
       <div className="App">
         <Header/>
           <main className="container">
-            <Link to="/">MainPage</Link>
-            <Link to="#aboutProjectPage">AboutProjectPage</Link>
-            <Link to="#aboutRecyclexPage">AboutRecyclexPage</Link>
-            <Link to="#formPage">FormPage</Link>
-            <Link to="#formThankYouPage">FormThankYouPage</Link>
             <Routes>
               <Route path='/' element={<MainPage/>}/>
               <Route path='/aboutProjectPage' element={<AboutProjectPage/>}/>
