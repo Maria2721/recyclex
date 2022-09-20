@@ -26,7 +26,7 @@ function App() {
               <Route path='/thank-you' element={<FormThankYouPage/>}/>
               <Route path='/general-terms' element={<GeneralTermsPage/>}/>
               <Route path='/privacy-policy' element={<PrivacyPolicyPage/>}/>
-              <Route path='/cookiesPolicyPage' element={<CookiesPolicyPage/>}/>
+              <Route path='/cookies-policy-page' element={<CookiesPolicyPage/>}/>
             </Routes>
           </main>
         <Footer/> 

@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="footer__links">
             <Link to="/privacy-policy" className="footer__link">Политика конфиденциальности</Link>
             <Link to="/general-terms" className="footer__link">Общие условия</Link>
-            <Link to="/cookiesPolicyPage" className="footer__link">Cookies Policy</Link>
+            <Link to="/cookies-policy-page" className="footer__link">Cookies Policy</Link>
             </div>
             <div className="footer__email">info@recyclex.online
             </div>
