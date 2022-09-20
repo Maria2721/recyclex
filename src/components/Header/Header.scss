@@ -1,1 +1,60 @@
 @import "../../styles/vars";
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    border-bottom: solid 1px $textColor;
+}
+
+#dark .header__inner {
+    border-color: $textColor_dark;
+}
+
+.header__nav {
+    display: flex;
+    gap: 86px;
+    font-size: 20px;
+}
+
+.header__link {
+    font-size: 20px;
+    &:hover {
+        color: $accentColor;
+        transition: color 0.1s ease;
+    }
+}
+
+#dark .header__link {
+    color: $textColor_dark
+}
+
+.header__logo {
+    width: 199px;
+}
+
+@media (max-width: $tablet)  {
+    .header__switch {
+        width: 50px
+    }
+
+    .header__nav {
+        gap: 50px;
+    }
+
+    .header__link {
+        font-size: 16px;
+    }
+
+    .header__logo {
+        width: 171px;
+    }
+}
+
+@media (max-width: $mobile)  {
+    .header__link {
+        font-size: 12px;
+    }
+
+}

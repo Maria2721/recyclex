@@ -1,1 +1,88 @@
 @import "../../styles/vars";
+
+.footer {
+    flex: 0 0 auto;
+}
+.footer__inner {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    height: 294px;
+    border-top: solid 1px $textColor;
+    gap: 48px;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.footer__info {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    &:first-child {
+        flex-wrap: wrap;
+    }
+}
+
+.footer__linksAndMail {
+    display: flex;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__link:hover {
+        color: $accentColor;
+        transition: color 0.1s ease;
+}
+
+#dark .footer__inner {
+    border-color: $textColor_dark;
+}
+
+
+@media (max-width: $tablet)  {
+    .footer__inner {
+        height: 125px;
+        padding-top: 30px;
+        font-size: 10px;
+    }
+
+    .footer__description {
+        display: none;
+    }
+}
+
+@media (max-width: $mobile)  {
+    .footer__inner {
+        height: 100px;
+        font-size: 8px;
+        border: none;
+    }
+
+    .footer__info  {
+        display: grid;
+        grid-template-areas:
+        "links email"
+        "requisites requisites";
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+
+    .footer__links {
+        grid-area: links;
+        line-height: 1.8;
+    }
+
+    .footer__email {
+        grid-area: email;
+        align-self: flex-end;
+    }
+
+    .footer__requisites {
+        grid-area: requisites;
+        line-height: 1.25;
+    }
+}
+
