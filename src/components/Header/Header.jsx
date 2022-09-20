@@ -10,14 +10,11 @@ export default function Header() {
       <div className="header__inner container__row">
           <SwitchTheme/>
         <nav className="header__nav">
-          <a className="header__link" href="http://loveyoucinema.com/?lang=ru">О проекте</a>
-          <a className="header__link" href="http://loveyoucinema.com/?lang=ru">Схема работы</a>
-          <a className="header__link" href="http://loveyoucinema.com/?lang=ru">Контакты</a>
-          {/* <Link to="/">О проекте</Link>
-          <Link to="/">Схема работы</Link>
-          <Link to="/">Контакты</Link> */}
+          <Link to="/about-project" className="header__link">О проекте</Link>
+          <Link to="/" className="header__link">Схема работы</Link>
+          <Link to="/" className="header__link">Контакты</Link>
         </nav>
-        <Logo className="header__logo"/>
+        <Link to="/"><Logo className="header__logo"/></Link>
       </div>
     </header>
   );

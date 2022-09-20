@@ -9,9 +9,9 @@ export default function Footer() {
           <div className="footer__requisites">2021, ИП КОВЕРДА ВАДИМ НИКОЛАЕВИЧ<br/>ИНН, 612509367304 ОГРН 319619600177064 ТЕЛ: 78003330816<br/>АДРЕС: ПЕРЕУЛОК ТЕНЕВОЙ, Д 178, КРАСНОДАРСКИЙ КРАЙ, Г.СОЧИ
           </div>
             <div className="footer__links">
-              <a className="footer__link">Политика конфиденциальности</a>
-              <a className="footer__link">Общие условия</a>
-              <a className="footer__link">Cookies Policy</a>
+            <Link to="/privacy-policy" className="footer__link">Политика конфиденциальности</Link>
+            <Link to="/general-terms" className="footer__link">Общие условия</Link>
+            <Link to="/cookiesPolicyPage" className="footer__link">Cookies Policy</Link>
             </div>
             <div className="footer__email">info@recyclex.online
             </div>
@@ -21,8 +21,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-
-    {/* <Link to="/">О проекте</Link>
-          <Link to="/">Схема работы</Link>
-          <Link to="/">Контакты</Link> */}
