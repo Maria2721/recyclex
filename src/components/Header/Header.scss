@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 5px;
     height: 120px;
     border-bottom: solid 1px $textColor;
 }
@@ -13,9 +14,14 @@
 }
 
 .header__nav {
+    flex: 1 0 auto;
+}
+
+.header__links {
     display: flex;
-    gap: 86px;
+    justify-content: space-evenly;
     font-size: 20px;
+    gap: 5px;
 }
 
 .header__link {
@@ -38,30 +44,93 @@
     width: 199px;
 }
 
+.header__burger {
+    display: none;
+}
+
 @media (max-width: $tablet)  {
+    .header__inner {
+        height: 100px;
+    }
     .header__switch {
         width: 50px
     }
-
-    .header__nav {
-        gap: 40px;
-    }
-
     .header__link {
         font-size: 16px;
     }
-
     .header__logo {
         width: 171px;
     }
 }
 
-@media (max-width: $mobile)  {
-    .header__nav {
-        display: none;
-    }
+@media (max-width: 730px)  {
     .header__link {
         font-size: 12px;
     }
 
+    .header__logo {
+        width: 120px;
+    }
+}
+
+@media (max-width: $mobile)  {
+    .header__nav {
+        position: fixed;
+        align-items: flex-start;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10;
+        left: 0;
+        top: -100%;
+        transition: top 0.2s ease;
+    }
+
+    .header__nav_active {
+        top: 0;
+    }
+
+    .header__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0;
+        font-size: 12px;
+        width: 100vw;
+    }
+
+    #dark .header__links {
+        border-color: $textColor_dark;
+    }
+
+    .header__link {
+        padding: 17px 30px;
+        font-size: 12px;
+        background-color: $bgColor;
+        border-bottom: 1px solid $textColor;
+        border-left: 1px solid $textColor;
+        border-right: 1px solid $textColor;
+
+        &:first-child {
+            border-top: 1px solid $textColor;;
+        }
+    }
+
+    #dark .header__link {
+        border-color: $textColor_dark;
+        background-color: $bgColor_dark;
+    }
+
+    .header__logo {
+        width: 108px;
+    }
+
+    .header__burger {
+        display: block;
+        width: 25px;
+        cursor: pointer;
+    }
+
+    #dark .header__burger {
+       fill: $textColor_dark;
+    }
 }

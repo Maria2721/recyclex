@@ -46,6 +46,25 @@
     }
 }
 
+
+@media (max-width: 730px)  {
+    .react-switch-bg {
+        width: 45px !important;
+        height: 25px !important;
+    }
+
+    .react-switch-handle {
+        width: 16px !important;
+        height: 16px !important;
+        top: 4px !important;
+    }
+    
+    #dark .react-switch-handle {
+        transform: translateX(17px)  !important;
+    }
+}
+
+
 @media (max-width: $smallMobile)  {
     .react-switch-bg {
         width: 30px !important;
