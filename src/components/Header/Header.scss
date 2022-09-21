@@ -27,7 +27,11 @@
 }
 
 #dark .header__link {
-    color: $textColor_dark
+    color: $textColor_dark;
+    &:hover {
+        color: $accentColor;
+        transition: color 0.1s ease;
+    }
 }
 
 .header__logo {
@@ -40,7 +44,7 @@
     }
 
     .header__nav {
-        gap: 50px;
+        gap: 40px;
     }
 
     .header__link {
@@ -53,6 +57,9 @@
 }
 
 @media (max-width: $mobile)  {
+    .header__nav {
+        display: none;
+    }
     .header__link {
         font-size: 12px;
     }

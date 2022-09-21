@@ -4,11 +4,11 @@ import { ReactComponent as Logo} from "../../assets/imgs/logo_black.svg";
 import SwitchTheme from "../SwitchTheme/SwitchTheme";
 
 
-export default function Header() {
+export default function Header({toggleTheme, theme}) {
   return (
     <header className="header container">
       <div className="header__inner container__row">
-          <SwitchTheme/>
+          <SwitchTheme toggleTheme={toggleTheme} theme={theme}/>
         <nav className="header__nav">
           <Link to="/about-project" className="header__link">О проекте</Link>
           <Link to="/" className="header__link">Схема работы</Link>

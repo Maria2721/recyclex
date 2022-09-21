@@ -11,11 +11,20 @@
     border-radius: 20px !important;
 }
 
+#dark .react-switch-bg {
+    background-color: $textColor_dark !important;
+}
+
 .react-switch-handle {
     width: 28px !important;
     height: 28px !important;
-    top: 6px !important;
+    top: 6.2px !important;
     left: 6px !important;
+}
+
+#dark .react-switch-handle {
+    background-color: $bgColor_dark !important;
+    transform: translateX(30px)  !important;
 }
 
 
@@ -30,9 +39,11 @@
         width: 20px !important;
         height: 20px !important;
         top: 5px !important;
-        left: 5px !important;
     }
     
+    #dark .react-switch-handle {
+        transform: translateX(18px)  !important;
+    }
 }
 
 @media (max-width: $smallMobile)  {
@@ -47,5 +58,9 @@
         height: 13px !important;
         top: 3.5px !important;
         left: 3px !important;
+    }
+
+    #dark .react-switch-handle {
+        transform: translateX(11px)  !important;
     }
 }
