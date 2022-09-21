@@ -1,9 +1,9 @@
 import "./SwitchTheme.scss";
 import ReactSwitch from "react-switch";
 
-export default function SwitchTheme() {
+export default function SwitchTheme({toggleTheme, theme}) {
   return (
-    <ReactSwitch
+    <ReactSwitch onChange={toggleTheme} checked={theme === 'dark'}
     onColor="#000000"
     onHandleColor="#ffffff"
     uncheckedIcon={false}

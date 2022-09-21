@@ -14,13 +14,14 @@
     line-height: 2;
 }
 
+#dark .footer__inner {
+    border-color: $textColor_dark;
+}
+
 .footer__info {
     display: flex;
     justify-content:space-between;
-    flex-wrap:wrap;
-    &:first-child {
-        flex-wrap: wrap;
-    }
+    gap: 5px;
 }
 
 .footer__linksAndMail {
@@ -32,13 +33,18 @@
     flex-direction: column;
 }
 
+#dark .footer__link {
+    color: $textColor_dark;
+}
+
 .footer__link:hover {
         color: $accentColor;
         transition: color 0.1s ease;
 }
 
-#dark .footer__inner {
-    border-color: $textColor_dark;
+#dark .footer__link:hover {
+    color: $accentColor;
+    transition: color 0.1s ease;
 }
 
 
@@ -56,9 +62,9 @@
 
 @media (max-width: $mobile)  {
     .footer__inner {
-        height: 100px;
+        height: 120px;
         font-size: 8px;
-        border: none;
+        padding-top: 20px;
     }
 
     .footer__info  {
@@ -67,12 +73,11 @@
         "links email"
         "requisites requisites";
         gap: 20px;
-        padding-bottom: 20px;
     }
 
     .footer__links {
         grid-area: links;
-        line-height: 1.8;
+        line-height: 1.5;
     }
 
     .footer__email {
@@ -83,6 +88,18 @@
     .footer__requisites {
         grid-area: requisites;
         line-height: 1.25;
+    }
+
+    @media (max-width: $smallMobile)  {
+        .footer__inner {
+            height: 110px;
+             font-size: 6px;
+            padding-top: 15px;
+        }
+
+        .footer__info  {
+            gap: 15px;
+        }
     }
 }
 
