@@ -11,7 +11,7 @@ export default function FirstScreen() {
                 <h1 className="firstScreen__title">Строим бизнес на мусоре</h1>
                 <div className="firstScreen__subTitle">Recyclex - это биржа <br/> участников рынка вторсырья</div>
                 <div className="firstScreen__btn">
-                    <ButtonJoin/>
+                    <ButtonJoin>Присоединиться</ButtonJoin>
                 </div>
             </div>
         </section>
