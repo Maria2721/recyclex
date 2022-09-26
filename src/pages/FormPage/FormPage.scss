@@ -1,1 +1,17 @@
 @import "../../styles/vars";
+
+.form {
+    margin-top: 96px;
+    margin-bottom: 111px;
+}
+
+.form__header {
+    margin-bottom: 55px;
+}
+
+.form__answer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
