@@ -15,7 +15,7 @@ export default function Advantages() {
                 <div className="advantages__items">
                     <div className="advantages__item">
                         <div className="item__img">
-                            <img src={Partrers}  alt="img partrers"/>
+                            <img src={Partrers}  width="60px" alt="img partrers"/>
                         </div>
                         <div className="item__wrapper">
                             <h4 className="item__title">База партнеров</h4>
@@ -24,7 +24,7 @@ export default function Advantages() {
                     </div>
                     <div className="advantages__item">
                         <div className="item__img">
-                            <img src={Money}  alt="img money"/>
+                            <img src={Money}  width="60px" alt="img money"/>
                         </div>
                         <div className="item__wrapper">
                             <h4 className="item__title">Лучшие цены</h4>
@@ -33,7 +33,7 @@ export default function Advantages() {
                     </div>
                     <div className="advantages__item">
                         <div className="item__img">
-                            <img src={Deals}  alt="img deals"/>
+                            <img src={Deals} width="60px"  alt="img deals"/>
                         </div>
                         <div className="item__wrapper">
                             <h4 className="item__title">Безопасные сделки</h4>
@@ -42,7 +42,7 @@ export default function Advantages() {
                     </div>
                     <div className="advantages__item">
                         <div className="item__img">
-                            <img src={Community}  alt="img community"/>
+                            <img src={Community} width="60px"  alt="img community"/>
                         </div>
                         <div className="item__wrapper">
                             <h4 className="item__title">Сообщество</h4>
