@@ -1,10 +1,15 @@
 import "./RadioButton.scss";
+import * as cx from "classnames";
 
-export default function RadioButton({id, value, name}) {
+export default function RadioButton({id, value, name, isBig}) {
+    const classRadioLabel = cx("radio__label", {
+        "radio__label radio__label_big": isBig,
+      });
+    
     return (
         <div className="radio">
-            <input className="radio_input" id={id} type="radio" value={value} name={name}/>
-            <label className="radio_label" htmlFor={id}>{value}</label>
+            <input className="radio__input" id={id} type="radio" value={value} name={name}/>
+            <label className={classRadioLabel} htmlFor={id}>{value}</label>
         </div>
     );
 }
