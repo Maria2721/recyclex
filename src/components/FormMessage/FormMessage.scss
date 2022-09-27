@@ -1,16 +1,56 @@
 @import "../../styles/vars";
 
 .formMessage {
-    margin-bottom: 40px;
+    display: flex;
 }
+
+.formMessage_right {
+    justify-content: flex-end;
+}
+
+.formMessage__border {
+    position: relative;
+    max-width: 502px;
+    padding: 15px 39px 15px 20px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    background-color: #EBEBEB;
+}
+
+.formMessage__border::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    top: 23px;
+    border: 21px solid transparent;
+    border-left: 38px solid #EBEBEB;
+}
+
+.formMessage__border_right {
+    min-width: 400px;
+}
+
+// .formMessage__border_big {
+//     width: 480px;
+// }
+
+.formMessage__border_right::after {
+    content: ''; 
+    position: absolute;
+    right: 0;
+    top: 23px;
+    border: 21px solid transparent;
+    border-right: 38px solid #EBEBEB;
+}
+
 
 .formMessage__text {
     font-size: 20px;
-    background-color: #EBEBEB;
-    padding: 15px 39px 15px 20px;
-    border-radius: 200px;
 }
 
+#dark .formMessage__text {
+    color: $bgColor_dark;
+}
 
 
 // @media (max-width: $tablet)  {

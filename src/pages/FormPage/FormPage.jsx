@@ -4,28 +4,36 @@ import FormAnswer from "../../components/FormAnswer/FormAnswer";
 import { questions } from "./questions";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import RadioButton from "../../components/RadioButton/RadioButton";
+import PersonalDataInputs from "../../components/PersonalDataInputs/PersonalDataInputs";
+import { useState } from "react";
 
 export default function FormPage() {
+    const [step, setStep] = useState(1)
+
     return (
         <div className="form container__row">
             <div className="form__inner">
-                <h1 className="form__header">Шаг 1</h1>
-                <FormMessage>С какими группами отходов Вы работаете? </FormMessage>
+                <h1 className="form__header">Шаг {step}</h1>
+                <FormMessage direction='left'>С какими группами отходов Вы работаете?</FormMessage>
+                <FormMessage direction='right' isBig={true}>Полимеры, металл</FormMessage>
                 <div className="form__answer">
-                    <FormAnswer>
+                    <FormAnswer isSelect={true}>
                        {
                           questions[0].options.map((item) => (
                                <Checkbox key={item.id} value={item.value} id={item.id}/>
                            ))
                        }
                     </FormAnswer>
-                    <FormAnswer>
+                    {/* <FormAnswer>
                     {
-                          questions[1].options.map((item) => (
-                               <RadioButton key={item.id} value={item.value} id={item.id} name={item.name}/>
+                          questions[2].options.map((item) => (
+                               <RadioButton key={item.id} value={item.value} id={item.id} name={item.name} isBig={true}/>
                            ))
                        }
-                    </FormAnswer>
+                    </FormAnswer> */}
+                    {/* <FormAnswer isSelect={false}>
+                        <PersonalDataInputs/>
+                    </FormAnswer> */}
                 </div>
             </div>
         </div>
@@ -44,7 +52,5 @@ export default function FormPage() {
 
 // На каждом шаге сохраняем инфу и записываем в ответ, потом отправляем на бэк (пока что в консоль)
 
-
-// баблы сделать пока просто рамкой, потом прихерачить туда жопку
 
 // рисуем сразу все шаги, по состоянию переключаем их. По клику на кнопки переходим в следующее состояние

@@ -1,14 +1,17 @@
 @import "../../styles/vars";
 
-
 .formAnswer {
     width: 685px;
-    padding: 60px 39px 30px 80px;
+    padding: 45px 53px 31px 53px;
     border-radius: 30px;
     font-size: 20px;
     background-color: #EBEBEB;
 }
-// .formAnswer__inner {
-//    display: flex;
-//    flex-direction: column;
-// }
+
+#dark .formAnswer {
+    color: $bgColor_dark;
+}
+
+.formAnswer_select {
+    padding: 60px 39px 30px 80px;
+}
