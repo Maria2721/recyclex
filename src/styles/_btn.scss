@@ -1,7 +1,8 @@
 @import "vars";
 
 .btn {
-    padding: 27px 70px;
+    width: 400px;
+    padding: 27px 0;
     font-size: 28px;
     background-color: $accentColor;
     color: #FFFFFF;
@@ -26,14 +27,16 @@
 
 @media screen and (max-width: $tablet) {
     .btn {
+        width: 300px;
+        padding: 25px 0;
         font-size: 20px;
-        padding: 25px 57px;
     }
   }
 
   @media screen and (max-width: $mobile) {
     .btn {
+        width: 200px;
+        padding: 13px 0;
         font-size: 12px;
-        padding: 12px 29px;
     }
   }
