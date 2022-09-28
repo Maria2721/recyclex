@@ -1,5 +1,9 @@
 @import "../../styles/vars";
 
+.radio:not(:last-child) {
+    margin-bottom: 18px;
+ }
+
 .radio__label {
     font-size: 20px;
     margin-left: 10px;
