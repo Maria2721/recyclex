@@ -1,1 +1,150 @@
 @import "../../styles/vars";
+@import "../../styles/_mixin.scss";
+
+.member {
+    margin-top: 145px;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    &__steps {
+        width: 459px;
+        margin-top: 70px; 
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .step__wrapper {
+        position: relative;
+        font-size: 32px;
+        font-weight: 700;
+    }
+    
+    .step__first {
+        &_color{
+            color: #FFFFFF;
+        }
+        @include before_circle-pressed;
+        @include divider;    
+    }
+    .step__second,
+    .step__third {
+        @include before_circle;
+        @include divider;
+    }
+    .step__fourth {
+        @include before_circle;
+    }
+
+    &__title {
+        margin-top: 59px;
+    }
+
+    &__subTitle{
+        margin-top: 10px;
+        font-size: 24px;
+        color: $accentColor;
+        text-align: center;
+    }
+
+    &__btn {
+        margin-top: 58px;
+        margin-bottom: 52px ;
+        .btn {
+            display: block;
+        }      
+    }
+}
+@media (max-width: $tablet)  {
+    .member{
+        margin-top: 75px;
+        &__title {
+            margin-top: 30px;
+            font-size: 30px;
+        }
+        .step__wrapper {
+            font-size: 24px;
+        }
+        &__steps {
+            margin-top: 75px;
+        }
+
+        &__subTitle {
+            font-size: 20px;    
+        }
+        &__steps {
+            width: 389px;
+            margin-top: 80px;  
+        }
+        .step__first, 
+        .step__second, 
+        .step__third, 
+        .step__fourth {
+            &:before {
+                width: 47px;
+                height: 47px;
+                top:-8px;
+                left: -15px;
+            }
+            &::after{
+                width: 80px;
+                top: 12px;
+                left: 31px;
+            }  
+        }
+        &__btn {
+            margin-top: 50px;
+            margin-bottom: 82px ;   
+        }
+    }
+    
+}
+@media (max-width: $mobile) {
+    .member{
+        margin-top: 25px;
+        &__steps {
+            margin-top: 27px;
+        }
+        &__title {
+            margin-top: 35px;
+            font-size: 12px;
+        }
+
+        &__subTitle {
+            margin-top: 5px;
+            font-size: 8px;    
+        }
+        
+        .step__wrapper {
+            font-size: 15px;
+        }
+        &__steps {
+            width: 164px;
+            margin-top: 30px;  
+        }
+        .step__first, 
+        .step__second, 
+        .step__third, 
+        .step__fourth {
+            &:before {
+                width: 23px;
+                height: 23px;
+                top:-2px;
+                left: -7px;
+                border: 2px solid #5FAE36;
+            }
+            &::after{
+                width: 30px;
+                top: 9px;
+                left: 15px;
+                border: 1px solid #5FAE36;
+            }  
+        }
+        &__btn {
+            margin-top: 15px;
+            margin-bottom: 35px ;   
+        }
+    }
+}
