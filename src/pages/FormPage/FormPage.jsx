@@ -1,6 +1,7 @@
 import "./FormPage.scss";
 import FormMessage from "../../components/FormMessage/FormMessage";
 import FormAnswer from "../../components/FormAnswer/FormAnswer";
+import FormButton from "../../components/FormButton/FormButton";
 import { questions } from "./questions";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import RadioButton from "../../components/RadioButton/RadioButton";
@@ -15,14 +16,17 @@ export default function FormPage() {
             <div className="form__inner">
                 <h1 className="form__header">Шаг {step}</h1>
                 <FormMessage direction='left'>С какими группами отходов Вы работаете?</FormMessage>
-                <FormMessage direction='right' isBig={true}>Полимеры, металл</FormMessage>
+                {/* <FormMessage direction='right' isBig={true}>Полимеры, металл</FormMessage> */}
                 <div className="form__answer">
                     <FormAnswer isSelect={true}>
-                       {
-                          questions[0].options.map((item) => (
-                               <Checkbox key={item.id} value={item.value} id={item.id}/>
-                           ))
-                       }
+                       <div>
+                           {
+                              questions[0].options.map((item) => (
+                                   <Checkbox key={item.id} value={item.value} id={item.id}/>
+                               ))
+                           }
+                       </div>
+                       <FormButton/>
                     </FormAnswer>
                     {/* <FormAnswer>
                     {

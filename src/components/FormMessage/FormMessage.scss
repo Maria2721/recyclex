@@ -17,6 +17,10 @@
     background-color: #EBEBEB;
 }
 
+#dark .formMessage__border {
+    background-color:  #FFFFFF;
+}
+
 .formMessage__border::after {
     content: ''; 
     position: absolute;
@@ -49,6 +53,7 @@
 }
 
 #dark .formMessage__text {
+    background-color:  #FFFFFF;
     color: $bgColor_dark;
 }
 
