@@ -1,1 +1,173 @@
 @import "../../styles/vars";
+@import "../../styles/_mixin.scss";
+
+.problems {
+    margin-top: 128px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+
+    &__items {
+        margin-top: 90px;
+        display: flex;
+        justify-content: space-around; 
+        column-gap: 2%;    
+    }
+
+    &__item {
+        width: 94%;
+        min-height: 520px;
+        padding-left: 30px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        position: relative; 
+
+        @include before_square; 
+        &:before{
+            border-bottom:  9px solid #79C14C;
+            border-right:  9px solid #79C14C;
+            border-radius: 28px;
+        } 
+        @include after_square; 
+        &::after{
+            border-top:  9px solid #79C14C;
+            border-left:  9px solid #79C14C;
+            border-radius: 28px;
+        } 
+        
+    } 
+
+    &__list-title {
+        margin-top: 80px;
+        height: 82px;
+        font-size: 32px;
+        font-weight: 700;
+        }
+
+    &__list-items{
+        margin-top: 15px;
+    }
+    &__list-item{
+        padding-bottom: 25px;
+        font-size: 20px;
+        line-height: 26px;
+        p {
+            display: block;
+        }
+        
+    }
+
+}
+@media (max-width: $tablet)  {
+    .problems {
+        margin-top: 230px;
+
+        &__items {
+            margin-top: 80px;
+            column-gap: 3%; 
+        }
+
+        &__item {
+            width: 94%;
+            min-height: 260px;
+            padding-left: 24px;
+            padding-right: 12px;
+            padding-bottom: 10px;
+            position: relative; 
+
+            @include before_square; 
+            &:before{
+                border-bottom:  3px solid #79C14C;
+                border-right:  3px solid #79C14C;
+                border-radius: 28px;
+            } 
+
+            @include after_square; 
+            &::after{
+                border-top:  3px solid #79C14C;
+                border-left:  3px solid #79C14C;
+                border-radius: 28px;
+            }
+        }
+
+        &__list-title {
+            margin-top: 35px;
+            font-size: 15px;
+            height: 38px;
+        }
+
+        &__list-items{
+            margin-top: 10px;
+        }
+        &__list-item{
+            font-size: 10px;
+            line-height: 12px;
+            padding-bottom: 17px;
+        }
+
+    }
+    
+}
+
+@media (max-width: $mobile) {
+    .problems {
+        margin-top: 80px;
+
+        &__items {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 0px;
+        }
+        &__item {
+            min-height: 30px;
+            padding-bottom: 0;
+            position: relative; 
+            
+            @include before_square; 
+            &:before{
+                display: none;
+            } 
+            @include after_square; 
+            &::after{
+                display: none;
+            } 
+        } 
+        
+
+        &__list-title {
+            height: 0;
+            min-height: 15px;
+            margin-top: 37px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        &__list-items{
+            margin-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 7%;
+        
+            
+        }
+        &__list-item{
+            font-size: 8px;
+            line-height: 10px;
+            padding-bottom: 10px;
+        }
+        .problems__col1{
+            width: 50%;
+            flex-grow: 1;
+        }
+
+        .problems__col2{
+            flex-grow: 1;
+            width: 50%;
+        }  
+    }
+    
+}
