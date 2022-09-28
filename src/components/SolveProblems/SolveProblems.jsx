@@ -10,7 +10,6 @@ export default function SolveProblems() {
                 <h1 className="problems__title">Recyclex решает проблемы</h1>
                 <div className="problems__items">
                     <div className="problems__item">
-                        {/* <div className="problems__wrapper"> */}
                             <h4 className="problems__list-title">Поставщиков</h4>
                             <div className="problems__list-items">
                                 <div className="problems__col1">
@@ -25,7 +24,6 @@ export default function SolveProblems() {
                         {/* </div> */}
                     </div>
                     <div className="problems__item">
-                        {/* <div className="problems__wrapper"> */}
                             <h4 className="problems__list-title">Переработчиков</h4>
                             <div className="problems__list-items">
                                 <div className="problems__col1">
@@ -38,10 +36,8 @@ export default function SolveProblems() {
                                     <p className="problems__list-item">Удобная логистика</p>
                                 </div>
                             </div>
-                       {/*  </div> */}
                     </div>
                     <div className="problems__item">
-                        {/* <div className="problems__wrapper"> */}
                             <h4 className="problems__list-title">Переработка вторсырья</h4>
                             <div className="problems__list-items">
                                 <div className="problems__col1">
@@ -54,7 +50,6 @@ export default function SolveProblems() {
                                     <p className="problems__list-item">Расширенная проверка контрагента (вживую специалистом биржи Recyclex)</p>
                                 </div>
                             </div>
-                        {/* </div> */}
                     </div>
                 </div>
             </div>
