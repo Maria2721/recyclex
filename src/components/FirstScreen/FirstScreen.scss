@@ -12,8 +12,10 @@
     &__title {
         max-width: 873px;
         font-size: 60px;
-        text-align: left;    
+        text-align: left; 
+        color: #000000;   
     }
+    
     &__subTitle {
         margin-top: 15px;
         max-width: 462px;
@@ -33,6 +35,9 @@
         }
     } 
     
+}
+#dark .firstScreen__title {
+    color: $textColor_dark;
 }
 @media (max-width: $tablet)  {
     .firstScreen {
@@ -81,4 +86,7 @@
         }
     }
 }
+}
+#dark .firstScreen {
+    color: #ffffff; 
 }
