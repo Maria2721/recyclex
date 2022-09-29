@@ -8,7 +8,7 @@ export default function FormButton({children, isSelect}) {
 
     return (
         <div className="formButton">
-        <button className="btn formButton__inner">Ответить</button>
+        <button className="btn btn_smaller">Ответить</button>
         </div>
     );
 }

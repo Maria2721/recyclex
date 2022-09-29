@@ -3,16 +3,22 @@
 .formButton {
     display: flex;
     justify-content: center;
-    margin-top: 60px;
+    // margin-top: 60px;
     margin-bottom: 29px;
     font-size: 20px;
 }
 
-// .formButton__inner {
-//     font-size: 20px;
+
+// @media (max-width: $tablet)  {   
+//     .formButton {
+//         margin-bottom: 44px;
+//     }
+    
 // }
-
-
-// #dark .formButton__inner:hover {
-//     background-color: $greyColor;
-//   }
+@media (max-width: $mobile)  {
+    .formButton {
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+    
+}

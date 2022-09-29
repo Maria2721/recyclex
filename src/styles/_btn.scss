@@ -24,19 +24,33 @@
     background-color: $bgColor;
 }
 
+.btn_smaller {
+    width: 300px;
+    padding: 22px 0;
+    font-size: 20px;
+}
 
 @media screen and (max-width: $tablet) {
     .btn {
         width: 300px;
-        padding: 25px 0;
+        padding: 23px 0;
         font-size: 20px;
+    }
+
+    .btn_smaller {
+        padding: 22px 0;
     }
   }
 
   @media screen and (max-width: $mobile) {
     .btn {
         width: 200px;
-        padding: 13px 0;
+        padding: 11px 0;
+        font-size: 12px;
+    }
+
+    .btn_smaller {
+        width: 170px;
         font-size: 12px;
     }
   }
