@@ -2,7 +2,6 @@
 
 .formAnswer {
     width: 685px;
-    padding: 45px 53px 31px 53px;
     border-radius: 30px;
     font-size: 20px;
     background-color: #EBEBEB;
@@ -13,6 +12,17 @@
     color: $bgColor_dark;
 }
 
-.formAnswer_select {
-    padding: 60px 39px 30px 80px;
+@media (max-width: 730px)  {
+    .personalData {
+        width: 100%;
+        border-radius: 10px;
+      }
+}
+
+
+@media (max-width: $mobile)  {
+    .formAnswer {
+        width: 100%;
+        border-radius: 10px;
+    }
 }

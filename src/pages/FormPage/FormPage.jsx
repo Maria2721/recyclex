@@ -16,28 +16,47 @@ export default function FormPage() {
             <div className="form__inner">
                 <h1 className="form__header">Шаг {step}</h1>
                 <FormMessage direction='left'>С какими группами отходов Вы работаете?</FormMessage>
-                {/* <FormMessage direction='right' isBig={true}>Полимеры, металл</FormMessage> */}
+                <FormMessage direction='right' isBig={true}>Полимеры, металл</FormMessage>
+                <FormMessage direction='left'>Какой профиль Вашей деятельности? *</FormMessage>
+                <FormMessage direction='right' isBig={true}>Торговая сеть, Продажа, монтаж , сервисное обслуживание оборудования</FormMessage>
                 <div className="form__answer">
-                    <FormAnswer isSelect={true}>
-                       <div>
+                    {/* <FormAnswer isSelect={true}>
+                        <div className="form__checkbox">
+                            {
+                                questions[0].options.map((item) => (
+                                    <Checkbox key={item.id} value={item.value} id={item.id}/>
+                                ))
+                            }
+                        </div>
+                        <FormButton/>
+                    </FormAnswer> */}
+
+
+                    {/* <FormAnswer isSelect={true}>
+                       <div className="form__checkbox">
                            {
-                              questions[0].options.map((item) => (
+                              questions[1].options.map((item) => (
                                    <Checkbox key={item.id} value={item.value} id={item.id}/>
                                ))
                            }
                        </div>
                        <FormButton/>
+                    </FormAnswer> */}
+{/* 
+                    <FormAnswer>
+                    <div className="form__radio">
+                        {
+                              questions[2].options.map((item) => (
+                                   <RadioButton key={item.id} value={item.value} id={item.id} name={item.name}/>
+                               ))
+                           }
+                    </div>
+                       <FormButton/>
+                    </FormAnswer> */}
+                    <FormAnswer isSelect={false}>
+                        <div className="form__personalData"><PersonalDataInputs/></div>
+                        <FormButton/>
                     </FormAnswer>
-                    {/* <FormAnswer>
-                    {
-                          questions[2].options.map((item) => (
-                               <RadioButton key={item.id} value={item.value} id={item.id} name={item.name} isBig={true}/>
-                           ))
-                       }
-                    </FormAnswer> */}
-                    {/* <FormAnswer isSelect={false}>
-                        <PersonalDataInputs/>
-                    </FormAnswer> */}
                 </div>
             </div>
         </div>
