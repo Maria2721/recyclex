@@ -3,6 +3,7 @@
 
 .member {
     margin-top: 145px;
+    margin-bottom: 115px;
     &__inner {
         display: flex;
         flex-direction: column;
@@ -60,6 +61,7 @@
 @media (max-width: $tablet)  {
     .member{
         margin-top: 75px;
+        margin-bottom: 83px;
         &__title {
             margin-top: 30px;
             font-size: 30px;
@@ -104,6 +106,7 @@
 @media (max-width: $mobile) {
     .member{
         margin-top: 25px;
+        margin-bottom: 30px;
         &__steps {
             margin-top: 27px;
         }
