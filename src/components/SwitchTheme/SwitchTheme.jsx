@@ -13,7 +13,7 @@ export default function SwitchTheme({toggleTheme, theme}) {
       activeBoxShadow="0px 0px 1px 5px rgba(0, 0, 0, 0.2)"
       className="react-switch"
       id="material-switch"/>
-      <span className="switch__label">Light mode</span>
+      <span className="switch__label">{theme === 'light' ? "Light mode" : "Dark mode"}</span>
     </div>
   );
 }
