@@ -1,14 +1,9 @@
 import "./FormButton.scss";
-import * as cx from "classnames";
 
-export default function FormButton({children, isSelect}) {
-    // const classFormAnswer = cx("formAnswer", {
-    //     "formAnswer formAnswer_select": isSelect,
-    //   });
-
+export default function FormButton({children, isSelect, onClick}) {
     return (
         <div className="formButton">
-        <button className="btn btn_smaller">Ответить</button>
+        <button className="btn btn_smaller" onClick={onClick}>Ответить</button>
         </div>
     );
 }

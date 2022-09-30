@@ -10,6 +10,7 @@ import { useState } from "react";
 
 export default function FormPage() {
     const [step, setStep] = useState(0);
+    console.log(step)
     const [firstAnswer, setFirstAnswer] = useState([]);
     const [secondAnswer, setSecondAnswer] = useState([]);
     const [fourthAnswer, setFourthAnswer] = useState('SMS');
@@ -47,9 +48,15 @@ export default function FormPage() {
     // console.log(fourthAnswer) 
 
 
-    // const handleClick = () => {
-    //     console.log(1)
-    // }
+    const handleClick = () => {
+        if (step < 3) {
+            setStep((step) => step + 1)
+        }
+    }
+
+    // useEffect(() => {
+
+    // }, [step])
 
     return (
         <div className="form container__row">
@@ -102,7 +109,7 @@ export default function FormPage() {
                             }
                         </div>
                         }
-                        <FormButton/>
+                        <FormButton onClick={handleClick}/>
                     </FormAnswer>
                 </div>
             </div>
