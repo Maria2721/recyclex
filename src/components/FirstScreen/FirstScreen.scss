@@ -24,21 +24,17 @@
     }
     &__btn {
         margin-top: 78px;
-        
-        .btn{
-            max-width: 400px;
-            padding: 30px 71px 27px 69px;
-            font-size: 28px;
-        }
         a {
             display: block;
         }
     } 
     
 }
+
 #dark .firstScreen__title {
     color: $textColor_dark;
 }
+
 @media (max-width: $tablet)  {
     .firstScreen {
         margin-top: 400px;
@@ -55,12 +51,6 @@
     }
     &__btn {
         margin-top: 60px;
-
-        .btn{
-            font-size: 20px;
-            max-width: 300px; 
-            padding: 12px 29px;
-        }
     }
 }
 }
@@ -78,15 +68,7 @@
         font-size: 13px;
     }
     &__btn {
-        max-width: 170px;
         margin-top: 25px; 
-        .btn{
-            font-size: 12px;
-            
-        }
     }
 }
-}
-#dark .firstScreen {
-    color: #ffffff; 
 }
