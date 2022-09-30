@@ -20,7 +20,7 @@ export const questions = [
     }]
 },{
         question: 'Какой профиль Вашей деятельности?*',
-        type: "radio",
+        type: "checkbox",
         options: [{
             value: 'Торговая сеть',
             id: 'trade',
@@ -52,16 +52,47 @@ export const questions = [
         }]
     },
     {
+        question: 'Ваши контактные данные?',
+        type: "personalData",
+        data: {
+        surname: {
+            type:'text',
+            placeholder:"Фамилия*",
+        },
+        name: {
+            type:'text',
+            placeholder:"Имя*",
+        },
+        middle: {
+            type:'text',
+            placeholder:"Отчество",
+        },
+        company: {
+            type:'text',
+            placeholder:"Название организации*",
+        },
+        telephone: {
+            type:'tel',
+            placeholder:"Контактный номер телефона*",
+        },
+       email:{
+            type:'email',
+            placeholder:"Ваш E-mail",
+        }}
+    },
+    {
         question: 'Пожалуйста, сообщите нам каким способом Вам удобнее получить дальнейшую информацию?',
         type: "radio",
         options: [{
             value: 'SMS',
             id: 'sms',
-            name: 'contact'
+            name: 'contact',
+            checked: true
         },{
             value: 'E-mail',
             id: 'email',
-            name: 'contact'
+            name: 'contact',
+            checked: false
         }]
     }
 ]

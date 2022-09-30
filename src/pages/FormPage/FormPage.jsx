@@ -9,52 +9,99 @@ import PersonalDataInputs from "../../components/PersonalDataInputs/PersonalData
 import { useState } from "react";
 
 export default function FormPage() {
-    const [step, setStep] = useState(1)
+    const [step, setStep] = useState(0);
+    const [firstAnswer, setFirstAnswer] = useState([]);
+    const [secondAnswer, setSecondAnswer] = useState([]);
+    const [fourthAnswer, setFourthAnswer] = useState('SMS');
+
+    const stepData = questions[step];
+
+    const handleChange = (e) => {
+        let newAnswer = null;
+        let value = e.target.value;
+
+        if (step === 0) {
+            if (firstAnswer.includes(value)) {
+                newAnswer = firstAnswer.filter((item) => item !== value);
+                setFirstAnswer(newAnswer);
+            } else {
+                setFirstAnswer([...firstAnswer, value]) 
+            }
+        }
+
+        if (step === 1) {
+            if (secondAnswer.includes(value)) {
+                newAnswer = secondAnswer.filter((item) => item !== value);
+                setSecondAnswer(newAnswer);
+            } else {
+                setSecondAnswer([...secondAnswer, value]) 
+            }
+        }
+
+        if (step === 3) {
+            setFourthAnswer(value)
+        }
+    }
+    // console.log(firstAnswer) 
+    // console.log(secondAnswer) 
+    // console.log(fourthAnswer) 
+
+
+    // const handleClick = () => {
+    //     console.log(1)
+    // }
 
     return (
         <div className="form container__row">
             <div className="form__inner">
-                <h1 className="form__header">Шаг {step}</h1>
+                <h1 className="form__header">Шаг {step + 1}</h1>
                 <FormMessage direction='left'>С какими группами отходов Вы работаете?</FormMessage>
-                <FormMessage direction='right' isBig={true}>Полимеры, металл</FormMessage>
+                {/* <FormMessage direction='right' isBig={true}>Полимеры, металл</FormMessage>
                 <FormMessage direction='left'>Какой профиль Вашей деятельности? *</FormMessage>
-                <FormMessage direction='right' isBig={true}>Торговая сеть, Продажа, монтаж , сервисное обслуживание оборудования</FormMessage>
+                <FormMessage direction='right' isBig={true}>Торговая сеть, Продажа, монтаж , сервисное обслуживание оборудования</FormMessage> */}
                 <div className="form__answer">
-                    {/* <FormAnswer isSelect={true}>
-                        <div className="form__checkbox">
+                    <FormAnswer>
+                        {
+                            stepData.type === 'checkbox' &&
+                            <div className='form__checkbox'>
                             {
-                                questions[0].options.map((item) => (
-                                    <Checkbox key={item.id} value={item.value} id={item.id}/>
+                                stepData.options.map((item) => (
+                                    <Checkbox
+                                    onChange={(e)=> handleChange(e)}
+                                    key={item.id}
+                                    value={item.value}
+                                    id={item.id}/>
                                 ))
                             }
                         </div>
-                        <FormButton/>
-                    </FormAnswer> */}
-
-
-                    {/* <FormAnswer isSelect={true}>
-                       <div className="form__checkbox">
-                           {
-                              questions[1].options.map((item) => (
-                                   <Checkbox key={item.id} value={item.value} id={item.id}/>
-                               ))
-                           }
-                       </div>
-                       <FormButton/>
-                    </FormAnswer> */}
-{/* 
-                    <FormAnswer>
-                    <div className="form__radio">
+                        }
+                        
                         {
-                              questions[2].options.map((item) => (
-                                   <RadioButton key={item.id} value={item.value} id={item.id} name={item.name}/>
-                               ))
-                           }
-                    </div>
-                       <FormButton/>
-                    </FormAnswer> */}
-                    <FormAnswer isSelect={false}>
-                        <div className="form__personalData"><PersonalDataInputs/></div>
+                            stepData.type === 'personalData' &&
+                            <div className='form__personalData'>
+                                <div className="form__personalData">
+                                    <PersonalDataInputs
+                                    data={stepData.data}/>
+                                    </div>
+                        </div>
+                        }
+
+                        {
+                            questions[step].type === 'radio' &&
+                            <div className='form__radio'>
+                            {
+                               questions[step].options.map((item) => (
+                                <RadioButton
+                                onChange={(e)=> handleChange(e)}
+                                key={item.id}
+                                defaultChecked={item.checked}
+                                value={item.value}
+                                id={item.id}
+                                name={item.name}/>
+                            ))
+                            }
+                        </div>
+                        }
                         <FormButton/>
                     </FormAnswer>
                 </div>
@@ -62,18 +109,3 @@ export default function FormPage() {
         </div>
     );
 }
-
-
-
-// массив с объектами, в которых вопрос, тип ответа, вариант ответа и порядковый номер (шаг)
-
-// первый – селект с выбором своего ответа (множественный выбор ответов или нет?)
-// второй - то же самое
-// третий - форма с заполнением данных
-// Фамилия Имя Отчество Организация Телефон Email
-// четвертый – селект
-
-// На каждом шаге сохраняем инфу и записываем в ответ, потом отправляем на бэк (пока что в консоль)
-
-
-// рисуем сразу все шаги, по состоянию переключаем их. По клику на кнопки переходим в следующее состояние

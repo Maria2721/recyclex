@@ -30,6 +30,10 @@
     font-size: 20px;
 }
 
+#dark .btn_smaller:hover {
+    background-color: $greyColor;
+}
+
 @media screen and (max-width: $tablet) {
     .btn {
         width: 300px;

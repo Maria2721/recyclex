@@ -1,16 +1,16 @@
 import "./PersonalDataInputs.scss";
 
-export default function PersonalDataInputs(props) {
+export default function PersonalDataInputs({data}) {
     return (
         <div className="personalData">
-            <input className="personalData__input" type="text" placeholder="Фамилия*"/>
+            <input className="personalData__input" type={data.surname.type} placeholder={data.surname.placeholder}/>
             <div className="personalData__firstAndMiddle">
-                <input className="personalData__input" type="text" placeholder="Имя*"/>
-                <input className="personalData__input" type="text" placeholder="Отчество"/>
+                <input className="personalData__input" type={data.name.type} placeholder={data.name.placeholder}/>
+                <input className="personalData__input" type={data.surname.middle} placeholder={data.middle.placeholder}/>
             </div>
-            <input className="personalData__input" type="text" placeholder="Название организации*"/>
-            <input className="personalData__input" type="text" placeholder="Контактный номер телефона*"/>
-            <input className="personalData__input" type="text" placeholder="Ваш E-mail"/>
+            <input className="personalData__input" type={data.surname.company} placeholder={data.company.placeholder}/>
+            <input className="personalData__input" type={data.surname.telephone} placeholder={data.telephone.placeholder}/>
+            <input className="personalData__input" type={data.surname.email} placeholder={data.email.placeholder}/>
         </div>
     );
 }
