@@ -8,6 +8,7 @@
     color: #FFFFFF;
     font-weight: bold;
     text-align: center;
+    line-height: 28px;
     border: none;
     text-decoration: none;
     text-transform: uppercase;
@@ -28,6 +29,7 @@
     width: 300px;
     padding: 22px 0;
     font-size: 20px;
+    line-height: 20px;
 }
 
 #dark .btn_smaller:hover {
@@ -39,6 +41,7 @@
         width: 300px;
         padding: 23px 0;
         font-size: 20px;
+        line-height: 20px;
     }
 
     .btn_smaller {
@@ -51,10 +54,12 @@
         width: 200px;
         padding: 11px 0;
         font-size: 12px;
+        line-height: 12px;
     }
 
     .btn_smaller {
         width: 170px;
         font-size: 12px;
+        line-height: 12px;
     }
   }

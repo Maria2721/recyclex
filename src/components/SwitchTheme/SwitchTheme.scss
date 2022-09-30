@@ -1,5 +1,15 @@
 @import "../../styles/vars";
 
+.switch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.switch__label {
+    font-size: 12px;
+}
 .react-switch {
     display: block !important;
     margin-top: 3px;
@@ -8,7 +18,9 @@
 .react-switch-bg {
     width: 72px !important;
     height: 40px !important;
+    border: 2px solid $textColor !important;
     border-radius: 20px !important;
+    background-color: $bgColor !important;
 }
 
 #dark .react-switch-bg {
@@ -16,6 +28,7 @@
 }
 
 .react-switch-handle {
+    background-color: $textColor !important;
     width: 28px !important;
     height: 28px !important;
     top: 6.2px !important;
@@ -29,16 +42,22 @@
 
 
 @media (max-width: $tablet)  {
+    .switch__label {
+        font-size: 6px;
+    }
+
     .react-switch-bg {
         width: 50px !important;
         height: 30px !important;
         border-radius: 15px !important;
+        border: 1px solid $textColor !important;
     }
 
     .react-switch-handle {
         width: 20px !important;
         height: 20px !important;
         top: 5px !important;
+        transform: translateX(-1px) !important;
     }
     
     #dark .react-switch-handle {
@@ -75,8 +94,9 @@
     .react-switch-handle {
         width: 13px !important;
         height: 13px !important;
-        top: 3.5px !important;
+        top: 3.3px !important;
         left: 3px !important;
+        transform: translateX(0px) !important;
     }
 
     #dark .react-switch-handle {
