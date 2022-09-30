@@ -1,1 +1,79 @@
 @import "../../styles/vars";
+
+.form {
+    margin-top: 96px;
+    margin-bottom: 115px;
+}
+
+.form__header {
+    margin-bottom: 55px;
+    text-align: start;
+}
+
+.form__answer {
+    display: flex;
+    justify-content: center;
+}
+
+.form__checkbox {
+    padding: 60px 100px 60px 100px;
+}
+
+.form__radio {
+    padding: 46px 81px 57px 81px;
+}
+
+.form__personalData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 53px 35px 53px;
+}
+
+@media (max-width: $tablet)  {   
+    .form {
+        margin-top: 100px;
+        margin-bottom: 110px;
+    }
+
+    .form__header {
+        margin-bottom: 35px;
+    }
+
+    .form__checkbox {
+        padding: 59px 52px 60px 52px;
+    }
+
+    .form__radio {
+        padding: 63px 50px 36px 50px;
+    }
+
+    .form__personalData {
+        padding: 45px 20px 35px 20px;
+        }  
+}
+
+@media (max-width: $mobile)  {
+    .form {
+        margin-top: 35px;
+        margin-bottom: 50px;
+    }
+
+    .form__header {
+        margin-bottom: 30px;
+    }
+
+    .form__checkbox {
+        padding: 29px 27px 30px 27px;
+    }
+
+    .form__radio {
+        padding: 28px 25px;
+    }
+
+
+.form__personalData {
+    padding: 20px 22px;
+    }
+    
+}

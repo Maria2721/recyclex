@@ -1,1 +1,97 @@
 @import "../../styles/vars";
+
+.formMessage {
+    display: flex;
+    margin-bottom: 70px;
+}
+
+.formMessage_right {
+    justify-content: flex-end;
+}
+
+.formMessage__border {
+    position: relative;
+    display: flex;
+    max-width: 502px;
+    // min-height: 68px;
+    // align-items: center;
+    padding: 15px 39px 15px 20px;
+    border-radius: 20px;
+    background-color: #EBEBEB;
+}
+
+#dark .formMessage__border {
+    background-color:  #FFFFFF;
+}
+
+.formMessage__border::after {
+    content: ''; 
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    bottom: -12px;
+    border: 21px solid transparent;
+    border-left: 38px solid #EBEBEB;
+}
+
+.formMessage__border_right::after {
+    content: ''; 
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: -12px;
+    border: 21px solid transparent;
+    border-right: 38px solid #EBEBEB;
+}
+
+.formMessage__text {
+    z-index: 1;
+    font-size: 20px;
+}
+
+#dark .formMessage__text {
+    background-color:  #FFFFFF;
+    color: $bgColor_dark;
+}
+
+
+@media (max-width: $tablet)  {
+    .formMessage {
+        margin-bottom: 55px;
+    }
+}
+
+
+@media (max-width: $mobile)  {
+    .formMessage {
+        margin-bottom: 30px;
+    }
+
+    .formMessage__border {
+        max-width: 205px;
+        padding: 5px 22px 5px 10px;
+        border-radius: 10px;
+    }
+
+    .formMessage__text {
+        font-size: 10px;
+        // line-height: 1.5 
+    }
+
+
+    .formMessage__border::after {
+        bottom: -7px;
+        border: 9px solid transparent;
+        border-left: 15px solid #EBEBEB;
+    }
+    
+    .formMessage__border_right::after {
+        bottom: -7px;
+        border: 9px solid transparent;
+        border-right: 15px solid #EBEBEB;
+    
+    }
+    
+}
+
+//чекнуть хвост сообщения при переполнении

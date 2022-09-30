@@ -1,1 +1,28 @@
 @import "../../styles/vars";
+
+.formAnswer {
+    width: 685px;
+    border-radius: 30px;
+    font-size: 20px;
+    background-color: #EBEBEB;
+}
+
+#dark .formAnswer {
+    background-color:  #FFFFFF;
+    color: $bgColor_dark;
+}
+
+@media (max-width: 730px)  {
+    .personalData {
+        width: 100%;
+        border-radius: 10px;
+      }
+}
+
+
+@media (max-width: $mobile)  {
+    .formAnswer {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
