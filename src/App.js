@@ -16,13 +16,14 @@ import { createContext, useState } from "react";
 const ThemeContext = createContext(null);
 
 function App() {
-  const [theme, setTheme] = useState('light');
-  console.log(`setTheme = ${setTheme}`);
-  
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  const [theme, setTheme] = useState(currentTheme);
+
   const toggleTheme = () => {
-    setTheme((curr) => (curr === 'light' ? 'dark' : 'light' ))
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme)
   }
-  
   
   const {pathname} = useLocation(); 
   const isHomePage = pathname === "/" ? true : false;

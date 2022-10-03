@@ -77,3 +77,24 @@
     }
     
 }
+
+// кастомные стили анимации
+
+.transition-answer-enter {
+    opacity: 0;
+}
+
+.transition-answer-enter-active {
+    opacity: 1;
+    transition: opacity 200ms;
+}
+
+.transition-question-enter {
+    opacity: 0;
+}
+
+.transition-question-enter-active {
+    opacity: 1;
+    transition: opacity 200ms;
+    transition-delay: 200ms;
+}
