@@ -3,7 +3,6 @@
 .formMessage {
     display: flex;
     margin-bottom: 70px;
-    transition: all 3s ease-in-out;
 }
 
 .formMessage_right {
@@ -17,7 +16,6 @@
     padding: 15px 39px 15px 20px;
     border-radius: 20px;
     background-color: #EBEBEB;
-    transition: all 3s ease-in-out;
 }
 
 #dark .formMessage__border {
@@ -36,7 +34,7 @@
 
 #dark .formMessage__border::after {
     border-color: transparent;
-   border-left-color: $textColor_dark;
+    border-left-color: $textColor_dark;
 }
 
 .formMessage__border_right::after {
@@ -51,7 +49,7 @@
 
 #dark .formMessage__border_right::after {
     border-color: transparent;
-   border-right-color: $textColor_dark;
+    border-right-color: $textColor_dark;
 }
 
 .formMessage__text {
@@ -71,7 +69,6 @@
         margin-bottom: 55px;
     }
 }
-
 
 @media (max-width: $mobile)  {
     .formMessage {
@@ -101,5 +98,4 @@
         border-right: 15px solid #EBEBEB;
     
     }
-    
 }

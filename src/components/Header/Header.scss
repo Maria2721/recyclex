@@ -63,7 +63,7 @@
     }
 }
 
-@media (max-width: 730px)  {
+@media (max-width: $smallTablet)  {
     .header__link {
         font-size: 12px;
     }

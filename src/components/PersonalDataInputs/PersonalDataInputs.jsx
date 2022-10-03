@@ -1,9 +1,6 @@
-// import { useState } from "react";
 import "./PersonalDataInputs.scss";
 
 export default function PersonalDataInputs({data, onChange}) {
-    // const [state, setState] = useState({});
-
     return (
         <div className="personalData">
             <input className="personalData__input" onChange={(e) => onChange(e, 'surname')} type={data.surname.type} placeholder={data.surname.placeholder}/>

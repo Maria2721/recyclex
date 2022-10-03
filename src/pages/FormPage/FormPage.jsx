@@ -69,6 +69,7 @@ export default function FormPage() {
     }
 
     const handleClick = () => {
+
         switch (step) {
             case 0:
                 firstAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
