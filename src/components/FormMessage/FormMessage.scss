@@ -3,6 +3,7 @@
 .formMessage {
     display: flex;
     margin-bottom: 70px;
+    transition: all 3s ease-in-out;
 }
 
 .formMessage_right {
@@ -16,6 +17,7 @@
     padding: 15px 39px 15px 20px;
     border-radius: 20px;
     background-color: #EBEBEB;
+    transition: all 3s ease-in-out;
 }
 
 #dark .formMessage__border {
@@ -55,6 +57,7 @@
 .formMessage__text {
     z-index: 1;
     font-size: 20px;
+    line-height: 1.3;
 }
 
 #dark .formMessage__text {

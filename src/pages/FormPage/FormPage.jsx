@@ -8,20 +8,20 @@ import RadioButton from "../../components/RadioButton/RadioButton";
 import PersonalDataInputs from "../../components/PersonalDataInputs/PersonalDataInputs";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { CSSTransition } from "react-transition-group"
 
 export default function FormPage() {
     const [step, setStep] = useState(0);
     const [firstAnswer, setFirstAnswer] = useState([]);
     const [secondAnswer, setSecondAnswer] = useState([]);
     const [thirdAnswer, setThirdAnswer] = useState({
-    surname: '',
-    name: '',
-    middle: '',
-    company: '',
-    telephone: '',
-    email: ''
-
-});
+        surname: '',
+        name: '',
+        middle: '',
+        company: '',
+        telephone: '',
+        email: ''
+    });
     const [fourthAnswer, setFourthAnswer] = useState('SMS');
     let {surname, name, middle, company, telephone, email} = thirdAnswer;
     const stepData = questions[step];
@@ -100,21 +100,47 @@ export default function FormPage() {
             <div className="form__inner">
                 <h1 className="form__header">Шаг {step + 1}</h1>
                 <FormMessage direction='left'>С какими группами отходов Вы работаете?</FormMessage>
-                {step >= 1 && <FormMessage direction='right'>{firstAnswer.join(', ')}</FormMessage>}
-                {step >= 1 && <FormMessage direction='left'>{questions[1].question}</FormMessage>}
 
-                {step >= 2 && <FormMessage direction='right'>{secondAnswer.join(', ')}</FormMessage>}
-                {step >= 2 && <FormMessage direction='left'>{questions[2].question}</FormMessage>}
+                <CSSTransition in={step >= 1} timeout={1000} classNames="transition-answer">
+                    <div>
+                        {step >= 1 && <FormMessage direction='right'>{firstAnswer.join(', ')}</FormMessage>}
+                    </div>
+                </CSSTransition>
+                <CSSTransition in={step >= 1} timeout={1000} classNames="transition-question">
+                    <div>
+                        {step >= 1 && <FormMessage direction='left'>{questions[1].question}</FormMessage>}
+                    </div>
+                </CSSTransition>
 
-                {step >= 3 && <FormMessage direction='right'>{`
-                Фамилия - ${surname}\n
-                Имя - ${name}\n
-                 ${middle && `Отчество - ${middle}\n`}
-                 Название организации - ${company}\n
-                 Контактный номер телефона - ${telephone}\n
-                 ${email && `Ваш e-mail - ${email}`}
-                `}</FormMessage>} 
-                {step >= 3 && <FormMessage direction='left'>{questions[3].question}</FormMessage>}
+                <CSSTransition in={step >= 2} timeout={1000} classNames="transition-answer">
+                    <div>
+                        {step >= 2 && <FormMessage direction='right'>{secondAnswer.join(', ')}</FormMessage>}
+                    </div>
+                </CSSTransition>
+                <CSSTransition in={step >= 2} timeout={1000} classNames="transition-question">
+                    <div>
+                        {step >= 2 && <FormMessage direction='left'>{questions[2].question}</FormMessage>}
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={step >= 3} timeout={1000} classNames="transition-answer">
+                    <div>
+                        {step >= 3 && <FormMessage direction='right'>
+                        Фамилия - {surname} <br />
+                        Имя - {name} <br />
+                        {middle && `Отчество - ${middle}`}
+                        Название организации - {company} <br />
+                        Контактный номер телефона - {telephone} <br />
+                        {email && `Ваш e-mail - ${email}`}
+                    </FormMessage>} 
+                    </div>
+                </CSSTransition>
+                <CSSTransition in={step >= 3} timeout={1000} classNames="transition-question">
+                    <div>
+                        {step >= 3 && <FormMessage direction='left'>{questions[3].question}</FormMessage>}
+                    </div>
+                </CSSTransition>
+
                 <div className="form__answer">
                     <FormAnswer>
                         {
@@ -140,22 +166,23 @@ export default function FormPage() {
                                     data={stepData.data}
                                     onChange={handleChangePersonalData}/>
                                     </div>
-                        </div>
+                            </div>
                         }
 
                         {
                             questions[step].type === 'radio' &&
                             <div className='form__radio'>
                             {
-                            questions[step].options.map((item) => (
-                                <RadioButton
-                                onChange={(e)=> handleChange(e)}
-                                key={item.id}
-                                defaultChecked={item.checked}
-                                value={item.value}
-                                id={item.id}
-                                name={item.name}/>
-                            ))
+                                questions[step].options.map((item) => (
+                                    <RadioButton
+                                        onChange={(e)=> handleChange(e)}
+                                        key={item.id}
+                                        defaultChecked={item.checked}
+                                        value={item.value}
+                                        id={item.id}
+                                        name={item.name}
+                                    />
+                                ))
                             }
                         </div>
                         }
