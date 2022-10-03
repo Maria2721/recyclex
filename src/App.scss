@@ -15,3 +15,17 @@
   background-color: $bgColor;
   color: $textColor;
 }
+
+.home__page {
+  background-image: url(./assets/imgs/background_desktop.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: $bgColor;
+
+    @media (max-width: $tablet)  {
+      background-image: url(./assets/imgs/background_table.png); 
+}
+    @media (max-width: $mobile)  {
+      background-image: url(./assets/imgs/background_mobile.png);
+}
+}

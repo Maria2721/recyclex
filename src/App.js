@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Routes, Route, useLocation} from 'react-router-dom';
 import './App.scss';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -12,6 +12,7 @@ import CookiesPolicyPage from './pages/CookiesPolicyPage/CookiesPolicyPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
 import Contacts from './pages/Contacts/Contacts';
 import { createContext, useState } from "react";
+
 const ThemeContext = createContext(null);
 
 function App() {
@@ -23,28 +24,31 @@ function App() {
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme)
   }
+  
+  const {pathname} = useLocation(); 
+  const isHomePage = pathname === "/" ? true : false;
+  const isSetBackground = isHomePage ? ' home__page' : '';
+  
 
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
-    <Router>
-      <div className="App" id={theme}>
+      <div className={`App ${isSetBackground}`} id={theme}>
         <Header toggleTheme={toggleTheme} theme={theme}/>
           <main className="container">
             <Routes>
-              <Route path='/' element={<MainPage/>}/>
-              <Route path='/about-project' element={<AboutProjectPage/>}/>
-              <Route path='/work-scheme' element={<WorkScheme/>}/>
-              <Route path='/form' element={<FormPage/>}/>
-              <Route path='/thank-you' element={<FormThankYouPage/>}/>
-              <Route path='/general-terms' element={<GeneralTermsPage/>}/>
-              <Route path='/privacy-policy' element={<PrivacyPolicyPage/>}/>
-              <Route path='/cookies-policy-page' element={<CookiesPolicyPage/>}/>
-              <Route path='/contacts' element={<Contacts/>}/>
+                <Route path='/' element={<MainPage/>}/>
+                <Route path='/about-project' element={<AboutProjectPage/>}/>
+                <Route path='/work-scheme' element={<WorkScheme/>}/>
+                <Route path='/form' element={<FormPage/>}/>
+                <Route path='/thank-you' element={<FormThankYouPage/>}/>
+                <Route path='/general-terms' element={<GeneralTermsPage/>}/>
+                <Route path='/privacy-policy' element={<PrivacyPolicyPage/>}/>
+                <Route path='/cookies-policy-page' element={<CookiesPolicyPage/>}/>
+                <Route path='/contacts' element={<Contacts/>}/>
             </Routes>
           </main>
         <Footer/> 
       </div>
-    </Router>
     </ThemeContext.Provider>
   );
 }
