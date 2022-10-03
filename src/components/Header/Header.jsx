@@ -4,7 +4,7 @@ import { ReactComponent as LogoBlack} from "../../assets/imgs/logo_black.svg";
 import { ReactComponent as LogoWhite} from "../../assets/imgs/logo_white.svg";
 import { ReactComponent as BurgerBlack} from "../../assets/imgs/burger_menu.svg";
 import SwitchTheme from "../SwitchTheme/SwitchTheme";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import * as cx from "classnames";
 
 

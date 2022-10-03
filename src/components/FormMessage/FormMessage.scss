@@ -13,8 +13,6 @@
     position: relative;
     display: flex;
     max-width: 502px;
-    // min-height: 68px;
-    // align-items: center;
     padding: 15px 39px 15px 20px;
     border-radius: 20px;
     background-color: #EBEBEB;
@@ -34,6 +32,11 @@
     border-left: 38px solid #EBEBEB;
 }
 
+#dark .formMessage__border::after {
+    border-color: transparent;
+    border-left-color: $textColor_dark;
+}
+
 .formMessage__border_right::after {
     content: ''; 
     position: absolute;
@@ -44,9 +47,15 @@
     border-right: 38px solid #EBEBEB;
 }
 
+#dark .formMessage__border_right::after {
+    border-color: transparent;
+    border-right-color: $textColor_dark;
+}
+
 .formMessage__text {
     z-index: 1;
     font-size: 20px;
+    line-height: 1.3;
 }
 
 #dark .formMessage__text {
@@ -61,7 +70,6 @@
     }
 }
 
-
 @media (max-width: $mobile)  {
     .formMessage {
         margin-bottom: 30px;
@@ -75,7 +83,6 @@
 
     .formMessage__text {
         font-size: 10px;
-        // line-height: 1.5 
     }
 
 
@@ -91,7 +98,4 @@
         border-right: 15px solid #EBEBEB;
     
     }
-    
 }
-
-//чекнуть хвост сообщения при переполнении
