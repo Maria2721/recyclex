@@ -61,7 +61,7 @@ export default function FormPage() {
         setThirdAnswer({
             ...thirdAnswer,
             [type]: value,
-          });
+        });
     }
 
     const validatePersonalData = (input) => {
@@ -74,16 +74,16 @@ export default function FormPage() {
             case 0:
                 firstAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
                 break;
-             case 1:
+            case 1:
                 secondAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
                 break;
-             case 2:
-                 let isValid = [surname, name, company, telephone].every((input) => validatePersonalData(input));
-                 console.log(isValid);
+            case 2:
+                let isValid = [surname, name, company, telephone].every((input) => validatePersonalData(input));
+                console.log(isValid);
 
-                 isValid ? setStep((step) => step + 1) : console.log('Заполните обязательные поля')
+                isValid ? setStep((step) => step + 1) : console.log('Заполните обязательные поля')
                 break;
-             case 3:
+            case 3:
                 console.log(`Ответ №1: ${firstAnswer},
                 Ответ №2: ${secondAnswer},
                 Ответ №3: ${surname}, ${name}, ${middle}, ${company}, ${telephone}, ${email}

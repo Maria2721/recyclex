@@ -81,12 +81,13 @@
         height: 100vh;
         z-index: 10;
         left: 0;
-        top: -100%;
-        transition: top 0.2s ease;
+        top: 0;
+        transform: translateY(-100%);
+        transition: transform 0.2s ease;
     }
 
     .header__nav_active {
-        top: 0;
+        transform: translateY(0);
     }
 
     .header__links {
@@ -131,6 +132,6 @@
     }
 
     #dark .header__burger {
-       fill: $textColor_dark;
+        fill: $textColor_dark;
     }
 }
