@@ -2,14 +2,14 @@
 
 .footer {
     flex: 0 0 auto;
+    padding-bottom: 60px;
 }
 .footer__inner {
     display: flex;
-    flex-direction: column;
-    padding-top: 50px;
-    height: 294px;
+    justify-content: space-between;
+    padding-top: 40px;
     border-top: solid 1px $textColor;
-    gap: 48px;
+    gap: 10px;
     font-size: 16px;
     line-height: 2;
 }
@@ -18,17 +18,20 @@
     border-color: $textColor_dark;
 }
 
-.footer__info {
+.footer__requisitesAndRights {
     display: flex;
+    flex-direction: column;
     justify-content:space-between;
-    gap: 5px;
-}
-
-.footer__linksAndMail {
-    display: flex;
+    gap: 50px;
 }
 
 .footer__links {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.footer__pages {
     display: flex;
     flex-direction: column;
 }
@@ -38,8 +41,8 @@
 }
 
 .footer__link:hover {
-        color: $accentColor;
-        transition: color 0.1s ease;
+    color: $accentColor;
+    transition: color 0.1s ease;
 }
 
 #dark .footer__link:hover {
@@ -47,58 +50,179 @@
     transition: color 0.1s ease;
 }
 
+.footer__manager {
+    text-align: start;
+    border: none;
+    background-color: inherit;
+    font-family: "Century Gothic";
+    font-size: 16px;
 
-@media (max-width: $tablet)  {
-    .footer__inner {
-        height: 125px;
-        padding-top: 30px;
-        font-size: 10px;
-    }
-
-    .footer__description {
-        display: none;
+    &:hover {
+        color: $accentColor;
+        transition: color 0.1s ease;
     }
 }
 
-@media (max-width: $mobile)  {
-    .footer__inner {
-        height: 120px;
-        font-size: 8px;
-        padding-top: 20px;
+.footer__manager {
+    &_mobile {
+        display: none;
     }
 
-    .footer__info  {
+    &_desktop {
+        display: block;
+    }
+}
+
+#dark .footer__manager {
+    color: $textColor_dark;
+
+    &:hover {
+        color: $accentColor;
+        transition: color 0.1s ease;
+    }
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer__icon {
+    width: 40px;
+    fill: $textColor;
+}
+
+#dark .footer__icon {
+    fill: $textColor_dark;
+}
+
+.footer__description {
+    display: flex;
+}
+
+@media (max-width: $tablet)  {
+    .footer {
+        padding-bottom: 30px;
+    }
+
+    .footer__inner {
+        padding-top: 22px;
+        font-size: 10px;
+    }
+
+    .footer__requisitesAndRights {
+        gap: 25px;
+    }
+    
+    .footer__manager {
+        font-size: 10px;
+    }
+
+    .footer__contacts {
+        gap: 16px;
+    }
+
+    .footer__social {
+        gap: 28px;
+    }
+    
+    .footer__icon {
+        width: 28px;
+    } 
+}
+
+@media (max-width: $mobile)  {
+    .footer {
+        padding-bottom: 20px;
+    }
+
+    .footer__inner {
         display: grid;
         grid-template-areas:
-        "links email"
+        "links contacts"
         "requisites requisites";
-        gap: 20px;
+        font-size: 10px;
+        padding-top: 20px;
     }
 
     .footer__links {
         grid-area: links;
-        line-height: 1.5;
+        line-height: 2.3;
+    }
+
+    .footer__contacts {
+        grid-area: contacts;
+        align-self: flex-end;
+        gap: 0;
+    }
+
+    .footer__requisitesAndRights {
+        grid-area: requisites;
+        font-size: 8px;
+        line-height: 1.6;
     }
 
     .footer__email {
-        grid-area: email;
-        align-self: flex-end;
+        margin-bottom: 10px;
     }
 
-    .footer__requisites {
-        grid-area: requisites;
-        line-height: 1.25;
+    .footer__manager {
+        margin-bottom: 20px;
+        &_mobile {
+            display: block;
+        }
+
+        &_desktop {
+            display: none;
+        }
     }
 
-@media (max-width: $smallMobile)  {
+    .footer__rights {
+        display: none;
+    }
+    
+    .footer__social {
+        gap: 23px;
+    }
+    
+    .footer__icon {
+        width: 23px;
+    } 
+
+@media (max-width: 330px)  {
         .footer__inner {
-            height: 110px;
-            font-size: 6px;
+            font-size: 8px;
             padding-top: 15px;
         }
 
-        .footer__info  {
-            gap: 15px;
+        .footer__links {
+            line-height: 2;
+        }
+
+        .footer__manager {
+            font-size: 8px;
+        }
+    
+        .footer__email {
+            margin-bottom: 4px;
+        }
+
+        .footer__icon {
+            width: 18px;
+        } 
+
+        .footer__requisitesAndRights {
+            font-size: 6px;
+            line-height: 1.3;
         }
     }
 }
