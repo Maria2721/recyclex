@@ -27,9 +27,10 @@ export default function Header({toggleTheme, theme}) {
           <SwitchTheme toggleTheme={toggleTheme} theme={theme}/>
         <nav className={classNav} onClick={handleClick}>
           <div className="header__links" onClick={e => e.stopPropagation()}>
-            <Link to="/about-project" onClick={() => setOpened(!opened)} className="header__link">О проекте</Link>
-            <Link to="/work-scheme" onClick={() => setOpened(!opened)} className="header__link">Схема работы</Link>
-            <Link to="/contacts" onClick={() => setOpened(!opened)} className="header__link">Контакты</Link>
+            <Link to="/about-project" onClick={handleClick} className="header__link">О проекте</Link>
+            <Link to="/work-scheme" onClick={handleClick} className="header__link">Схема работы</Link>
+            <Link to="/contacts" onClick={handleClick} className="header__link">Контакты</Link>
+            <Link to="/form" onClick={handleClick} className="header__link header__link_border">Присеоединиться</Link>
           </div>
         </nav>
         <Link to="/">{theme === 'light'? <LogoBlack className="header__logo"/> : <LogoWhite className="header__logo"/>}</Link>
