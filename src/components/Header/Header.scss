@@ -20,6 +20,7 @@
 .header__links {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     font-size: 20px;
     gap: 5px;
 }
@@ -40,6 +41,32 @@
     }
 }
 
+
+.header__link_border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    padding: 11px 0;
+    font-size: 14px;
+    border: 1px solid $textColor;
+    line-height: 14px;
+    text-transform: uppercase;
+
+    &:hover {
+        border-color: $accentColor;
+    }
+}
+
+#dark .header__link_border {
+    border-color: $textColor_dark;
+
+    &:hover {
+        border-color: $accentColor;
+    }
+}
+
+
 .header__logo {
     width: 199px;
 }
@@ -48,7 +75,7 @@
     display: none;
 }
 
-@media (max-width: $tablet)  {
+@media (max-width: 1050px)  {
     .header__inner {
         height: 100px;
     }
@@ -61,9 +88,16 @@
     .header__logo {
         width: 171px;
     }
+
+    .header__link_border {
+        width: 140px;
+        padding: 7px 0;
+        font-size: 12px;
+        text-transform: none;
+    }
 }
 
-@media (max-width: $smallTablet)  {
+@media (max-width: 850px)  {
     .header__link {
         font-size: 12px;
     }
@@ -73,7 +107,7 @@
     }
 }
 
-@media (max-width: $mobile)  {
+@media (max-width: 650px)  {
     .header__nav {
         position: fixed;
         align-items: flex-start;
@@ -94,6 +128,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        align-items:stretch;
         gap: 0;
         font-size: 12px;
         width: 100vw;
@@ -119,6 +154,28 @@
     #dark .header__link {
         border-color: $textColor_dark;
         background-color: $bgColor_dark;
+    }
+
+    .header__link_border {
+        justify-content: flex-start;
+        width: 100%;
+        border-top: none;
+        text-transform: none;
+        font-size: 12px;
+        line-height: 12px;
+
+        &:hover {
+            border-color: $textColor;
+        }
+    }
+
+    #dark .header__link_border {
+        border-color: $textColor_dark;
+        border-top: $textColor_dark;
+    
+        &:hover {
+            border-color: $textColor_dark;
+        }
     }
 
     .header__logo {
