@@ -42,14 +42,47 @@
         padding: 23px 0;
         font-size: 20px;
         line-height: 20px;
+
+        &:hover{
+            background-color: $accentColor;
+            color: #FFFFFF;
+        }
+
+        &:active {
+            background-color: $greyColor;
+            color: $accentColor;
+        }
     }
 
     .btn_smaller {
         padding: 22px 0;
+
+        &:hover{
+            background-color: $accentColor;
+            color: #FFFFFF;
+        }
+
+        &:active {
+            background-color: $greyColor;
+            color: $accentColor;
+        }
     }
 
-    .btn_smaller {
-        padding: 22px 0;
+    #dark .btn:hover {
+        background-color: $accentColor;
+    }
+
+    #dark .btn:active {
+        background-color: $bgColor;
+    }
+    
+    
+    #dark .btn_smaller:hover {
+        background-color: $accentColor;
+    }
+
+    #dark .btn_smaller:active {
+        background-color: $greyColor;
     }
   }
 
