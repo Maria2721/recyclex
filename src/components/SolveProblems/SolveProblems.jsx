@@ -1,3 +1,4 @@
+import BorderBold from '../BorderBold/BorderBold';
 import "./SolveProblems.scss";
 
 
@@ -10,20 +11,25 @@ export default function SolveProblems() {
                 <h1 className="problems__title">Recyclex решает проблемы</h1>
                 <div className="problems__items">
                     <div className="problems__item">
-                            <h4 className="problems__list-title">Поставщиков</h4>
-                            <div className="problems__list-items">
-                                <div className="problems__col1">
-                                    <p className="problems__list-item">Сбыт больших объемов</p>
-                                    <p className="problems__list-item">Стабильные заказы</p>
-                                </div>
-                                <div className="problems__col2">
-                                    <p className="problems__list-item">Выгодные цены</p>
-                                    <p className="problems__list-item">Своевременная оплата</p>
+                        <BorderBold>
+                            <div className="problems__wrapper">
+                                <h4 className="problems__list-title">Поставщиков</h4>
+                                <div className="problems__list-items">
+                                    <div className="problems__col1">
+                                        <p className="problems__list-item">Сбыт больших объемов</p>
+                                        <p className="problems__list-item">Стабильные заказы</p>
+                                    </div>
+                                    <div className="problems__col2">
+                                        <p className="problems__list-item">Выгодные цены</p>
+                                        <p className="problems__list-item">Своевременная оплата</p>
+                                    </div>
                                 </div>
                             </div>
-                        {/* </div> */}
+                        </BorderBold>
                     </div>
                     <div className="problems__item">
+                    <BorderBold>
+                            <div className="problems__wrapper">
                             <h4 className="problems__list-title">Переработчиков</h4>
                             <div className="problems__list-items">
                                 <div className="problems__col1">
@@ -36,8 +42,12 @@ export default function SolveProblems() {
                                     <p className="problems__list-item">Удобная логистика</p>
                                 </div>
                             </div>
+                            </div>
+                            </BorderBold>
                     </div>
                     <div className="problems__item">
+                    <BorderBold>
+                    <div className="problems__wrapper">
                             <h4 className="problems__list-title">Переработка вторсырья</h4>
                             <div className="problems__list-items">
                                 <div className="problems__col1">
@@ -49,8 +59,11 @@ export default function SolveProblems() {
                                     <p className="problems__list-item">Контроль качества сырья</p>
                                     <p className="problems__list-item">Расширенная проверка контрагента (вживую специалистом биржи Recyclex)</p>
                                 </div>
+                                </div>
                             </div>
+                            </BorderBold>
                     </div>
+                    
                 </div>
             </div>
         </section>  

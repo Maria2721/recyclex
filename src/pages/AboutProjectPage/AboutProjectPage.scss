@@ -1,1 +1,86 @@
 @import "../../styles/vars";
+
+.about {
+    margin-top: 127px;
+    margin-bottom: 115px;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 90px;
+    }
+    &__content {
+        padding: 85px 80px 88px 80px;
+    }
+    &__subtitle {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 41px;
+        margin-bottom: 15px;
+    }
+    &__text {
+        font-size: 20px;
+        line-height: 22px;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: $tablet)  {
+    .about {
+        margin-top: 45px;
+        margin-bottom: 40px;
+        
+        &__title {
+            margin-bottom: 45px;
+        }
+    
+        &__content {
+            padding: 60px 35px 74px 35px;
+        }
+        
+        &__subtitle {
+            font-size: 32px;
+            line-height: 41px;
+            margin-bottom: 10px;
+        }
+        
+        &__text {
+            font-size: 15px;
+            line-height: 15px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+@media (max-width: $mobile)  {
+    .about {
+        margin-top: 45px;
+        margin-bottom: 60px;
+
+        &__title {
+            margin-bottom: 20px;
+        }
+    
+        &__content {
+            padding: 8px 25px 8px 24px;
+        }
+        
+        &__subtitle {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        &__text {
+            font-size: 8px;
+            margin-bottom: 15px;
+        }
+    }
+
+   
+}
+
+
+
+
+
+

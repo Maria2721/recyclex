@@ -4,10 +4,13 @@
 .member {
     margin-top: 145px;
     margin-bottom: 115px;
+    
     &__inner {
         display: flex;
         flex-direction: column;
         align-items: center; 
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     &__steps {
@@ -107,6 +110,7 @@
     .member{
         margin-top: 25px;
         margin-bottom: 30px;
+
         &__steps {
             margin-top: 27px;
         }

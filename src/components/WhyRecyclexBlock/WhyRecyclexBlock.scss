@@ -68,6 +68,9 @@
     &__divider {
         border-bottom: 1px solid #000000;
     }
+    &__divider #dark  {
+        border-bottom: 1px solid #ffffff;
+    }
     
     
     &__img {
@@ -158,4 +161,7 @@
         }
     }
 
+}
+#dark .whyRecyclex__divider {
+    border-bottom: 1px solid #ffffff;
 }
