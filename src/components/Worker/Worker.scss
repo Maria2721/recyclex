@@ -1,0 +1,49 @@
+@import "../../styles/vars";
+
+.worker {
+    display: flex;
+    padding: 40px 89px 40px 25px;
+    gap: 20px;
+    background-color: #EBEBEB;
+    border-radius: 8px;
+}
+
+.worker__imgWrapper {
+    // width: 170px;
+    width: 35%;
+}
+
+.worker__img {
+    width: 100%;
+}
+
+.worker__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.worker__position {
+    font-size: 18px;
+    line-height: 16.2px
+}
+
+.worker__name {
+    display: flex;
+    flex-direction: column;
+}
+
+.worker__surname {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.worker__firstname {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.worker__contacts {
+    display: flex;
+    flex-direction: column;
+}

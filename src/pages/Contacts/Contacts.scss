@@ -2,6 +2,7 @@
 
 .contacts {
     margin-top: 127px;
+    margin-bottom: 60px;
 }
 
 .contacts__header {
@@ -27,4 +28,10 @@
 .contacts__numbers {
     display: flex;
     flex-direction: column;
+}
+
+.contacts__workers {
+    display: flex;
+    // flex-direction: column;
+    gap: 20px;
 }

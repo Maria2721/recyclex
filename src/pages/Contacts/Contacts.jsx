@@ -1,4 +1,5 @@
 import "./Contacts.scss";
+import Worker from "../../components/Worker/Worker";
 
 export default function Contacts() {
     return (
@@ -26,7 +27,10 @@ export default function Contacts() {
                 </div>
             </div>
             <div className="contacts__map"></div>
-            <div className="contacts__people"></div>
+            <div className="contacts__workers">
+                <Worker/>
+                <Worker/>
+            </div>
         </section>
     );
 }
