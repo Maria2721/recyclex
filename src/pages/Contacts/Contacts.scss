@@ -1,1 +1,30 @@
 @import "../../styles/vars";
+
+.contacts {
+    margin-top: 127px;
+}
+
+.contacts__header {
+    margin-bottom: 71px;
+}
+
+.contacts__info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    font-size: 24px;
+}
+
+.contacts__column {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.contacts__subtitle {
+    font-weight: 700;
+}
+
+.contacts__numbers {
+    display: flex;
+    flex-direction: column;
+}
