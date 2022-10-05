@@ -35,40 +35,74 @@
     color: $textColor_dark;
 }
 
+@media(max-width: 961px) {
+    .firstScreen {
+
+        &__title {
+            font-size: 59px;
+        }
+    }  
+}
+
 @media (max-width: $tablet)  {
     .firstScreen {
         margin-top: 400px;
 
-    &__title {
-        margin-top: 16px;
-        max-width: 655px;
-        font-size: 48px;
-    }
-    &__subTitle {
-        margin-top: 30px;
-        max-width: 345px;
-        font-size: 24px;
-    }
-    &__btn {
+        &__title {
+            margin-top: 16px;
+            max-width: 655px;
+            font-size: 48px;
+        }
+
+        &__subTitle {
+            margin-top: 30px;
+            max-width: 345px;
+            font-size: 24px;
+        }
+
+        &__btn {
         margin-top: 60px;
+        }
     }
 }
+
+@media(max-width: 769px) {
+    .firstScreen {
+
+        &__title {
+            font-size: 45px;
+        }
+    }
+    
 }
-@media (max-width: $mobile)  {
+
+@media(max-width: $smallTablet) {
     .firstScreen {
         margin-top: 120px;
 
-    &__title {
-        max-width: 280px;
-        font-size: 20px;    
+        &__title {
+            font-size: 30px;
+        }
     }
-    &__subTitle {
-        margin-top: 5px;
-        max-width: 280px;
-        font-size: 13px;
-    }
-    &__btn {
-        margin-top: 25px; 
-    }
+    
 }
+
+@media (max-width: $mobile)  {
+    .firstScreen {
+
+        &__title {
+            max-width: 280px;
+            font-size: 20px;    
+        }
+
+        &__subTitle {
+            margin-top: 5px;
+            max-width: 280px;
+            font-size: 13px;
+        }
+
+        &__btn {
+            margin-top: 25px; 
+        }
+    }
 }

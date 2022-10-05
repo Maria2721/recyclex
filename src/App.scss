@@ -17,15 +17,15 @@
 }
 
 .home__page {
-  background-image: url(./assets/imgs/background_desktop.png);
+  background-image: url(./assets/imgs/background_desktop_comp.png);
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: $bgColor;
 
     @media (max-width: $tablet)  {
-      background-image: url(./assets/imgs/background_table.png); 
+      background-image: url(./assets/imgs/background_table_comp.png); 
 }
     @media (max-width: $mobile)  {
-      background-image: url(./assets/imgs/background_mobile.png);
+      background-image: url(./assets/imgs/background_mobile_comp.png);
 }
 }
