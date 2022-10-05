@@ -1,11 +1,11 @@
 import "./Worker.scss";
-import WorkerImage from "../../assets/imgs/workers_desktop.png";
+import WorkerDesktop from "../../assets/imgs/workers_desktop.png";
 
 export default function Worker() {
     return (
         <div className="worker">
             <div className="worker__imgWrapper">
-                <img className="worker__img" alt="Worker" src={WorkerImage}/>
+                <img className="worker__img" alt="Worker" src={WorkerDesktop}/>
             </div>
             <div className="worker__info">
                 <span className="worker__position">Главный специалист отдела закупок и контроля затрат</span>
