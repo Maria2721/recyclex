@@ -46,3 +46,18 @@
         border: 2px solid #5FAE36;
     }
 }
+@mixin before_circleList {
+    &::before {
+        display: block;
+        box-sizing: border-box;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 4px;
+        left: -44px;
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        background-color: #E88B00;
+    }  
+}
