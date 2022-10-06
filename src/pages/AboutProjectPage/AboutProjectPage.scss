@@ -38,8 +38,6 @@
         }
         
         &__subtitle {
-            font-size: 32px;
-            line-height: 41px;
             margin-bottom: 10px;
         }
         
@@ -62,11 +60,12 @@
         }
     
         &__content {
-            padding: 8px 25px 8px 24px;
+            padding: 25px 7px 25px 7px;
         }
         
         &__subtitle {
             font-size: 14px;
+            line-height: 18px;
             margin-bottom: 5px;
         }
         
@@ -75,8 +74,6 @@
             margin-bottom: 15px;
         }
     }
-
-   
 }
 
 
