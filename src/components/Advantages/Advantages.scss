@@ -1,7 +1,11 @@
 @import "../../styles/_vars.scss";
 @import "../../styles/_mixin.scss";
 
-
+#dark .advantages {
+    .borderBold {
+        background: rgba(255, 255, 255, 0.08);  
+    }
+}
 .advantages {
     margin-top: 305px;
     
@@ -19,25 +23,29 @@
     &__items {
         margin-top: 110px;
         display: flex;
-        justify-content: space-around; 
-        column-gap: 2%;    
+        justify-content: space-between;  
+        column-gap: 2%;
+
+        .borderBold{
+            width: 23%;   
+        } 
+        .borderBold__inner{
+            width: 100%;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
     }
     
-    &__item {
-        width: 94%;
-        min-height: 413px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 40px;
-        padding-bottom: 10px;
-        position: relative; 
-        @include before_square;
-        @include after_square;
-        
-    } 
-    &__btn{
+    &__btn {
         margin: 0 auto;
         margin-top: 70px; 
+
         .btn {
             display: block;  
         }
@@ -45,6 +53,10 @@
     .item__img {
         height: 217px;
         margin: 0 auto;
+        padding-top: 45px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
         
         img {
             width: 100%;
@@ -54,73 +66,142 @@
         }
 
     .item__wrapper {
-        margin-top: 9px;
+        margin-bottom: 10px;
     }
     .item__title {
-        margin-top: 9px;
         font-size: 24px;
+        line-height: 30px;
         font-weight: 700;
         text-align: center;
         }
+
     .item__text {
         margin-top: 10px;
-        display: block;
         font-size: 14px;
+        line-height: 18px;
         text-align: center;
         min-height: 50px;
         }    
 }
-@media (max-width: $tablet)  {
-    .advantages {
-        margin-top: 485px;
-        
-    &__title {
-        margin: 0 auto;
+@media (max-width: 1344px){
+    .advantages {   
+    .item__title {
+        font-size: 20px;
+        line-height: 28px;
+        }
     }
-    
+}
+
+@media (max-width: 1137px){
+    .advantages {
+        
     &__items {
         margin-top: 80px;
         column-gap: 3%;
+
+        .borderBold {
+            &::before {
+                border: 4px solid #85D454;
+            }    
+        } 
     }
-    &__item {
-        width: 91%;
-        min-height: 250px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 30px;
-        @include before_square; 
-        &:before{
-            border-bottom:  3px solid #85D454;
-            border-right:  3px solid #85D454;
-        } 
-        @include after_square; 
-        &::after{
-            border-top:  3px solid #85D454;
-            border-left:  3px solid #85D454;
-        } 
-    } 
+
     &__btn{ 
         margin-top: 60px; 
-
     }
+
     .item__img {  
-        height: 120px;
+        height: 130px;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
     }
 
     .item__title {
-        margin-top: 20px;
-        font-size: 15px;
+        padding-top: 20px;
+        font-size: 18px;
         }
 
     .item__text {
-        display: block;
-        margin-top: 5px;
-        font-size: 10px;
-        overflow: hidden;
+        min-height: 45px;
+        font-size: 13px;
         }   
     } 
 }
-@media (max-width: $mobile)  {
+@media (max-width: 1055px){
+    .advantages {   
+    .item__title {
+        font-size: 16px;
+        }
+    .item__text {
+            font-size: 12px;
+        } 
+    }
+    
+}
+@media (max-width: $tablet)  {
+    .advantages {   
+        .item__title {
+            font-size: 14px;
+            }
+        .item__text {
+                font-size: 10px;
+            } 
+        }
+
+}
+
+@media(max-width: 883px) {
+    
+    .advantages {
+        &__title {
+            font-size: 32px;
+        }
+        &__items {
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 160px;
+            row-gap: 60px;
+
+            .borderBold {
+                width: 160px; 
+                min-height: 230px;  
+            }   
+        }
+
+        .item__title {
+            font-size: 15px;
+            }
+
+        .item__img {  
+            height: 90px;
+            padding-top: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 5px;
+        }
+        .item__title {
+            font-size: 13px;
+            }
+
+        .item__text {
+            min-height: 40px;
+            font-size: 10px;
+        } 
+    }
+}
+
+@media (max-width:839px) {
+    .advantages {
+    &__items {
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 120px;
+}
+}
+}
+@media (max-width: 526px){
     .advantages {
         margin-top: 164px;
         
@@ -130,64 +211,61 @@
     }
     
     &__items {
-        margin-top: 15px;
-        display: flex;
+        margin-top: 20px;
+        flex-wrap: nowrap;
         flex-direction: column;
         align-items: center;
         row-gap: 10px; 
+
+        .borderBold {
+            width: 100%;
+            min-height: 80px;
+            border-radius: 15px; 
+            &::before {
+                border: 2px solid #85D454;
+                border-radius: 15px;
+            } 
+            
+            .borderBold__inner{
+                padding-bottom: 0;
+                padding-top: 0;
+            }
+        }  
     }
-    
     &__item {
-        display: flex;
+        width: 100%;
+        flex-direction: row;
         column-gap: 7%;
         align-items: flex-start;
-        min-height: 80px;
-        padding-bottom: 5px;
-        padding-top: 15px;
-
-        @include before_square; 
-        &:before{
-            border-bottom:  3px solid #85D454;
-            border-right:  3px solid #85D454;
-            filter: blur(1px);
-            border-radius: 15px;
-        } 
-        @include after_square; 
-        &::after{
-            border-top:  3px solid #85D454;
-            border-left:  3px solid #85D454;
-            filter: blur(1px);
-            border-radius: 15px;
-        } 
     } 
-    &__btn{
+
+    &__btn {
         margin-top: 40px;
         text-align: center; 
     }
     .item__img {
         width: 22%;
-        height: 50px;
+        height: 70px;
     }
     .item__wrapper {
+        padding-top: 20px;
+        padding-bottom: 0;
+        margin-bottom: 0;
         width: 75%;
-        margin-top: 0;
     }
 
     .item__title {
+        padding-top: 0;
         margin-top: 0;
         font-size: 15px;
         text-align: left;
         }
     .item__text {
-        margin-top: 1px;
-        min-height: 40px;
+        margin: 0;
+        padding-top: 0;
         font-size: 10px;
+        line-height: 13px;
         text-align: left; 
         }   
     } 
 }
-
-
-
-
-
