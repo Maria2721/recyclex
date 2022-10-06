@@ -26,11 +26,26 @@ export default function Contacts() {
                     <span>Юрьева Анна Владимировна</span>
                 </div>
             </div>
-            <div className="contacts__map"></div>
+            <div className="contacts__mapWrapper">
+                <iframe className="contacts__map" title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.5099045500347!2d37.535223762818404!3d55.749643966130535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bdcbbad463d%3A0x6d3294a8edf98cce!2z0JrQvtCy0L7RgNC60LjQvdCzIMKr0J7RhNC40YEgMjQvN8K7!5e0!3m2!1sru!2sge!4v1664996240475!5m2!1sru!2sge"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
             <div className="contacts__workers">
-                <Worker/>
-                <Worker/>
+                <Worker
+                position='Главный специалист отдела закупок и контроля затрат'
+                surname='Иванова'
+                name='Алиса Ивановна'
+                phone='+7(495) 783-35-34 (доб. 51-42)'
+                email='AASirotenko@vtbf.ru'/>
+                <Worker
+                position='Главный специалист отдела закупок и контроля затрат'
+                surname='Иванова'
+                name='Алиса Ивановна'
+                phone='+7(495) 783-35-34 (доб. 51-42)'
+                email='AASirotenko@vtbf.ru'/>
             </div>
         </section>
     );
 }
+
+
+
