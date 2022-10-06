@@ -16,6 +16,7 @@ import { createContext, useState } from "react";
 const ThemeContext = createContext(null);
 
 function App() {
+  const [openedModal, setOpenedModal] = useState(false);
   const currentTheme = localStorage.getItem('theme') || 'light';
   const [theme, setTheme] = useState(currentTheme);
 
@@ -28,6 +29,10 @@ function App() {
   const {pathname} = useLocation(); 
   const isHomePage = pathname === "/" ? true : false;
   const isSetBackground = isHomePage ? ' home__page' : '';
+
+  const handleModal = () => {
+    setOpenedModal(true);
+  }
   
 
   return (
@@ -47,7 +52,7 @@ function App() {
                 <Route path='/contacts' element={<Contacts/>}/>
             </Routes>
           </main>
-        <Footer/> 
+        <Footer handleModal={handleModal}/> 
       </div>
     </ThemeContext.Provider>
   );
