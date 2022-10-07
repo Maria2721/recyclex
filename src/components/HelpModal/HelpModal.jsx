@@ -3,10 +3,10 @@ import { ReactComponent as AlertIcon} from "../../assets/imgs/alert_icon.svg";
 import { ReactComponent as LogoBlack} from "../../assets/imgs/logo_black.svg";
 import { ReactComponent as LogoWhite} from "../../assets/imgs/logo_white.svg";
 import { ReactComponent as CloseIcon} from "../../assets/imgs/close_icon.svg";
-import { useState } from "react";
+// import { useState } from "react";
 import * as cx from "classnames";
 
-export default function HelpModal({ handleModal, opened}) {
+export default function HelpModal({ handleModal, opened, theme}) {
     // const [shown, setShown] = useState(true);
 
     const classModal = cx('help', {
@@ -18,7 +18,7 @@ export default function HelpModal({ handleModal, opened}) {
             <div className="help__inner">
                 <div className="help__content">
                     <div className="help__header">
-                        <LogoBlack className="help__logo"/>
+                    {theme === 'light'? <LogoBlack className="help__logo"/> : <LogoWhite className="help__logo"/>}
                         <button className="help__close"><CloseIcon className="help__cross" onClick={handleModal}/></button>
                     </div>
                         <div className="help__form">

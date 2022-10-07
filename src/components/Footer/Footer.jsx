@@ -2,11 +2,8 @@ import { Link } from 'react-router-dom';
 import "./Footer.scss";
 import { ReactComponent as TelegramIcon} from "../../assets/imgs/telegram_icon.svg";
 import { ReactComponent as WhatsAppIcon} from "../../assets/imgs/whatsapp_icon.svg";
-import { useState } from 'react';
-
 
 export default function Footer({ handleModal }) {
-
   return (
     <footer className="footer container">
       <div className="footer__inner container__row">

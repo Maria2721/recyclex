@@ -38,7 +38,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
       <div className={`App ${isSetBackground}`} id={theme}>
-      <HelpModal handleModal={handleModal} opened={openedModal}/>
+      <HelpModal handleModal={handleModal} opened={openedModal} theme={theme}/>
         <Header toggleTheme={toggleTheme} theme={theme}/>
           <main className="container">
             <Routes>
