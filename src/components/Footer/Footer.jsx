@@ -3,8 +3,7 @@ import "./Footer.scss";
 import { ReactComponent as TelegramIcon} from "../../assets/imgs/telegram_icon.svg";
 import { ReactComponent as WhatsAppIcon} from "../../assets/imgs/whatsapp_icon.svg";
 
-
-export default function Footer() {
+export default function Footer({ handleModal }) {
   return (
     <footer className="footer container">
       <div className="footer__inner container__row">
@@ -19,11 +18,11 @@ export default function Footer() {
               <Link to="/general-terms" className="footer__link">Общие условия</Link>
               <Link to="/cookies-policy-page" className="footer__link">Cookies Policy</Link>
             </div>
-            <button className="footer__manager footer__manager_desktop">Связь с менеджером</button>
+            <button className="footer__manager footer__manager_desktop" onClick={handleModal}>Связь с менеджером</button>
           </div>
             <div className="footer__contacts">
               <div className="footer__email">info@recyclex.online</div>
-              <button className="footer__manager footer__manager_mobile">Связь с менеджером</button>
+              <button className="footer__manager footer__manager_mobile" onClick={handleModal}>Связь с менеджером</button>
               <div className="footer__social">
                   <a
                     href='https://king-prawn-app-vja2f.ondigitalocean.app/'
