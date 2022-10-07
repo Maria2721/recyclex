@@ -20,11 +20,16 @@
     height: 100%;
 }
 
+// .help__border {
+//         width: 850px;
+//     max-height: 700px;
+// }
+
 .help__content {
-    padding: 68px 57px;
-    width: 850px;
-    max-height: 600px;
+    padding: 36px 35px 58px 35px;
     background-color: $bgColor;
+    width: 850px;
+    max-height: 700px;
 }
 
 #dark .help__content {
@@ -35,11 +40,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 62px;
+    margin-bottom: 26px;
 }
 
 .help__logo {
-    height: 61px;
+    width: 240px;
 }
 
 .help__close {
@@ -57,18 +62,14 @@
     fill: $textColor_dark;
 }
 
-.help__agreement {
-    text-decoration: underline;
-}
-
-#dark .help__agreement {
-    color: $textColor_dark;
+.help__label {
+    font-size: 24px;
 }
 
 .help__form {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 30px;
 }
 
 .help__row {
@@ -78,7 +79,10 @@
 
 .help__input {
     width: 460px;
-    // height: 40px;
+    height: 30px;
+    padding: 6px 14px;
+    font-size: 16px;
+    line-height: 20px;
     background-color: #F1F0F0;
     border: none;
 
@@ -87,21 +91,36 @@
     }
 }
 
-// .help__form textarea {
-//     height: 220px;
-// }
+#dark .help__input {
+    background-color: #FFFFFF;
+}
+
+.help__form textarea {
+    height: 134px;
+}
 
 .help__alert {
     display: flex;
     gap: 5px;
     width: 300px;
-    // height: 24px;
     font-size: 12px;
     line-height: 12px;
-    margin-bottom: 21px;
+    margin-bottom: 15px;
 }
 
 .help__alertIcon {
     width: 15px;
     height: 15px;
 }
+
+.help__agreement {
+    text-decoration: underline;
+}
+
+#dark .help__agreement {
+    color: $textColor_dark;
+}
+
+// .help__button {
+//     width: 250px !important; 
+// }
