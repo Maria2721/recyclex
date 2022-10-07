@@ -10,12 +10,15 @@ import FormThankYouPage from './pages/FormThankYouPage/FormThankYouPage';
 import GeneralTermsPage from './pages/GeneralTermsPage/GeneralTermsPage';
 import CookiesPolicyPage from './pages/CookiesPolicyPage/CookiesPolicyPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
+import Agreement from './pages/Agreement/Agreement';
 import Contacts from './pages/Contacts/Contacts';
+import HelpModal from './components/HelpModal/HelpModal';
 import { createContext, useState } from "react";
 
 const ThemeContext = createContext(null);
 
 function App() {
+  const [openedModal, setOpenedModal] = useState(false);
   const currentTheme = localStorage.getItem('theme') || 'light';
   const [theme, setTheme] = useState(currentTheme);
 
@@ -28,11 +31,15 @@ function App() {
   const {pathname} = useLocation(); 
   const isHomePage = pathname === "/" ? true : false;
   const isSetBackground = isHomePage ? ' home__page' : '';
-  
+
+  const handleModal = () => {
+    setOpenedModal((curr) => !curr);
+  }
 
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
       <div className={`App ${isSetBackground}`} id={theme}>
+      <HelpModal handleModal={handleModal} opened={openedModal} theme={theme}/>
         <Header toggleTheme={toggleTheme} theme={theme}/>
           <main className="container">
             <Routes>
@@ -44,10 +51,11 @@ function App() {
                 <Route path='/general-terms' element={<GeneralTermsPage/>}/>
                 <Route path='/privacy-policy' element={<PrivacyPolicyPage/>}/>
                 <Route path='/cookies-policy-page' element={<CookiesPolicyPage/>}/>
+                <Route path='/agreement' element={<Agreement/>}/>
                 <Route path='/contacts' element={<Contacts/>}/>
             </Routes>
           </main>
-        <Footer/> 
+        <Footer handleModal={handleModal}/> 
       </div>
     </ThemeContext.Provider>
   );
