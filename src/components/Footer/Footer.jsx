@@ -25,7 +25,7 @@ export default function Footer({ handleModal }) {
           </div>
             <div className="footer__contacts">
               <div className="footer__email">info@recyclex.online</div>
-              <button className="footer__manager footer__manager_mobile">Связь с менеджером</button>
+              <button className="footer__manager footer__manager_mobile" onClick={handleModal}>Связь с менеджером</button>
               <div className="footer__social">
                   <a
                     href='https://king-prawn-app-vja2f.ondigitalocean.app/'

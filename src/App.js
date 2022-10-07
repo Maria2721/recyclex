@@ -11,6 +11,7 @@ import GeneralTermsPage from './pages/GeneralTermsPage/GeneralTermsPage';
 import CookiesPolicyPage from './pages/CookiesPolicyPage/CookiesPolicyPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
 import Contacts from './pages/Contacts/Contacts';
+import HelpModal from './components/HelpModal/HelpModal';
 import { createContext, useState } from "react";
 
 const ThemeContext = createContext(null);
@@ -31,13 +32,13 @@ function App() {
   const isSetBackground = isHomePage ? ' home__page' : '';
 
   const handleModal = () => {
-    setOpenedModal(true);
+    setOpenedModal((curr) => !curr);
   }
-  
 
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
       <div className={`App ${isSetBackground}`} id={theme}>
+      <HelpModal handleModal={handleModal} opened={openedModal}/>
         <Header toggleTheme={toggleTheme} theme={theme}/>
           <main className="container">
             <Routes>
