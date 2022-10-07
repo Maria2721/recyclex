@@ -1,4 +1,5 @@
 import "./HelpModal.scss";
+import { Link } from "react-router-dom";
 import { ReactComponent as AlertIcon} from "../../assets/imgs/alert_icon.svg";
 import { ReactComponent as LogoBlack} from "../../assets/imgs/logo_black.svg";
 import { ReactComponent as LogoWhite} from "../../assets/imgs/logo_white.svg";
@@ -7,8 +8,6 @@ import { ReactComponent as CloseIcon} from "../../assets/imgs/close_icon.svg";
 import * as cx from "classnames";
 
 export default function HelpModal({ handleModal, opened, theme}) {
-    // const [shown, setShown] = useState(true);
-
     const classModal = cx('help', {
         'help help_show': opened,
     });
@@ -54,7 +53,12 @@ export default function HelpModal({ handleModal, opened, theme}) {
                                             <div>
                                                 <AlertIcon className="help__alertIcon"/>
                                             </div>
-                                            <span>Нажимая «Отправить», вы даете согласие на обработку персональных данных</span>
+                                            <span>Нажимая «Отправить», вы даете <Link
+                                            to="/agreement"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="help__agreement"
+                                            >согласие на обработку персональных данных</Link></span>
                                         </div>
                                         {/* <button className="help__button btn btn_smaller">Отправить</button> */}
                                     </div>

@@ -57,6 +57,14 @@
     fill: $textColor_dark;
 }
 
+.help__agreement {
+    text-decoration: underline;
+}
+
+#dark .help__agreement {
+    color: $textColor_dark;
+}
+
 .help__form {
     display: flex;
     flex-direction: column;

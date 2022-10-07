@@ -10,6 +10,7 @@ import FormThankYouPage from './pages/FormThankYouPage/FormThankYouPage';
 import GeneralTermsPage from './pages/GeneralTermsPage/GeneralTermsPage';
 import CookiesPolicyPage from './pages/CookiesPolicyPage/CookiesPolicyPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
+import Agreement from './pages/Agreement/Agreement';
 import Contacts from './pages/Contacts/Contacts';
 import HelpModal from './components/HelpModal/HelpModal';
 import { createContext, useState } from "react";
@@ -50,6 +51,7 @@ function App() {
                 <Route path='/general-terms' element={<GeneralTermsPage/>}/>
                 <Route path='/privacy-policy' element={<PrivacyPolicyPage/>}/>
                 <Route path='/cookies-policy-page' element={<CookiesPolicyPage/>}/>
+                <Route path='/agreement' element={<Agreement/>}/>
                 <Route path='/contacts' element={<Contacts/>}/>
             </Routes>
           </main>
