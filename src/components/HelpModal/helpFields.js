@@ -31,7 +31,7 @@ export const helpFields = [
             id: 'helpPhone',
             name: 'Номер телефона*',
             view: 'input',
-            type:'text',
+            type:'tel',
             rule: 'required',
         },
         {

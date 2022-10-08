@@ -28,7 +28,7 @@ export default function HelpInput({
           <input
             className={classInput}
             onBlur={() => blurHandler(id)}
-            onChange={(e) => handleChange(e, id)}
+            onChange={(e) => handleChange(e, id, type)}
             type={type}
             id={id}
             name={id}

@@ -18,44 +18,54 @@ export default function HelpModal({ handleModal, opened, theme }) {
 const [state, setState] = useState({
         helpSurname: {
             value: '',
-            isChanged: false,
+            isDirty: false,
             error: ''
         },
         helpName: {
             value: '',
-            isChanged: false,
+            isDirty: false,
             error: ''
         },
         helpMiddle: {
             value: '',
-            isChanged: false,
+            isDirty: false,
             error: ''
         },
         helpCompany: {
             value: '',
-            isChanged: false,
+            isDirty: false,
             error: ''
         },
         helpPhone: {
             value: '',
-            isChanged: false,
+            isDirty: false,
             error: ''
         },
         helpQuestion: {
             value: '',
-            isChanged: false,
+            isDirty: false,
             error: ''
         },
 })
 
-  const handleChange = (e, type) => {
-    let value = e.target.value.trimStart().replace(/ +/g, " ");
+  const handleChange = (e, id, type) => {
+      let value;
+      switch (type) {
+        case 'text':
+            value = e.target.value.trimStart().replace(/ +/g, " ");
+          break;
+        case 'tel':
+            value = e.target.value.trimStart().replace(/ +/g, " ").replace (/[^0-9+]/, '');
+          break;
+        default:
+        value = e.target.value;
+    }  
+
     setState({
       ...state,
-      [type]: {
-          ...state[type],
-          value: value,
-          isChanged: true
+      [id]: {
+          ...state[id],
+          value: value
       }
     });
   };
@@ -65,7 +75,7 @@ const [state, setState] = useState({
    ...state,
    [type]: {
        ...state[type],
-       isChanged: true
+       isDirty: true
    }
  }));
     validateForm()
@@ -129,7 +139,7 @@ const validateForm = () => {
                 handleChange={handleChange}
                 handleClick={handleClick}
                 errorMessage={state[item.id].error}
-                isDirty={state[item.id].isChanged}
+                isDirty={state[item.id].isDirty}
               />
             ))}
             <div className="help__footer">
