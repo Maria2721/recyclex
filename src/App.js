@@ -18,7 +18,7 @@ import { createContext, useState } from "react";
 const ThemeContext = createContext(null);
 
 function App() {
-  const [openedModal, setOpenedModal] = useState(false);
+  const [openedModal, setOpenedModal] = useState(true);
   const currentTheme = localStorage.getItem('theme') || 'light';
   const [theme, setTheme] = useState(currentTheme);
 
