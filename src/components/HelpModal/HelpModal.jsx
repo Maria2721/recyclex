@@ -47,6 +47,7 @@ const [state, setState] = useState({
             error: ''
         },
 })
+// const [isError, setIsError] = useState(false);
 
   const handleChange = (e, id, type) => {
       let value;
@@ -83,6 +84,7 @@ const [state, setState] = useState({
 
 const handleClick = () => {
     validateForm();
+    //  пройтись и посмотреть, есть ли ошибки
 };
 
 const validateForm = () => {
@@ -126,22 +128,24 @@ const validateForm = () => {
             </button>
           </div>
           <div className="help__form">
-            {helpFields.map((item) => (
-              <HelpInput
-                key={item.id}
-                id={item.id}
-                name={item.name}
-                value={state[item.id].value}
-                type={item.type}
-                view={item.view}
-                theme={theme}
-                blurHandler={blurHandler}
-                handleChange={handleChange}
-                handleClick={handleClick}
-                errorMessage={state[item.id].error}
-                isDirty={state[item.id].isDirty}
-              />
-            ))}
+            <div className="help__rows">
+              {helpFields.map((item) => (
+                <HelpInput
+                  key={item.id}
+                  id={item.id}
+                  name={item.name}
+                  value={state[item.id].value}
+                  type={item.type}
+                  view={item.view}
+                  theme={theme}
+                  blurHandler={blurHandler}
+                  handleChange={handleChange}
+                  handleClick={handleClick}
+                  errorMessage={state[item.id].error}
+                  isDirty={state[item.id].isDirty}
+                />
+              ))}
+            </div>
             <div className="help__footer">
                <div className="help__helper"></div>
                 <div className="help__alertAndButton">
@@ -165,7 +169,7 @@ const validateForm = () => {
                       </span>
                     </div>
                     <button
-                      className="help__button btn btn_smaller"
+                      className="btn btn_modal"
                       onClick={handleClick}>
                       Отправить
                     </button>

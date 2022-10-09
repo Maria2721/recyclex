@@ -32,6 +32,13 @@
     line-height: 20px;
 }
 
+.btn_modal {
+    width: 250px;
+    padding: 20px 0;
+    font-size: 20px;
+    line-height: 20px;
+}
+
 #dark .btn_smaller:hover {
     background-color: $greyColor;
 }
@@ -68,6 +75,13 @@
         }
     }
 
+    .btn_modal {
+        width: 200px;
+        padding: 14px 0;
+        font-size: 14px;
+        line-height: 14px;
+    }
+
     #dark .btn:hover {
         background-color: $accentColor;
     }
@@ -98,5 +112,9 @@
         width: 170px;
         font-size: 12px;
         line-height: 12px;
+    }
+
+    .btn_modal {
+        width: 160px;
     }
   }

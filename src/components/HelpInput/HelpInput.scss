@@ -7,12 +7,12 @@
 
 .help__label {
     font-size: 24px;
-    width: 35%; // возможно убрать
+    width: 35%;
 }
 
 .help__inputWrapper {
     position: relative;
-    width: 59%;
+    width: 65%;
 }
 
 .help__input {
@@ -53,4 +53,36 @@
 .help__row textarea {
     height: 134px;
     resize: none;
+}
+
+@media (max-width: $tablet)  {
+    .help__label {
+        font-size: 16px;
+        width: 40%; // возможно убрать
+    }
+    
+    .help__inputWrapper {
+        width: 60%; // коррект
+    }
+    
+    .help__input {
+        width: 280px;
+        height: 25px;
+        padding: 5px 14px;
+        font-size: 14px;
+    }
+
+    #dark .help__input_error {
+        border-width: 3px;
+    }
+
+    .help__error {
+        top: -9px;
+        font-size: 8px;
+        line-height: 8px;
+    }
+    
+    .help__row textarea {
+        height: 100px;
+    }
 }
