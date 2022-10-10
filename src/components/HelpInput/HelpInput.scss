@@ -1,0 +1,156 @@
+@import "../../styles/vars";
+
+.help__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.help__label {
+    font-size: 24px;
+    width: 35%;
+}
+
+.help__inputWrapper {
+    position: relative;
+    width: 65%;
+}
+
+.help__input {
+    width: 460px;
+    height: 30px;
+    padding: 6px 14px;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #F1F0F0;
+    border: none;
+    border-radius: 4px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.help__input_error {
+    border: 3px solid $accentColor;
+}
+
+#dark .help__input_error {
+    border-width: 4px;
+}
+
+#dark .help__input {
+    background-color: #FFFFFF;
+}
+
+.help__error {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.help__row textarea {
+    height: 134px;
+    resize: none;
+}
+
+@media (max-width: $tablet)  {
+    .help__label {
+        font-size: 16px;
+        width: 40%;
+    }
+    
+    .help__inputWrapper {
+        width: 60%;
+    }
+    
+    .help__input {
+        width: 280px;
+        height: 25px;
+        padding: 5px 14px;
+        font-size: 14px;
+    }
+
+    #dark .help__input_error {
+        border-width: 3px;
+    }
+
+    .help__error {
+        top: -9px;
+        font-size: 8px;
+        line-height: 8px;
+    }
+    
+    .help__row textarea {
+        height: 100px;
+    }
+}
+
+@media (max-width: $smallTablet)  {
+    .help__row {
+        display: block;
+    }
+
+    .help__label {
+        font-size: 12px;
+        line-height: 14px;
+        width: 100%;
+    }
+    
+    .help__inputWrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    
+    .help__input {
+        width: 265px;
+        max-height: 20px;
+        padding: 5px 10px;
+        font-size: 8px;
+        line-height: 12px;
+        border-radius: 2px;
+        margin-bottom: 2px;
+    }
+
+    .help__input {
+        border-width: 2px;
+    }
+
+    .help__error {
+        position: absolute;
+        top: 22px;
+        left: 84px;
+        text-align: center;
+    }
+    
+    #dark .help__input_error {
+        border-width: 2px;
+    }
+    
+    .help__row textarea {
+        max-height: 85px;
+    }
+}
+
+@media (max-width: $smallMobile)  {
+    .help__label {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .help__input {
+        width: 210px;
+        max-height: 18px;
+    }
+
+    .help__error {
+        top: 21px;
+        left: 59px;
+    }
+    
+    .help__row textarea {
+        max-height: 70px;
+    }
+}
