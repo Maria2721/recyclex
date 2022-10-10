@@ -154,13 +154,13 @@
 @media (max-width: $smallTablet)  {
     .help__content {
         width: 320px;
-        padding: 25px 20px 23px 28px;
+        padding: 22px 20px 23px 28px;
         max-height: 520px;
     }
 
     .help__header {
         position: relative;
-        margin-bottom: 5px;
+        margin-bottom: 0;
     }
 
     .help__close {
@@ -209,7 +209,6 @@
     .help__logo {
         width: 140px;
     }
-    
 
     .help__rows {
         gap: 6px;

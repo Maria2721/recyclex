@@ -154,7 +154,7 @@ const validateForm = () => {
               ))}
             </div>
             <div className="help__footer">
-               <div className="help__helper"></div>
+              <div className="help__helper"></div>
                 <div className="help__alertAndButton">
                     <div className="help__alert">
                       <div>

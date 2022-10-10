@@ -124,6 +124,11 @@
         left: 84px;
         text-align: center;
     }
+
+    .help__row:last-child .help__error {
+        top: 87px;
+        left: 84px;
+    }
     
     #dark .help__input_error {
         border-width: 2px;
@@ -131,6 +136,7 @@
     
     .help__row textarea {
         max-height: 85px;
+        margin-bottom: 10px;
     }
 }
 
@@ -149,8 +155,15 @@
         top: 21px;
         left: 59px;
     }
+
+    .help__row:last-child .help__error {
+        top: 73px;
+        left: 59px;
+    }
+    
     
     .help__row textarea {
         max-height: 70px;
+        margin-bottom: 13px;
     }
 }
