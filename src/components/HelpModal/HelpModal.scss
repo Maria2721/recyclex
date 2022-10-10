@@ -86,7 +86,7 @@
 .help__alert {
     display: flex;
     gap: 5px;
-    width: 300px;
+    width: 360px;
     font-size: 12px;
     line-height: 12px;
     margin-bottom: 15px;
@@ -109,18 +109,9 @@
     .help__content {
         width: 550px;
         padding: 46px 60px 51px 26px;
-        background-color: $bgColor;
         max-height: 580px;
     }
-    
-    #dark .help__content {
-        background-color: $bgColor_dark;
-    }
-    
-    // .help__header {
-    //     margin-bottom: 20px;
-    // }
-    
+
     .help__logo {
         width: 164px;
     }
@@ -129,11 +120,7 @@
         width: 11px;
         height: 11px;
     }
-    
-    #dark .help__cross {
-        fill: $textColor_dark;
-    }
-    
+
     .help__rows {
         gap: 20px;
     }
@@ -154,15 +141,77 @@
     }
     
     .help__alertIcon {
-        width: 15px;
-        height: 15px;
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: $smallTablet)  {
+    .help__content {
+        width: 320px;
+        padding: 25px 20px 23px 28px;
+        max-height: 520px;
+    }
+
+    .help__header {
+        position: relative;
+        margin-bottom: 5px;
+    }
+
+    .help__close {
+        position: absolute;
+        right: 0;
+        top: -10px;
     }
     
-    .help__agreement {
-        text-decoration: underline;
+    .help__cross {
+        width: 8px;
+        height: 8px;
+    }
+
+    .help__rows {
+        gap: 8px;
+    }
+
+    .help__helper {
+        display: none;
     }
     
-    #dark .help__agreement {
-        color: $textColor_dark;
+    .help__alertAndButton {
+        width: 100%;
+    }
+    
+    .help__alert {
+        width: 250px;
+        margin-bottom: 9px;
+    }
+    
+    .help__alertIcon {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: $smallMobile)  {
+    .help__content {
+        width: 260px;
+    }
+
+    .help__header {
+        margin-bottom: 3px;
+    }
+
+    .help__logo {
+        width: 140px;
+    }
+    
+
+    .help__rows {
+        gap: 6px;
+    }
+    
+    .help__alert {
+        width: 200px;
+        margin-bottom: 9px;
     }
 }

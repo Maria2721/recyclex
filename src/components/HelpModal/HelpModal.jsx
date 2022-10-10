@@ -84,7 +84,6 @@ const [state, setState] = useState({
 
 const handleClick = () => {
     validateForm();
-    //  пройтись и посмотреть, есть ли ошибки
 };
 
 const validateForm = () => {
@@ -150,13 +149,13 @@ const validateForm = () => {
                <div className="help__helper"></div>
                 <div className="help__alertAndButton">
                     <div className="help__alert">
-                      <>
+                      <div>
                         {theme === "light" ? (
                           <AlertIcon className="help__alertIcon" />
                         ) : (
                           <AlertIconWhite className="help__alertIcon" />
                         )}
-                      </>
+                      </div>
                       <span>
                         Нажимая «Отправить», вы даете{" "}
                         <Link

@@ -58,11 +58,11 @@
 @media (max-width: $tablet)  {
     .help__label {
         font-size: 16px;
-        width: 40%; // возможно убрать
+        width: 40%;
     }
     
     .help__inputWrapper {
-        width: 60%; // коррект
+        width: 60%;
     }
     
     .help__input {
@@ -84,5 +84,73 @@
     
     .help__row textarea {
         height: 100px;
+    }
+}
+
+@media (max-width: $smallTablet)  {
+    .help__row {
+        display: block;
+    }
+
+    .help__label {
+        font-size: 12px;
+        line-height: 14px;
+        width: 100%;
+    }
+    
+    .help__inputWrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    
+    .help__input {
+        width: 265px;
+        max-height: 20px;
+        padding: 5px 10px;
+        font-size: 8px;
+        line-height: 12px;
+        border-radius: 2px;
+        margin-bottom: 2px;
+    }
+
+    .help__input {
+        border-width: 2px;
+    }
+
+    .help__error {
+        position: absolute;
+        top: 22px;
+        left: 84px;
+        text-align: center;
+    }
+    
+    #dark .help__input_error {
+        border-width: 2px;
+    }
+    
+    .help__row textarea {
+        max-height: 85px;
+    }
+}
+
+@media (max-width: $smallMobile)  {
+    .help__label {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .help__input {
+        width: 210px;
+        max-height: 18px;
+    }
+
+    .help__error {
+        top: 21px;
+        left: 59px;
+    }
+    
+    .help__row textarea {
+        max-height: 70px;
     }
 }
