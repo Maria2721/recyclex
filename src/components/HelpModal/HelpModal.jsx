@@ -47,7 +47,7 @@ const [state, setState] = useState({
             error: ''
         },
 })
-// const [isError, setIsError] = useState(false);
+const [valid, setValid] = useState(false);
 
   const handleChange = (e, id, type) => {
       let value;
@@ -84,9 +84,16 @@ const [state, setState] = useState({
 
 const handleClick = () => {
     validateForm();
+
+    if (valid) {
+      console.log('Форма отправлена')
+      handleModal()
+    }
 };
 
 const validateForm = () => {
+  setValid(true);
+
     for (const field of helpFields) {
         const { rule, id } = field;
         const { value } = state[id];
@@ -96,6 +103,7 @@ const validateForm = () => {
             case 'required':
               if (value.length === 0) {
                 error = 'Необходимо заполнить';
+                setValid(false);
               }
               break;
             default:
