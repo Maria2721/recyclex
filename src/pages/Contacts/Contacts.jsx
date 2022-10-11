@@ -1,5 +1,7 @@
 import "./Contacts.scss";
 import Worker from "../../components/Worker/Worker";
+import WorkerPhoto from "../../assets/imgs/worker.png";
+import WorkerPhotoForRetina from "../../assets/imgs/worker_2x.png";
 
 export default function Contacts() {
     return (
@@ -35,13 +37,17 @@ export default function Contacts() {
                 surname='Иванова'
                 name='Алиса Ивановна'
                 phone='+7(495) 783-35-34 (доб. 51-42)'
-                email='AASirotenko@vtbf.ru'/>
+                email='AASirotenko@vtbf.ru'
+                src={WorkerPhoto}
+                srcRetina={WorkerPhotoForRetina}/>
                 <Worker
                 position='Главный специалист отдела закупок и контроля затрат'
                 surname='Иванова'
                 name='Алиса Ивановна'
                 phone='+7(495) 783-35-34 (доб. 51-42)'
-                email='AASirotenko@vtbf.ru'/>
+                email='AASirotenko@vtbf.ru'
+                src={WorkerPhoto}
+                srcRetina={WorkerPhotoForRetina}/>
             </div>
         </section>
     );
