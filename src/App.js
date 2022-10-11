@@ -14,6 +14,10 @@ import Agreement from './pages/Agreement/Agreement';
 import Contacts from './pages/Contacts/Contacts';
 import HelpModal from './components/HelpModal/HelpModal';
 import { createContext, useState } from "react";
+import { ReactComponent as ChatIconWhite} from "./assets/imgs/chat_icon_white.svg";
+import { ReactComponent as OnlineMark} from "./assets/imgs/online_mark_chat.svg";
+import { ReactComponent as ChatIconBlack} from "./assets/imgs/chat_icon_black.svg";
+
 
 const ThemeContext = createContext(null);
 
@@ -55,6 +59,11 @@ function App() {
                 <Route path='/contacts' element={<Contacts/>}/>
             </Routes>
           </main>
+          <button className='app__chat'>
+            {theme === 'light' ? <ChatIconBlack className='app__chatIcon'/>
+            : <ChatIconWhite className='app__chatIcon'/>}
+            <OnlineMark className='app__chatOnline'/>
+          </button>
         <Footer handleModal={handleModal}/> 
       </div>
     </ThemeContext.Provider>
