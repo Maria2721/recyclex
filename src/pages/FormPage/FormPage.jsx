@@ -72,16 +72,47 @@ export default function FormPage() {
 
         switch (step) {
             case 0:
-                firstAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
+                if (firstAnswer.length !== 0) {
+                    setStep((step) => step + 1)
+                    window.scrollTo({
+                        top: 650,
+                        left: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    console.log('Выберете значение')
+                }
+                // firstAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
                 break;
             case 1:
-                secondAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
+                if (secondAnswer.length !== 0) {
+                    setStep((step) => step + 1)
+                    window.scrollTo({
+                        top: 700,
+                        left: 0,
+                        behavior: 'smooth'
+                    });
+                    
+                } else {
+                    console.log('Выберете значение')
+                }
+                // secondAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
                 break;
             case 2:
                 let isValid = [surname, name, company, telephone].every((input) => validatePersonalData(input));
                 console.log(isValid);
 
-                isValid ? setStep((step) => step + 1) : console.log('Заполните обязательные поля')
+                if (isValid) {
+                    setStep((step) => step + 1)
+                    window.scrollTo({
+                        top: 900,
+                        left: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    console.log('Заполните обязательные поля')
+                }
+                // isValid ? setStep((step) => step + 1) : console.log('Заполните обязательные поля')
                 break;
             case 3:
                 console.log(`Ответ №1: ${firstAnswer},
@@ -129,7 +160,7 @@ export default function FormPage() {
                         {step >= 3 && <FormMessage direction='right'>
                         Фамилия - {surname} <br />
                         Имя - {name} <br />
-                        {middle && `Отчество - ${middle}`}
+                        {middle && `Отчество - ${middle}`} {middle && <br />}
                         Название организации - {company} <br />
                         Контактный номер телефона - {telephone} <br />
                         {email && `Ваш e-mail - ${email}`}
