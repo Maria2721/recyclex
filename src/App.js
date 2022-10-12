@@ -13,7 +13,7 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
 import Agreement from './pages/Agreement/Agreement';
 import Contacts from './pages/Contacts/Contacts';
 import HelpModal from './components/HelpModal/HelpModal';
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { ReactComponent as ChatIconWhite} from "./assets/imgs/chat_icon_white.svg";
 import { ReactComponent as OnlineMark} from "./assets/imgs/online_mark_chat.svg";
 import { ReactComponent as ChatIconBlack} from "./assets/imgs/chat_icon_black.svg";
@@ -25,16 +25,19 @@ function App() {
   const [openedModal, setOpenedModal] = useState(false);
   const currentTheme = localStorage.getItem('theme') || 'light';
   const [theme, setTheme] = useState(currentTheme);
+  const {pathname} = useLocation(); 
+  const isHomePage = pathname === "/" ? true : false;
+  const isSetBackground = isHomePage ? ' home__page' : '';
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme)
   }
-  
-  const {pathname} = useLocation(); 
-  const isHomePage = pathname === "/" ? true : false;
-  const isSetBackground = isHomePage ? ' home__page' : '';
 
   const handleModal = () => {
     setOpenedModal((curr) => !curr);
