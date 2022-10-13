@@ -14,8 +14,8 @@ export default function Worker({position, surname, name, phone, email, src, srcR
                     <span className="worker__firstname">{name}</span>
                 </div>
                 <div className="worker__contacts">
-                    <span>{phone}</span>
-                    <span>{email}</span>
+                    <a href={`tel:${phone}`}>{phone}</a>
+                    <a href={`mailto:${email}`}>{email}</a>
                 </div>
             </div>
         </div>
