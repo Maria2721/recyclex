@@ -8,7 +8,7 @@ export default function Footer({ handleModal }) {
     <footer className="footer container">
       <div className="footer__inner container__row">
           <div className="footer__requisitesAndRights">
-            <div className="footer__requisites">2021, ООО “Экополимер”<br/>ИНН, 612509367304,  ТЕЛ: +7 (800) 333-08-16<br/>АДРЕС: Москва, Пресненская наб. д.12, офис 405, помещ.3
+            <div className="footer__requisites">2021, ООО “Экополимер”<br/>ИНН, 612509367304,  ТЕЛ: <a href="tel:+78003330816">+7 (800) 333-08-16</a><br/>АДРЕС: Москва, Пресненская наб. д.12, офис 405, помещ.3
             </div>
             <div className="footer__rights">Все права защищены</div>
           </div>
@@ -21,7 +21,7 @@ export default function Footer({ handleModal }) {
             <button className="footer__manager footer__manager_desktop" onClick={handleModal}>Связь с менеджером</button>
           </div>
             <div className="footer__contacts">
-              <div className="footer__email">info@recyclex.online</div>
+              <div className="footer__email"><a href="mailto:info@recyclex.online">info@recyclex.online</a></div>
               <button className="footer__manager footer__manager_mobile" onClick={handleModal}>Связь с менеджером</button>
               <div className="footer__social">
                   <a

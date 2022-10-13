@@ -18,9 +18,9 @@ export default function Contacts() {
                 <div className="contacts__contacts contacts__column">
                     <span className="contacts__subtitle">Для связи</span>
                     <div className="contacts__numbers contacts__description">
-                        <span>+7 (473) 252-80-40</span>
-                        <span>+7 (473) 252-80-37</span>
-                        <span>+7 (473) 252-80-39</span>
+                        <a href="tel:+74732528040">+7 (473) 252-80-40</a>
+                        <a href="tel:+74732528037">+7 (473) 252-80-37</a>
+                        <a href="tel:+747325280390">+7 (473) 252-80-39</a>
                     </div>
                 </div>
                 <div className="contacts__director contacts__column">
@@ -36,7 +36,7 @@ export default function Contacts() {
                 position='Главный специалист отдела закупок и контроля затрат'
                 surname='Иванова'
                 name='Алиса Ивановна'
-                phone='+7(495) 783-35-34 (доб. 51-42)'
+                phone='+7(495) 783-35-34'
                 email='AASirotenko@vtbf.ru'
                 src={WorkerPhoto}
                 srcRetina={WorkerPhotoForRetina}/>
@@ -44,7 +44,7 @@ export default function Contacts() {
                 position='Главный специалист отдела закупок и контроля затрат'
                 surname='Иванова'
                 name='Алиса Ивановна'
-                phone='+7(495) 783-35-34 (доб. 51-42)'
+                phone='+7(495) 783-35-34'
                 email='AASirotenko@vtbf.ru'
                 src={WorkerPhoto}
                 srcRetina={WorkerPhotoForRetina}/>
