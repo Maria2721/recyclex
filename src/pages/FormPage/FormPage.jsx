@@ -6,7 +6,7 @@ import { questions } from "./questions";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import RadioButton from "../../components/RadioButton/RadioButton";
 import PersonalDataInputs from "../../components/PersonalDataInputs/PersonalDataInputs";
-import { useState } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { CSSTransition } from "react-transition-group"
 
@@ -26,6 +26,22 @@ export default function FormPage() {
     let {surname, name, middle, company, telephone, email} = thirdAnswer;
     const stepData = questions[step];
     const navigate = useNavigate();
+
+    const $buttonRef = useRef(null)
+
+    useLayoutEffect(() => {
+        if (!$buttonRef.current) {
+            return
+        }
+        
+        const top = $buttonRef.current.offsetTop - window.innerHeight + 30
+
+        window.scrollTo({
+            top,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }, [step])
 
     const handleChange = (e) => {
         let newAnswer = null;
@@ -72,47 +88,31 @@ export default function FormPage() {
 
         switch (step) {
             case 0:
-                if (firstAnswer.length !== 0) {
-                    setStep((step) => step + 1)
-                    window.scrollTo({
-                        top: 650,
-                        left: 0,
-                        behavior: 'smooth'
-                    });
-                } else {
-                    console.log('Выберете значение')
-                }
-                // firstAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
+                // if (firstAnswer.length !== 0) {
+                //     setStep((step) => step + 1)
+                // } else {
+                //     console.log('Выберете значение')
+                // }
+                firstAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
                 break;
             case 1:
-                if (secondAnswer.length !== 0) {
-                    setStep((step) => step + 1)
-                    window.scrollTo({
-                        top: 700,
-                        left: 0,
-                        behavior: 'smooth'
-                    });
-                    
-                } else {
-                    console.log('Выберете значение')
-                }
-                // secondAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
+                // if (secondAnswer.length !== 0) {
+                //     setStep((step) => step + 1)
+                // } else {
+                //     console.log('Выберете значение')
+                // }
+                secondAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
                 break;
             case 2:
                 let isValid = [surname, name, company, telephone].every((input) => validatePersonalData(input));
                 console.log(isValid);
 
-                if (isValid) {
-                    setStep((step) => step + 1)
-                    window.scrollTo({
-                        top: 900,
-                        left: 0,
-                        behavior: 'smooth'
-                    });
-                } else {
-                    console.log('Заполните обязательные поля')
-                }
-                // isValid ? setStep((step) => step + 1) : console.log('Заполните обязательные поля')
+                // if (isValid) {
+                //     setStep((step) => step + 1)
+                // } else {
+                //     console.log('Заполните обязательные поля')
+                // }
+                isValid ? setStep((step) => step + 1) : console.log('Заполните обязательные поля')
                 break;
             case 3:
                 console.log(`Ответ №1: ${firstAnswer},
@@ -218,7 +218,7 @@ export default function FormPage() {
                             }
                         </div>
                         }
-                        <FormButton onClick={handleClick}/>
+                        <FormButton onClick={handleClick}/><span ref={$buttonRef}></span>
                     </FormAnswer>
                 </div>
             </div>
