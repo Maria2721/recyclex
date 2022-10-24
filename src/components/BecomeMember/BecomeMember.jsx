@@ -1,5 +1,4 @@
 import ButtonJoin from "../ButtonJoin/ButtonJoin";
-import BorderThin from "../BorderThin/BorderThin";
 
 import "./BecomeMember.scss";
 
@@ -7,7 +6,6 @@ import "./BecomeMember.scss";
 export default function BecomeMember() {
     return (  
         <section className="member">
-            <BorderThin> 
             <div className="member__inner">
                 <div className="member__steps">
                     <div className="step__wrapper">
@@ -29,7 +27,6 @@ export default function BecomeMember() {
                     <ButtonJoin>Присоединиться</ButtonJoin>
                 </div>
             </div>
-            </BorderThin>
         </section>  
     );
 }

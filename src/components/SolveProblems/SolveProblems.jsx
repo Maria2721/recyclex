@@ -1,4 +1,3 @@
-import BorderBold from '../BorderBold/BorderBold';
 import "./SolveProblems.scss";
 
 
@@ -8,7 +7,6 @@ export default function SolveProblems() {
             <div className="problems__inner">
                 <h1 className="problems__title">Recyclex решает проблемы</h1>
                 <div className="problems__items">
-                    <BorderBold>
                         <div className="problems__item">
                         
                             <div className="problems__wrapper">
@@ -26,8 +24,6 @@ export default function SolveProblems() {
                             </div>
                         
                     </div>
-                    </BorderBold>
-                    <BorderBold>
                     <div className="problems__item">
                         <div className="problems__wrapper">
                             <h4 className="problems__list-title">Переработчиков</h4>
@@ -44,8 +40,6 @@ export default function SolveProblems() {
                             </div>
                         </div>
                     </div>
-                    </BorderBold>
-                    <BorderBold>
                     <div className="problems__item">
                         <div className="problems__wrapper">
                             <h4 className="problems__list-title">Переработка <br/> вторсырья</h4>
@@ -62,7 +56,6 @@ export default function SolveProblems() {
                                 </div>
                         </div>
                     </div>
-                    </BorderBold>
                 </div>
             </div>
         </section>  

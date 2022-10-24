@@ -9,8 +9,7 @@
         display: flex;
         flex-direction: column;
         align-items: center; 
-        padding-left: 40px;
-        padding-right: 40px;
+        
     }
 
     &__steps {
@@ -22,12 +21,13 @@
     }
     .step__wrapper {
         position: relative;
-        font-size: 32px;
-        font-weight: 700;
+        z-index: 1;
     }
     
     .step__first {
         &_color{
+            font-size: 32px;
+            font-weight: 700;
             color: #FFFFFF;
         }
         @include before_circle-pressed;
@@ -35,10 +35,14 @@
     }
     .step__second,
     .step__third {
+        font-size: 32px;
+        font-weight: 700;
         @include before_circle;
         @include divider;
     }
     .step__fourth {
+        font-size: 32px;
+        font-weight: 700;
         @include before_circle;
     }
 
@@ -98,16 +102,17 @@
         .step__second, 
         .step__third, 
         .step__fourth {
+            font-size: 24px;
             &:before {
                 width: 47px;
                 height: 47px;
                 top:-8px;
-                left: -15px;
+                left: -17px;
             }
             &::after{
                 width: 72px;
                 top: 14px;
-                left: 31px;
+                left: 29px;
             }  
         }
         &__btn {
@@ -157,12 +162,13 @@
         }
         &__steps {
             width: 164px;
-            margin-top: 30px;  
+            margin-top: 30px; 
         }
         .step__first, 
         .step__second, 
         .step__third, 
         .step__fourth {
+            font-size: 15px; 
             &:before {
                 width: 23px;
                 height: 23px;
