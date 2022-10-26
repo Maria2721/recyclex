@@ -7,37 +7,37 @@
 }
 
 .switch__label {
-    font-size: 12px;
+    font-size: 10px;
 }
 .react-switch {
     display: block !important;
     margin-top: 3px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .react-switch-bg {
     width: 72px !important;
     height: 40px !important;
-    border: 2px solid $textColor !important;
+    border: none !important;
     border-radius: 20px !important;
-    background-color: $bgColor !important;
+    background-color: #BDBDBD !important;
 }
 
 #dark .react-switch-bg {
-    background-color: $textColor_dark !important;
+    background-color: #79C14C !important;
 }
 
 .react-switch-handle {
-    background-color: $textColor !important;
+    background-color: $bgColor !important;
     width: 28px !important;
     height: 28px !important;
     top: 6.2px !important;
     left: 6px !important;
+    transform: translateX(-1px) !important;
 }
 
 #dark .react-switch-handle {
-    background-color: $bgColor_dark !important;
-    transform: translateX(30px)  !important;
+    transform: translateX(33px)  !important;
 }
 
 
@@ -50,56 +50,55 @@
         width: 50px !important;
         height: 30px !important;
         border-radius: 15px !important;
-        border: 1px solid $textColor !important;
     }
 
     .react-switch-handle {
         width: 20px !important;
         height: 20px !important;
         top: 5px !important;
-        transform: translateX(-1px) !important;
+        transform: translateX(-3px) !important;
     }
     
     #dark .react-switch-handle {
-        transform: translateX(18px)  !important;
+        transform: translateX(20px)  !important;
     }
 }
 
-
 @media (max-width: 730px)  {
     .react-switch-bg {
-        width: 45px !important;
-        height: 25px !important;
+        width: 30px !important;
+        height: 20px !important;
     }
 
     .react-switch-handle {
         width: 16px !important;
         height: 16px !important;
-        top: 4px !important;
+        top: 2px !important;
+        transform: translateX(-3px) !important;
     }
     
     #dark .react-switch-handle {
-        transform: translateX(17px)  !important;
+        transform: translateX(6px)  !important;
     }
 }
 
 
-@media (max-width: $smallMobile)  {
-    .react-switch-bg {
-        width: 30px !important;
-        height: 20px !important;
-        border-radius: 15px !important;
-    }
+// @media (max-width: $smallMobile)  {
+//     .react-switch-bg {
+//         width: 30px !important;
+//         height: 20px !important;
+//         border-radius: 15px !important;
+//     }
 
-    .react-switch-handle {
-        width: 13px !important;
-        height: 13px !important;
-        top: 3.3px !important;
-        left: 3px !important;
-        transform: translateX(0px) !important;
-    }
+//     .react-switch-handle {
+//         width: 13px !important;
+//         height: 13px !important;
+//         top: 3.3px !important;
+//         left: 3px !important;
+//         transform: translateX(0px) !important;
+//     }
 
-    #dark .react-switch-handle {
-        transform: translateX(11px)  !important;
-    }
-}
+//     #dark .react-switch-handle {
+//         transform: translateX(11px)  !important;
+//     }
+// }
