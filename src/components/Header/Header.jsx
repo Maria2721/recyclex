@@ -23,18 +23,20 @@ export default function Header({toggleTheme, theme}) {
   
   return (
     <header className="header container">
-      <div className="header__inner container__row">
-          <SwitchTheme toggleTheme={toggleTheme} theme={theme}/>
+      <div className="header__inner">
+          {/* <SwitchTheme toggleTheme={toggleTheme} theme={theme}/> */}
+          <BurgerBlack onClick={() => setOpened(!opened)} className="header__burger"/>
+          <Link to="/">{theme === 'light'? <LogoBlack className="header__logo"/> : <LogoWhite className="header__logo"/>}</Link>
         <nav className={classNav} onClick={handleClick}>
           <div className="header__links" onClick={e => e.stopPropagation()}>
             <Link to="/about-project" onClick={handleClick} className="header__link">О проекте</Link>
             <Link to="/work-scheme" onClick={handleClick} className="header__link">Схема работы</Link>
             <Link to="/contacts" onClick={handleClick} className="header__link">Контакты</Link>
-            <Link to="/form" onClick={handleClick} className="header__link header__link_border">Присоединиться</Link>
+            <Link to="/form" onClick={handleClick} className="header__link ">Присоединиться</Link>
           </div>
         </nav>
-        <Link to="/">{theme === 'light'? <LogoBlack className="header__logo"/> : <LogoWhite className="header__logo"/>}</Link>
-        <BurgerBlack onClick={() => setOpened(!opened)} className="header__burger"/>
+        <SwitchTheme toggleTheme={toggleTheme} theme={theme}/>
+        {/* <Link to="/">{theme === 'light'? <LogoBlack className="header__logo"/> : <LogoWhite className="header__logo"/>}</Link> */}
       </div>
     </header>
   );
