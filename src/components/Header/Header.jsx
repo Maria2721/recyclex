@@ -28,7 +28,7 @@ export default function Header({toggleTheme, theme}) {
   
   return (
     <header className="header container">
-      <div className="header__inner">
+      <div className="header__inner container__row_wide">
           <BurgerBlack onClick={() => setOpened(!opened)} className="header__burger"/>
           <Link to="/">{theme === 'light'? <LogoBlack className="header__logo"/> : <LogoWhite className="header__logo"/>}</Link>
           <div className={classOverlay}></div>

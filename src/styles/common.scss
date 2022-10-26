@@ -28,7 +28,31 @@ main {
 }
 
 .container__row {
-  width: 85%;
+  max-width: 1280px;
+  padding: 0 60px;
+
+  @media (max-width: $mobile)  {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $ultra)  {
+    max-width: 2020px;
+    padding: 0;
+  }
+}
+
+.container__row_wide { // для хедера
+  max-width: 1320px;
+  padding: 0 30px;
+
+  @media (max-width: $mobile)  {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $ultra)  {
+    max-width: 2258px;
+    padding: 0 60px;
+  }
 }
 
 button:hover {
