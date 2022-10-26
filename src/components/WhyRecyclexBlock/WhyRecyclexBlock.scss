@@ -5,41 +5,35 @@
     border-bottom: 1px solid #ffffff;
 }
 
-.whyRecyclex{
-    margin-top: 280px;
-
-
+.whyRecyclex {
+    margin-top: 150px;
     &__inner {
-        margin-top: 85px;
-        padding-bottom: 64px;
-        padding-left: 18px;
-        padding-right: 80px;
+        margin-top: 100px;
         display: flex;
-        column-gap: 8%;
+        justify-content: space-between;
     }
     &__items {
-        width: 50%;
-        margin-top: 50px;
-        margin-left: 15px;    
+        width: 46%; 
+        padding-left: 4%;
     }
     &__item {
-        min-height: 130px;
+        padding-top: 20px;
+        padding-bottom: 15px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-    
-    &__img{
-        margin-top: 279px;
-        width: 40%;
-        height: 38%;
-        img {
-            width: 100%;
+        &:first-child {
+            padding-top: 0;
         }
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }   
+    &__img {
+        margin-top: 110px;
+        width: 46%;
     }
-    
     &__subTitle {
-        padding-top: 15px;
         font-size: 24px;
         font-weight: 700;
         line-height: 30px;   
@@ -52,102 +46,103 @@
     &__divider {
         border-bottom: 1px solid #000000;
     }
-    &__divider #dark  {
-        border-bottom: 1px solid #ffffff;
+    .wrapper__img {
+        width: 74%;
+        height: 100%;
+        background-image: url(../../assets/imgs/screen_desktop.png);
+        background-size: 100%;
+        background-repeat: no-repeat;       
     }
-    
-    
-    &__img {
-        img {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            }   
-        }
 }
-@media (max-width: $tablet)  {
 
+@media (min-resolution: 2dppx)  {
     .whyRecyclex {
+        .wrapper__img {
+            background-image: url(../../assets/imgs/screen_desktop@2k.png);          
+        }
+    }
+}
 
-        margin-top: 230px;
-
+@media (max-width: $tablet)  {
+    .whyRecyclex {
+        margin-top: 180px;
         &__inner {
-            margin-top: 80px;
-            padding-bottom: 39px;
-            padding-left: 40px;
-            padding-right: 40px;
+            margin-top: 105px;
+        }
+        &__items {
+            width: 56%;
         }
         &__item {
-            min-height: 67px;
-        }
-        .item_gradient {
-            &::after {
-                display: none;
-            }  
+            width: 100%;
         }
         &__subTitle {
-            font-size: 15px;
-            line-height: 19px;
+            font-size: 16px;
+            line-height: 20px;
         }
         &__text {
             font-size: 10px;
             line-height: 13px;
         }
-
-        &__img{
-            margin-top: 179px;
-            width: 36%;
-            height: 29%;   
+        &__img {
+            margin-top: 70px;
+            width: 34%;
+            /* height: 100%;  */  
+        }
+        .wrapper__img {
+            width: 100%;
+            background-image: url(../../assets/imgs/screen_table.png); 
         }
     }
-
+}
+@media (min-resolution: 2dppx) and (max-width: $tablet) {
+    .whyRecyclex {
+        .wrapper__img {
+            background-image: url(../../assets/imgs/screen_table@2k.png);
+        }
+    }
 }
 @media (max-width: $mobile) {
-    #dark .whyRecyclex {
-
-        .borderBold {
-            background: none;  
-        }
-    }
-
-    .whyRecyclex{
-        margin-top: 80px;
-
-        .borderThin{
-            &:before{
-                display: none;
-            } 
-        }
-        
+    .whyRecyclex {
+        margin-top: 80px;       
         &__inner{
-            margin-top: 30px;
-            padding-left: 0;
-            padding-right: 0;
-            padding-bottom: 0px;
+            margin-top: 20px;
             flex-direction: column;
             align-items: center;
-            row-gap: 20px;
+            row-gap: 80px;
+        }       
+        &__items{
+            width: 100%;
+            padding-left: 0;
         }
         &__item {
-            min-height: 50px;
-        }
-        &__items{
-            width: 100%; 
-            margin-top: 0;
-            margin-left: 0;  
+            padding-top: 15px;
+            padding-bottom: 5px;
         }
         &__subTitle {
-            font-size: 12px;
-            line-height: 15px;
+            font-size: 13px;
+            line-height: 16px;
         }
         &__text {
-            font-size: 8px;
-            line-height: 10px;
+            font-size: 10px;
+            line-height: 13px;
         }  
         &__img {
             margin-top: 0;
-            width: 91%;
+            width: 85%;
+            height: 130px;
+        }
+        .wrapper__img {
+            background-image: url(../../assets/imgs/screen_mobila.png);
+            background-size: contain;
+            background-position: center;
         }
     }
-
 }
+@media (min-resolution: 2dppx) and (max-width: $mobile) {
+    .whyRecyclex {
+        .wrapper__img {
+                background-image: url(../../assets/imgs/screen_mobila@2k.png); 
+        }
+    }
+}
+

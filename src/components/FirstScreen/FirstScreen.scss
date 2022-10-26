@@ -2,7 +2,7 @@
 
 
 .firstScreen {
-    margin-top: 270px;
+    margin-top: 297px;
     
     &__inner{
         display: flex;
@@ -37,7 +37,6 @@
 
 @media(max-width: 961px) {
     .firstScreen {
-
         &__title {
             font-size: 59px;
         }
@@ -47,7 +46,6 @@
 @media (max-width: $tablet)  {
     .firstScreen {
         margin-top: 400px;
-
         &__title {
             margin-top: 16px;
             max-width: 655px;
@@ -55,20 +53,20 @@
         }
 
         &__subTitle {
-            margin-top: 30px;
+            margin-top: 20px;
             max-width: 345px;
             font-size: 24px;
         }
 
         &__btn {
-        margin-top: 60px;
+        margin-top: 73px;
         }
     }
 }
 
 @media(max-width: 769px) {
     .firstScreen {
-
+        margin-top: 297px;
         &__title {
             font-size: 45px;
         }
@@ -78,25 +76,29 @@
 
 @media(max-width: $smallTablet) {
     .firstScreen {
-        margin-top: 120px;
-
+        &__title {
+            font-size: 32px;
+        }
+    }   
+}
+@media(max-width: 512px) {
+    .firstScreen {
         &__title {
             font-size: 30px;
         }
-    }
-    
+    }   
 }
 
 @media (max-width: $mobile)  {
     .firstScreen {
-
+        margin-top: 120px;
         &__title {
             max-width: 280px;
-            font-size: 20px;    
+            font-size: 19px;    
         }
 
         &__subTitle {
-            margin-top: 5px;
+            margin-top: 18px;
             max-width: 280px;
             font-size: 13px;
         }

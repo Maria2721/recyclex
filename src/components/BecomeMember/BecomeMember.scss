@@ -2,28 +2,24 @@
 @import "../../styles/_mixin.scss";
 
 .member {
-    margin-top: 145px;
-    margin-bottom: 115px;
+    margin-top: 200px;
+    margin-bottom: 50px;
     
     &__inner {
         display: flex;
         flex-direction: column;
         align-items: center; 
-        
     }
 
     &__steps {
         width: 459px;
-        margin-top: 70px; 
         display: flex;
-        justify-content: space-between;
-        
+        justify-content: space-between;  
     }
     .step__wrapper {
         position: relative;
         z-index: 1;
     }
-    
     .step__first {
         &_color{
             font-size: 32px;
@@ -45,21 +41,17 @@
         font-weight: 700;
         @include before_circle;
     }
-
     &__title {
-        margin-top: 59px;
+        margin-top: 70px;
     }
-
     &__subTitle{
         margin-top: 10px;
         font-size: 24px;
         color: $accentColor;
         text-align: center;
     }
-
     &__btn {
         margin-top: 58px;
-        margin-bottom: 52px ;
         .btn {
             display: block;
         }      
@@ -77,26 +69,24 @@
 }
 @media (max-width: $tablet)  {
     .member{
-        margin-top: 75px;
-        margin-bottom: 83px;
+        margin-top: 140px;
+        margin-bottom: 66px;
 
         &__title {
-            margin-top: 35px;
+            margin-top: 40px;
+            line-height: 38px;
             font-size: 30px;
         }
         .step__wrapper {
             font-size: 24px;
         }
-        &__steps {
-            margin-top: 75px;
-        }
 
         &__subTitle {
-            font-size: 20px;    
+            font-size: 20px;
+            line-height: 26px;    
         }
         &__steps {
-            width: 360px;
-            margin-top: 80px;  
+            width: 383px;
         }
         .step__first, 
         .step__second, 
@@ -110,59 +100,59 @@
                 left: -17px;
             }
             &::after{
-                width: 72px;
+                width: 80px;
                 top: 14px;
                 left: 29px;
             }  
         }
         &__btn {
-            margin-top: 50px;
-            margin-bottom: 82px ;   
+            margin-top: 50px;  
         }
     }
 }
 @media (max-width: $smallTablet) {
-    .member{
+    .member {
+    &__title {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    &__subTitle {
+        font-size: 12px;
+        line-height: 16px;  
+        } 
     &__steps {
         width: 300px; 
     }
     .step__first, 
         .step__second, 
         .step__third, 
-        .step__fourth {
-            
+        .step__fourth {          
             &::after{
                 width: 50px;
-                
             }  
         }
-}
+    }
 }
 
 @media (max-width: $mobile) {
     .member{
-        margin-top: 25px;
-        margin-bottom: 30px;
-
-        &__steps {
-            margin-top: 27px;
-        }
+        margin-top: 50px;
+        margin-bottom: 75px;
         &__title {
-            margin-top: 35px;
+            margin-top: 40px;
             font-size: 12px;
+            line-height: 16px;
         }
-
         &__subTitle {
             margin-top: 5px;
-            font-size: 8px;    
-        }
-        
+            font-size: 8px;  
+            line-height: 10px;  
+        }      
         .step__wrapper {
             font-size: 15px;
         }
         &__steps {
-            width: 164px;
-            margin-top: 30px; 
+            width: 150px;
         }
         .step__first, 
         .step__second, 
@@ -177,7 +167,7 @@
                 border: 2px solid #5FAE36;
             }
             &::after{
-                width: 30px;
+                width: 26px;
                 top: 9px;
                 left: 15px;
                 border: 1px solid #5FAE36;
@@ -185,7 +175,6 @@
         }
         &__btn {
             margin-top: 15px;
-            margin-bottom: 35px ;   
         }
     }
 }

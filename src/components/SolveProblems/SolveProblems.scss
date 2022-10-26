@@ -6,8 +6,7 @@
 }
 
 .problems {
-    margin-top: 128px;
-
+    margin-top: 150px;
     &__inner {
         display: flex;
         flex-direction: column;
@@ -15,182 +14,171 @@
     }
 
     &__items {
-        margin-top: 90px;
+        margin-top: 100px;
         display: flex;
         justify-content: space-between; 
-        width: 100%;
-        column-gap: 2%; 
-
-            
+        width: 100%;    
     }
-    &__item{
+    &__item {
         width: 32%;
-                display: flex;
-                justify-content: space-between;  
-                column-gap: 2%;
-                border-radius: 28px;
-                background: #F7F7F7;  
-                border-radius:30px;               
-} 
-
-
+        border-radius: 28px;
+        background: #F7F7F7;  
+        border-radius:30px;               
+    } 
     &__wrapper {
-        width: 100%;
         display: flex;
         flex-direction: column;
-        width: 100%;
-        
-        padding-top: 80px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 10px;
+        padding-left: 10%;
+        padding-right: 10%; 
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
-
     &__list-title {
-        display: block;
-        height: 82px;
+        min-height: 85px;
         font-size: 32px;
+        line-height: 41px;
         font-weight: 700;
-        }
-
-    &__list-items{
-        display: block;
-        margin-top: 15px;
+    }
+    &__list-items {
+        margin-top: 20px;
     }
     &__list-item{
-        padding-bottom: 25px;
+        padding-bottom: 30px;
         font-size: 20px;
-        line-height: 26px;
-            p {
-                display: block;
-            }
+        line-height: 26px;       
+    }
+    .problems__col1, 
+    .problems__col2 {
+        p:last-child{
+            padding-bottom: 0;
+        }
     }
 }
-@media (max-width: 1137px) {
+@media (max-width: 1280px) {
     .problems {
-        margin-top: 230px;
-        &__items {
-            margin-top: 80px;
-            column-gap: 3%; 
-        }
         &__item{
             min-height: 260px;
-
         }
         &__wrapper {
             min-height: 260px;
-            padding-top: 35px;
-            padding-left: 24px;
-            padding-right: 12px;
-            padding-bottom: 10px;
         }
-
         &__list-title {
-            font-size: 15px;
-            height: 38px;
+            min-height: 75px;
+            font-size: 26px;
+            line-height: 36px;
         }
-
         &__list-items {
-            margin-top: 15px;
+            margin-top: 10px;
         }
-        &__list-item{
-            font-size: 10px;
-            line-height: 12px;
+        &__list-item {
+            padding-bottom: 20px;
+            font-size: 15px; 
+            line-height: 20px;
         }
     }
 }
 @media (max-width: $tablet)  {
     .problems {
-        &__list-title {
-            font-size: 12px;
+        margin-top: 180px;
+        &__items {
+            margin-top: 105px;
         }
-    
-    &__list-item {
-        font-size: 10px;
-        line-height: 12px;
-        padding-bottom: 17px;
+        &__wrapper {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        &__list-title {
+            min-height: 40px;
+            font-size: 16px;
+            line-height: 20px;
+        }       
+        &__list-item {
+            font-size: 13px;
+            line-height: 16px;
+            padding-bottom: 20px;
+        }
     }
-}
-    
 }
 @media(max-width: $smallTablet) {
     .problems {
-
-        &__title {
-        font-size: 32px;
-        }
         &__list-item {
-            padding-bottom: 17px;
+            padding-bottom: 10px;
+        }
+        &__wrapper {
+            padding-left: 4%;
+            padding-right: 4%;
         }
     }
 }
 
-@media (max-width: 526px){
-    #dark .problems__item { 
-            background: none;  
+@media (max-width: 650px) {
+    #dark .problems__item {
+        background: none;
     }
-    .problems {
-        margin-top: 80px;
-        &__title {
-            font-size: 16px;
-        }
+    .problems {       
         &__items {
             width: 100%;
             display: flex;
             flex-direction: column;
-            margin-top: 0px;
-
         }
-
         &__item {
             width: 100%;
             background: none;
             min-height: 40px;
-
         }
-
         &__wrapper{ 
             min-height: 30px;
+            padding-top: 0;
             padding-bottom: 0;
         }
         &__item {
-            padding-bottom: 0;   
+            padding-bottom: 35px;   
         } 
         &__list-title {
-            height: 0;
             min-height: 15px;
-            font-size: 12px;
+            font-size: 16px;
+            line-height: 20px;
             text-align: center;
             br {
                 display: none;
             }
         }
-
-        &__list-items{
+        &__list-items {
             display: flex;
             justify-content: space-between;
-            column-gap: 7%;
-        
+            margin-top: 12px;  
+            font-size: 12px;
+            line-height: 16px;
+        }
+        .problems__col1 {
+            width: 46%;
             
         }
-        &__list-item {
-            font-size: 8px;
-            line-height: 10px;
-            padding-bottom: 10px;
-        }
-        .problems__col1{
-            width: 50%;
-            flex-grow: 1;
-        }
-
-        .problems__col2{
-            flex-grow: 1;
-            width: 50%;
+        .problems__col2 {
+            width: 46%;
         }  
     }    
 }
 
-
-
 @media (max-width: $mobile) {
+    .problems {
+        margin-top: 80px;
+        &__items {
+            margin-top: 20px;
+        }
+        &__item:last-child { 
+            padding-bottom: 0;
+        }
+        &__list-title {
+            height: 0;
+            min-height: 15px;
+            font-size: 13px;
+            line-height: 16px;
+        }
+        &__list-item {
+            font-size: 10px;
+            line-height: 12px;
+            padding-bottom: 12px;
+        }
+    }  
 }

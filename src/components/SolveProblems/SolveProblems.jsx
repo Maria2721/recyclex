@@ -50,7 +50,7 @@ export default function SolveProblems() {
                                     <p className="problems__list-item">Своевременные поставки</p>
                                 </div>
                                 <div className="problems__col2">
-                                    <p className="problems__list-item">Контроль качества сырья</p>
+                                    <p className="problems__list-item">Контроль качества сырья </p>
                                     <p className="problems__list-item">Расширенная проверка контрагента (вживую специалистом биржи Recyclex)</p>
                                 </div>
                                 </div>

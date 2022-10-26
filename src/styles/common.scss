@@ -5,6 +5,8 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-weight: 400;
 }
@@ -50,6 +52,10 @@ h1 {
 
   @media (max-width: $tablet)  {
     font-size: 40px;
+  }
+
+  @media(max-width: $smallTablet) {
+    font-size: 28px;
   }
 
   @media (max-width: $mobile)  {
