@@ -1,10 +1,3 @@
-import Exchange from "../../assets/imgs/screen_desktop.png";
-import ExchangeTab from "../../assets/imgs/screen_table.png";
-import ExchangeMob from "../../assets/imgs/screen_mobila.png";
-import Exchange2k from "../../assets/imgs/screen_desktop@2k.png";
-import ExchangeTab2k from "../../assets/imgs/screen_table@2k.png";
-import ExchangeMob2k from "../../assets/imgs/screen_mobila@2k.png";
-
 import "./WhyRecyclexBlock.scss";
 
 
@@ -39,17 +32,13 @@ export default function WhyRecyclexBlock() {
                             
                         </div>
                         <div className="whyRecyclex__item">
-                            
                             <h4 className="whyRecyclex__subTitle">Реклама своей продукции, услуг, предложений</h4>
                             <p className="whyRecyclex__text">Продвигайте объявления и увеличивайте охваты аудитории</p>
-                            
                         </div>
                     </div>
                     <div className="whyRecyclex__img">
-                            <img 
-                                srcSet={`${ExchangeMob} 720w, ${ExchangeMob2k} 2x, ${ExchangeTab} 959w, ${ExchangeTab2k} 2x, ${Exchange} 1440w,  ${Exchange2k} 2x`} 
-                                src={Exchange} 
-                                alt="img exchange"/>
+                        <div className="wrapper__img">
+                        </div>   
                     </div>
                 </div>
         </section>  
