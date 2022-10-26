@@ -38,7 +38,7 @@ export default function WhyRecyclexBlock() {
                     </div>
                     <div className="whyRecyclex__img">
                         <div className="wrapper__img">
-                        </div>   
+                    </div>   
                     </div>
                 </div>
         </section>  

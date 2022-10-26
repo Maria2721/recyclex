@@ -146,7 +146,9 @@
         &__list-items {
             display: flex;
             justify-content: space-between;
-            margin-top: 12px;   
+            margin-top: 12px;  
+            font-size: 12px;
+            line-height: 16px;
         }
         .problems__col1 {
             width: 46%;
@@ -164,7 +166,6 @@
         &__items {
             margin-top: 20px;
         }
-
         &__item:last-child { 
             padding-bottom: 0;
         }
