@@ -13,6 +13,7 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
 import Agreement from './pages/Agreement/Agreement';
 import Contacts from './pages/Contacts/Contacts';
 import HelpModal from './components/HelpModal/HelpModal';
+import ThanksModal from './components/ThanksModal/ThanksModal';
 import { createContext, useState, useEffect } from "react";
 import { ReactComponent as ChatIconWhite} from "./assets/imgs/chat_icon_white.svg";
 import { ReactComponent as OnlineMark} from "./assets/imgs/online_mark_chat.svg";
@@ -22,7 +23,8 @@ import { ReactComponent as ChatIconBlack} from "./assets/imgs/chat_icon_black.sv
 const ThemeContext = createContext(null);
 
 function App() {
-  const [openedModal, setOpenedModal] = useState(false);
+  const [openedHelpModal, setOpenedHelpModal] = useState(false);
+  const [openedThanksModal, setOpenedThanksModal] = useState(false);
   const currentTheme = localStorage.getItem('theme') || 'light';
   const [theme, setTheme] = useState(currentTheme);
   const {pathname} = useLocation(); 
@@ -39,21 +41,26 @@ function App() {
     localStorage.setItem('theme', newTheme)
   }
 
-  const handleModal = () => {
-    setOpenedModal((curr) => !curr);
+  const handleHelpModal = () => {
+    setOpenedHelpModal((curr) => !curr);
+  }
+
+  const handleThanksModal = () => {
+    setOpenedThanksModal((curr) => !curr);
   }
 
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
       <div className={`App ${isSetBackground}`} id={theme}>
-      <HelpModal handleModal={handleModal} opened={openedModal} theme={theme}/>
+      <HelpModal handleModal={handleHelpModal} opened={openedHelpModal} theme={theme}/>
+      <ThanksModal handleModal={handleThanksModal} opened={openedThanksModal} theme={theme}/>
         <Header toggleTheme={toggleTheme} theme={theme}/>
           <main className="container">
             <Routes>
                 <Route path='/' element={<MainPage/>}/>
                 <Route path='/about-project' element={<AboutProjectPage/>}/>
                 <Route path='/work-scheme' element={<WorkScheme/>}/>
-                <Route path='/form' element={<FormPage/>}/>
+                <Route path='/form' element={<FormPage handleModal={handleThanksModal}/>}/>
                 <Route path='/thank-you' element={<FormThankYouPage/>}/>
                 <Route path='/general-terms' element={<GeneralTermsPage/>}/>
                 <Route path='/privacy-policy' element={<PrivacyPolicyPage/>}/>
@@ -67,7 +74,7 @@ function App() {
             : <ChatIconWhite className='app__chatIcon'/>}
             <OnlineMark className='app__chatOnline'/>
           </button>
-        <Footer handleModal={handleModal}/> 
+        <Footer handleModal={handleHelpModal}/> 
       </div>
     </ThemeContext.Provider>
   );

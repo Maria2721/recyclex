@@ -10,7 +10,7 @@ import { useState, useRef, useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { CSSTransition } from "react-transition-group"
 
-export default function FormPage() {
+export default function FormPage({ handleModal }) {
     const [step, setStep] = useState(0);
     const [firstAnswer, setFirstAnswer] = useState([]);
     const [secondAnswer, setSecondAnswer] = useState([]);
@@ -120,7 +120,8 @@ export default function FormPage() {
                 Ответ №3: ${surname}, ${name}, ${middle}, ${company}, ${telephone}, ${email}
                 Ответ №4:${fourthAnswer}. `)
                 
-                navigate('/thank-you');
+                navigate('/');
+                handleModal()
                 break;
             default:
                 console.log('Клик по кнопке')
