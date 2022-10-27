@@ -28,30 +28,38 @@ main {
 }
 
 .container__row {
+  width: 90%;
   max-width: 1280px;
-  padding: 0 60px;
+  padding-left: 60px;
+  padding-right: 60px;
 
   @media (max-width: $mobile)  {
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media (min-width: $ultra)  {
     max-width: 2020px;
-    padding: 0;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 
 .container__row_wide { // для хедера
+  width: 95%;
   max-width: 1320px;
-  padding: 0 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 
   @media (max-width: $mobile)  {
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media (min-width: $ultra)  {
     max-width: 2258px;
-    padding: 0 60px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 
