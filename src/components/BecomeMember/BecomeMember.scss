@@ -57,15 +57,12 @@
         }      
     }
 }
-@media (max-width: 1076px) {
+@media (max-width: 1105px) {
     .member {
         &__title {
             font-size: 40px;
         }
-        &__subTitle {
-            font-size: 22px;    
-        }
-}
+    }
 }
 @media (max-width: $tablet)  {
     .member{
@@ -109,11 +106,15 @@
         }
     }
 }
-@media (max-width: 739px){
+@media (max-width: 821px){
     .member {
+        &__title {
+            font-size: 29px;
+            line-height: 30px;
+        }
         &__subTitle {
-            font-size: 19px;
-            line-height: 25px;  
+            font-size: 17px;
+            line-height: 22px;  
             } 
     }
 }
