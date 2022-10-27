@@ -42,7 +42,7 @@
             height: 100%;
             overflow: hidden;
             }   
-        }
+    }
     .item__wrapper {
         margin-bottom: 10px;
     }
@@ -59,6 +59,29 @@
         text-align: center;
         min-height: 50px;
         }    
+}
+@media(min-width: $ultra) {
+    .advantages {
+        margin-top: 549px;
+        &__items {
+            margin-top: 200px;
+        }
+        &__btn {
+            margin-top: 130px; 
+        }
+        .item__img {
+            height: 365px; 
+        }
+        .item__title {
+            font-size: 37px;
+            line-height: 47px;
+            }
+        .item__text {
+            margin-top: 20px;
+            font-size: 23px;
+            line-height: 29px;
+            }   
+    }
 }
 @media (max-width: 1344px){
     .advantages {   

@@ -79,6 +79,9 @@ h1 {
   font-weight: 700;
   color: $accentColor;
   text-align: center;
+  @media(min-width: $ultra) {
+    font-size: 60px;
+  }
 
   @media (max-width: $tablet)  {
     font-size: 40px;
