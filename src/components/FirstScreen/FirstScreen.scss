@@ -10,7 +10,7 @@
     }
     
     &__title {
-        max-width: 873px;
+        /* max-width: 873px; */
         font-size: 60px;
         text-align: left; 
         color: #000000;   
@@ -19,7 +19,6 @@
     &__subTitle {
         margin-top: 15px;
         max-width: 462px;
-        margin-top: 8px;
         font-size: 28px;
     }
     &__btn {
@@ -34,7 +33,23 @@
 #dark .firstScreen__title {
     color: $textColor_dark;
 }
-
+@media(min-width: $ultra) {
+    .firstScreen {
+        &__title {
+            font-size: 95px;
+            line-height: 122px;
+        }
+        &__subTitle {
+            margin-top: 50px;
+            max-width: 790px;
+            font-size: 55px;
+            line-height: 55px;
+        }
+        &__btn {
+            margin-top: 100px;
+    }  
+    }
+}
 @media(max-width: 961px) {
     .firstScreen {
         &__title {
