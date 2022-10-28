@@ -42,7 +42,14 @@
 #dark .btn_smaller:hover {
     background-color: $greyColor;
 }
-
+@media screen and (min-width: $ultra) {
+    .btn {
+        width: 650px;
+        padding: 33px 0;
+        font-size: 45px;
+        line-height: 45px;
+    }
+}
 @media screen and (max-width: $tablet) {
     .btn {
         width: 300px;

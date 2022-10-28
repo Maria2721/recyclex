@@ -26,7 +26,7 @@ main {
 }
 
 .container__row {
-  width: 90%;
+  width: 100%;
   max-width: 1280px;
   padding-left: 60px;
   padding-right: 60px;
@@ -79,6 +79,9 @@ h1 {
   font-weight: 700;
   color: $accentColor;
   text-align: center;
+  @media(min-width: $ultra) {
+    font-size: 60px;
+  }
 
   @media (max-width: $tablet)  {
     font-size: 40px;

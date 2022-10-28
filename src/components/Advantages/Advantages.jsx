@@ -14,10 +14,10 @@ export default function Advantages() {
                 <h1 className="advantages__title">Здесь все необходимое</h1>
                 <div className="advantages__items">
                     <div className="advantages__item">
-                        <div className="item__img">
+                        <div className="advantages__item_row item__img">
                             <img src={Partrers}  width="60px" alt="img partrers"/>
                         </div>
-                        <div className="item__wrapper">
+                        <div className="advantages__item_row item__wrapper">
                             <h4 className="item__title">База партнеров</h4>
                             <p className="item__text">Удобный бизнес каталог</p>
                         </div>

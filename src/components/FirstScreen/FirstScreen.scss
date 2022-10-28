@@ -8,14 +8,11 @@
         display: flex;
         flex-direction: column;
     }
-    
     &__title {
-        /* max-width: 873px; */
         font-size: 60px;
         text-align: left; 
         color: #000000;   
     }
-    
     &__subTitle {
         margin-top: 15px;
         max-width: 462px;
@@ -27,7 +24,6 @@
             display: block;
         }
     } 
-    
 }
 
 #dark .firstScreen__title {
@@ -35,6 +31,7 @@
 }
 @media(min-width: $ultra) {
     .firstScreen {
+        margin-top: 477px;
         &__title {
             font-size: 95px;
             line-height: 122px;
@@ -47,7 +44,7 @@
         }
         &__btn {
             margin-top: 100px;
-    }  
+        }  
     }
 }
 @media(max-width: 961px) {
@@ -57,7 +54,6 @@
         }
     }  
 }
-
 @media (max-width: $tablet)  {
     .firstScreen {
         margin-top: 400px;
@@ -66,40 +62,30 @@
             max-width: 655px;
             font-size: 48px;
         }
-
         &__subTitle {
             margin-top: 20px;
             max-width: 345px;
             font-size: 24px;
         }
-
         &__btn {
         margin-top: 73px;
         }
     }
 }
 
-@media(max-width: 769px) {
+@media(max-width: 774px) {
     .firstScreen {
-        margin-top: 297px;
+        /* margin-top: 297px; */
         &__title {
-            font-size: 45px;
+            font-size: 43px;
         }
     }
-    
 }
-
 @media(max-width: $smallTablet) {
     .firstScreen {
         &__title {
-            font-size: 32px;
-        }
-    }   
-}
-@media(max-width: 512px) {
-    .firstScreen {
-        &__title {
-            font-size: 30px;
+            font-size: 45px;
+            max-width: 380px;
         }
     }   
 }
@@ -108,18 +94,24 @@
     .firstScreen {
         margin-top: 120px;
         &__title {
-            max-width: 280px;
+            /* max-width: 280px; */
             font-size: 19px;    
         }
-
         &__subTitle {
             margin-top: 18px;
             max-width: 280px;
             font-size: 13px;
         }
-
         &__btn {
             margin-top: 25px; 
+        }
+    }
+}
+@media (max-width: $smallMobile)  {
+    .firstScreen {
+        &__title {
+            font-size: 25px; 
+            max-width: 230px;
         }
     }
 }
