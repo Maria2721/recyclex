@@ -1,11 +1,9 @@
 import "./GeneralTermsPage.scss";
-import BorderThin from "../../components/BorderThin/BorderThin";
 
 export default function GeneralTermsPage() {
     return (
         <section className="terms container__row">
             <h1 className="terms__title">Общие условия</h1>
-            <BorderThin> 
                 <div className="terms__content">
                 <p className="terms__text">Мы признаем важность конфиденциальности информации. В этом документе описывается, какую личную информацию мы получаем и собираем, когда Вы пользуетесь сайтом . Мы надеемся, что эти сведения помогут Вам принимать осознанные решения в отношении предоставляемой нам личной информации.</p>
                 <h2 className="terms__subtitle">Общедоступная информация и идентификация посетителей</h2>
@@ -29,7 +27,6 @@ export default function GeneralTermsPage() {
             <h2 className="terms__subtitle">Затраты на доступ</h2>
             <p className="terms__text">Вы должны обеспечить за свой счет оборудование и подключение к Интернет, необходимые Вам для получения доступа к Сайту и его использования. Вы несете единоличную ответственность за любые затраты на доступ к Сайту через беспроводную связь или иные.</p>
             </div>
-            </BorderThin>
         </section>
     );
 }

@@ -2,41 +2,66 @@
 @import "../../styles/mixin";
 
 .scheme {
-    margin-top: 144px;
+    margin-top: 115px;
     margin-bottom: 172px;
     font-size: 22px;
-
     &_textUp{
         text-transform: uppercase;
     }
-
     &__title {
-        margin-bottom: 77px;
-        font-size: 53px;
-    }
-    &__content {
-        padding: 88px 72px 97px 60px;
+        margin-bottom: 70px;
     }
     &__list-title {
-        margin-bottom: 88px;
+        margin-bottom: 60px;
     }
     &__list {
         list-style-type: none;
-        margin-bottom: 86px;
+        margin-bottom: 60px;
     }
     &__list-item {
         position: relative;
         margin-left: 140px;
         @include before_circleList;
+        z-index: 1;
     }
     .list-item_bottom {
-        padding-bottom: 70px;
+        padding-bottom: 60px;
     }
     .text_bottom {
-        padding-bottom: 45px;
+        padding-bottom: 60px;
     }
 }
 
+@media (min-width: $ultra) {
+    .scheme {
+        margin-top: 170px;
+        font-size: 30px;
+        &__title {
+            margin-bottom: 150px;
+        }
+        &__list-title {
+            margin-bottom: 45px;
+        }
+        &__list {
+            margin-bottom: 45px;
+        }
+        &__list-item {
+            margin-left: 100px;
+                &::before {
+                    top: 13px;
+                    left: -60px;
+                    width: 20px;
+                    height: 20px;
+                }
+        }
+        .list-item_bottom {
+            padding-bottom: 45px;
+        }
+        .text_bottom {
+            padding-bottom: 45px;
+        }
+    }
+}
 @media (max-width: $tablet)  {
     .scheme {
         font-size: 15px;
@@ -44,19 +69,13 @@
         margin-bottom: 95px;
         
         &__title {
-            margin-bottom: 52px;
-            font-size: 36px;
+            margin-bottom: 45px;
         }
-
-        &__content {
-            padding: 62px 35px 55px 35px;
-        }
-        
         &__list-title {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         &__list {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         &__list-item {
             margin-left: 80px;
@@ -68,7 +87,7 @@
             }
         }
         .list-item_bottom {
-            padding-bottom: 40px;
+            padding-bottom: 30px;
         }
 
         .text_bottom {
@@ -83,16 +102,9 @@
         font-size: 8px;
         margin-top: 45px;
         margin-bottom: 20px;
-
         &__title {
-            margin-bottom: 20px;
-            font-size: 16px;
+            margin-bottom: 40px;
         }
-    
-        &__content {
-            padding: 25px 7px 25px 7px;
-        }
-        
         &__list-title {
             margin-bottom: 15px;
         }
@@ -100,7 +112,7 @@
             margin-bottom: 15px;
         }
         &__list-item {
-            margin-left: 41px;
+            margin-left: 40px;
 
             &::before {
                 top: 3px;
@@ -113,7 +125,7 @@
             padding-bottom: 15px;
         }
         .text_bottom {
-            padding-bottom: 24px;
+            padding-bottom: 15px;
         }
     }
 }

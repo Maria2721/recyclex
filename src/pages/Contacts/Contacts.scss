@@ -1,12 +1,12 @@
 @import "../../styles/vars";
 
 .contacts {
-  margin-top: 127px;
+  margin-top: 115px;
   margin-bottom: 60px;
 }
 
 .contacts__header {
-  margin-bottom: 71px;
+  margin-bottom: 70px;
 }
 
 .contacts__info {
@@ -51,6 +51,14 @@
     font-size: 20px;
   }
 }
+@media (min-width: $ultra) {
+  .contacts {
+      margin-top: 170px;
+  }
+  .contacts__header {
+    margin-bottom: 150px;
+  }
+}
 @media screen and (max-width: $tablet) {
   .contacts {
     margin-top: 75px;
@@ -58,7 +66,7 @@
   }
 
   .contacts__header {
-    margin-bottom: 65px;
+    margin-bottom: 45px;
   }
 
   .contacts__info {
@@ -127,11 +135,11 @@
 
 @media screen and (max-width: $mobile) {
   .contacts {
-    margin-top: 50px;
+    margin-top: 45px;
   }
 
   .contacts__header {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .contacts__info {

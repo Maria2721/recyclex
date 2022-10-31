@@ -12,17 +12,12 @@
     border-bottom: 1px solid #ffffff;
 }
 .сookies {
-    margin-top: 146px;
+    margin-top: 115px;
     margin-bottom: 134px;
     font-size: 22px;
     line-height: 27px;
-    &__content {
-        padding: 88px 60px 82px 60px;
-    }
-
     &__title {
-        margin-bottom: 77px;
-        font-size: 53px;
+        margin-bottom: 70px;
     }
     &__subtitle {
         font-size: 40px;
@@ -31,19 +26,20 @@
         text-transform: uppercase;
         margin-bottom: 20px;
     }
-    &__text{
+    &__text {
         margin-bottom: 60px;
         a {
             display: inline;
             font-size: 22px;
+            text-decoration: underline;
         }
     }
     &__list-title {
-        margin-bottom: 49px;
+        margin-bottom: 60px;
     }
     &__list {
         list-style-type: none;
-        margin-bottom: 48px;
+        margin-bottom: 60px;
     }
     &__list-item {
         margin-left: 140px;
@@ -51,20 +47,20 @@
     .list-item_circleList {
         position: relative;
         @include before_circleList;
+        z-index: 1;
     }
-
     .list-item_bottom {
         padding-bottom: 60px;
     }
     &__subtitle_h3 {
         font-size: 40px;
-        line-height: 49px;
         font-weight: 700;
-        margin-bottom: 20px;
+        line-height: 59px;
+        margin-bottom: 50px;
     }
     &__subtitle_h4 {
-        font-size: 22px;
-        line-height: 27px;
+        font-size: 33px;
+        line-height: 40px;
         font-weight: 700;
     }
     .text_weight700 {
@@ -72,7 +68,7 @@
     }
     &-type__wrapper{
         h4 {
-            padding-bottom: 40px;
+            padding-bottom: 60px;
         }
     }
     &__items {
@@ -103,7 +99,71 @@
         transition: color 0.1s ease;
     }   
 }
-
+@media (min-width: $ultra) {
+    .сookies  {
+        margin-top: 170px;
+        font-size: 30px;
+        &__title {
+            margin-bottom: 150px;
+        }
+        &__subtitle {
+            font-size: 48px;
+            line-height: 62px;
+            margin-bottom: 80px;
+        }
+        &__text {
+            margin-bottom: 100px;
+            a {
+                font-size: 30px;
+            }
+        }
+        &__list-title {
+            margin-bottom: 50px;
+        }
+        &__list {
+            list-style-type: none;
+            margin-bottom: 65px;
+        }
+        &__list-item {
+            margin-left: 200px;
+        }
+        .list-item_circleList {
+            &::before {
+                top: 6px;
+                left: -60px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .list-item_bottom {
+            padding-bottom: 60px;
+        }
+        &__subtitle_h3 {
+            font-size: 48px;
+            line-height: 58px;
+            margin-bottom: 50px;
+        }
+        &__subtitle_h4 {
+            font-size: 30px;
+            line-height: 37px;
+        }
+        &-type__wrapper{
+            h4 {
+                padding-bottom: 60px;
+            }
+        }
+        &__items {
+            margin-top: 200px;
+        }
+        &__item {
+            align-items: center;
+            min-height: 163px;
+        }
+        &__link {
+            font-size: 30px;
+        }  
+    }
+}
 
 @media (max-width: $tablet)  {
     .сookies {
@@ -111,12 +171,8 @@
         line-height: 18px;
         margin-top: 75px;
         margin-bottom: 70px;
-        &__content {
-            padding: 60px 35px 52px 35px;
-        }
         &__title {
-            margin-bottom: 80px;
-            font-size: 36px;
+            margin-bottom: 45px;
         }
         &__subtitle {
             font-size: 32px;
@@ -181,16 +237,10 @@
     .сookies {
         font-size: 8px;
         line-height: 10px;
-        margin-top: 52px;
+        margin-top: 45px;
         margin-bottom: 25px;
-
-        &__content {
-            padding: 25px 7px 25px 7px;
-        }
-
         &__title {
-            margin-bottom: 20px;
-            font-size: 16px;
+            margin-bottom: 40px;
         }
         &__subtitle {
             font-size: 14px;
