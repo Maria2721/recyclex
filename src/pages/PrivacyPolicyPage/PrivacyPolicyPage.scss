@@ -2,16 +2,12 @@
 @import "../../styles/mixin";
 
 .privacy {
-    margin-top: 146px;
+    margin-top: 115px;
     margin-bottom: 146px;
     font-size: 22px;
 
     &__title {
-        margin-bottom: 77px;
-        font-size: 53px;
-    }
-    &__content {
-        padding: 60px 60px 97px 60px;
+        margin-bottom: 70px;
     }
     &__list-title {
         margin-bottom: 49px;
@@ -24,12 +20,40 @@
         position: relative;
         margin-left: 140px;
         @include before_circleList;
+        z-index: 1;
     }
     .list-item_bottom {
         padding-bottom: 60px;
     }
 }
 
+@media (min-width: $ultra) {
+    .privacy  {
+        margin-top: 170px;
+        font-size: 30px;
+        &__title {
+            margin-bottom: 150px;
+        }
+        &__list-title {
+            margin-bottom: 45px;
+        }
+        &__list {
+            margin-bottom: 45px;
+        }
+        &__list-item {
+            margin-left: 100px;
+            &::before {
+                top: 10px;
+                left: -60px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .list-item_bottom {
+            padding-bottom: 45px;
+        }
+    }
+}
 @media (max-width: $tablet)  {
     .privacy {
         font-size: 15px;
@@ -37,13 +61,12 @@
         margin-bottom: 95px;
         
         &__title {
-            margin-bottom: 52px;
-            font-size: 36px;
+            margin-bottom: 45px;
         }
-
+/* 
         &__content {
             padding: 53px 35px 60px 35px;
-        }
+        } */
         
         &__list-title {
             margin-bottom: 30px;
@@ -70,17 +93,16 @@
 @media (max-width: $mobile)  {
     .privacy {
         font-size: 8px;
-        margin-top: 45px;
+        margin-top: 40px;
         margin-bottom: 20px;
 
         &__title {
-            margin-bottom: 20px;
-            font-size: 16px;
+            margin-bottom: 40px;
         }
     
-        &__content {
+/*         &__content {
             padding: 25px 7px 25px 7px;
-        }
+        } */
         
         &__list-title {
             margin-bottom: 15px;

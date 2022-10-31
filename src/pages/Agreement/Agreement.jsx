@@ -1,11 +1,9 @@
-import BorderThin from '../../components/BorderThin/BorderThin';
 import "./Agreement.scss";
 
 export default function Agreement() {
     return (
         <section className="agreement container__row">
             <h1 className="agreement__title">Соглашение об обработке персональных данных</h1>
-            <BorderThin>
                 <div className="agreement__content">
                     <p className="agreement__list-title">Настоящим я даю свое согласие  «Recyclex» </p>
                     <ul className="agreement__list">
@@ -18,7 +16,6 @@ export default function Agreement() {
                     <p className="agreement__text">Настоящее согласие действует с настоящего момента до достижения указанных целей обработки.Согласие может быть отозвано мной по моему письменному запросу.Согласие на получение рекламных рассылок может мной отозвано по письменному запросу или с использованием функции «Отписаться». </p>
                     <p className="agreement__text">Текст согласия размещен на сайте  в неограниченном доступе и может быть изменен без предварительного уведомления или согласия Пользователя.Новая редакция Соглашения вступает в силу с момента его утверждения и размещения на сайте.Настоящее Соглашение на обработку персональных данных является неотъемлемой частью Политики конфиденциальности, доступной, размещенной в неограниченном доступе на сайте.</p >
                 </div >
-            </BorderThin >
         </section >
     );
 }
