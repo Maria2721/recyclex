@@ -2,8 +2,8 @@
 @import "../../styles/_mixin.scss";
 
 .member {
-    margin-top: 200px;
-    margin-bottom: 50px;
+    margin-top: 115px;
+    margin-bottom: 100px;
     
     &__inner {
         display: flex;
@@ -12,7 +12,7 @@
     }
 
     &__steps {
-        width: 459px;
+        width: 410px;
         display: flex;
         justify-content: space-between;  
     }
@@ -43,6 +43,8 @@
     }
     &__title {
         margin-top: 70px;
+        font-size: 48px;
+        line-height: 61px;
     }
     &__subTitle{
         margin-top: 10px;
@@ -57,6 +59,51 @@
         }      
     }
 }
+@media(min-width: $ultra) {
+    .member {
+        margin-top: 300px;
+        margin-bottom: 300px;
+        &__title {
+            margin-top: 105px;
+            font-size: 90px;
+            line-height: 115px;
+        }
+        .step__wrapper {
+            font-size: 60px;
+        }
+
+        &__subTitle {
+            margin-top: 30px;
+            font-size: 43px;
+            line-height: 55px;    
+        }
+        &__steps {
+            width: 810px;
+        }
+        .step__first, 
+        .step__second, 
+        .step__third, 
+        .step__fourth {
+            font-size: 60px;
+            &:before {
+                width: 145px;
+                height: 145px;
+                top: -34px;
+                left: -56px;
+            }
+            &::after{
+                width: 120px;
+                top: 30px;
+                left: 85px;
+                border: 7px solid #5FAE36;
+            }  
+        }
+        &__btn {
+            margin-top: 50px;  
+        }
+    }
+}
+
 @media (max-width: 1105px) {
     .member {
         &__title {
@@ -66,8 +113,8 @@
 }
 @media (max-width: $tablet)  {
     .member{
-        margin-top: 140px;
-        margin-bottom: 66px;
+        margin-top: 115px;
+        margin-bottom: 105px;
         &__title {
             margin-top: 40px;
             line-height: 38px;
@@ -82,7 +129,7 @@
             line-height: 26px;    
         }
         &__steps {
-            width: 383px;
+            width: 350px;
         }
         .step__first, 
         .step__second, 
@@ -93,12 +140,12 @@
                 width: 47px;
                 height: 47px;
                 top:-8px;
-                left: -17px;
+                left: -16px;
             }
             &::after{
-                width: 80px;
-                top: 14px;
-                left: 29px;
+                width: 67px;
+                top: 12px;
+                left: 30px;
             }  
         }
         &__btn {
@@ -138,7 +185,7 @@
             &::after{
                 width: 50px;
             }  
-        }
+        } 
     }
 }
 
@@ -160,7 +207,7 @@
             font-size: 15px;
         }
         &__steps {
-            width: 150px;
+            width: 138px;
         }
         .step__first, 
         .step__second, 
@@ -175,10 +222,10 @@
                 border: 2px solid #5FAE36;
             }
             &::after{
-                width: 26px;
-                top: 9px;
+                width: 23px;
+                top: 8px;
                 left: 15px;
-                border: 1px solid #5FAE36;
+                border: 2px solid #5FAE36;
             }  
         }
         &__btn {
