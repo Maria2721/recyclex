@@ -7,10 +7,12 @@ import { ReactComponent as Close } from "../../assets/imgs/close_icon.svg";
 import SwitchTheme from "../SwitchTheme/SwitchTheme";
 import { useState } from "react";
 import * as cx from "classnames";
+import { useDisableBodyScroll } from "../../hooks/useDisableBodyScroll";
 
 
 export default function Header({toggleTheme, theme}) {
   let [opened, setOpened] = useState(false);
+  useDisableBodyScroll(opened)
 
   const classNav = cx("header__nav", {
     "header__nav header__nav_active": opened,

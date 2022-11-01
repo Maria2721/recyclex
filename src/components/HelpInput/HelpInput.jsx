@@ -7,12 +7,13 @@ export default function HelpInput({
   view,
   type,
   value,
+  isDirty,
   handleChange,
   blurHandler,
   errorMessage
 }) {
   const classInput = cx("help__input", {
-    "help__input help__input_error": errorMessage,
+    "help__input help__input_error": errorMessage && isDirty,
   });
 
   return (
@@ -21,7 +22,7 @@ export default function HelpInput({
         {name}
       </label>
       <div className="help__inputWrapper">
-        {(errorMessage) && <div className="help__error">Необходимо заполнить</div>}
+        {(errorMessage && isDirty) && <div className="help__error">Необходимо заполнить</div>}
         
         {view === "input" && (
           <input
