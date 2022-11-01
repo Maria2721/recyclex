@@ -37,14 +37,14 @@ main {
   }
 
   @media (min-width: $ultra)  {
-    max-width: 2020px;
+    max-width: 2220px;
     padding-left: 100px;
     padding-right: 100px;
   }
 }
 
 .container__row_wide { // для хедера
-  width: 95%;
+  width: 100%;
   max-width: 1320px;
   padding-left: 30px;
   padding-right: 30px;
@@ -55,7 +55,7 @@ main {
   }
 
   @media (min-width: $ultra)  {
-    max-width: 2258px;
+    max-width: 2318px;
     padding-left: 60px;
     padding-right: 60px;
   }
