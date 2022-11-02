@@ -12,6 +12,7 @@ import CookiesPolicyPage from './pages/CookiesPolicyPage/CookiesPolicyPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
 import Agreement from './pages/Agreement/Agreement';
 import Contacts from './pages/Contacts/Contacts';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
 import HelpModal from './components/HelpModal/HelpModal';
 import ThanksModal from './components/ThanksModal/ThanksModal';
 import { createContext, useState, useEffect } from "react";
@@ -67,6 +68,7 @@ function App() {
                 <Route path='/cookies-policy-page' element={<CookiesPolicyPage/>}/>
                 <Route path='/agreement' element={<Agreement/>}/>
                 <Route path='/contacts' element={<Contacts/>}/>
+                <Route path='*' element={<ErrorPage/>}/>
             </Routes>
           </main>
           <button className='app__chat'>
