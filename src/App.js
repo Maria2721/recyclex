@@ -71,7 +71,7 @@ function App() {
                 <Route path='/cookies-policy-page' element={<CookiesPolicyPage/>}/>
                 <Route path='/agreement' element={<Agreement/>}/>
                 <Route path='/contacts' element={<Contacts/>}/>
-                <Route path='/*' element={<ErrorPage/>}/>
+                <Route path='*' element={<ErrorPage/>}/>
             </Routes>
           </main>
           <button className='app__chat'>
