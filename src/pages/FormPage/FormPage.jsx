@@ -1,4 +1,6 @@
 import "./FormPage.scss";
+import * as cx from "classnames";
+import { ReactComponent as AlertIcon} from "../../assets/imgs/alert_form.svg";
 import FormMessage from "../../components/FormMessage/FormMessage";
 import FormAnswer from "../../components/FormAnswer/FormAnswer";
 import FormButton from "../../components/FormButton/FormButton";
@@ -23,11 +25,19 @@ export default function FormPage({ handleModal }) {
         email: ''
     });
     const [fourthAnswer, setFourthAnswer] = useState('SMS');
+    const [isErrorCheckbox, setIsErrorCheckbox] = useState(false)
     let {surname, name, middle, company, telephone, email} = thirdAnswer;
     const stepData = questions[step];
     const navigate = useNavigate();
+    const $buttonRef = useRef(null);
+    const $messageRef1 = useRef(null);
+    const $messageRef2 = useRef(null);
+    const $messageRef3 = useRef(null);
+    const $messageRef4 = useRef(null);
 
-    const $buttonRef = useRef(null)
+    const classCheckboxError = cx("form__checkboxError", {
+        "form__checkboxError_shown": isErrorCheckbox,
+      });
 
     useLayoutEffect(() => {
         if (!$buttonRef.current) {
@@ -85,23 +95,26 @@ export default function FormPage({ handleModal }) {
     }
 
     const handleClick = () => {
-
         switch (step) {
             case 0:
-                // if (firstAnswer.length !== 0) {
-                //     setStep((step) => step + 1)
-                // } else {
-                //     console.log('Выберете значение')
-                // }
-                firstAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
+                if (firstAnswer.length !== 0) {
+                    setStep((step) => step + 1)
+                    setIsErrorCheckbox(false) 
+                } else {
+                    setIsErrorCheckbox(true) 
+                    // console.log('Выберете значение')
+                }
+                // firstAnswer.length === 0 ? setIsErrorCheckbox(true) : setStep((step) => step + 1)
                 break;
             case 1:
-                // if (secondAnswer.length !== 0) {
-                //     setStep((step) => step + 1)
-                // } else {
-                //     console.log('Выберете значение')
-                // }
-                secondAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
+                if (secondAnswer.length !== 0) {
+                    setStep((step) => step + 1)
+                    setIsErrorCheckbox(false) 
+                } else {
+                    setIsErrorCheckbox(true) 
+                    // console.log('Выберете значение')
+                }
+                // secondAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
                 break;
             case 2:
                 let isValid = [surname, name, company, telephone].every((input) => validatePersonalData(input));
@@ -131,27 +144,27 @@ export default function FormPage({ handleModal }) {
     return (
         <div className="form container__row">
             <div className="form__inner">
-                <h1 className="form__header">Шаг {step + 1}</h1>
+                <h1 className="form__header">Шаг {step + 1} из 4</h1>
                 <FormMessage direction='left'>С какими группами отходов Вы работаете?</FormMessage>
 
-                <CSSTransition in={step >= 1} timeout={1000} classNames="transition-answer">
-                    <div>
+                <CSSTransition in={step >= 1} timeout={1000} classNames="transition-answer" nodeRef={$messageRef1}>
+                    <div ref={$messageRef1}>
                         {step >= 1 && <FormMessage direction='right'>{firstAnswer.join(', ')}</FormMessage>}
                     </div>
                 </CSSTransition>
-                <CSSTransition in={step >= 1} timeout={1000} classNames="transition-question">
-                    <div>
+                <CSSTransition in={step >= 1} timeout={1000} classNames="transition-question" nodeRef={$messageRef2}>
+                    <div ref={$messageRef2}>
                         {step >= 1 && <FormMessage direction='left'>{questions[1].question}</FormMessage>}
                     </div>
                 </CSSTransition>
 
-                <CSSTransition in={step >= 2} timeout={1000} classNames="transition-answer">
-                    <div>
+                <CSSTransition in={step >= 2} timeout={1000} classNames="transition-answer" nodeRef={$messageRef3}>
+                    <div ref={$messageRef3}>
                         {step >= 2 && <FormMessage direction='right'>{secondAnswer.join(', ')}</FormMessage>}
                     </div>
                 </CSSTransition>
-                <CSSTransition in={step >= 2} timeout={1000} classNames="transition-question">
-                    <div>
+                <CSSTransition in={step >= 2} timeout={1000} classNames="transition-question" nodeRef={$messageRef4}>
+                    <div ref={$messageRef4}>
                         {step >= 2 && <FormMessage direction='left'>{questions[2].question}</FormMessage>}
                     </div>
                 </CSSTransition>
@@ -179,16 +192,22 @@ export default function FormPage({ handleModal }) {
                         {
                             stepData.type === 'checkbox' &&
                             <div className='form__checkbox'>
-                            {
-                                stepData.options.map((item) => (
-                                    <Checkbox
-                                    onChange={(e)=> handleChange(e)}
-                                    key={item.id}
-                                    value={item.value}
-                                    id={item.id}/>
-                                ))
-                            }
-                        </div>
+                            <div className='form__checkboxInner'>
+                                <div className={classCheckboxError}>
+                                    <AlertIcon className="form__checkboxErrorIcon"/>
+                                    <span className="form__checkboxErrorText">Ответьте, пожалуйста, на вопрос.</span>
+                                </div>
+                                {
+                                    stepData.options.map((item) => (
+                                        <Checkbox
+                                        onChange={(e)=> handleChange(e)}
+                                        key={item.id}
+                                        value={item.value}
+                                        id={item.id}/>
+                                    ))
+                                }
+                                                        </div>
+                            </div>
                         }
                         
                         {

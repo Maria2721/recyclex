@@ -2,7 +2,7 @@
 
 .formMessage {
     display: flex;
-    margin-bottom: 70px;
+    margin-bottom: 35px;
 }
 
 .formMessage_right {
@@ -19,7 +19,7 @@
 }
 
 #dark .formMessage__border {
-    background-color:  #FFFFFF;
+    background-color:  #1A1A1A;
 }
 
 .formMessage__border::after {
@@ -34,7 +34,7 @@
 
 #dark .formMessage__border::after {
     border-color: transparent;
-    border-left-color: $textColor_dark;
+    border-left-color: #1A1A1A;
 }
 
 .formMessage__border_right::after {
@@ -49,18 +49,18 @@
 
 #dark .formMessage__border_right::after {
     border-color: transparent;
-    border-right-color: $textColor_dark;
+    border-right-color: #1A1A1A;
 }
 
 .formMessage__text {
     z-index: 1;
-    font-size: 20px;
-    line-height: 1.3;
+    font-size: 16px;
+    line-height: 20px
 }
 
 #dark .formMessage__text {
-    background-color:  #FFFFFF;
-    color: $bgColor_dark;
+    background-color:  #1A1A1A;
+    color: $textColor_dark;
 }
 
 
@@ -68,21 +68,27 @@
     .formMessage {
         margin-bottom: 55px;
     }
+
+    .formMessage__text {
+        font-size: 20px;
+        line-height: 24px
+    }
 }
 
 @media (max-width: $mobile)  {
     .formMessage {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     .formMessage__border {
-        max-width: 205px;
+        max-width: 242px;
         padding: 5px 22px 5px 10px;
         border-radius: 10px;
     }
 
     .formMessage__text {
-        font-size: 10px;
+        font-size: 13px;
+        line-height: 17px;
     }
 
 
@@ -97,5 +103,23 @@
         border: 9px solid transparent;
         border-right: 15px solid #EBEBEB;
     
+    }
+}
+
+@media (min-width: $ultra)  {
+    .formMessage {
+        display: flex;
+        margin-bottom: 50px;
+    }
+    
+    .formMessage__border {
+        max-width: 616px;
+        padding: 44px 40px;
+        border-radius: 35px;
+    }
+
+    .formMessage__text {
+        font-size: 24px;
+        line-height: 31px
     }
 }
