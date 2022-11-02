@@ -34,6 +34,8 @@ export default function FormPage({ handleModal }) {
     const $messageRef2 = useRef(null);
     const $messageRef3 = useRef(null);
     const $messageRef4 = useRef(null);
+    const $messageRef5 = useRef(null);
+    const $messageRef6 = useRef(null);
 
     const classCheckboxError = cx("form__checkboxError", {
         "form__checkboxError_shown": isErrorCheckbox,
@@ -148,7 +150,7 @@ export default function FormPage({ handleModal }) {
                 <FormMessage direction='left'>С какими группами отходов Вы работаете?</FormMessage>
 
                 <CSSTransition in={step >= 1} timeout={1000} classNames="transition-answer" nodeRef={$messageRef1}>
-                    <div ref={$messageRef1}>
+                    <div ref={$messageRef1} >
                         {step >= 1 && <FormMessage direction='right'>{firstAnswer.join(', ')}</FormMessage>}
                     </div>
                 </CSSTransition>
@@ -169,8 +171,8 @@ export default function FormPage({ handleModal }) {
                     </div>
                 </CSSTransition>
 
-                <CSSTransition in={step >= 3} timeout={1000} classNames="transition-answer">
-                    <div>
+                <CSSTransition in={step >= 3} timeout={1000} classNames="transition-answer" nodeRef={$messageRef5}>
+                    <div ref={$messageRef5}>
                         {step >= 3 && <FormMessage direction='right'>
                         Фамилия - {surname} <br />
                         Имя - {name} <br />
@@ -181,8 +183,8 @@ export default function FormPage({ handleModal }) {
                     </FormMessage>} 
                     </div>
                 </CSSTransition>
-                <CSSTransition in={step >= 3} timeout={1000} classNames="transition-question">
-                    <div>
+                <CSSTransition in={step >= 3} timeout={1000} classNames="transition-question" nodeRef={$messageRef6}>
+                    <div ref={$messageRef6}>
                         {step >= 3 && <FormMessage direction='left'>{questions[3].question}</FormMessage>}
                     </div>
                 </CSSTransition>
@@ -213,11 +215,9 @@ export default function FormPage({ handleModal }) {
                         {
                             stepData.type === 'personalData' &&
                             <div className='form__personalData'>
-                                <div className="form__personalData">
                                     <PersonalDataInputs
                                     data={stepData.data}
                                     onChange={handleChangePersonalData}/>
-                                    </div>
                             </div>
                         }
 

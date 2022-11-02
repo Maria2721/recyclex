@@ -16,18 +16,21 @@
 }
 
 .form__checkbox {
-  padding: 51px 54px 40px 54px;
+  // max-width: 620px;
+  // width: 100%;
+  padding: 51px 24px 40px 54px;
 }
 
 .form__radio {
-  padding: 46px 81px 57px 81px;
+  width: 620px;
+  padding: 44px 76px 24px 76px;
 }
 
 .form__personalData {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 45px 53px 35px 53px;
+  padding: 53px 50px 24px 53px;
 }
 
 .form__checkboxInner {
@@ -68,6 +71,8 @@
   }
 
   .form__checkbox {
+    // max-width: 580px;
+    // width: 100%;
     padding: 50px 15px 60px 52px;
   }
 
@@ -84,15 +89,18 @@
   }
 
   .form__radio {
+    // width: 580px;
     padding: 63px 50px 36px 50px;
   }
 
   .form__personalData {
-    padding: 45px 20px 35px 20px;
+    // max-width: 580px;
+    // width: 100%;
+    padding: 56px 20px 60px 20px;
   }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $smallTablet) {
   .form {
     margin-top: 30px;
     margin-bottom: 50px;
@@ -102,9 +110,10 @@
     margin-bottom: 30px;
   }
 
-  .form__checkbox {
-    padding: 26px 30px 25px 30px;
-  }
+  // .form__checkbox {
+  //   width: 100%;
+  // }
+
 
   .form__checkboxError {
     top: -20px;
@@ -125,7 +134,13 @@
   }
 
   .form__personalData {
-    padding: 20px 22px;
+    padding: 50px 23px 35px 22px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .form__personalData {
+    padding: 30px 23px 15px 22px;
   }
 }
 
@@ -136,7 +151,6 @@
 
   .form__checkboxErrorIcon {
     width: 9px;
-    // margin-right: 2px;
   }
 
   .form__checkboxErrorText {
@@ -157,7 +171,13 @@
     margin-bottom: 129px;
   }
 
+  .form__personalData {
+    // width: 1145px;
+    padding: 77px 57px 60px 57px;
+  }
+
   .form__checkbox {
+    // width: 1140px;
     padding: 150px 30px 143px 150px;
   }
 
@@ -176,11 +196,8 @@
   }
 
   .form__radio {
-    padding: 28px 25px;
-  }
-
-  .form__personalData {
-    padding: 20px 22px;
+    // width: 1005px;
+    padding: 91px 108px 113px 108px;
   }
 
   .form__checkboxError {

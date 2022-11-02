@@ -1,7 +1,8 @@
 @import "../../styles/vars";
 
 .formAnswer {
-  width: 620px;
+  max-width: 620px;
+  width: 100%;
   border-radius: 30px;
   font-size: 16px;
   font-weight: 400;
@@ -16,7 +17,8 @@
 
 @media (max-width: $tablet) {
   .formAnswer {
-    width: 580px;
+    max-width: 580px;
+    width: 100%;
     font-size: 20px;
     line-height: 18px;
   }
@@ -27,7 +29,7 @@
   }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $smallTablet) {
   .formAnswer {
     width: 100%;
     border-radius: 10px;
@@ -36,7 +38,8 @@
 
 @media (min-width: $ultra) {
   .formAnswer {
-    width: 1018px;
+    max-width: 1145px;
+    width: 100%;
     border-radius: 50px;
     font-size: 24px;
     line-height: 21px;
