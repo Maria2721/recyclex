@@ -8,7 +8,7 @@ export default function WhyRecyclexBlock() {
             <h1 className="whyRecyclex__title">Почему Recyclex?</h1>
                 <div className="whyRecyclex__inner">
                     <div className="whyRecyclex__items">
-                        <div className="whyRecyclex__item whyRecyclex__divider">
+                        <div className="whyRecyclex__item  item whyRecyclex__divider">
                             <h4 className="whyRecyclex__subTitle ">Готовая база предприятий и организаций сферы переработки вторичных ресурсов</h4>
                             <p className="whyRecyclex__text">Это теплая целевая аудитория для ваших предложений</p>
                         </div>
@@ -36,7 +36,7 @@ export default function WhyRecyclexBlock() {
                             <p className="whyRecyclex__text">Продвигайте объявления и увеличивайте охваты аудитории</p>
                         </div>
                     </div>
-                    <div className="whyRecyclex__img">
+                    <div className="whyRecyclex__img item">
                         <div className="wrapper__img">
                     </div>   
                     </div>
