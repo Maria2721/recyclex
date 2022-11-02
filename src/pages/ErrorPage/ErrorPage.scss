@@ -2,8 +2,8 @@
 @import "../../styles/mixin";
 
 .errorPage {
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 48px;
+    margin-bottom: 65px;
 
     &__content {
         display: flex;
@@ -85,7 +85,7 @@
 @media (max-width: $tablet)  {
     .errorPage {
         margin-top: 75px;
-        margin-bottom: 75px;
+        margin-bottom: 116px;
         &__container {
             display: grid;
             justify-content: center;
@@ -116,8 +116,8 @@
 }
 @media (max-width: $mobile)  {
     .errorPage {
-        margin-top: 45px;
-        margin-bottom: 45px;
+        margin-top: 30px;
+        margin-bottom: 30px;
         &__container {
             grid-template-areas: 
             "img img"
