@@ -69,9 +69,8 @@
             margin-top: 150px;
         }
         &__items {
-            width: 55%; 
+            width: 48%; 
         }
-
         &__item {
             padding-top: 30px;
             padding-bottom: 50px;
@@ -89,12 +88,12 @@
         &__img {
             position: relative;
             margin-top: 110px;
-            width: 45%;
+            width: 44%;
         }
         .wrapper__img {
             width: 100%;
             position: absolute;
-            left: 7%;
+            left: 16%;
             background-image: url(../../assets/imgs/screen_desktop4k.png); 
         }
     }
@@ -153,6 +152,7 @@
             flex-direction: column;
             align-items: center;
             row-gap: 80px;
+            grid-row-gap: 80px;
         }       
         &__items{
             width: 100%;
