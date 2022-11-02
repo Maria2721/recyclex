@@ -19,6 +19,7 @@ import { createContext, useState, useEffect } from "react";
 import { ReactComponent as ChatIconWhite} from "./assets/imgs/chat_icon_white.svg";
 import { ReactComponent as OnlineMark} from "./assets/imgs/online_mark_chat.svg";
 import { ReactComponent as ChatIconBlack} from "./assets/imgs/chat_icon_black.svg";
+import { useDisableBodyScroll } from './hooks/useDisableBodyScroll';
 
 
 const ThemeContext = createContext(null);
@@ -31,6 +32,8 @@ function App() {
   const {pathname} = useLocation(); 
   const isHomePage = pathname === "/" ? true : false;
   const isSetBackground = isHomePage ? ' home__page' : '';
+  useDisableBodyScroll(openedThanksModal)
+  useDisableBodyScroll(openedHelpModal)
 
   useEffect(() => {
     window.scrollTo(0, 0);

@@ -202,3 +202,17 @@
         fill: $textColor_dark;
     }
 }
+
+@media (min-width: $ultra)  {
+    .header__inner {
+        height: 200px;
+    }
+    .header__link {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .header__logo {
+        width: 387px;
+    }
+}
