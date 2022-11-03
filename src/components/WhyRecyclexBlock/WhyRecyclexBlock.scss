@@ -151,7 +151,6 @@
             margin-top: 45px;
             flex-direction: column;
             align-items: center;
-            /* row-gap: 80px; */
         }       
         &__items {
             width: 100%;
@@ -188,4 +187,11 @@
         }
     }
 }
-
+@media screen and (orientation:landscape) and (max-width: $horizonMobile) {
+    .whyRecyclex  {
+        margin-top: 90px; 
+        &__inner {
+            margin-top: 50px;
+        }
+    }
+}

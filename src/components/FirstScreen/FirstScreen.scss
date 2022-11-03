@@ -2,14 +2,14 @@
 
 
 .firstScreen {
-    margin-top: 297px;
-    
+    margin-top: 297px;   
     &__inner{
         display: flex;
         flex-direction: column;
     }
     &__title {
         font-size: 60px;
+        line-height: 77px;
         text-align: left; 
         color: #000000;   
     }
@@ -17,12 +17,13 @@
         margin-top: 15px;
         max-width: 462px;
         font-size: 28px;
+        line-height: 28px
     }
     &__btn {
         margin-top: 78px;
-        a {
-            display: block;
-        }
+            a {
+                display: block;
+            }
     } 
 }
 
@@ -47,71 +48,60 @@
         }  
     }
 }
-@media(max-width: 961px) {
-    .firstScreen {
-        &__title {
-            font-size: 59px;
-        }
-    }  
-}
+
 @media (max-width: $tablet)  {
     .firstScreen {
         margin-top: 200px;
         &__title {
-            margin-top: 16px;
-            max-width: 655px;
             font-size: 48px;
+            line-height: 61px;
         }
         &__subTitle {
             margin-top: 20px;
             max-width: 345px;
             font-size: 24px;
+            line-height: 24px;
         }
         &__btn {
         margin-top: 73px;
         }
     }
 }
-
 @media(max-width: 774px) {
     .firstScreen {
-        /* margin-top: 297px; */
         &__title {
-            font-size: 43px;
+            max-width: 380px;
         }
     }
 }
-@media(max-width: $smallTablet) {
+@media (max-width: 498px) {
     .firstScreen {
         &__title {
             font-size: 45px;
-            max-width: 380px;
-        }
-    }   
-}
-
-@media (max-width: $mobile)  {
-    .firstScreen {
-        margin-top: 120px;
-        &__title {
-            /* max-width: 280px; */
-            font-size: 19px;    
-        }
-        &__subTitle {
-            margin-top: 18px;
-            max-width: 280px;
-            font-size: 13px;
-        }
-        &__btn {
-            margin-top: 25px; 
         }
     }
 }
-@media (max-width: $smallMobile)  {
+@media(max-width: $mobile) {
     .firstScreen {
+        margin-top: 106px;
         &__title {
-            font-size: 25px; 
-            max-width: 230px;
+            font-size: 20px;
+            line-height: 26px;
+            max-width: 380px;
         }
+        &__subTitle {
+            max-width: 280px;
+            margin-top: 18px;
+            font-size: 15px; 
+            line-height: 15px;   
+        }
+        &__btn {
+            margin-top: 24px; 
+        }
+    }   
+}
+@media screen and (orientation:landscape) and (max-width: $horizonMobile) {
+    .firstScreen {
+        margin-top: 100px; 
     }
 }
