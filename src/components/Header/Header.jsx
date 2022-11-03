@@ -35,13 +35,13 @@ export default function Header({toggleTheme, theme}) {
           <Link to="/">{theme === 'light'? <LogoBlack className="header__logo"/> : <LogoWhite className="header__logo"/>}</Link>
           <div className={classOverlay}></div>
         <nav className={classNav} onClick={handleClick}>
-          <div className="header__navInner">
+          <div className="header__navInner" onClick={e => e.stopPropagation()}>
           {opened && (
               <button className="header__close" onClick={handleClick}>
                 <Close className="header__closeIcon" />
               </button>
             )}
-            <div className="header__links" onClick={e => e.stopPropagation()}>
+            <div className="header__links">
               <Link to="/about-project" onClick={handleClick} className="header__link">О проекте</Link>
               <Link to="/work-scheme" onClick={handleClick} className="header__link">Схема работы</Link>
               <Link to="/contacts" onClick={handleClick} className="header__link">Контакты</Link>

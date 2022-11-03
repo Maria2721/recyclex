@@ -16,7 +16,7 @@ export const questions = [
         id: 'glass'
     },{
         value: 'Другое',
-        id: 'other'
+        id: 'otherGroups'
     }]
 },{
         question: 'Какой профиль Вашей деятельности?*',
@@ -47,7 +47,7 @@ export const questions = [
             name: 'profile'
         },{
             value: 'Другое',
-            id: 'other',
+            id: 'otherProfile',
             name: 'profile'
         }]
     },
@@ -57,27 +57,27 @@ export const questions = [
         data: {
         surname: {
             type:'text',
-            placeholder:"Фамилия*",
+            label:"Фамилия*",
         },
         name: {
             type:'text',
-            placeholder:"Имя*",
+            label:"Имя*",
         },
         middle: {
             type:'text',
-            placeholder:"Отчество",
+            label:"Отчество",
         },
         company: {
             type:'text',
-            placeholder:"Название организации*",
+            label:"Название организации*",
         },
         telephone: {
             type:'tel',
-            placeholder:"Контактный номер телефона*",
+            label:"Номер телефона*",
         },
        email:{
             type:'email',
-            placeholder:"Ваш E-mail",
+            label:"Ваш E-mail*",
         }}
     },
     {

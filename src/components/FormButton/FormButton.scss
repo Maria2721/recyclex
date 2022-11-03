@@ -3,7 +3,7 @@
 .formButton {
     display: flex;
     justify-content: center;
-    margin-bottom: 29px;
+    margin-bottom: 40px;
     font-size: 20px;
 }
 
@@ -11,6 +11,13 @@
     .formButton {
         margin-bottom: 15px;
         font-size: 12px;
+    }
+    
+}
+
+@media (min-width: $ultra)  {
+    .formButton {
+        margin-bottom: 78px;
     }
     
 }
