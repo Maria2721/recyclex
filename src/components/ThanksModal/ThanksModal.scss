@@ -134,3 +134,31 @@
         margin-bottom: 30px;
     } 
 }
+
+@media (min-width: $ultra)  { 
+    .thanksModal__content {
+        padding: 108px 30px 87px 30px;
+        background-color: $bgColor;
+        width: 1050px;
+        max-height: 900px;
+        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    }
+    
+    .thanksModal__header {
+        font-size: 80px;
+        line-height: 102px;
+        margin-bottom: 50px;
+    }
+    
+    .thanksModal__image {
+        width: 465px;
+        margin-bottom: 35px;
+    }
+    
+    .thanksModal__description {
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 54px;
+    }
+    
+}
