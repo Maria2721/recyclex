@@ -25,7 +25,7 @@ const ThemeContext = createContext(null);
 
 function App() {
   const [openedHelpModal, setOpenedHelpModal] = useState(false);
-  const [openedThanksModal, setOpenedThanksModal] = useState(false);
+  const [openedThanksModal, setOpenedThanksModal] = useState(true);
   const currentTheme = localStorage.getItem('theme') || 'light';
   const [theme, setTheme] = useState(currentTheme);
   const {pathname} = useLocation(); 

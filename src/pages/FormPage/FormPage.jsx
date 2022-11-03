@@ -26,7 +26,8 @@ export default function FormPage({ handleModal }) {
     });
     const [fourthAnswer, setFourthAnswer] = useState('SMS');
     const [isErrorCheckbox, setIsErrorCheckbox] = useState(false)
-    let {surname, name, middle, company, telephone, email} = thirdAnswer;
+    // const [formErrors, serFormErrors] = useState()
+    const {surname, name, middle, company, telephone, email} = thirdAnswer;
     const stepData = questions[step];
     const navigate = useNavigate();
     const $buttonRef = useRef(null);
@@ -45,9 +46,7 @@ export default function FormPage({ handleModal }) {
         if (!$buttonRef.current) {
             return
         }
-        
         const top = $buttonRef.current.offsetTop - window.innerHeight + 30
-
         window.scrollTo({
             top,
             left: 0,
@@ -104,7 +103,6 @@ export default function FormPage({ handleModal }) {
                     setIsErrorCheckbox(false) 
                 } else {
                     setIsErrorCheckbox(true) 
-                    // console.log('Выберете значение')
                 }
                 // firstAnswer.length === 0 ? setIsErrorCheckbox(true) : setStep((step) => step + 1)
                 break;
@@ -114,13 +112,11 @@ export default function FormPage({ handleModal }) {
                     setIsErrorCheckbox(false) 
                 } else {
                     setIsErrorCheckbox(true) 
-                    // console.log('Выберете значение')
                 }
                 // secondAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
                 break;
             case 2:
                 let isValid = [surname, name, company, telephone].every((input) => validatePersonalData(input));
-                console.log(isValid);
 
                 // if (isValid) {
                 //     setStep((step) => step + 1)
