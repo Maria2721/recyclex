@@ -1,7 +1,7 @@
 import "./Contacts.scss";
-import Worker from "../../components/Worker/Worker";
-import WorkerPhoto from "../../assets/imgs/worker.png";
-import WorkerPhotoForRetina from "../../assets/imgs/worker_2x.png";
+// import Worker from "../../components/Worker/Worker";
+// import WorkerPhoto from "../../assets/imgs/worker.png";
+// import WorkerPhotoForRetina from "../../assets/imgs/worker_2x.png";
 
 export default function Contacts() {
     return (
@@ -9,29 +9,27 @@ export default function Contacts() {
             <h1 className="contacts__header">Контакты</h1>
             <div className="contacts__info">
                 <div className="contacts__city contacts__column">
-                    <span className="contacts__subtitle contacts__subtitle_bigger">г. Москва</span>
+                    <span className="contacts__subtitle contacts__subtitle_bigger">Россия</span>
                 </div>
                 <div className="contacts__address contacts__column">
                     <span className="contacts__subtitle">Адрес</span>
-                    <span className="contacts__description">Пресненская набережная д.12, офис 405, помещ.3</span>
+                    <span className="contacts__description contacts__adress">Москва,<br/>Пресненская набережная д.12, офис 405, помещ.3</span>
                 </div>
                 <div className="contacts__contacts contacts__column">
                     <span className="contacts__subtitle">Для связи</span>
                     <div className="contacts__numbers contacts__description">
-                        <a href="tel:+74732528040">+7 (473) 252-80-40</a>
-                        <a href="tel:+74732528037">+7 (473) 252-80-37</a>
-                        <a href="tel:+747325280390">+7 (473) 252-80-39</a>
+                        <a href="tel:+78003330816">+7 (800) 333-08-16</a>
                     </div>
                 </div>
                 <div className="contacts__director contacts__column">
-                    <span className="contacts__subtitle contacts__description">Директор представительства</span>
-                    <span>Юрьева Анна Владимировна</span>
+                    <span className="contacts__subtitle contacts__description">Директор</span>
+                    <span>Коверда <br className="contacts__tablet_hidden"/>Вадим Николаевич</span>
                 </div>
             </div>
             <div className="contacts__mapWrapper">
                 <iframe className="contacts__map" title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.5099045500347!2d37.535223762818404!3d55.749643966130535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bdcbbad463d%3A0x6d3294a8edf98cce!2z0JrQvtCy0L7RgNC60LjQvdCzIMKr0J7RhNC40YEgMjQvN8K7!5e0!3m2!1sru!2sge!4v1664996240475!5m2!1sru!2sge"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div className="contacts__workers">
+            {/* <div className="contacts__workers">
                 <Worker
                 position='Главный специалист отдела закупок и контроля затрат'
                 surname='Иванова'
@@ -48,7 +46,7 @@ export default function Contacts() {
                 email='AASirotenko@vtbf.ru'
                 src={WorkerPhoto}
                 srcRetina={WorkerPhotoForRetina}/>
-            </div>
+            </div> */}
         </section>
     );
 }
