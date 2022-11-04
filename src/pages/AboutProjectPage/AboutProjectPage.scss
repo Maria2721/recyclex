@@ -75,6 +75,11 @@
         }
     }
 }
+@media screen and (orientation:landscape) and (max-width: $horizonMobile) {
+    .about   {
+        margin-top: 20px; 
+    }
+}
 
 
 

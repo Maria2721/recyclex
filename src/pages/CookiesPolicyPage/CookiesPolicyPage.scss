@@ -308,3 +308,8 @@
         }
     }
 }
+@media screen and (orientation:landscape) and (max-width: $horizonMobile) {
+    .сookies {
+        margin-top: 20px; 
+    }
+}

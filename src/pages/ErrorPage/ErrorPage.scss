@@ -152,3 +152,8 @@
         }
     }
 }
+@media screen and (orientation:landscape) and (max-width: $horizonMobile) {
+    .errorPage {
+        margin-top: 20px; 
+    }
+}
