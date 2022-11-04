@@ -13,17 +13,17 @@
     text-decoration: none;
     text-transform: uppercase;
 
-    &:hover{
-        background-color: $greyColor;
-        color: $accentColor;
-        cursor: pointer;
-        transition: background-color 0.1s ease;
-    }
+    // &:hover{
+    //     background-color: $greyColor;
+    //     color: $accentColor;
+    //     cursor: pointer;
+    //     transition: background-color 0.1s ease;
+    // }
 }
 
-#dark .btn:hover {
-    background-color: $bgColor;
-}
+// #dark .btn:hover {
+//     background-color: $bgColor;
+// }
 
 .btn_smaller {
     width: 300px;
@@ -64,29 +64,29 @@
         font-size: 20px;
         line-height: 20px;
 
-        &:hover{
-            background-color: $accentColor;
-            color: #FFFFFF;
-        }
+        // &:hover{
+        //     background-color: $accentColor;
+        //     color: #FFFFFF;
+        // }
 
-        &:active {
-            background-color: $greyColor;
-            color: $accentColor;
-        }
+        // &:active {
+        //     background-color: $greyColor;
+        //     color: $accentColor;
+        // }
     }
 
     .btn_smaller {
         padding: 22px 0;
 
-        &:hover{
-            background-color: $accentColor;
-            color: #FFFFFF;
-        }
+        // &:hover{
+        //     background-color: $accentColor;
+        //     color: #FFFFFF;
+        // }
 
-        &:active {
-            background-color: $greyColor;
-            color: $accentColor;
-        }
+        // &:active {
+        //     background-color: $greyColor;
+        //     color: $accentColor;
+        // }
     }
 
     .btn_modal {

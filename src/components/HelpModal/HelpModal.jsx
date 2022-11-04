@@ -7,6 +7,7 @@ import { ReactComponent as AlertIconWhite } from "../../assets/imgs/alert_icon_w
 import { ReactComponent as LogoBlack } from "../../assets/imgs/logo_black.svg";
 import { ReactComponent as LogoWhite } from "../../assets/imgs/logo_white.svg";
 import { ReactComponent as CloseIcon } from "../../assets/imgs/close_icon.svg";
+import ButtonSend from "../ButtonSend/ButtonSend";
 import { useState } from "react";
 import * as cx from "classnames";
 
@@ -87,7 +88,7 @@ const handleClick = () => {
 
     if (valid) {
       console.log('Форма отправлена')
-      handleModal()
+      // handleModal()
     }
 };
 
@@ -175,11 +176,7 @@ const validateForm = () => {
                         </Link>
                       </span>
                     </div>
-                    <button
-                      className="btn btn_modal"
-                      onClick={handleClick}>
-                      Отправить
-                    </button>
+                    <ButtonSend handleSendForm={handleClick} isValid={valid} handleModal={handleModal}>Отправить</ButtonSend>
                 </div>
               </div>
             </div>
