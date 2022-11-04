@@ -19,7 +19,7 @@ export default function Advantages() {
                         </div>
                         <div className="advantages__item_row item__wrapper">
                             <h4 className="item__title">База партнеров</h4>
-                            <p className="item__text">Удобный бизнес каталог</p>
+                            <p className="item__text">Удобный бизнес-каталог</p>
                         </div>
                     </div>
                     <div className="advantages__item">
@@ -38,7 +38,7 @@ export default function Advantages() {
                         </div>
                         <div className="item__wrapper">
                             <h4 className="item__title">Безопасные сделки</h4>
-                            <p className="item__text">Удобный бизнес-каталог</p>
+                            <p className="item__text">Прозрачные соглашения</p>
                         </div>
                     </div>
                     <div className="advantages__item">
