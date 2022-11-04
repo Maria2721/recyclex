@@ -95,3 +95,21 @@ h1 {
     font-size: 16px;
   }
 }
+
+@supports(padding:max(0px)) {
+  body, header, footer {
+      padding-left: min(0vmin, env(safe-area-inset-left));
+      padding-right: min(0vmin, env(safe-area-inset-right));
+  }
+}
+
+@media screen and (orientation:landscape)
+and (max-width: 900px) {
+  .container__row {
+    padding: 0 60px;
+  }
+
+  .container__row_wide {
+    padding: 0 50px;
+  }
+}
