@@ -3,6 +3,10 @@
 .help__row {
     display: flex;
     justify-content: space-between;
+
+    & :not(:last-child) {
+        margin-bottom: 30px;
+    }
 }
 
 .help__label {
@@ -92,6 +96,10 @@
         height: 100px;
     }
 
+    .help__row :not(:last-child) {
+        margin-bottom: 20px;
+    }
+    
     .help__row:last-child {
         margin-bottom: 5px;
     }
@@ -100,6 +108,10 @@
 @media (max-width: $smallTablet)  {
     .help__row {
         display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
     }
 
     .help__label {
@@ -169,6 +181,10 @@
         left: 59px;
     }
 
+    .help__row:not(:last-child) {
+        margin-bottom: 6px;
+    }
+
     .help__row:last-child .help__error {
         top: 73px;
         left: 59px;
@@ -209,6 +225,10 @@
         top: -25px;
         font-size: 19px;
         line-height: 19px;
+    }
+
+    .help__row:not(:last-child) {
+        margin-bottom: 40px;
     }
 
     .help__row:last-child {
