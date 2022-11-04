@@ -8,7 +8,7 @@ export default function Footer({ handleModal }) {
     <footer className="footer container">
         <div className="footer__inner container__row">
             <div className="footer__requisitesAndRights">
-              <div className="footer__requisites">2021, ООО “Экополимер”<br/>ИНН, 612509367304,  ТЕЛ: <a href="tel:+78003330816">+7 (800) 333-08-16</a><br/>АДРЕС: Москва, Пресненская набережная. д.12, офис 405, помещ.3
+              <div className="footer__requisites">2021, ООО “Экополимер”<br/>ИНН, 612509367304,<br/>ТЕЛ: <a href="tel:+78003330816">+7 (800) 333-08-16</a><br/>АДРЕС: Москва, Пресненская набережная. д.12, офис 405, помещ.3
               </div>
               <div className="footer__rights">Все права защищены</div>
             </div>
