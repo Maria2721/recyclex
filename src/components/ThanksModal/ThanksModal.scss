@@ -137,28 +137,73 @@
 
 @media (min-width: $ultra)  { 
     .thanksModal__content {
-        padding: 108px 30px 87px 30px;
-        background-color: $bgColor;
-        width: 1050px;
-        max-height: 900px;
-        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        padding: 206px 30px 151px 30px;
+        width: 1600px;
+        max-height: 1400px;
     }
     
     .thanksModal__header {
-        font-size: 80px;
-        line-height: 102px;
+        font-size: 96px;
+        line-height: 122px;
         margin-bottom: 50px;
     }
     
     .thanksModal__image {
-        width: 465px;
-        margin-bottom: 35px;
+        max-width: 796px;
+        width: 100%;
+        margin-bottom: 44px;
     }
     
     .thanksModal__description {
+        font-size: 36px;
+        line-height: 36px;
+        margin-bottom: 94px;
+    }
+}
+
+@media screen and (orientation:landscape)
+and (max-width: $landscape) {
+    .thanksModal__content {
+        padding: 37px 10px 38px 10px;
+        width: 230px;
+        max-height: 300px;
+    }
+
+    .thanksModal__header {
         font-size: 24px;
-        line-height: 24px;
-        margin-bottom: 54px;
+        line-height: 30.72px;
+        margin-bottom: 10px;
     }
     
+    .thanksModal__image {
+        width: 131px;
+        margin-bottom: 13px;
+    }
+    
+    .thanksModal__description {
+        font-size: 10px;
+        line-height: 10px;
+        margin-bottom: 20px;
+    } 
+
+    .thanksModal .btn_smaller {
+        width: 170px;
+        font-size: 12px;
+        line-height: 12px;
+        padding: 11px 0;
+    }
+}
+
+@media screen and (orientation:landscape)
+and (max-width: $landscapeMiddle) {
+    .thanksModal__content {
+        padding-top: 22px;
+        max-height: 270px;
+    }
+
+     .thanksModal__description {
+        font-size: 10px;
+        line-height: 10px;
+        margin-bottom: 15px;
+    } 
 }
