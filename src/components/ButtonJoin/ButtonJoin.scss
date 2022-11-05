@@ -32,6 +32,10 @@
   
 
   @media screen and (max-width: $tablet) {
+    .buttonJoin__arrowWrapper {
+        height: 0;
+      }
+
     .buttonJoin:hover .buttonJoin__arrowWrapper {
       width: 0;
       display: none;
