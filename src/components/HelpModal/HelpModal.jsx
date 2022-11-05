@@ -86,6 +86,16 @@ const [valid, setValid] = useState(false);
 const handleClick = () => {
     validateForm();
 
+    for (let key in state) { // проходим по стейту и отмечаем isDirty, чтобы отобразилась ошибка у всех
+      setState((state) => ({
+        ...state,
+        [key]: {
+            ...state[key],
+            isDirty: true
+        }
+      }));
+    }
+
     if (valid) {
       console.log('Форма отправлена')
       // handleModal()
