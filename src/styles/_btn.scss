@@ -39,9 +39,9 @@
     line-height: 20px;
 }
 
-#dark .btn_smaller:hover {
-    background-color: $greyColor;
-}
+// #dark .btn_smaller:hover {
+//     background-color: $greyColor;
+// }
 @media screen and (min-width: $ultra) {
     .btn {
         width: 650px;
@@ -96,22 +96,22 @@
         line-height: 14px;
     }
 
-    #dark .btn:hover {
-        background-color: $accentColor;
-    }
+    // #dark .btn:hover {
+    //     background-color: $accentColor;
+    // }
 
-    #dark .btn:active {
-        background-color: $bgColor;
-    }
+    // #dark .btn:active {
+    //     background-color: $bgColor;
+    // }
     
     
-    #dark .btn_smaller:hover {
-        background-color: $accentColor;
-    }
+    // #dark .btn_smaller:hover {
+    //     background-color: $accentColor;
+    // }
 
-    #dark .btn_smaller:active {
-        background-color: $greyColor;
-    }
+    // #dark .btn_smaller:active {
+    //     background-color: $greyColor;
+    // }
   }
 
   @media screen and (max-width: $smallTablet) {
