@@ -54,31 +54,45 @@ export const questions = [
     {
         question: 'Ваши контактные данные?',
         type: "personalData",
-        data: {
-        surname: {
-            type:'text',
-            label:"Фамилия*",
-        },
-        name: {
-            type:'text',
-            label:"Имя*",
-        },
-        middle: {
-            type:'text',
-            label:"Отчество",
-        },
-        company: {
-            type:'text',
-            label:"Название организации*",
-        },
-        telephone: {
-            type:'tel',
-            label:"Номер телефона*",
-        },
-       email:{
-            type:'email',
-            label:"Ваш E-mail*",
-        }}
+        fields: [
+            {
+                id: 'surname',
+                name: 'Фамилия*',
+                type:'text',
+                rule: 'name',
+            },
+                {
+                id: 'name',
+                name: 'Имя*',
+                type:'text',
+                rule: 'name',
+            },
+            {
+                id: 'middle',
+                name: 'Отчество',
+                view: 'input',
+                type:'text',
+                rule: '',
+            },
+            {
+                id: 'company',
+                name: 'Название организации*',
+                type:'text',
+                rule: 'company',
+            },
+            {
+                id: 'phone',
+                name: 'Номер телефона*',
+                type:'tel',
+                rule: 'phone',
+            },
+            {
+                id: 'email',
+                name: 'Ваш E-mail*',
+                type:'email',
+                rule: 'email',
+            },
+        ]
     },
     {
         question: 'Пожалуйста, сообщите нам каким способом Вам удобнее получить дальнейшую информацию?',
@@ -96,3 +110,34 @@ export const questions = [
         }]
     }
 ]
+
+
+   // {
+    //     question: 'Ваши контактные данные?',
+    //     type: "personalData",
+    //     data: {
+    //     surname: {
+    //         type:'text',
+    //         label:"Фамилия*",
+    //     },
+    //     name: {
+    //         type:'text',
+    //         label:"Имя*",
+    //     },
+    //     middle: {
+    //         type:'text',
+    //         label:"Отчество",
+    //     },
+    //     company: {
+    //         type:'text',
+    //         label:"Название организации*",
+    //     },
+    //     telephone: {
+    //         type:'tel',
+    //         label:"Номер телефона*",
+    //     },
+    //    email:{
+    //         type:'email',
+    //         label:"Ваш E-mail*",
+    //     }}
+    // },
