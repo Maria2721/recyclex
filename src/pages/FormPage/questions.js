@@ -72,7 +72,7 @@ export const questions = [
                 name: 'Отчество',
                 view: 'input',
                 type:'text',
-                rule: '',
+                rule: 'middle',
             },
             {
                 id: 'company',
