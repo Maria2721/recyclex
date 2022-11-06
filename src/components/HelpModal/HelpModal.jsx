@@ -8,6 +8,7 @@ import { ReactComponent as AlertIconWhite } from "../../assets/imgs/alert_icon_w
 import { ReactComponent as LogoBlack } from "../../assets/imgs/logo_black.svg";
 import { ReactComponent as LogoWhite } from "../../assets/imgs/logo_white.svg";
 import { ReactComponent as CloseIcon } from "../../assets/imgs/close_icon.svg";
+import { initialState } from "./initialState";
 import { isPossiblePhoneNumber } from 'react-phone-number-input';
 import ButtonSend from "../ButtonSend/ButtonSend";
 import { useState } from "react";
@@ -17,38 +18,7 @@ export default function HelpModal({ handleModal, opened, theme }) {
     "help help_show": opened,
   });
 
-const [state, setState] = useState({
-        helpSurname: {
-            value: '',
-            isDirty: false,
-            error: ''
-        },
-        helpName: {
-            value: '',
-            isDirty: false,
-            error: ''
-        },
-        helpMiddle: {
-            value: '',
-            isDirty: false,
-            error: ''
-        },
-        helpCompany: {
-            value: '',
-            isDirty: false,
-            error: ''
-        },
-        helpPhone: {
-            value: '',
-            isDirty: false,
-            error: ''
-        },
-        helpQuestion: {
-            value: '',
-            isDirty: false,
-            error: ''
-        },
-})
+const [state, setState] = useState(initialState)
 const [phoneValue, setPhoneValue] = useState('');
 const [valid, setValid] = useState(false);
 
@@ -105,9 +75,10 @@ const handleClick = () => {
                 Название компании:${state.helpCompany.value},
                 Телефон: ${phoneValue},
                 Вопрос: ${state.helpQuestion.value}.`)
-                
-                // navigate('/');
-                handleModal()
+                // navigate('/'); // возможно не надо никуда навигировать
+                // handleModal() // закрытие модалки перенесено в кнопку
+      setState(initialState); // возвращаем состояние к началу
+      setPhoneValue('');
     }
 };
 
