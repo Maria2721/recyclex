@@ -14,7 +14,7 @@ import { CSSTransition } from "react-transition-group";
 import { isPossiblePhoneNumber } from 'react-phone-number-input';
 
 export default function FormPage({ handleModal }) {
-    const [step, setStep] = useState(0);
+    const [step, setStep] = useState(2);
     const [firstAnswer, setFirstAnswer] = useState([]);
     const [secondAnswer, setSecondAnswer] = useState([]);
     const [phoneValue, setPhoneValue] = useState('');
