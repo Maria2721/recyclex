@@ -69,14 +69,3 @@ export default function HelpInput({
     </div>
   );
 }
-
-
-    // <input
-                  //   className={classInput}
-                  //   onBlur={() => blurHandler(id)}
-                  //   onChange={(e) => handleChange(e, id, type)}
-                  //   type={type}
-                  //   id={id}
-                  //   name={id}
-                  //   value={value}
-                  // />
