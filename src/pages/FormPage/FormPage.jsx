@@ -53,7 +53,7 @@ export default function FormPage({ handleModal }) {
     const [fourthAnswer, setFourthAnswer] = useState('SMS');
     const [isErrorCheckbox, setIsErrorCheckbox] = useState(false)
     const [valid, setValid] = useState(false);
-    const {surname, name, middle, company, phone, email} = thirdAnswer;
+    const {surname, name, middle, company, email} = thirdAnswer;
     const stepData = questions[step];
     const formFields = questions[2].fields;
     const navigate = useNavigate();
@@ -126,7 +126,7 @@ const handleChangePersonalData = (e, id, type) => {
           break;
         default:
         value = e.target.value;
-    }  
+    }
 
     setThirdAnswer({
       ...thirdAnswer,
@@ -173,6 +173,18 @@ const validatePersonalData = () => {
                 } 
                 if (value.length > 200) {
                     error = 'Максимум 200 символов';
+                    setValid(false);
+                    break;
+                }
+                break;
+            case 'middle':
+                if (value.length !== 0 && value.length > 200) {
+                    error = 'Максимум 200 символов';
+                    setValid(false);
+                    break;
+                }
+                if (value.length !== 0 && !regName.test(value)) {
+                    error = 'Недопустимые символы';
                     setValid(false);
                     break;
                 }
@@ -255,7 +267,7 @@ const validatePersonalData = () => {
             case 3:
                 console.log(`Ответ №1: ${firstAnswer},
                 Ответ №2: ${secondAnswer},
-                Ответ №3: ${surname.value}, ${name.value}, ${middle.value}, ${company.value}, ${thirdAnswer.telephone}, ${thirdAnswer.email}
+                Ответ №3: ${surname.value}, ${name.value}, ${middle.value}, ${company.value}, ${phoneValue}, ${thirdAnswer.email}
                 Ответ №4:${fourthAnswer}. `)
                 
                 navigate('/');
@@ -301,7 +313,7 @@ const validatePersonalData = () => {
                         Имя - {name.value} <br />
                         {middle.value && `Отчество - ${middle.value}`} {middle.value && <br />}
                         Название организации - {company.value} <br />
-                        Контактный номер телефона - {phone.value} <br />
+                        Контактный номер телефона - {phoneValue} <br />
                         {email.value && `Ваш e-mail - ${email.value}`}
                     </FormMessage>} 
                     </div>

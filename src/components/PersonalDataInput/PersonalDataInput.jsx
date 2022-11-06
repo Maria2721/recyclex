@@ -30,9 +30,11 @@ export default function PersonalDataInput({
           defaultCountry="RU"
           value={phoneValue}
           type={type}
+          name={id}
           onBlur={() => blurHandler(id)}
           onChange={handlePhoneValue}
           className={classInput}
+          maxLength={25}
         />
       )}
 
@@ -43,6 +45,7 @@ export default function PersonalDataInput({
           onBlur={() => blurHandler(id)}
           value={value}
           type={type}
+          name={id}
         />
       )}
       {errorMessage && isDirty && (

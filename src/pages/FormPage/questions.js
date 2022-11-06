@@ -72,7 +72,7 @@ export const questions = [
                 name: 'Отчество',
                 view: 'input',
                 type:'text',
-                rule: '',
+                rule: 'middle',
             },
             {
                 id: 'company',
@@ -110,34 +110,3 @@ export const questions = [
         }]
     }
 ]
-
-
-   // {
-    //     question: 'Ваши контактные данные?',
-    //     type: "personalData",
-    //     data: {
-    //     surname: {
-    //         type:'text',
-    //         label:"Фамилия*",
-    //     },
-    //     name: {
-    //         type:'text',
-    //         label:"Имя*",
-    //     },
-    //     middle: {
-    //         type:'text',
-    //         label:"Отчество",
-    //     },
-    //     company: {
-    //         type:'text',
-    //         label:"Название организации*",
-    //     },
-    //     telephone: {
-    //         type:'tel',
-    //         label:"Номер телефона*",
-    //     },
-    //    email:{
-    //         type:'email',
-    //         label:"Ваш E-mail*",
-    //     }}
-    // },
