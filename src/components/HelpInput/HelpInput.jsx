@@ -1,5 +1,7 @@
 import "./HelpInput.scss";
 import * as cx from "classnames";
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
 
 export default function HelpInput({
   id,
@@ -10,10 +12,12 @@ export default function HelpInput({
   isDirty,
   handleChange,
   blurHandler,
-  errorMessage
+  errorMessage,
+  phoneValue,
+  handlePhoneValue
 }) {
   const classInput = cx("help__input", {
-    "help__input help__input_error": errorMessage && isDirty,
+    "help__input help__input_error": errorMessage && isDirty
   });
 
   return (
@@ -22,7 +26,7 @@ export default function HelpInput({
         {name}
       </label>
       <div className="help__inputWrapper">
-        {(errorMessage && isDirty) && <div className="help__error">Необходимо заполнить</div>}
+        {errorMessage && isDirty && <div className="help__error">{errorMessage}</div>}
         
         {view === "input" && (
           <input
@@ -36,6 +40,19 @@ export default function HelpInput({
           />
         )}
 
+        {view === "phone" && (
+          <PhoneInput
+          international
+          defaultCountry="RU"
+          name={id}
+          value={phoneValue}
+          type={type}
+          onBlur={() => blurHandler(id)}
+          onChange={handlePhoneValue}
+          className={classInput}
+          maxLength={25}
+        />)}
+
         {view === "texterea" && (
             <textarea
               className={classInput}
@@ -45,6 +62,7 @@ export default function HelpInput({
               id={id}
               name={id}
               value={value}
+              maxLength={5000}
             />
         )}
       </div>

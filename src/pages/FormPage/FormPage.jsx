@@ -10,25 +10,52 @@ import RadioButton from "../../components/RadioButton/RadioButton";
 import PersonalDataInputs from "../../components/PersonalDataInputs/PersonalDataInputs";
 import { useState, useRef, useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { CSSTransition } from "react-transition-group"
+import { CSSTransition } from "react-transition-group";
+import { isPossiblePhoneNumber } from 'react-phone-number-input';
 
 export default function FormPage({ handleModal }) {
     const [step, setStep] = useState(0);
     const [firstAnswer, setFirstAnswer] = useState([]);
     const [secondAnswer, setSecondAnswer] = useState([]);
+    const [phoneValue, setPhoneValue] = useState('');
     const [thirdAnswer, setThirdAnswer] = useState({
-        surname: '',
-        name: '',
-        middle: '',
-        company: '',
-        telephone: '',
-        email: ''
-    });
+        surname: {
+            value: '',
+            isDirty: false,
+            error: ''
+        },
+        name: {
+            value: '',
+            isDirty: false,
+            error: ''
+        },
+        middle: {
+            value: '',
+            isDirty: false,
+            error: ''
+        },
+        company: {
+            value: '',
+            isDirty: false,
+            error: ''
+        },
+        phone: {
+            value: '',
+            isDirty: false,
+            error: ''
+        },
+        email: {
+            value: '',
+            isDirty: false,
+            error: ''
+        },
+});
     const [fourthAnswer, setFourthAnswer] = useState('SMS');
     const [isErrorCheckbox, setIsErrorCheckbox] = useState(false)
-    // const [formErrors, serFormErrors] = useState()
-    const {surname, name, middle, company, telephone, email} = thirdAnswer;
+    const [valid, setValid] = useState(false);
+    const {surname, name, middle, company, email} = thirdAnswer;
     const stepData = questions[step];
+    const formFields = questions[2].fields;
     const navigate = useNavigate();
     const $buttonRef = useRef(null);
     const $messageRef1 = useRef(null);
@@ -54,7 +81,7 @@ export default function FormPage({ handleModal }) {
         });
     }, [step])
 
-    const handleChange = (e) => {
+    const handleChangeCheckboxAndRadio = (e) => {
         let newAnswer = null;
         let value = e.target.value;
 
@@ -80,20 +107,130 @@ export default function FormPage({ handleModal }) {
             setFourthAnswer(value)
         }
     }
-
-
-    const handleChangePersonalData = (e, type) => {
-        let value = e.target.value.trimStart().replace(/ +/g, " ");
-
-        setThirdAnswer({
-            ...thirdAnswer,
-            [type]: value,
-        });
+    const blurHandler = (type) => {
+        setThirdAnswer((state) => ({
+       ...state,
+       [type]: {
+           ...state[type],
+           isDirty: true
+       }
+     }));
+     validatePersonalData()
     }
 
-    const validatePersonalData = (input) => {
-        return input !== "";
+const handleChangePersonalData = (e, id, type) => {
+    let value;
+      switch (type) {
+        case 'text':
+            value = e.target.value.trimStart().replace(/ +/g, " ");
+          break;
+        default:
+        value = e.target.value;
     }
+
+    setThirdAnswer({
+      ...thirdAnswer,
+      [id]: {
+          ...thirdAnswer[id],
+          value: value
+      }
+    });
+}
+
+const validatePersonalData = () => {
+    setValid(true);
+    const regName = /^[A-ZА-ЯЁ\s'-]+$/i;
+    const regEmail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
+  
+      for (const field of formFields) {
+          const { rule, id } = field;
+          const { value } = thirdAnswer[id];
+          let error;
+  
+          switch (rule) {
+              case 'name':
+                if (value.length === 0) {
+                  error = 'Необходимо заполнить';
+                  setValid(false);
+                  break;
+                } 
+                if (value.length > 200) {
+                    error = 'Максимум 200 символов';
+                    setValid(false);
+                    break;
+                }
+                if (!regName.test(value)) {
+                    error = 'Недопустимые символы';
+                    setValid(false);
+                    break;
+                  }
+                break;
+            case 'company':
+                if (value.length === 0) {
+                  error = 'Необходимо заполнить';
+                  setValid(false);
+                  break;
+                } 
+                if (value.length > 200) {
+                    error = 'Максимум 200 символов';
+                    setValid(false);
+                    break;
+                }
+                break;
+            case 'middle':
+                if (value.length !== 0 && value.length > 200) {
+                    error = 'Максимум 200 символов';
+                    setValid(false);
+                    break;
+                }
+                if (value.length !== 0 && !regName.test(value)) {
+                    error = 'Недопустимые символы';
+                    setValid(false);
+                    break;
+                }
+                break;
+            case 'phone':
+                if (!isPossiblePhoneNumber(phoneValue)) {
+                  error = 'Недопустимая длина';
+                  setValid(false);
+                  break;
+                }
+                break;
+            case 'email':
+                if (value.length === 0) {
+                  error = 'Необходимо заполнить';
+                  setValid(false);
+                  break;
+                } 
+                if (value.length < 5) {
+                    error = 'Минимум 5 символов';
+                    setValid(false);
+                    break;
+                  } 
+                if (value.length > 200) {
+                    error = 'Максимум 200 символов';
+                    setValid(false);
+                    break;
+                }
+                if (!regEmail.test(value)) { // еще пофиксить
+                    error = 'Недопустимый формат';
+                    setValid(false);
+                    break;
+                  }
+                break;
+              default:
+              error = '';
+          }    
+  
+          setThirdAnswer((state) => ({
+              ...state,
+              [id]: {
+                  ...state[id],
+                  error: error ? error : ''
+              }
+            }));
+      }
+  }
 
     const handleClick = () => {
         switch (step) {
@@ -104,7 +241,6 @@ export default function FormPage({ handleModal }) {
                 } else {
                     setIsErrorCheckbox(true) 
                 }
-                // firstAnswer.length === 0 ? setIsErrorCheckbox(true) : setStep((step) => step + 1)
                 break;
             case 1:
                 if (secondAnswer.length !== 0) {
@@ -113,22 +249,25 @@ export default function FormPage({ handleModal }) {
                 } else {
                     setIsErrorCheckbox(true) 
                 }
-                // secondAnswer.length === 0 ? console.log('Выберете значение') : setStep((step) => step + 1)
                 break;
             case 2:
-                let isValid = [surname, name, company, telephone].every((input) => validatePersonalData(input));
+                for (let key in thirdAnswer) { // проходим по стейту и отмечаем isDirty, чтобы отобразилась ошибка у всех
+                    setThirdAnswer((state) => ({
+                      ...state,
+                      [key]: {
+                          ...state[key],
+                          isDirty: true
+                      }
+                    }));
+                  }
 
-                // if (isValid) {
-                //     setStep((step) => step + 1)
-                // } else {
-                //     console.log('Заполните обязательные поля')
-                // }
-                isValid ? setStep((step) => step + 1) : console.log('Заполните обязательные поля')
+                validatePersonalData()
+                valid && setStep((step) => step + 1)
                 break;
             case 3:
                 console.log(`Ответ №1: ${firstAnswer},
                 Ответ №2: ${secondAnswer},
-                Ответ №3: ${surname}, ${name}, ${middle}, ${company}, ${telephone}, ${email}
+                Ответ №3: ${surname.value}, ${name.value}, ${middle.value}, ${company.value}, ${phoneValue}, ${thirdAnswer.email}
                 Ответ №4:${fourthAnswer}. `)
                 
                 navigate('/');
@@ -170,12 +309,12 @@ export default function FormPage({ handleModal }) {
                 <CSSTransition in={step >= 3} timeout={1000} classNames="transition-answer" nodeRef={$messageRef5}>
                     <div ref={$messageRef5}>
                         {step >= 3 && <FormMessage direction='right'>
-                        Фамилия - {surname} <br />
-                        Имя - {name} <br />
-                        {middle && `Отчество - ${middle}`} {middle && <br />}
-                        Название организации - {company} <br />
-                        Контактный номер телефона - {telephone} <br />
-                        {email && `Ваш e-mail - ${email}`}
+                        Фамилия - {surname.value} <br />
+                        Имя - {name.value} <br />
+                        {middle.value && `Отчество - ${middle.value}`} {middle.value && <br />}
+                        Название организации - {company.value} <br />
+                        Контактный номер телефона - {phoneValue} <br />
+                        {email.value && `Ваш e-mail - ${email.value}`}
                     </FormMessage>} 
                     </div>
                 </CSSTransition>
@@ -198,7 +337,7 @@ export default function FormPage({ handleModal }) {
                                 {
                                     stepData.options.map((item) => (
                                         <Checkbox
-                                        onChange={(e)=> handleChange(e)}
+                                        onChange={(e)=> handleChangeCheckboxAndRadio(e)}
                                         key={item.id}
                                         value={item.value}
                                         id={item.id}/>
@@ -212,8 +351,12 @@ export default function FormPage({ handleModal }) {
                             stepData.type === 'personalData' &&
                             <div className='form__personalData'>
                                     <PersonalDataInputs
-                                    data={stepData.data}
-                                    onChange={handleChangePersonalData}/>
+                                    data={stepData.fields}
+                                    state={thirdAnswer}
+                                    phoneValue={phoneValue}
+                                    handlePhoneValue={setPhoneValue}
+                                    blurHandler={blurHandler}
+                                    handleChangePersonalData={handleChangePersonalData}/>
                             </div>
                         }
 
@@ -223,7 +366,7 @@ export default function FormPage({ handleModal }) {
                             {
                                 questions[step].options.map((item) => (
                                     <RadioButton
-                                        onChange={(e)=> handleChange(e)}
+                                        onChange={(e)=> handleChangeCheckboxAndRadio(e)}
                                         key={item.id}
                                         defaultChecked={item.checked}
                                         value={item.value}

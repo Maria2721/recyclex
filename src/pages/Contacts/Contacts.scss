@@ -33,6 +33,10 @@
   flex-direction: column;
 }
 
+#dark .contacts__numbers a {
+  color: $textColor_dark;
+}
+
 .contacts__mapWrapper {
   max-height: 400px;
   margin-bottom: 60px;
