@@ -25,8 +25,8 @@ import { useDisableBodyScroll } from './hooks/useDisableBodyScroll';
 const ThemeContext = createContext(null);
 
 function App() {
-  const [openedHelpModal, setOpenedHelpModal] = useState(true);
-  const [openedThanksModal, setOpenedThanksModal] = useState(true);
+  const [openedHelpModal, setOpenedHelpModal] = useState(false);
+  const [openedThanksModal, setOpenedThanksModal] = useState(false);
   const currentTheme = localStorage.getItem('theme') || 'light';
   const [theme, setTheme] = useState(currentTheme);
   const {pathname} = useLocation(); 
