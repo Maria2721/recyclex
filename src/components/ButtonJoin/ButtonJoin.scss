@@ -5,12 +5,16 @@
   display: flex !important;
   align-items: center;
   justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
 }
 
 .buttonJoin {
   display: flex !important;
   align-items: center;
   justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
 }
 
 .buttonJoin_active {
@@ -48,13 +52,18 @@
 
     .buttonJoinWrapper:hover .buttonJoin__arrowWrapper {
       width: 0;
-      display: none;
+      height: 20px;
+      overflow: hidden;
+      margin-left: 0;
     }
 
     .buttonJoinWrapper:active .buttonJoin__arrowWrapper {
       width: 20px;
       display: flex;
       align-items: center;
+      justify-content: center;
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
       margin-left: 10px;
       transition: width 0.1s ease-in-out;
     }
@@ -62,7 +71,7 @@
 
   @media screen and (max-width: $mobile) {
     .buttonJoin__arrowWrapper {
-        height: 12px;
+        height: 11px;
       }
 
       .buttonJoin__arrow {
@@ -71,14 +80,16 @@
 
     .buttonJoinWrapper:hover .buttonJoin__arrowWrapper {
       width: 0;
-      display: none;
+      height: 12px;
+      overflow: hidden;
+      margin-left: 0;
     }
-     
 
     .buttonJoinWrapper:active .buttonJoin__arrowWrapper {
       width: 12px;
       display: flex;
       align-items: center;
+      justify-content: center;
       margin-left: 5px;
       transition: width 0.1s ease-in-out;
     }
