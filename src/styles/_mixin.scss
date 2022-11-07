@@ -3,6 +3,8 @@
 
 @mixin before_circle-pressed {
     &:before {
+        margin: 0;
+        padding: 0;
         display: block;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -22,6 +24,8 @@
 
 @mixin before_circle {
     &::before {
+        margin: 0;
+        padding: 0;
         display: block;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -54,6 +58,8 @@
 }
 @mixin before_circleList {
     &::before {
+        margin: 0;
+        padding: 0;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         display: block;
