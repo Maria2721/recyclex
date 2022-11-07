@@ -221,7 +221,8 @@
             &:before {
                 width: 24px;
                 height: 24px;
-                top:-1px;
+                /* top:-1px; */
+                top: -2px;
                 left: -8px;
                 border: 2px solid #5FAE36;
             }
