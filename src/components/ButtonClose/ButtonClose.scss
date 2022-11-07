@@ -35,22 +35,52 @@
 
 @media screen and (max-width: $tablet) {
     .buttonClose__arrowWrapper {
-    height: 0;
-  }
+        height: 20px;
+      }
 
-  .buttonCloseWrapper:hover .buttonClose__arrowWrapper {
-    width: 0;
-    display: none;
-  }
+      .buttonClose__arrow {
+        width: 20px;
+      }
 
-  .buttonClose_active {
-    transform: none;
-  }
+      .buttonCloseWrapper:hover .buttonClose__arrowWrapper {
+      width: 0;
+      display: none;
+    }
+     
 
-  .buttonClose:active {
-    color: $accentColor;
-  }
+    .buttonCloseWrapper:active .buttonClose__arrowWrapper {
+      width: 20px;
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      transition: width 0.1s ease-in-out;
+    }
 }
+
+@media screen and (max-width: $mobile) {
+    .buttonClose__arrowWrapper {
+        height: 12px;
+      }
+
+      .buttonClose__arrow {
+        width: 12px;
+      }
+
+      .buttonCloseWrapper:hover .buttonClose__arrowWrapper {
+      width: 0;
+      display: none;
+    }
+     
+
+    .buttonCloseWrapper:active .buttonClose__arrowWrapper {
+      width: 12px;
+      display: flex;
+      align-items: center;
+      margin-left: 5px;
+      transition: width 0.1s ease-in-out;
+    }
+}
+
 
 @media screen and (min-width: $ultra) {
     .buttonClose__arrowWrapper {
@@ -61,7 +91,7 @@
     width: 30px;
     margin-left: 20px;
   }
-  
+
   .buttonClose__arrow {
     width: 30px;
   }

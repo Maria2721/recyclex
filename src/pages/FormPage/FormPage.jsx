@@ -236,7 +236,11 @@ const validatePersonalData = () => {
         switch (step) {
             case 0:
                 if (firstAnswer.length !== 0) {
-                    setStep((step) => step + 1)
+                    // setStep((step) => step + 1)
+                    setTimeout(() => {
+                        setStep((step) => step + 1)
+                      }, 200);
+
                     setIsErrorCheckbox(false) 
                 } else {
                     setIsErrorCheckbox(true) 
@@ -244,7 +248,11 @@ const validatePersonalData = () => {
                 break;
             case 1:
                 if (secondAnswer.length !== 0) {
-                    setStep((step) => step + 1)
+                    // setStep((step) => step + 1)
+                    setTimeout(() => {
+                        setStep((step) => step + 1)
+                      }, 200);
+
                     setIsErrorCheckbox(false) 
                 } else {
                     setIsErrorCheckbox(true) 
@@ -262,7 +270,11 @@ const validatePersonalData = () => {
                   }
 
                 validatePersonalData()
-                valid && setStep((step) => step + 1)
+                if (valid) {
+                    setTimeout(() => {
+                        setStep((step) => step + 1)
+                      }, 200);
+                }
                 break;
             case 3:
                 console.log(`Ответ №1: ${firstAnswer},
@@ -270,8 +282,10 @@ const validatePersonalData = () => {
                 Ответ №3: ${surname.value}, ${name.value}, ${middle.value}, ${company.value}, ${phoneValue}, ${thirdAnswer.email}
                 Ответ №4:${fourthAnswer}. `)
                 
-                navigate('/');
-                handleModal()
+                setTimeout(() => {
+                    navigate('/');
+                    handleModal()
+                  }, 1000);
                 break;
             default:
                 console.log('Клик по кнопке')
@@ -279,7 +293,7 @@ const validatePersonalData = () => {
     }
 
     return (
-        <div className="form container__row">
+        <section className="form container__row">
             <div className="form__inner">
                 <h1 className="form__header">Шаг {step + 1} из 4</h1>
                 <FormMessage direction='left'>С какими группами отходов Вы работаете?</FormMessage>
@@ -377,10 +391,10 @@ const validatePersonalData = () => {
                             }
                         </div>
                         }
-                        <FormButton onClick={handleClick}/><span ref={$buttonRef}></span>
+                        <FormButton handleForm={handleClick} step={step} isValid={valid} firstAnswer={firstAnswer} secondAnswer={secondAnswer}/><span ref={$buttonRef}></span>
                     </FormAnswer>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
