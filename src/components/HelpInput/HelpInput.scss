@@ -257,6 +257,9 @@
     .help__row .PhoneInputInput {
         font-size: 23px;
         background-color: $bgColor;
+        box-shadow: inset 0 0 0 50px $bgColor;
+    -webkit-box-shadow: inset 0 0 0 50px $bgColor;
+    -webkit-text-fill-color: #000;
       }
     
     .help__input_error, #dark .help__input_error {

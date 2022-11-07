@@ -54,9 +54,9 @@
 .buttonSend__check {
   position: absolute;
   width: 25px;
-  height: 17px;
-  top: -10px;
-  right: -14px;
+  height: 15px;
+  top: -8px;
+  right: -12px;
 }
 
 .buttonSend__sendedText {
@@ -65,10 +65,11 @@
 }
 
 @media screen and (max-width: $tablet) {
-    .buttonSend__arrowWrapper {
+  .buttonSend__arrowWrapper {
         width: 0;
         height: 9px;
-    }
+  }
+
   .buttonSend:hover .buttonSend__arrowWrapper {
     display: none;
     width: 0;
@@ -78,16 +79,12 @@
   .buttonSend:active .buttonSend__arrowWrapper {
     display: none;
   }
-
-  .buttonSend:active {
-    color: $accentColor;
-  }
-
+  
   .buttonSend__check {
     width: 12px;
     height: 9px;
-    top: -6px;
-    right: -14px;
+    top: -5px;
+    right: -11px;
   }
 
   .buttonSend__sendedText {
@@ -102,4 +99,14 @@
         right: -12px;
       }
     
+}
+
+@media screen and (min-width: $ultra) {
+  .buttonSend__check {
+    width: 28px;
+    height: 22px;
+    top: -13px;
+    right: -17px;
+    }
+  
 }
