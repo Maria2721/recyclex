@@ -16,28 +16,31 @@
 }
 
 .formButton__arrowWrapper {
+      display: grid;
+    grid-template-columns: 10fr 1fr;
+    align-items: center;
     width: 0;
     height: 20px;
     overflow: hidden;
+    transition: width 0.2s ease-in-out;
   }
 
 .formButton:hover .formButton__arrowWrapper {
     width: 20px;
-    display: grid;
-    grid-template-columns: 10fr 1fr;
-    align-items: center;
-    transition: width 0.3s ease-in-out;
+    transition: width 0.5s ease-in-out;
     overflow: visible;
 }
 
 .formButton__arrow {
     width: 20px;
     margin-left: 10px;
+    transition: transform 300ms ease;
+    -webkit-transition: transform 300ms ease;
 }
 
   .formButton__arrow_active {
     transform: translateX(1000%);
-    transition: transform 300ms ease;
+
   }
 
   .formButton:hover .formButton__arrowWrapper_active {
@@ -74,29 +77,13 @@
         width: 0;
         height: 20px;
         overflow: hidden;
+        
     }
 
     .formButton .formButton__arrowWrapper.formButton__arrowWrapper_active {
       width: 20px;
-      display: grid;
-      grid-template-columns: 10fr 1fr;
-      align-items: center;
-      transition: width 0.3s ease-in-out;
       overflow: visible;
-      -webkit-overflow: visible;
-      -webkit-width: 20px;
-      -webkit-display: grid;
-      -webkit-grid-template-columns: 10fr 1fr;
-      -webkit-align-items: center;
-      -webkit-transition: width 0.3s ease-in-out;
-      -webkit-overflow: visible;
   }
-
-    .formButton__arrow_active {
-      transform: translateX(1000%);
-      -webkit-transition: transform 300ms ease;
-      transition: transform 300ms ease;
-    }
 
     .formButton__check {
       top: -7px;
@@ -115,21 +102,6 @@
         overflow: hidden;
       }
 
-    // .formButton:hover .formButton__arrowWrapper {
-    //     width: 0;
-    //     height: 12px;
-    //     overflow: hidden;
-    // }
-
-    // .formButton:active .formButton__arrowWrapper_active {
-    //     width: 12px;
-    //     display: grid;
-    //     grid-template-columns: 10fr 1fr;
-    //     align-items: center;
-    //     transition: width 0.1s ease-in-out;
-    //     overflow: visible;
-    // }
-
     .formButton:hover .formButton__arrowWrapper {
       width: 0;
       height: 12px;
@@ -138,31 +110,12 @@
 
   .formButton .formButton__arrowWrapper.formButton__arrowWrapper_active {
     width: 12px;
-    display: grid;
-    grid-template-columns: 10fr 1fr;
-    align-items: center;
-    transition: width 0.3s ease-in-out;
     overflow: visible;
-
-    -webkit-overflow: visible;
-    -webkit-width: 12px;
-    -webkit-display: grid;
-    -webkit-grid-template-columns: 10fr 1fr;
-    -webkit-align-items: center;
-    -webkit-transition: width 0.3s ease-in-out;
-
-    -webkit-overflow: visible;
 }
 
     .formButton__arrow {
         width: 12px;
         margin-left: 8px;
-    }
-
-    .formButton__arrow_active {
-      transform: translateX(1000%);
-      -webkit-transition: transform 300ms ease;
-      transition: transform 300ms ease;
     }
 
     .formButton__check {
@@ -190,10 +143,7 @@
     
     .formButton:hover .formButton__arrowWrapper {
         width: 45px;
-        display: grid;
-        grid-template-columns: 10fr 1fr;
-        align-items: center;
-        transition: width 0.1s ease-in-out;
+        transition: width 0.2s ease-in-out;
         overflow: visible;
     }
     

@@ -239,7 +239,7 @@ const validatePersonalData = () => {
                     // setStep((step) => step + 1)
                     setTimeout(() => {
                         setStep((step) => step + 1)
-                      }, 200);
+                      }, 300);
 
                     setIsErrorCheckbox(false) 
                 } else {
@@ -251,7 +251,7 @@ const validatePersonalData = () => {
                     // setStep((step) => step + 1)
                     setTimeout(() => {
                         setStep((step) => step + 1)
-                      }, 200);
+                      }, 300);
 
                     setIsErrorCheckbox(false) 
                 } else {
@@ -273,7 +273,7 @@ const validatePersonalData = () => {
                 if (valid) {
                     setTimeout(() => {
                         setStep((step) => step + 1)
-                      }, 200);
+                      }, 300);
                 }
                 break;
             case 3:
