@@ -49,7 +49,7 @@ export default function FormButton({ handleForm, step, isValid, firstAnswer, sec
 
             setTimeout(() => {
                 setCheckVisible(true);
-              }, 100);
+              }, 200);
 
 
               setTimeout(() => {
