@@ -97,9 +97,9 @@
                 left: -56px;
             }
             &::after{
-                width: 120px;
+                width: 119px;
                 top: 30px;
-                left: 85px;
+                left: 86px;
                 border: 7px solid #5FAE36;
             }  
         }
@@ -218,17 +218,20 @@
         .step__third, 
         .step__fourth {
             font-size: 15px; 
+            line-height: 20px;
+            outline: 0;
+            vertical-align: baseline;
             &:before {
-                width: 24px;
-                height: 24px;
-                top: -2px;
-                left: -8px;
+                width: 23px;
+                height: 23px;
+                top: -1px;
+                left: -7px;
                 border: 2px solid #5FAE36;
             }
             &::after{
-                width: 23px;
+                width: 22px;
                 top: 8px;
-                left: 14px;
+                left: 15px;
                 border: 2px solid #5FAE36;
             }  
         }
