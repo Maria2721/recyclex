@@ -1,13 +1,20 @@
 @import "../../styles/vars";
 
+.buttonJoinWrapper {
+  overflow: hidden;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
 .buttonJoin {
-    display: flex !important;
+  display: flex !important;
   align-items: center;
   justify-content: center;
 }
 
 .buttonJoin_active {
-    transform: translateX(100%);
+    transform: translateX(200%);
     transition: transform 200ms ease;
   }
   
@@ -18,7 +25,7 @@
     overflow: hidden;
   }
   
-  .buttonJoin:hover .buttonJoin__arrowWrapper {
+  .buttonJoinWrapper:hover .buttonJoin__arrowWrapper {
     width: 28px;
     display: flex;
     align-items: center;
@@ -36,13 +43,17 @@
         height: 0;
       }
 
-    .buttonJoin:hover .buttonJoin__arrowWrapper {
+    .buttonJoinWrapper:hover .buttonJoin__arrowWrapper {
       width: 0;
       display: none;
     }
+
+    .buttonJoin_active {
+      transform: none;
+    }
   
     .buttonJoin:active {
-        color: $accentColor;
+      color: $accentColor;
     }
   }
 
@@ -51,7 +62,7 @@
         height: 36px;
       }
       
-      .buttonJoin:hover .buttonJoin__arrowWrapper {
+      .buttonJoinWrapper:hover .buttonJoin__arrowWrapper {
         width: 36px;
         margin-left: 38px;
       }
