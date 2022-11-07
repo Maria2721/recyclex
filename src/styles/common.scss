@@ -6,13 +6,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-weight: 400;
 }
 
 body {
   font-family: $generalFont;
   background-color: $bgColor;
   color: $textColor;
+  font-weight: 400;
 }
 
 main {

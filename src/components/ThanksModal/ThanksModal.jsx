@@ -1,6 +1,7 @@
 import "./ThanksModal.scss";
 import { ReactComponent as Thanks} from "../../assets/imgs/thanks.svg";
 import * as cx from "classnames";
+import ButtonClose from "../ButtonClose/ButtonClose";
 
 
 export default function ThanksModal({ handleModal, opened }) {
@@ -14,7 +15,8 @@ export default function ThanksModal({ handleModal, opened }) {
                     <h1 className="thanksModal__header">Спасибо</h1>
                     <Thanks className="thanksModal__image"/>
                     <p className="thanksModal__description">Ваша заявка успешно отправлена!<br/>Ожидайте сообщения!</p>
-                    <button onClick={handleModal} className="btn btn_smaller">Закрыть</button>
+                    <ButtonClose handleModal={handleModal}/>
+                    {/* <button onClick={handleModal} className="btn btn_smaller">Закрыть</button> */}
                 </div>
             </div>
         </div>  
