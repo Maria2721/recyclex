@@ -12,6 +12,7 @@
     border: none;
     text-decoration: none;
     text-transform: uppercase;
+    user-select: none;
 
     // &:hover{
     //     background-color: $greyColor;
@@ -20,10 +21,6 @@
     //     transition: background-color 0.1s ease;
     // }
 }
-
-// #dark .btn:hover {
-//     background-color: $bgColor;
-// }
 
 .btn_smaller {
     width: 300px;

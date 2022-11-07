@@ -26,7 +26,7 @@
     display: grid;
     grid-template-columns: 10fr 1fr;
     align-items: center;
-    transition: width 0.1s ease-in-out;
+    transition: width 0.3s ease-in-out;
     overflow: visible;
 }
 
@@ -76,38 +76,38 @@
         overflow: hidden;
     }
 
-    .formButton:active .formButton__arrowWrapper_active {
-        width: 20px;
-        display: grid;
-        grid-template-columns: 10fr 1fr;
-        align-items: center;
-        transition: width 0.1s ease-in-out;
-        overflow: visible;
+    .formButton .formButton__arrowWrapper.formButton__arrowWrapper_active {
+      width: 20px;
+      display: grid;
+      grid-template-columns: 10fr 1fr;
+      align-items: center;
+      transition: width 0.3s ease-in-out;
+      overflow: visible;
+      -webkit-overflow: visible;
+      -webkit-width: 20px;
+      -webkit-display: grid;
+      -webkit-grid-template-columns: 10fr 1fr;
+      -webkit-align-items: center;
+      -webkit-transition: width 0.3s ease-in-out;
+      -webkit-overflow: visible;
+  }
+
+    .formButton__arrow_active {
+      transform: translateX(1000%);
+      -webkit-transition: transform 300ms ease;
+      transition: transform 300ms ease;
+    }
+
+    .formButton__check {
+      top: -7px;
+      right: -5px;
+    }
+
+    .formButton__sendedText {
+      margin-right: 0;
     }
 }
 
-// @media screen and (max-width: $tablet) {
-//     .buttonJoin__arrowWrapper {
-//         height: 20px;
-//       }
-
-//       .buttonJoin__arrow {
-//         width: 20px;
-//       }
-
-//     .buttonJoinWrapper:hover .buttonJoin__arrowWrapper {
-//       width: 0;
-//       display: none;
-//     }
-
-//     .buttonJoinWrapper:active .buttonJoin__arrowWrapper {
-//       width: 20px;
-//       display: flex;
-//       align-items: center;
-//       margin-left: 10px;
-//       transition: width 0.1s ease-in-out;
-//     }
-//   }
 @media (max-width: $mobile)  {
     .formButton__arrowWrapper {
         width: 0;
@@ -115,24 +115,54 @@
         overflow: hidden;
       }
 
-    .formButton:hover .formButton__arrowWrapper {
-        width: 0;
-        height: 12px;
-        overflow: hidden;
-    }
+    // .formButton:hover .formButton__arrowWrapper {
+    //     width: 0;
+    //     height: 12px;
+    //     overflow: hidden;
+    // }
 
-    .formButton:active .formButton__arrowWrapper_active {
-        width: 12px;
-        display: grid;
-        grid-template-columns: 10fr 1fr;
-        align-items: center;
-        transition: width 0.1s ease-in-out;
-        overflow: visible;
-    }
+    // .formButton:active .formButton__arrowWrapper_active {
+    //     width: 12px;
+    //     display: grid;
+    //     grid-template-columns: 10fr 1fr;
+    //     align-items: center;
+    //     transition: width 0.1s ease-in-out;
+    //     overflow: visible;
+    // }
+
+    .formButton:hover .formButton__arrowWrapper {
+      width: 0;
+      height: 12px;
+      overflow: hidden;
+  }
+
+  .formButton .formButton__arrowWrapper.formButton__arrowWrapper_active {
+    width: 12px;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    align-items: center;
+    transition: width 0.3s ease-in-out;
+    overflow: visible;
+
+    -webkit-overflow: visible;
+    -webkit-width: 12px;
+    -webkit-display: grid;
+    -webkit-grid-template-columns: 10fr 1fr;
+    -webkit-align-items: center;
+    -webkit-transition: width 0.3s ease-in-out;
+
+    -webkit-overflow: visible;
+}
 
     .formButton__arrow {
         width: 12px;
         margin-left: 8px;
+    }
+
+    .formButton__arrow_active {
+      transform: translateX(1000%);
+      -webkit-transition: transform 300ms ease;
+      transition: transform 300ms ease;
     }
 
     .formButton__check {
@@ -142,8 +172,9 @@
       }
       
       .formButton__sendedText {
-        margin-right: 10px;
+        margin-right: 0;
       }
+      
 }
 
 @media (min-width: $ultra)  {
