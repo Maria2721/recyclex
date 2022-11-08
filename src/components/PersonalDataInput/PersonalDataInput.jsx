@@ -41,7 +41,7 @@ export default function PersonalDataInput({
       {type !== "tel" && (
         <input
           className={classInput}
-          onChange={(e) => handleChange(e, id, type)}
+          onChange={(e) => handleChange(e, id)}
           onBlur={() => blurHandler(id)}
           value={value}
           type={type}

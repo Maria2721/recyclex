@@ -118,16 +118,8 @@ export default function FormPage({ handleModal }) {
      validatePersonalData()
     }
 
-const handleChangePersonalData = (e, id, type) => {
-    let value;
-      switch (type) {
-        case 'text':
-            value = e.target.value.trimStart().replace(/ +/g, " ");
-          break;
-        default:
-        value = e.target.value;
-    }
-
+const handleChangePersonalData = (e, id) => {
+    let value = e.target.value.trimStart().replace(/ +/g, " ");
     setThirdAnswer({
       ...thirdAnswer,
       [id]: {
@@ -279,7 +271,7 @@ const validatePersonalData = () => {
             case 3:
                 console.log(`Ответ №1: ${firstAnswer},
                 Ответ №2: ${secondAnswer},
-                Ответ №3: ${surname.value}, ${name.value}, ${middle.value}, ${company.value}, ${phoneValue}, ${thirdAnswer.email}
+                Ответ №3: ${surname.value}, ${name.value}, ${middle.value}, ${company.value}, ${phoneValue}, ${email.value}
                 Ответ №4:${fourthAnswer}. `)
                 
                 setTimeout(() => {
@@ -351,7 +343,7 @@ const validatePersonalData = () => {
                                 {
                                     stepData.options.map((item) => (
                                         <Checkbox
-                                        onChange={(e)=> handleChangeCheckboxAndRadio(e)}
+                                        handleChange={handleChangeCheckboxAndRadio}
                                         key={item.id}
                                         value={item.value}
                                         id={item.id}/>
@@ -380,7 +372,7 @@ const validatePersonalData = () => {
                             {
                                 questions[step].options.map((item) => (
                                     <RadioButton
-                                        onChange={(e)=> handleChangeCheckboxAndRadio(e)}
+                                        handleChange={handleChangeCheckboxAndRadio}
                                         key={item.id}
                                         defaultChecked={item.checked}
                                         value={item.value}
