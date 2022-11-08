@@ -24,18 +24,6 @@ const [valid, setValid] = useState(false);
 
   const handleChange = (e, id) => {
     const value = e.target.value.trimStart().replace(/ +/g, " ");
-    //   console.log(type)
-    //   switch (type) {
-    //     case 'text':
-    //         value = e.target.value.trimStart().replace(/ +/g, " ");
-    //       break;
-    //     // case 'tel':
-    //     //     value = e.target.value.trimStart().replace(/ +/g, " ").replace (/[^0-9+]/, '');
-    //     //   break;
-    //     default:
-    //     value = e.target.value;
-    // }  
-
     setState({
       ...state,
       [id]: {
@@ -43,8 +31,6 @@ const [valid, setValid] = useState(false);
           value: value
       }
     });
-
-    // console.log(state)
   };
 
   const blurHandler = (type) => {

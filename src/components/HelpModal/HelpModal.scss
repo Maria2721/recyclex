@@ -251,7 +251,7 @@
   }
 }
 
-@media (orientation: landscape) and (max-width: $landscape) {
+@media screen and (orientation: landscape) and (max-width: $landscape) {
   .help__content {
     display: flex;
     flex-direction: column;
@@ -296,7 +296,7 @@
 }
 }
 
-@media (orientation: landscape) and (max-width: $landscapeMiddle) {
+@media screen and (orientation: landscape) and (max-width: $landscapeMiddle) {
   .help__content {
     padding: 15px 30px 18px 79px;
   }
