@@ -22,24 +22,13 @@ const [state, setState] = useState(initialState)
 const [phoneValue, setPhoneValue] = useState('');
 const [valid, setValid] = useState(false);
 
-  const handleChange = (e, id, type) => {
-      let value;
-      switch (type) {
-        case 'text':
-            value = e.target.value.trimStart().replace(/ +/g, " ");
-          break;
-        case 'tel':
-            value = e.target.value.trimStart().replace(/ +/g, " ").replace (/[^0-9+]/, '');
-          break;
-        default:
-        value = e.target.value;
-    }  
-
+  const handleChange = (e, id) => {
+    // const value = e.target.value.trimStart().replace(/ +/g, " ");
     setState({
       ...state,
       [id]: {
           ...state[id],
-          value: value
+          value: e.target.value
       }
     });
   };
@@ -69,12 +58,12 @@ const handleClick = () => {
     }
 
     if (valid) {
-      console.log(`Фамилия: ${state.helpSurname.value},
-                Имя: ${state.helpName.value},
-                Отчество: ${state.helpMiddle.value},
-                Название компании:${state.helpCompany.value},
-                Телефон: ${phoneValue},
-                Вопрос: ${state.helpQuestion.value}.`)
+      console.log(`Фамилия: ${state.helpSurname.value.trimStart().replace(/ +/g, " ")},
+                Имя: ${state.helpName.value.trimStart().replace(/ +/g, " ")},
+                Отчество: ${state.helpMiddle.value.trimStart().replace(/ +/g, " ")},
+                Название компании:${state.helpCompany.value.trimStart().replace(/ +/g, " ")},
+                Телефон: ${phoneValue.trimStart().replace(/ +/g, " ")},
+                Вопрос: ${state.helpQuestion.value.trimStart().replace(/ +/g, " ")}.`)
                 // navigate('/'); // возможно не надо никуда навигировать
                 // handleModal() // закрытие модалки перенесено в кнопку
       setState(initialState); // возвращаем состояние к началу

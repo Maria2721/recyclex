@@ -27,21 +27,21 @@ export default function FormButton({ handleForm, step, isValid, firstAnswer, sec
             setArrowMove(true)
             setTimeout(() => {
                 setArrowMove(false);
-              }, 200);
+              }, 300);
         }
 
         if (step === 1 && secondAnswer.length !== 0) {
             setArrowMove(true)
             setTimeout(() => {
                 setArrowMove(false);
-              }, 200);
+              }, 300);
         }
 
         if (step === 2 && isValid) {
             setArrowMove(true)
             setTimeout(() => {
                 setArrowMove(false);
-              }, 200);
+              }, 300);
         }
 
         if (step === 3 && isValid) {
@@ -49,7 +49,7 @@ export default function FormButton({ handleForm, step, isValid, firstAnswer, sec
 
             setTimeout(() => {
                 setCheckVisible(true);
-              }, 200);
+              }, 350);
 
 
               setTimeout(() => {
@@ -62,7 +62,7 @@ export default function FormButton({ handleForm, step, isValid, firstAnswer, sec
     return (
         <div className="formButton">
         <button className="formButton__inner btn btn_smaller" onClick={handleClick}>
-        {arrowMove && step === 3? <div className="formButton__sendedText">Отправлено</div> : <span>Ответить</span>}
+        {arrowMove && step === 3? <div className="formButton__sendedText">Отправлено</div> : <div className="formButton__sendText">Ответить</div>}
         <div className={classArrowWrapper}>
           <Arrow className={classArrow} />
         </div>
