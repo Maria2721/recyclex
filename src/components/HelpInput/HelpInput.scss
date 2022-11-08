@@ -289,7 +289,7 @@
 
 
 
-@media (orientation:landscape) and (max-width: $landscape) {
+@media (orientation:landscape) and (max-width: $landscape) and (max-height: 600px) {
     .help__row {
         display: block;
 

@@ -251,7 +251,7 @@
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: $landscape) {
+@media screen and (orientation: landscape) and (max-width: $landscape) and (max-height: 600px) {
   .help__content {
     display: flex;
     flex-direction: column;
