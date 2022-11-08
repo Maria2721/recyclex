@@ -13,10 +13,6 @@ body {
   background-color: $bgColor;
   color: $textColor;
   font-weight: 400;
-  scrollbar-width: none;
-}
-body::-webkit-scrollbar {
-  display: none;
 }
 
 main {
