@@ -327,3 +327,10 @@
     max-width: 380px;
   }
 }
+
+@media (orientation: landscape) and (max-width: 400px) {
+  .help__content {
+    padding: 10px 10px 10px 10px;
+  }
+}
+
