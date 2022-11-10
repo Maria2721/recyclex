@@ -19,9 +19,6 @@ const scrollbarWidth = () => {
  
 	return width;
 }
-// Не верно высчитывает 
-/* let scrollWidth = document.body.offsetWidth - document.body.clientWidth;
-console.log (`scrollWidth =${scrollWidth}`); */
 
 export const useDisableBodyScroll = (open) => {
     useEffect(() => {
