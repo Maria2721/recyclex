@@ -18,6 +18,7 @@ export default function FormPage({ handleModal }) {
     const [firstAnswer, setFirstAnswer] = useState([]);
     const [secondAnswer, setSecondAnswer] = useState([]);
     const [phoneValue, setPhoneValue] = useState('');
+    const [disabledButton, setDisabledButton] = useState(false);
     const [thirdAnswer, setThirdAnswer] = useState({
         surname: {
             value: '',
@@ -82,6 +83,7 @@ export default function FormPage({ handleModal }) {
     }, [step])
 
     const handleChangeCheckboxAndRadio = (e) => {
+        setDisabledButton(false);
         let newAnswer = null;
         let value = e.target.value;
 
@@ -120,6 +122,7 @@ export default function FormPage({ handleModal }) {
 
 const handleChangePersonalData = (e, id) => {
     // let value = e.target.value.trimStart().replace(/ +/g, " ");
+    setDisabledButton(false);
     setThirdAnswer({
       ...thirdAnswer,
       [id]: {
@@ -225,12 +228,14 @@ const validatePersonalData = () => {
   }
 
     const handleClick = () => {
+        setDisabledButton(true)
         switch (step) {
             case 0:
                 if (firstAnswer.length !== 0) {
-                    // setStep((step) => step + 1)
+                    // setDisabled(false)
                     setTimeout(() => {
                         setStep((step) => step + 1)
+                        // setDisabled(true)
                       }, 300);
 
                     setIsErrorCheckbox(false) 
@@ -383,7 +388,14 @@ const validatePersonalData = () => {
                             }
                         </div>
                         }
-                        <FormButton handleForm={handleClick} step={step} isValid={valid} firstAnswer={firstAnswer} secondAnswer={secondAnswer}/><span ref={$buttonRef}></span>
+                        <FormButton
+                        disabled={disabledButton}
+                        handleForm={handleClick}
+                        step={step}
+                        isValid={valid}
+                        firstAnswer={firstAnswer}
+                        secondAnswer={secondAnswer}/>
+                        <span ref={$buttonRef}></span>
                     </FormAnswer>
                 </div>
             </div>
