@@ -18,8 +18,6 @@ export default function HelpModal({ handleModal, opened, theme }) {
     "help help_show": opened,
   });
 
-  console.log(opened)
-
 const [state, setState] = useState(initialState)
 const [phoneValue, setPhoneValue] = useState('');
 const [valid, setValid] = useState(false);
@@ -79,7 +77,7 @@ const validateForm = () => {
   
       for (const field of helpFields) {
           const { rule, id } = field;
-          const { value } = state[id];
+          const value = state[id].value.trimStart().replace(/ +/g, " ");
           let error;
   
           switch (rule) {

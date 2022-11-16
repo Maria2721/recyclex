@@ -135,8 +135,9 @@ const validatePersonalData = () => {
   
       for (const field of formFields) {
           const { rule, id } = field;
-          const { value } = thirdAnswer[id];
+          const value = thirdAnswer[id].value.trimStart().replace(/ +/g, " ");
           let error;
+          
   
           switch (rule) {
               case 'name':
