@@ -18,6 +18,8 @@ export default function HelpModal({ handleModal, opened, theme }) {
     "help help_show": opened,
   });
 
+  console.log(opened)
+
 const [state, setState] = useState(initialState)
 const [phoneValue, setPhoneValue] = useState('');
 const [valid, setValid] = useState(false);

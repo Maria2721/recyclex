@@ -35,6 +35,8 @@ function App() {
   useDisableBodyScroll(openedThanksModal)
   useDisableBodyScroll(openedHelpModal)
 
+  // const {fix, release, toggle} = useDisableBodyScroll()
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -47,10 +49,12 @@ function App() {
 
   const handleHelpModal = () => {
     setOpenedHelpModal((curr) => !curr);
+    // toggle()
   }
 
   const handleThanksModal = () => {
     setOpenedThanksModal((curr) => !curr);
+    // toggle()
   }
 
   return (
