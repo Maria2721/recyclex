@@ -9,7 +9,6 @@ import Checkbox from "../../components/Checkbox/Checkbox";
 import RadioButton from "../../components/RadioButton/RadioButton";
 import PersonalDataInputs from "../../components/PersonalDataInputs/PersonalDataInputs";
 import { useState, useRef, useLayoutEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { isPossiblePhoneNumber } from 'react-phone-number-input';
 
@@ -57,7 +56,6 @@ export default function FormPage({ handleModal }) {
     const {surname, name, middle, company, email} = thirdAnswer;
     const stepData = questions[step];
     const formFields = questions[2].fields;
-    const navigate = useNavigate();
     const $buttonRef = useRef(null);
     const $messageRef1 = useRef(null);
     const $messageRef2 = useRef(null);
@@ -83,7 +81,6 @@ export default function FormPage({ handleModal }) {
     }, [step])
 
     const handleChangeCheckboxAndRadio = (e) => {
-        setDisabledButton(false);
         let newAnswer = null;
         let value = e.target.value;
 
@@ -122,7 +119,6 @@ export default function FormPage({ handleModal }) {
 
 const handleChangePersonalData = (e, id) => {
     // let value = e.target.value.trimStart().replace(/ +/g, " ");
-    setDisabledButton(false);
     setThirdAnswer({
       ...thirdAnswer,
       [id]: {
@@ -207,7 +203,7 @@ const validatePersonalData = () => {
                     setValid(false);
                     break;
                 }
-                if (!regEmail.test(value)) { // еще пофиксить
+                if (!regEmail.test(value)) {
                     error = 'Недопустимый формат';
                     setValid(false);
                     break;
@@ -229,13 +225,16 @@ const validatePersonalData = () => {
 
     const handleClick = () => {
         setDisabledButton(true)
+
+        setTimeout(() => {
+            setDisabledButton(false)
+          }, 500);
+
         switch (step) {
             case 0:
                 if (firstAnswer.length !== 0) {
-                    // setDisabled(false)
                     setTimeout(() => {
                         setStep((step) => step + 1)
-                        // setDisabled(true)
                       }, 300);
 
                     setIsErrorCheckbox(false) 
@@ -245,7 +244,6 @@ const validatePersonalData = () => {
                 break;
             case 1:
                 if (secondAnswer.length !== 0) {
-                    // setStep((step) => step + 1)
                     setTimeout(() => {
                         setStep((step) => step + 1)
                       }, 300);
@@ -280,9 +278,9 @@ const validatePersonalData = () => {
                 Ответ №4:${fourthAnswer}. `)
                 
                 setTimeout(() => {
-                    navigate('/');
                     handleModal()
                   }, 1000);
+
                 break;
             default:
                 console.log('Клик по кнопке')
