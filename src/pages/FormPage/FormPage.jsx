@@ -18,6 +18,7 @@ export default function FormPage({ handleModal }) {
     const [firstAnswer, setFirstAnswer] = useState([]);
     const [secondAnswer, setSecondAnswer] = useState([]);
     const [phoneValue, setPhoneValue] = useState('');
+    const [disabledButton, setDisabledButton] = useState(false);
     const [thirdAnswer, setThirdAnswer] = useState({
         surname: {
             value: '',
@@ -82,6 +83,7 @@ export default function FormPage({ handleModal }) {
     }, [step])
 
     const handleChangeCheckboxAndRadio = (e) => {
+        setDisabledButton(false);
         let newAnswer = null;
         let value = e.target.value;
 
@@ -119,12 +121,13 @@ export default function FormPage({ handleModal }) {
     }
 
 const handleChangePersonalData = (e, id) => {
-    let value = e.target.value.trimStart().replace(/ +/g, " ");
+    // let value = e.target.value.trimStart().replace(/ +/g, " ");
+    setDisabledButton(false);
     setThirdAnswer({
       ...thirdAnswer,
       [id]: {
           ...thirdAnswer[id],
-          value: value
+          value: e.target.value
       }
     });
 }
@@ -225,12 +228,14 @@ const validatePersonalData = () => {
   }
 
     const handleClick = () => {
+        setDisabledButton(true)
         switch (step) {
             case 0:
                 if (firstAnswer.length !== 0) {
-                    // setStep((step) => step + 1)
+                    // setDisabled(false)
                     setTimeout(() => {
                         setStep((step) => step + 1)
+                        // setDisabled(true)
                       }, 300);
 
                     setIsErrorCheckbox(false) 
@@ -271,7 +276,7 @@ const validatePersonalData = () => {
             case 3:
                 console.log(`Ответ №1: ${firstAnswer},
                 Ответ №2: ${secondAnswer},
-                Ответ №3: ${surname.value}, ${name.value}, ${middle.value}, ${company.value}, ${phoneValue}, ${email.value}
+                Ответ №3: ${surname.value.trimStart().replace(/ +/g, " ")}, ${name.value.trimStart().replace(/ +/g, " ")}, ${middle.value.trimStart().replace(/ +/g, " ")}, ${company.value.trimStart().replace(/ +/g, " ")}, ${phoneValue.trimStart().replace(/ +/g, " ")}, ${email.value.trimStart().replace(/ +/g, " ")}
                 Ответ №4:${fourthAnswer}. `)
                 
                 setTimeout(() => {
@@ -317,10 +322,10 @@ const validatePersonalData = () => {
                         {step >= 3 && <FormMessage direction='right'>
                         Фамилия - {surname.value} <br />
                         Имя - {name.value} <br />
-                        {middle.value && `Отчество - ${middle.value}`} {middle.value && <br />}
-                        Название организации - {company.value} <br />
-                        Контактный номер телефона - {phoneValue} <br />
-                        {email.value && `Ваш e-mail - ${email.value}`}
+                        {middle.value && `Отчество - ${middle.value.trimStart().replace(/ +/g, " ")}`} {middle.value.trimStart().replace(/ +/g, " ") && <br />}
+                        Название организации - {company.value.trimStart().replace(/ +/g, " ")} <br />
+                        Контактный номер телефона - {phoneValue.trimStart().replace(/ +/g, " ")} <br />
+                        {email.value && `Ваш e-mail - ${email.value.trimStart().replace(/ +/g, " ")}`}
                     </FormMessage>} 
                     </div>
                 </CSSTransition>
@@ -383,7 +388,14 @@ const validatePersonalData = () => {
                             }
                         </div>
                         }
-                        <FormButton handleForm={handleClick} step={step} isValid={valid} firstAnswer={firstAnswer} secondAnswer={secondAnswer}/><span ref={$buttonRef}></span>
+                        <FormButton
+                        disabled={disabledButton}
+                        handleForm={handleClick}
+                        step={step}
+                        isValid={valid}
+                        firstAnswer={firstAnswer}
+                        secondAnswer={secondAnswer}/>
+                        <span ref={$buttonRef}></span>
                     </FormAnswer>
                 </div>
             </div>

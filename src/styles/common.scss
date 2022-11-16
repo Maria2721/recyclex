@@ -13,10 +13,6 @@ body {
   background-color: $bgColor;
   color: $textColor;
   font-weight: 400;
-  scrollbar-width: none;
-}
-body::-webkit-scrollbar {
-  display: none;
 }
 
 main {
@@ -108,7 +104,7 @@ h1 {
 }
 
 @media screen and (orientation:landscape)
-and (max-width: 900px) {
+and (max-width: $landscape) and (max-height: 600px) {
   .container__row {
     padding: 0 60px;
   }

@@ -5,7 +5,7 @@ import { ReactComponent as Check} from "../../assets/imgs/check_button.svg";
 import { useState } from "react";
 
 
-export default function FormButton({ handleForm, step, isValid, firstAnswer, secondAnswer}) {
+export default function FormButton({ handleForm, step, isValid, firstAnswer, secondAnswer, disabled}) {
     const [arrowMove, setArrowMove] = useState(false);
     const [checkVisible, setCheckVisible] = useState(false);
   
@@ -23,6 +23,7 @@ export default function FormButton({ handleForm, step, isValid, firstAnswer, sec
 
     const handleClick = () => {
         handleForm();
+
         if (step === 0 && firstAnswer.length !== 0) {
             setArrowMove(true)
             setTimeout(() => {
@@ -61,7 +62,7 @@ export default function FormButton({ handleForm, step, isValid, firstAnswer, sec
 
     return (
         <div className="formButton">
-        <button className="formButton__inner btn btn_smaller" onClick={handleClick}>
+        <button className="formButton__inner btn btn_smaller" onClick={handleClick} disabled={disabled}>
         {arrowMove && step === 3? <div className="formButton__sendedText">Отправлено</div> : <div className="formButton__sendText">Ответить</div>}
         <div className={classArrowWrapper}>
           <Arrow className={classArrow} />

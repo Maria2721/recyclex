@@ -289,7 +289,7 @@
 
 
 
-@media (orientation:landscape) and (max-width: $landscape) {
+@media (orientation:landscape) and (max-width: $landscape) and (max-height: 600px) {
     .help__row {
         display: block;
 
@@ -430,7 +430,45 @@
 
 @media (orientation:landscape) and (max-width: $landscapeSmall) {
     .help__label {
-        font-size: 7px;
+        font-size: 6px;
         line-height: 9px;
     }
 }
+
+@media (orientation: landscape) and (max-width: 400px) {
+    .help__label {
+        font-size: 5px;
+        line-height: 6px;
+    }
+
+    .help__input {
+    margin-bottom: -7px;
+}
+
+    .help__error {
+        font-size: 4px;
+        top: -7px;
+    }
+
+    .help__alert {
+        width: 250px;
+        font-size: 5px;
+        line-height: 5px;
+        margin-bottom: 3px;
+    }
+
+    .help__row:last-child {
+        margin-bottom: 0;
+    }
+
+    .help__row textarea {
+        max-height: 30px;
+        margin-bottom: 5px;
+    }
+
+    .help__alertIcon {
+        width: 5px;
+        height: 5px;
+    }
+  }
+  

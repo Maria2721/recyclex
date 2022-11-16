@@ -2,6 +2,7 @@ import "./HelpInput.scss";
 import * as cx from "classnames";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
+import ru from 'react-phone-number-input/locale/ru';
 
 export default function HelpInput({
   id,
@@ -42,6 +43,7 @@ export default function HelpInput({
 
         {view === "phone" && (
           <PhoneInput
+          labels={ru}
           international
           defaultCountry="RU"
           name={id}

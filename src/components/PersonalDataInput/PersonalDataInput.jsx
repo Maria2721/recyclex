@@ -2,6 +2,7 @@ import "./PersonalDataInput.scss";
 import * as cx from "classnames";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
+import ru from "react-phone-number-input/locale/ru";
 
 export default function PersonalDataInput({
   id,
@@ -13,7 +14,7 @@ export default function PersonalDataInput({
   errorMessage,
   isDirty,
   phoneValue,
-  handlePhoneValue
+  handlePhoneValue,
 }) {
   const classInput = cx("personalDataInput__input", {
     personalDataInput__input_error: errorMessage && isDirty,
@@ -26,6 +27,7 @@ export default function PersonalDataInput({
       </label>
       {type === "tel" && (
         <PhoneInput
+          labels={ru}
           international
           defaultCountry="RU"
           value={phoneValue}

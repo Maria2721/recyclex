@@ -218,7 +218,7 @@
 }
 
 @media screen and (orientation:landscape)
-and (max-width: $landscape) {
+and (max-width: $landscape) and (max-height: 600px) {
     .header__inner {
         height: 100px;
     }
