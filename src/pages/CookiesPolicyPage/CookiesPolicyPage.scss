@@ -52,6 +52,11 @@
     &__list {
         list-style-type: none;
         margin-bottom: 60px;
+        a {
+            display: inline;
+            font-size: 22px;
+            text-decoration: underline;
+        }
     }
     &__list-item {
         margin-left: 140px;
@@ -135,6 +140,9 @@
         &__list {
             list-style-type: none;
             margin-bottom: 65px;
+            a {
+                font-size: 30px;
+            }
         }
         &__list-item {
             margin-left: 200px;
@@ -216,6 +224,9 @@
         }
         &__list {
             margin-bottom: 30px;
+            a {
+                font-size: 15px;
+            }
         }
         &__list-item {
             margin-left: 80px;           
@@ -270,6 +281,9 @@
         }
         &__list {
             margin-bottom: 15px;
+            a {
+                font-size: 8px;
+            }
         }
         &__list-item {
             margin-left: 41px;
