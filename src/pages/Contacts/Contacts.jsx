@@ -13,7 +13,7 @@ export default function Contacts() {
                 </div>
                 <div className="contacts__address contacts__column">
                     <span className="contacts__subtitle">Адрес</span>
-                    <span className="contacts__description contacts__adress">Москва,<br/>Пресненская набережная д.12, офис 405, помещ.3</span>
+                    <span className="contacts__description contacts__adress">Москва,<br/>Пресненская набережная д. 12, офис 405, помещ. 3</span>
                 </div>
                 <div className="contacts__contacts contacts__column">
                     <span className="contacts__subtitle">Для связи</span>
