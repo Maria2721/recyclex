@@ -83,15 +83,16 @@
 
   &:nth-child(2) {
     width: 50%;
-    padding-right: 18px;
+    padding-right: 9px;
 
     & .personalDataInput__error {
-      right: 18px;
+      right: 9px;
     }
   }
 
   &:nth-child(3) {
     width: 50%;
+    padding-left: 9px;
   }
 }
 
@@ -133,11 +134,15 @@
     }
 
     &:nth-child(2) {
-      padding-right: 20px;
+      padding-right: 10px;
 
       & .personalDataInput__error {
-        right: 20px;
+        right: 10px;
       }
+    }
+
+    &:nth-child(3) {
+      padding-left: 10px;
     }
   }
 
@@ -170,6 +175,7 @@
 
     &:nth-child(3) {
       width: 100%;
+      padding-left: 0;
     }
   }
 }
