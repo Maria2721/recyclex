@@ -21,7 +21,16 @@ export default function HelpModal({ handleModal, opened, theme }) {
 const [state, setState] = useState(initialState)
 const [phoneValue, setPhoneValue] = useState('');
 const [valid, setValid] = useState(false);
-
+const {helpSurname, helpName, helpMiddle, helpCompany, helpQuestion} = state;
+console.log(helpSurname.value)
+const data = { // данные, которые отправляем в форму
+  companyName: helpCompany.value.trimStart().replace(/ +/g, " "),
+  mobileMumber: phoneValue.trimStart().replace(/ +/g, " "),
+  name: helpName.value.trimStart().replace(/ +/g, " "),
+  patronymic: helpMiddle.value.trimStart().replace(/ +/g, " "),
+  question: helpQuestion.value.trimStart().replace(/ +/g, " "),
+  surname: helpSurname.value.trimStart().replace(/ +/g, " ")
+}
   const handleChange = (e, id) => {
     // const value = e.target.value.trimStart().replace(/ +/g, " ");
     setState({
@@ -43,33 +52,6 @@ const [valid, setValid] = useState(false);
  }));
     validateForm()
 }
-
-const handleClick = () => {
-    validateForm();
-
-    for (let key in state) { // проходим по стейту и отмечаем isDirty, чтобы отобразилась ошибка у всех
-      setState((state) => ({
-        ...state,
-        [key]: {
-            ...state[key],
-            isDirty: true
-        }
-      }));
-    }
-
-    if (valid) {
-      console.log(`Фамилия: ${state.helpSurname.value.trimStart().replace(/ +/g, " ")},
-                Имя: ${state.helpName.value.trimStart().replace(/ +/g, " ")},
-                Отчество: ${state.helpMiddle.value.trimStart().replace(/ +/g, " ")},
-                Название компании:${state.helpCompany.value.trimStart().replace(/ +/g, " ")},
-                Телефон: ${phoneValue.trimStart().replace(/ +/g, " ")},
-                Вопрос: ${state.helpQuestion.value.trimStart().replace(/ +/g, " ")}.`)
-                // navigate('/'); // возможно не надо никуда навигировать
-                // handleModal() // закрытие модалки перенесено в кнопку
-      setState(initialState); // возвращаем состояние к началу
-      setPhoneValue('');
-    }
-};
 
 const validateForm = () => {
   setValid(true)
@@ -153,6 +135,57 @@ const validateForm = () => {
             }
           }));
     }
+}
+const handleClick = () => {
+  validateForm();
+
+  for (let key in state) { // проходим по стейту и отмечаем isDirty, чтобы отобразилась ошибка у всех
+    setState((state) => ({
+      ...state,
+      [key]: {
+          ...state[key],
+          isDirty: true
+      }
+    }));
+  }
+
+  if (valid) {
+    // console.log(`Фамилия: ${data.surname}
+    //           Имя: ${data.name}
+    //           Отчество: ${data.patronymic}
+    //           Название компании:${data.companyName}
+    //           Телефон: ${data.mobileMumber}
+    //           Вопрос: ${data.question}`)
+    // sendData(data)
+    setState(initialState); // возвращаем состояние к началу
+    setPhoneValue('');
+  }
+};
+
+const sendData = (data) => {
+  const URL = process.env.REACT_APP_API_ADDRESS_SUPPORT;
+
+  fetch(URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        company_name: data.companyName,
+        mobile_number: data.mobileMumber,
+        name: data.name,
+        patronymic: data.patronymic,
+        question: data.question,
+        surname: data.surname
+      }),
+      mode: 'cors'
+  })
+
+  .then((response) => {
+      console.log(response)
+  })
+  
+  .catch((e) => console.log(e))
 }
 
   return (

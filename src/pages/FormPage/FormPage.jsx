@@ -63,6 +63,17 @@ export default function FormPage({ handleModal }) {
     const $messageRef4 = useRef(null);
     const $messageRef5 = useRef(null);
     const $messageRef6 = useRef(null);
+    const data = { // данные, которые отправляем в форму
+        activityProfile: secondAnswer,
+        companyName: company.value.trimStart().replace(/ +/g, " "),
+        email: email.value.trimStart().replace(/ +/g, " "),
+        mobileMumber: phoneValue.trimStart().replace(/ +/g, " "),
+        name: name.value.trimStart().replace(/ +/g, " "),
+        patronymic: middle.value.trimStart().replace(/ +/g, " "),
+        replyType: fourthAnswer,
+        scrapGroups: firstAnswer,
+        surname: surname.value.trimStart().replace(/ +/g, " ")
+    }
 
     const classCheckboxError = cx("form__checkboxError", {
         "form__checkboxError_shown": isErrorCheckbox,
@@ -273,10 +284,11 @@ const validatePersonalData = () => {
                 }
                 break;
             case 3:
-                console.log(`Ответ №1: ${firstAnswer},
-                Ответ №2: ${secondAnswer},
-                Ответ №3: ${surname.value.trimStart().replace(/ +/g, " ")}, ${name.value.trimStart().replace(/ +/g, " ")}, ${middle.value.trimStart().replace(/ +/g, " ")}, ${company.value.trimStart().replace(/ +/g, " ")}, ${phoneValue.trimStart().replace(/ +/g, " ")}, ${email.value.trimStart().replace(/ +/g, " ")}
-                Ответ №4:${fourthAnswer}. `)
+                // console.log(`Ответ №1: ${data.scrapGroups}
+                // Ответ №2: ${data.activityProfile}
+                // Ответ №3: ${data.surname}, ${data.name}, ${data.patronymic}, ${data.companyName}, ${data.mobileMumber}, ${data.email}
+                // Ответ №4:${data.replyType} `)
+                sendData(data);
                 
                 setTimeout(() => {
                     handleModal()
@@ -288,6 +300,35 @@ const validatePersonalData = () => {
         }
     }
 
+
+const sendData = (data) => {
+    const URL = process.env.REACT_APP_API_ADDRESS;
+
+    fetch(URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+                activity_profile: data.activityProfile.join("; "),
+                company_name: data.companyName,
+                email: data.email,
+                mobile_number: data.mobileMumber,
+                name: data.name,
+                patronymic: data.patronymic,
+                reply_type: data.replyType,
+                scrap_groups: data.scrapGroups.join(', '),
+                surname: data.surname
+        }),
+        mode: 'cors'
+    })
+
+    .then((response) => {
+        console.log(response)
+    })
+    
+    .catch((e) => console.log(e))
+}
     return (
         <section className="form container__row">
             <div className="form__inner">
