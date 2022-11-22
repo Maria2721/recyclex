@@ -64,14 +64,14 @@ export default function FormPage({ handleModal }) {
     const $messageRef5 = useRef(null);
     const $messageRef6 = useRef(null);
     const data = { // данные, которые отправляем в форму
-        activityProfile: secondAnswer,
+        activityProfile: secondAnswer.join("; "),
         companyName: company.value.trimStart().replace(/ +/g, " "),
         email: email.value.trimStart().replace(/ +/g, " "),
         mobileMumber: phoneValue.trimStart().replace(/ +/g, " "),
         name: name.value.trimStart().replace(/ +/g, " "),
         patronymic: middle.value.trimStart().replace(/ +/g, " "),
         replyType: fourthAnswer,
-        scrapGroups: firstAnswer,
+        scrapGroups: firstAnswer.join(', '),
         surname: surname.value.trimStart().replace(/ +/g, " ")
     }
 
@@ -310,14 +310,14 @@ const sendData = (data) => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-                activity_profile: data.activityProfile.join("; "),
+                activity_profile: data.activityProfile,
                 company_name: data.companyName,
                 email: data.email,
                 mobile_number: data.mobileMumber,
                 name: data.name,
                 patronymic: data.patronymic,
                 reply_type: data.replyType,
-                scrap_groups: data.scrapGroups.join(', '),
+                scrap_groups: data.scrapGroups,
                 surname: data.surname
         }),
         mode: 'cors'
