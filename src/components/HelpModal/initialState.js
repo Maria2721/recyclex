@@ -1,21 +1,21 @@
 export const initialState = {
     helpSurname: {
-        value: '',
+        value: 'Галко',
         isDirty: false,
         error: ''
     },
     helpName: {
-        value: '',
+        value: 'Мария',
         isDirty: false,
         error: ''
     },
     helpMiddle: {
-        value: '',
+        value: 'Сергеевна',
         isDirty: false,
         error: ''
     },
     helpCompany: {
-        value: '',
+        value: 'Exim',
         isDirty: false,
         error: ''
     },

@@ -329,9 +329,6 @@ const sendData = (data) => {
     
     .catch((e) => console.log(e))
 }
-
-window.a = sendData
-
     return (
         <section className="form container__row">
             <div className="form__inner">
