@@ -22,7 +22,6 @@ const [state, setState] = useState(initialState)
 const [phoneValue, setPhoneValue] = useState('');
 const [valid, setValid] = useState(false);
 const {helpSurname, helpName, helpMiddle, helpCompany, helpQuestion} = state;
-console.log(helpSurname.value)
 const data = { // данные, которые отправляем в форму
   companyName: helpCompany.value.trimStart().replace(/ +/g, " "),
   mobileMumber: phoneValue.trimStart().replace(/ +/g, " "),
@@ -156,7 +155,7 @@ const handleClick = () => {
     //           Название компании:${data.companyName}
     //           Телефон: ${data.mobileMumber}
     //           Вопрос: ${data.question}`)
-    // sendData(data)
+    sendData(data)
     setState(initialState); // возвращаем состояние к началу
     setPhoneValue('');
   }
