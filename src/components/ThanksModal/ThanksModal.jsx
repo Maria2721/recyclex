@@ -2,13 +2,19 @@ import "./ThanksModal.scss";
 import { ReactComponent as Thanks} from "../../assets/imgs/thanks.svg";
 import * as cx from "classnames";
 import ButtonClose from "../ButtonClose/ButtonClose";
-
+import { RemoveScroll } from "react-remove-scroll";
 
 export default function ThanksModal({ handleModal, opened }) {
     const classThanksModal = cx("thanksModal", {
         "thanksModal_show": opened,
     });
+
+    if (!opened) {
+        return null
+    }
+
     return (  
+        <RemoveScroll removeScrollBar>
         <div className={classThanksModal}>
             <div className="thanksModal__inner">
                 <div className="thanksModal__content">
@@ -20,5 +26,6 @@ export default function ThanksModal({ handleModal, opened }) {
                 </div>
             </div>
         </div>  
+        </RemoveScroll>
     );
 }

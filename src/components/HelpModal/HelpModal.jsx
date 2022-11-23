@@ -12,6 +12,7 @@ import { initialState } from "./initialState";
 import { isPossiblePhoneNumber } from 'react-phone-number-input';
 import ButtonSend from "../ButtonSend/ButtonSend";
 import { useState } from "react";
+import { RemoveScroll } from "react-remove-scroll";
 
 export default function HelpModal({ handleModal, opened, theme }) {
   const classModal = cx("help", {
@@ -187,7 +188,12 @@ const sendData = (data) => {
   .catch((e) => console.log(e))
 }
 
+if (!opened) {
+  return null
+}
+
   return (
+    <RemoveScroll removeScrollBar>
     <div className={classModal}>
       <div className="help__inner">
         <div className="help__content">
@@ -251,5 +257,6 @@ const sendData = (data) => {
         </div>
       </div>
     </div>
+    </RemoveScroll>
   );
 }
