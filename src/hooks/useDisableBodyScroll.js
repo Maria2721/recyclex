@@ -47,12 +47,12 @@ const fixBody = () => {
     body.dataset.state = 'fixed';
 
     scrollPosition = window.pageYOffset;
-    body.style = {
+    Object.assign(document.body.style, {
         top: `-${scrollPosition}px`,
         width: '100%',
         overflow: 'hidden',
         position:'fixed',
-    }
+    })
 }
 
 const releaseBody = () => {
