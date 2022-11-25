@@ -7,6 +7,7 @@ import ru from 'react-phone-number-input/locale/ru';
 export default function HelpInput({
   id,
   name,
+  label,
   view,
   type,
   value,
@@ -24,7 +25,7 @@ export default function HelpInput({
   return (
     <div className="help__row">
       <label className="help__label" htmlFor={id}>
-        {name}
+        {label}
       </label>
       <div className="help__inputWrapper">
         {errorMessage && isDirty && <div className="help__error">{errorMessage}</div>}
@@ -36,7 +37,7 @@ export default function HelpInput({
             onChange={(e) => handleChange(e, id)}
             type={type}
             id={id}
-            name={id}
+            name={name}
             value={value}
           />
         )}
@@ -46,7 +47,7 @@ export default function HelpInput({
           labels={ru}
           international
           defaultCountry="RU"
-          name={id}
+          name={name}
           value={phoneValue}
           type={type}
           onBlur={() => blurHandler(id)}
@@ -62,7 +63,7 @@ export default function HelpInput({
               onChange={(e) => handleChange(e, id)}
               type={type}
               id={id}
-              name={id}
+              name={name}
               value={value}
               maxLength={5000}
             />

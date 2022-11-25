@@ -22,9 +22,10 @@ export default function HelpModal({ handleModal, opened, theme }) {
 const [state, setState] = useState(initialState)
 const [phoneValue, setPhoneValue] = useState('');
 const [valid, setValid] = useState(false);
-const {helpSurname, helpName, helpMiddle, helpCompany, helpQuestion} = state;
+const {helpSurname, helpName, helpMiddle, helpCompany, helpEmail, helpQuestion} = state;
 const data = { // данные, которые отправляем в форму
   companyName: helpCompany.value.trimStart().replace(/ +/g, " "),
+  email: helpEmail.value.trimStart().replace(/ +/g, " "),
   mobileMumber: phoneValue.trimStart().replace(/ +/g, " "),
   name: helpName.value.trimStart().replace(/ +/g, " "),
   patronymic: helpMiddle.value.trimStart().replace(/ +/g, " "),
@@ -56,6 +57,7 @@ const data = { // данные, которые отправляем в форм�
 const validateForm = () => {
   setValid(true)
   const regName = /^[A-ZА-ЯЁ\s'-]+$/i;
+  const regEmail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
   
       for (const field of helpFields) {
           const { rule, id } = field;
@@ -111,6 +113,28 @@ const validateForm = () => {
                   break;
                 }
                 break;
+            case 'email':
+                if (value.length === 0) {
+                  error = 'Необходимо заполнить';
+                  setValid(false);
+                  break;
+                } 
+                if (value.length < 5) {
+                    error = 'Минимум 5 символов';
+                    setValid(false);
+                    break;
+                  } 
+                if (value.length > 200) {
+                    error = 'Максимум 200 символов';
+                    setValid(false);
+                    break;
+                }
+                if (!regEmail.test(value)) {
+                    error = 'Недопустимый формат';
+                    setValid(false);
+                    break;
+                  }
+                break;
             case 'question':
                 if (value.length === 0) {
                   error = 'Необходимо заполнить';
@@ -155,6 +179,7 @@ const handleClick = () => {
     //           Отчество: ${data.patronymic}
     //           Название компании:${data.companyName}
     //           Телефон: ${data.mobileMumber}
+    //           Почта: ${data.email}
     //           Вопрос: ${data.question}`)
     sendData(data)
     setState(initialState); // возвращаем состояние к началу
@@ -172,6 +197,7 @@ const sendData = (data) => {
       },
       body: JSON.stringify({
         company_name: data.companyName,
+        email: data.email,
         mobile_number: data.mobileMumber,
         name: data.name,
         patronymic: data.patronymic,
@@ -213,6 +239,7 @@ if (!opened) {
                 <HelpInput
                   key={item.id}
                   id={item.id}
+                  label={item.label}
                   name={item.name}
                   value={state[item.id].value}
                   type={item.type}
