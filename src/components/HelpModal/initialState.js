@@ -24,6 +24,11 @@ export const initialState = {
         isDirty: false,
         error: ''
     },
+    helpEmail: {
+        value: '',
+        isDirty: false,
+        error: ''
+    },
     helpQuestion: {
         value: '',
         isDirty: false,

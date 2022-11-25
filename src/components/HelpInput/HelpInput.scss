@@ -5,7 +5,7 @@
     justify-content: space-between;
 
     &:not(:last-child) {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 }
 
@@ -29,6 +29,10 @@
     border: 1px solid transparent;
     border-radius: 4px;
     font-family: $generalFont;
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: inset 0 0 0 50px #F1F0F0;
+    -webkit-box-shadow: inset 0 0 0 50px #F1F0F0;
     &:focus {
         outline: none;
     }
@@ -54,6 +58,8 @@
     background-color: #1A1A1A;
     border: 1px solid $bgColor;
     color: $bgColor;
+    box-shadow: inset 0 0 0 50px #1A1A1A;
+    -webkit-box-shadow: inset 0 0 0 50px #1A1A1A;
 }
 
 .help__input_error, #dark .help__input_error {
@@ -76,7 +82,7 @@
 }
 
 .help__row:last-child {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 @media (max-width: $tablet)  {
@@ -137,7 +143,7 @@
         display: block;
 
         &:not(:last-child) {
-            margin-bottom: 8px;
+            margin-bottom: 3px;
         }
     }
 
@@ -252,6 +258,8 @@
         border: 1px solid $textColor;
         background-color: $bgColor;
         border-radius: 4px;
+        box-shadow: inset 0 0 0 50px $bgColor;
+        -webkit-box-shadow: inset 0 0 0 50px $bgColor;
     }
 
     .PhoneInputInput {
@@ -279,7 +287,7 @@
     }
 
     .help__row:not(:last-child) {
-        margin-bottom: 40px;
+        margin-bottom: 25px;
     }
 
     .help__row:last-child {
@@ -302,21 +310,26 @@
         }
 
         &:nth-child(2) {
-            width: 40%;
+            width: 45%;
             padding-right: 20px;
         }
 
         &:nth-child(3) {
-            width: 60%;
+            width: 55%;
         }
 
         &:nth-child(4) {
-            width: 50%;
-            padding-right: 20px;
+            width: 100%;
         }
 
         &:nth-child(5) {
             width: 50%;
+            padding-right: 10px;
+        }
+
+        &:nth-child(6) {
+            width: 50%;
+            padding-left: 10px;
         }
 
         &:last-child {
@@ -374,11 +387,11 @@
     }
     
     .help__row textarea {
-        max-height: 85px;
+        max-height: 50px;
     }
 
     .help__row:last-child {
-        margin-bottom: 10px;
+        margin-bottom: 7px;
     }
 
     .help__error {
@@ -396,13 +409,17 @@
 
 @media (orientation:landscape) and (max-width: $landscapeMiddle) {
 
+    .help__header {
+        margin-bottom: 0;
+    }
+
     .help__label {
         font-size: 10px;
         line-height: 12px;
     }
 
     .help__input {
-        max-height: 20px;
+        max-height: 17px;
         margin-bottom: -4px;
     }
     .help__error {
@@ -410,9 +427,13 @@
         top: 22px;
         left: 84px;
     }
+
+    .help__rows {
+        max-width: 491px;
+    }
     
     .help__row textarea {
-        max-height: 40px;
+        max-height: 35px;
     }
 
     .help__error {
