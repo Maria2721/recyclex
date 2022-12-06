@@ -25,13 +25,13 @@ export default function Footer({ handleModal }) {
                 <button className="footer__manager footer__manager_mobile" onClick={handleModal}>Связь с менеджером</button>
                 <div className="footer__social">
                     <a
-                      href='https://king-prawn-app-vja2f.ondigitalocean.app/'
+                      href='https://recyclex.pro/'
                       target="_blank"
                       rel="noreferrer">
                           <TelegramIcon className="footer__icon" />
                     </a>
                     <a
-                      href='https://king-prawn-app-vja2f.ondigitalocean.app/'
+                      href='https://recyclex.pro/'
                       target="_blank"
                       rel="noreferrer">
                           <WhatsAppIcon className="footer__icon" />
