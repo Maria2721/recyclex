@@ -8,12 +8,14 @@ import { questions } from "./questions";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import RadioButton from "../../components/RadioButton/RadioButton";
 import PersonalDataInputs from "../../components/PersonalDataInputs/PersonalDataInputs";
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import { isPossiblePhoneNumber } from 'react-phone-number-input';
+import { useSearchParams } from "react-router-dom";
 
 export default function FormPage({ handleModal }) {
     const [step, setStep] = useState(0);
+    const [searchParams, setSearchParams] = useSearchParams();
     const [firstAnswer, setFirstAnswer] = useState([]);
     const [secondAnswer, setSecondAnswer] = useState([]);
     const [phoneValue, setPhoneValue] = useState('');
@@ -63,21 +65,22 @@ export default function FormPage({ handleModal }) {
     const $messageRef4 = useRef(null);
     const $messageRef5 = useRef(null);
     const $messageRef6 = useRef(null);
-    const data = { // данные, которые отправляем в форму
-        activityProfile: secondAnswer.join("; "),
-        companyName: company.value.trimStart().replace(/ +/g, " "),
-        email: email.value.trimStart().replace(/ +/g, " "),
-        mobileMumber: phoneValue.trimStart().replace(/ +/g, " "),
-        name: name.value.trimStart().replace(/ +/g, " "),
-        patronymic: middle.value.trimStart().replace(/ +/g, " "),
-        replyType: fourthAnswer,
-        scrapGroups: firstAnswer.join(', '),
-        surname: surname.value.trimStart().replace(/ +/g, " ")
-    }
 
     const classCheckboxError = cx("form__checkboxError", {
         "form__checkboxError_shown": isErrorCheckbox,
       });
+
+
+    useEffect(() => {
+       setSearchParams({ index: step})
+       // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
+    useEffect(() => {
+        const index = searchParams.get("index");
+        const newStep = Number(index);
+        setStep(newStep);
+     }, [searchParams])
 
     useLayoutEffect(() => {
         if (!$buttonRef.current) {
@@ -247,6 +250,7 @@ const validatePersonalData = () => {
                 if (firstAnswer.length !== 0) {
                     setTimeout(() => {
                         setStep((step) => step + 1)
+                        setSearchParams({ index: step + 1})
                       }, 300);
 
                     setIsErrorCheckbox(false) 
@@ -258,6 +262,7 @@ const validatePersonalData = () => {
                 if (secondAnswer.length !== 0) {
                     setTimeout(() => {
                         setStep((step) => step + 1)
+                        setSearchParams({ index: step + 1})
                       }, 300);
 
                     setIsErrorCheckbox(false) 
@@ -266,7 +271,7 @@ const validatePersonalData = () => {
                 }
                 break;
             case 2:
-                for (let key in thirdAnswer) { // проходим по стейту и отмечаем isDirty, чтобы отобразилась ошибка у всех
+                for (let key in thirdAnswer) {
                     setThirdAnswer((state) => ({
                       ...state,
                       [key]: {
@@ -280,6 +285,7 @@ const validatePersonalData = () => {
                 if (valid) {
                     setTimeout(() => {
                         setStep((step) => step + 1)
+                        setSearchParams({ index: step + 1})
                       }, 300);
                 }
                 break;
@@ -288,7 +294,7 @@ const validatePersonalData = () => {
                 // Ответ №2: ${data.activityProfile}
                 // Ответ №3: ${data.surname}, ${data.name}, ${data.patronymic}, ${data.companyName}, ${data.mobileMumber}, ${data.email}
                 // Ответ №4:${data.replyType} `)
-                sendData(data);
+                sendData();
                 
                 setTimeout(() => {
                     handleModal()
@@ -301,8 +307,19 @@ const validatePersonalData = () => {
     }
 
 
-const sendData = (data) => {
+const sendData = () => {
     const URL = process.env.REACT_APP_API_ADDRESS;
+    const data = {
+        activityProfile: secondAnswer.join("; "),
+        companyName: company.value.trimStart().replace(/ +/g, " "),
+        email: email.value.trimStart().replace(/ +/g, " "),
+        mobileMumber: phoneValue.trimStart().replace(/ +/g, " "),
+        name: name.value.trimStart().replace(/ +/g, " "),
+        patronymic: middle.value.trimStart().replace(/ +/g, " "),
+        replyType: fourthAnswer,
+        scrapGroups: firstAnswer.join(', '),
+        surname: surname.value.trimStart().replace(/ +/g, " ")
+    }
 
     fetch(URL, {
         method: 'POST',

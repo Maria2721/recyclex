@@ -23,15 +23,7 @@ const [state, setState] = useState(initialState)
 const [phoneValue, setPhoneValue] = useState('');
 const [valid, setValid] = useState(false);
 const {helpSurname, helpName, helpMiddle, helpCompany, helpEmail, helpQuestion} = state;
-const data = { // данные, которые отправляем в форму
-  companyName: helpCompany.value.trimStart().replace(/ +/g, " "),
-  email: helpEmail.value.trimStart().replace(/ +/g, " "),
-  mobileMumber: phoneValue.trimStart().replace(/ +/g, " "),
-  name: helpName.value.trimStart().replace(/ +/g, " "),
-  patronymic: helpMiddle.value.trimStart().replace(/ +/g, " "),
-  question: helpQuestion.value.trimStart().replace(/ +/g, " "),
-  surname: helpSurname.value.trimStart().replace(/ +/g, " ")
-}
+
   const handleChange = (e, id) => {
     // const value = e.target.value.trimStart().replace(/ +/g, " ");
     setState({
@@ -108,6 +100,7 @@ const validateForm = () => {
                 break;
             case 'phone':
                 if (!isPossiblePhoneNumber(phoneValue)) {
+                  console.log(2)
                   error = 'Недопустимая длина';
                   setValid(false);
                   break;
@@ -181,14 +174,23 @@ const handleClick = () => {
     //           Телефон: ${data.mobileMumber}
     //           Почта: ${data.email}
     //           Вопрос: ${data.question}`)
-    sendData(data)
+    sendData()
     setState(initialState); // возвращаем состояние к началу
     setPhoneValue('');
   }
 };
 
-const sendData = (data) => {
+const sendData = () => {
   const URL = process.env.REACT_APP_API_ADDRESS_SUPPORT;
+  const data = {
+    companyName: helpCompany.value.trimStart().replace(/ +/g, " "),
+    email: helpEmail.value.trimStart().replace(/ +/g, " "),
+    mobileMumber: phoneValue.trimStart().replace(/ +/g, " "),
+    name: helpName.value.trimStart().replace(/ +/g, " "),
+    patronymic: helpMiddle.value.trimStart().replace(/ +/g, " "),
+    question: helpQuestion.value.trimStart().replace(/ +/g, " "),
+    surname: helpSurname.value.trimStart().replace(/ +/g, " ")
+  }
 
   fetch(URL, {
       method: 'POST',
