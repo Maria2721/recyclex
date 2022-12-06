@@ -16,9 +16,9 @@ import ErrorPage from './pages/ErrorPage/ErrorPage';
 import HelpModal from './components/HelpModal/HelpModal';
 import ThanksModal from './components/ThanksModal/ThanksModal';
 import { createContext, useState, useEffect } from "react";
-import { ReactComponent as ChatIconWhite} from "./assets/imgs/chat_icon_white.svg";
-import { ReactComponent as OnlineMark} from "./assets/imgs/online_mark_chat.svg";
-import { ReactComponent as ChatIconBlack} from "./assets/imgs/chat_icon_black.svg";
+// import { ReactComponent as ChatIconWhite} from "./assets/imgs/chat_icon_white.svg";
+// import { ReactComponent as OnlineMark} from "./assets/imgs/online_mark_chat.svg";
+// import { ReactComponent as ChatIconBlack} from "./assets/imgs/chat_icon_black.svg";
 import { useDisableBodyScroll } from './hooks/useDisableBodyScroll';
 
 
@@ -74,11 +74,11 @@ function App() {
                 <Route path='*' element={<ErrorPage/>}/>
             </Routes>
           </main>
-          <button className='app__chat'>
+          {/* <button className='app__chat'>
             {theme === 'light' ? <ChatIconBlack className='app__chatIcon'/>
             : <ChatIconWhite className='app__chatIcon'/>}
             <OnlineMark className='app__chatOnline'/>
-          </button>
+          </button> */}
         <Footer handleModal={handleHelpModal}/> 
       </div>
     </ThemeContext.Provider>
