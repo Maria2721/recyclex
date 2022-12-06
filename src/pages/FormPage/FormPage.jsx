@@ -8,12 +8,14 @@ import { questions } from "./questions";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import RadioButton from "../../components/RadioButton/RadioButton";
 import PersonalDataInputs from "../../components/PersonalDataInputs/PersonalDataInputs";
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import { isPossiblePhoneNumber } from 'react-phone-number-input';
+import { useSearchParams } from "react-router-dom";
 
 export default function FormPage({ handleModal }) {
     const [step, setStep] = useState(0);
+    const [searchParams, setSearchParams] = useSearchParams();
     const [firstAnswer, setFirstAnswer] = useState([]);
     const [secondAnswer, setSecondAnswer] = useState([]);
     const [phoneValue, setPhoneValue] = useState('');
@@ -78,6 +80,18 @@ export default function FormPage({ handleModal }) {
     const classCheckboxError = cx("form__checkboxError", {
         "form__checkboxError_shown": isErrorCheckbox,
       });
+
+
+    useEffect(() => {
+       setSearchParams({ index: step})
+       // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
+    useEffect(() => {
+        const index = searchParams.get("index");
+        const newStep = Number(index);
+        setStep(newStep);
+     }, [searchParams])
 
     useLayoutEffect(() => {
         if (!$buttonRef.current) {
@@ -247,6 +261,7 @@ const validatePersonalData = () => {
                 if (firstAnswer.length !== 0) {
                     setTimeout(() => {
                         setStep((step) => step + 1)
+                        setSearchParams({ index: step + 1})
                       }, 300);
 
                     setIsErrorCheckbox(false) 
@@ -258,6 +273,7 @@ const validatePersonalData = () => {
                 if (secondAnswer.length !== 0) {
                     setTimeout(() => {
                         setStep((step) => step + 1)
+                        setSearchParams({ index: step + 1})
                       }, 300);
 
                     setIsErrorCheckbox(false) 
@@ -266,7 +282,7 @@ const validatePersonalData = () => {
                 }
                 break;
             case 2:
-                for (let key in thirdAnswer) { // проходим по стейту и отмечаем isDirty, чтобы отобразилась ошибка у всех
+                for (let key in thirdAnswer) {
                     setThirdAnswer((state) => ({
                       ...state,
                       [key]: {
@@ -280,6 +296,7 @@ const validatePersonalData = () => {
                 if (valid) {
                     setTimeout(() => {
                         setStep((step) => step + 1)
+                        setSearchParams({ index: step + 1})
                       }, 300);
                 }
                 break;
