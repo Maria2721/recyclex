@@ -65,17 +65,6 @@ export default function FormPage({ handleModal }) {
     const $messageRef4 = useRef(null);
     const $messageRef5 = useRef(null);
     const $messageRef6 = useRef(null);
-    const data = { // данные, которые отправляем в форму
-        activityProfile: secondAnswer.join("; "),
-        companyName: company.value.trimStart().replace(/ +/g, " "),
-        email: email.value.trimStart().replace(/ +/g, " "),
-        mobileMumber: phoneValue.trimStart().replace(/ +/g, " "),
-        name: name.value.trimStart().replace(/ +/g, " "),
-        patronymic: middle.value.trimStart().replace(/ +/g, " "),
-        replyType: fourthAnswer,
-        scrapGroups: firstAnswer.join(', '),
-        surname: surname.value.trimStart().replace(/ +/g, " ")
-    }
 
     const classCheckboxError = cx("form__checkboxError", {
         "form__checkboxError_shown": isErrorCheckbox,
@@ -305,7 +294,7 @@ const validatePersonalData = () => {
                 // Ответ №2: ${data.activityProfile}
                 // Ответ №3: ${data.surname}, ${data.name}, ${data.patronymic}, ${data.companyName}, ${data.mobileMumber}, ${data.email}
                 // Ответ №4:${data.replyType} `)
-                sendData(data);
+                sendData();
                 
                 setTimeout(() => {
                     handleModal()
@@ -318,8 +307,19 @@ const validatePersonalData = () => {
     }
 
 
-const sendData = (data) => {
+const sendData = () => {
     const URL = process.env.REACT_APP_API_ADDRESS;
+    const data = {
+        activityProfile: secondAnswer.join("; "),
+        companyName: company.value.trimStart().replace(/ +/g, " "),
+        email: email.value.trimStart().replace(/ +/g, " "),
+        mobileMumber: phoneValue.trimStart().replace(/ +/g, " "),
+        name: name.value.trimStart().replace(/ +/g, " "),
+        patronymic: middle.value.trimStart().replace(/ +/g, " "),
+        replyType: fourthAnswer,
+        scrapGroups: firstAnswer.join(', '),
+        surname: surname.value.trimStart().replace(/ +/g, " ")
+    }
 
     fetch(URL, {
         method: 'POST',

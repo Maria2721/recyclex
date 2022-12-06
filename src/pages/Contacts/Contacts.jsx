@@ -27,7 +27,7 @@ export default function Contacts() {
                 </div>
             </div>
             <div className="contacts__mapWrapper">
-            <iframe className="contacts__map"  title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.5081828838265!2d37.53745771007338!3d55.74967387708095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bdcbfd1b72d%3A0x433d48214f76b256!2z0J_RgNC10YHQvdC10L3RgdC60LDRjyDQvdCw0LEuLCAxMiwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEyMzMxNw!5e0!3m2!1sru!2sge!4v1669406101341!5m2!1sru!2sge" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe className="contacts__map"  title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.5081828838265!2d37.53745771007338!3d55.74967387708095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bdcbfd1b72d%3A0x433d48214f76b256!2z0J_RgNC10YHQvdC10L3RgdC60LDRjyDQvdCw0LEuLCAxMiwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEyMzMxNw!5e0!3m2!1sru!2sge!4v1669406101341!5m2!1sru!2sge" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             {/* <div className="contacts__workers">

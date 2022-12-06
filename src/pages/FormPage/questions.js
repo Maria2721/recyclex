@@ -26,7 +26,7 @@ export const questions = [
             id: 'trade',
             name: 'profile'
         },{
-            value: 'Сборка, транспортировака, сортировка отходов',
+            value: 'Сборка, транспортировка, сортировка отходов',
             id: 'sorting',
             name: 'profile'
         },{
