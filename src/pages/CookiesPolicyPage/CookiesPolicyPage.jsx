@@ -97,7 +97,7 @@ export default function CookiesPolicyPage() {
                                     rel="noreferrer">https://support.apple.com/ru-ru/guide/safari/sfri11471/mac</a>
                             </div>
                             <div className="сookies__item">
-                                <h4 className="сookies__title-link сookies__subtitle_h4">Safari su iPhone, iPad, o iPod touch</h4>
+                                <h4 className="сookies__title-link сookies__subtitle_h4">Safari su iPhone, iPad</h4>
                                 <a href="https://support.apple.com/ru-ru/HT201265" 
                                     className="сookies__link"
                                     target="_blank"
