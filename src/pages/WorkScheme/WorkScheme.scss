@@ -31,6 +31,9 @@
     .text_bottom {
         padding-bottom: 60px;
     }
+    &__icon {
+        width: 22px;
+    }
 }
 
 @media (min-width: $ultra) {
@@ -60,6 +63,9 @@
         }
         .text_bottom {
             padding-bottom: 45px;
+        }
+        &__icon {
+            width: 30px;
         }
     }
 }
@@ -93,6 +99,9 @@
 
         .text_bottom {
             padding-bottom: 30px;
+        }
+        &__icon {
+            width: 15px;
         }
     }
 }
@@ -128,11 +137,17 @@
         .text_bottom {
             padding-bottom: 15px;
         }
+        &__icon {
+            width: 8px;
+        }
     }
 }
-@media screen and (orientation:landscape) and (max-width: $horizonMobile)and (max-height: 600px) {
+@media screen and (orientation:landscape) and (max-width: $horizonMobile) and (max-height: 600px) {
     .scheme {
         margin-top: 20px; 
+        &__icon {
+            width: 18px;
+        }
     /*     &__list-item {
             &::before {
                 -webkit-top: 12px;
