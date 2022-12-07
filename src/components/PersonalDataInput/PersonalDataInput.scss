@@ -93,6 +93,10 @@
   &:nth-child(3) {
     width: 50%;
     padding-left: 9px;
+
+    & .personalDataInput__label {
+        left: 15px;
+    }
   }
 }
 
@@ -143,6 +147,10 @@
 
     &:nth-child(3) {
       padding-left: 10px;
+
+      & .personalDataInput__label {
+        left: 20px;
+    }
     }
   }
 
@@ -176,7 +184,14 @@
     &:nth-child(3) {
       width: 100%;
       padding-left: 0;
+      & .personalDataInput__label {
+        left: 10px;
     }
+    }
+  }
+
+  .personalDataInput__error {
+    font-size: 12px;
   }
 }
 
@@ -197,6 +212,12 @@
   .personalDataInput_inputWrapper {
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+
+    &:nth-child(3) {
+      & .personalDataInput__label {
+        left: 5px;
+    }
     }
   }
 
