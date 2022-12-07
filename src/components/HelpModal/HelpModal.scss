@@ -156,7 +156,7 @@
   .help__content {
     width: 320px;
     padding: 22px 20px 23px 28px;
-    max-height: 520px;
+    max-height: 535px;
   }
 
   .help__header {
@@ -262,6 +262,7 @@
     width: 100vw;
     height: 100vh;
     max-height: 100vh;
+    overflow-y: scroll;
   }
 
   .help__header {
