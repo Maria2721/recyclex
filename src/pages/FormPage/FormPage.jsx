@@ -12,6 +12,7 @@ import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import { isPossiblePhoneNumber } from 'react-phone-number-input';
 import { useSearchParams } from "react-router-dom";
+import { initialState } from "./initialState";
 
 export default function FormPage({ handleModal }) {
     const [step, setStep] = useState(0);
@@ -20,38 +21,7 @@ export default function FormPage({ handleModal }) {
     const [secondAnswer, setSecondAnswer] = useState([]);
     const [phoneValue, setPhoneValue] = useState('');
     const [disabledButton, setDisabledButton] = useState(false);
-    const [thirdAnswer, setThirdAnswer] = useState({
-        surname: {
-            value: '',
-            isDirty: false,
-            error: ''
-        },
-        name: {
-            value: '',
-            isDirty: false,
-            error: ''
-        },
-        middle: {
-            value: '',
-            isDirty: false,
-            error: ''
-        },
-        company: {
-            value: '',
-            isDirty: false,
-            error: ''
-        },
-        phone: {
-            value: '',
-            isDirty: false,
-            error: ''
-        },
-        email: {
-            value: '',
-            isDirty: false,
-            error: ''
-        },
-});
+    const [thirdAnswer, setThirdAnswer] = useState(initialState);
     const [fourthAnswer, setFourthAnswer] = useState('SMS');
     const [isErrorCheckbox, setIsErrorCheckbox] = useState(false)
     const [valid, setValid] = useState(false);
@@ -80,6 +50,14 @@ export default function FormPage({ handleModal }) {
         const index = searchParams.get("index");
         const newStep = Number(index);
         setStep(newStep);
+
+        if (newStep === 0) {
+            setFirstAnswer([]);
+            setSecondAnswer([]);
+            setPhoneValue('');
+            setThirdAnswer(initialState);
+            setFourthAnswer('SMS');
+        }
      }, [searchParams])
 
     useLayoutEffect(() => {
