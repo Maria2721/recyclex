@@ -10,6 +10,7 @@ export default function WorkScheme() {
                             <div>
                                 <p className="scheme__list-title">Наша биржа вторсырья подобна маркетплейсу. Это <span className="scheme_textUp">ПЛОЩАДКА</span>, которая поможет вам:</p>
                                 <ul className="scheme__list"> 
+                                    <li className="scheme__list-item list-item_bottom">выгодно <span className="scheme_textUp">ПРОДАТЬ</span> или <span className="scheme_textUp">КУПИТЬ</span> уже переработанную вторичку, само вторсырье, макулатуру, металлолом, отходы полиэтилена и пластика, стеклобой и многое другое</li>
                                     <li className="scheme__list-item list-item_bottom">найти <span className="scheme_textUp">ПРИЁМНЫЕ ПУНКТЫ</span> макулатуры, организации по вывозу различного ТБО, мусора</li>
                                     <li className="scheme__list-item list-item_bottom">найти <span className="scheme_textUp">ПРИЁМЩИКОВ</span> металлолома по высокой цене, равно как и сдать цветной лом </li>
                                     <li className="scheme__list-item">получить <span className="scheme_textUp">ИНТЕРЕСНЫЕ ПРЕДЛОЖЕНИЯ</span> от поставщиков оборудования или самому предложить свои услуги для участников биржи</li>
