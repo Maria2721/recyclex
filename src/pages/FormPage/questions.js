@@ -59,7 +59,7 @@ export const questions = [
                 id: 'surname',
                 name: 'Фамилия*',
                 type:'text',
-                rule: 'name',
+                rule: 'surname',
             },
                 {
                 id: 'name',

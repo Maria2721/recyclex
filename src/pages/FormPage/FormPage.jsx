@@ -156,7 +156,7 @@ const validatePersonalData = () => {
           switch (rule) {
               case 'name':
                 if (value.length === 0) {
-                  error = 'Необходимо заполнить';
+                  error = 'Необходимо заполнить "Имя"';
                   setValid(false);
                   break;
                 } 
@@ -171,9 +171,26 @@ const validatePersonalData = () => {
                     break;
                   }
                 break;
+                case 'surname':
+                    if (value.length === 0) {
+                      error = 'Необходимо заполнить "Фамилия"';
+                      setValid(false);
+                      break;
+                    } 
+                    if (value.length > 200) {
+                        error = 'Максимум 200 символов';
+                        setValid(false);
+                        break;
+                    }
+                    if (!regName.test(value)) {
+                        error = 'Недопустимые символы';
+                        setValid(false);
+                        break;
+                      }
+                    break;
             case 'company':
                 if (value.length === 0) {
-                  error = 'Необходимо заполнить';
+                  error = 'Необходимо заполнить "Название организации"';
                   setValid(false);
                   break;
                 } 
@@ -204,7 +221,7 @@ const validatePersonalData = () => {
                 break;
             case 'email':
                 if (value.length === 0) {
-                  error = 'Необходимо заполнить';
+                  error = 'Необходимо заполнить "E-mail"';
                   setValid(false);
                   break;
                 } 
