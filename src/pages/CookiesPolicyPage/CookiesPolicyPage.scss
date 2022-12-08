@@ -260,6 +260,19 @@
         }
     }
 }
+@media (max-width: 605px) {
+    .сookies {
+        &__item {
+        column-gap: 8%;
+        }
+        &__title-link {
+            width: 28%;
+        }
+        &__link {
+            width: 64%;
+        }
+    }
+}
 
 @media (max-width: $mobile)  {
     .сookies {
@@ -343,6 +356,7 @@
 @media screen and (orientation:landscape) and (max-width: $horizonMobile) and (max-height: 600px){
     .сookies {
         margin-top: 20px; 
+
         /* .list-item_circleList {
             &::before {
             -webkit-transform: translateY(4px);
