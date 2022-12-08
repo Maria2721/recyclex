@@ -37,6 +37,12 @@
         outline: none;
     }
 }
+
+.help__input:-webkit-autofill {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+}
   
 .help__row .PhoneInputInput {
     font-family: $generalFont;
