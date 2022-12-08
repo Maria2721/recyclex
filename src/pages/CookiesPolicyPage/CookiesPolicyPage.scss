@@ -72,12 +72,12 @@
     &__subtitle_h3 {
         font-size: 40px;
         font-weight: 700;
-        line-height: 59px;
+        line-height: 49px;
         margin-bottom: 50px;
     }
     &__subtitle_h4 {
-        font-size: 33px;
-        line-height: 40px;
+        font-size: 22px;
+        line-height: 27px;
         font-weight: 700;
     }
     .text_weight700 {
@@ -100,13 +100,16 @@
         column-gap: 6%;
     }
     &__title-link {
-        width: 44%;
+        width: 32%;
     }
     &__link {
         display: inline-block;
         word-wrap: break-word;
-        width: 50%;
+        width: 64%;
         font-size: 18px;
+        line-height: 22px;
+        font-weight: 700;
+        
     }
     &_divider {
         border-bottom: 1px solid #000000;
@@ -120,6 +123,7 @@
     .сookies  {
         margin-top: 170px;
         font-size: 30px;
+        line-height: 36px;
         &__title {
             margin-bottom: 150px;
         }
@@ -181,6 +185,7 @@
         }
         &__link {
             font-size: 30px;
+            line-height: 37px;
         }  
     }
 }
@@ -331,6 +336,7 @@
             width: 100%;
             font-size: 8px;
             line-height: 10px;
+            font-weight: 400;           
         }
     }
 }
