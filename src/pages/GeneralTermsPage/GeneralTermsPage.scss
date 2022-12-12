@@ -2,11 +2,11 @@
 
 .terms {
     margin-top: 115px;
-    margin-bottom: 171px;
+    margin-bottom: 50px;
 }
 
 .terms__title {
-    margin-bottom: 90px;
+    margin-bottom: 70px;
 }
 
 
@@ -24,6 +24,7 @@
 @media (min-width: $ultra) {
     .terms {
         margin-top: 170px;
+        margin-bottom: 150px;
         font-size: 30px;
         &__title {
             margin-bottom: 150px;
@@ -42,11 +43,11 @@
 @media (max-width: $tablet)  {
     .terms {
         margin-top: 75px;
-        margin-bottom: 105px;
+        margin-bottom: 50px;
     }
 
     .terms__title {
-        margin-bottom: 45px;
+        margin-bottom: 40px;
     }
     
     .terms__subtitle {
@@ -63,12 +64,12 @@
 
 @media (max-width: $mobile)  {
     .terms {
-        margin-top: 45px;
-        margin-bottom: 60px;
+        margin-top: 35px;
+        margin-bottom: 30px;
     }
 
     .terms__title {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
     
