@@ -11,13 +11,15 @@
 
 
 .terms__subtitle {
-    font-size: 32px;
+    font-size: 40px;
+    line-height: 44px;
     font-weight: 700;
     margin-bottom: 12px;
 }
 
 .terms__text {
-    font-size: 20px;
+    font-size: 22px;
+    line-height: 27px;
     margin-bottom: 40px;
 }
 
@@ -26,11 +28,13 @@
         margin-top: 170px;
         margin-bottom: 150px;
         font-size: 30px;
+        line-height: 30px;
         &__title {
             margin-bottom: 150px;
         }
         .terms__subtitle {
             font-size: 48px;
+            line-height: 53px;
             margin-bottom: 50px;
         }
         
@@ -52,11 +56,13 @@
     
     .terms__subtitle {
         font-size: 32px;
+        line-height: 41px;
         margin-bottom: 10px;
     }
     
     .terms__text {
         font-size: 15px;
+        line-height: 16px;
         margin-bottom: 30px;
     }
 }
@@ -75,11 +81,13 @@
     
     .terms__subtitle {
         font-size: 14px;
+        line-height: 18px;
         margin-bottom: 5px;
     }
     
     .terms__text {
         font-size: 8px;
+        line-height: 8px;
         margin-bottom: 15px;
     }
 }

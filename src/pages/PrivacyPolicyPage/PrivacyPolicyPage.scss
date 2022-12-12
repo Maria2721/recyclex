@@ -5,6 +5,7 @@
     margin-top: 115px;
     margin-bottom: 50px;
     font-size: 22px;
+    line-height: 27px;
 
     &__title {
         margin-bottom: 70px;
@@ -58,6 +59,7 @@
 @media (max-width: $tablet)  {
     .privacy {
         font-size: 15px;
+        line-height: 18px;
         margin-top: 75px;
         margin-bottom: 50px;
         
@@ -94,6 +96,7 @@
 @media (max-width: $mobile)  {
     .privacy {
         font-size: 8px;
+        line-height: 10px;
         margin-top: 35px;
         margin-bottom: 30px;
 
@@ -128,7 +131,7 @@
 }
 @media screen and (orientation:landscape) and (max-width: $horizonMobile) and (max-height: 600px) {
     .privacy {
-        margin-top: 20px; 
+        margin-top: 20px;
     }
 }
 /* @media screen and (orientation:landscape) and (max-width: $horizonMobile) and (-webkit-min-device-pixel-ratio:0) and (max-height: 600px){ 
