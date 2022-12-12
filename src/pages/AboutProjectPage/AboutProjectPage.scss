@@ -8,14 +8,14 @@
         margin-bottom: 70px;
     }
     &__subtitle {
-        font-size: 32px;
+        font-size: 40px;
         font-weight: 700;
-        line-height: 41px;
+        line-height: 44px;
         margin-bottom: 15px;
     }
     &__text {
-        font-size: 20px;
-        line-height: 22px;
+        font-size: 22px;
+        line-height: 27px;
         margin-bottom: 60px;
     }
 }
@@ -34,7 +34,7 @@
         }
         &__text {
             font-size: 30px;
-            line-height: 33px;
+            line-height: 30px;
             margin-bottom: 100px;
         }
     }
@@ -48,6 +48,8 @@
             margin-bottom: 40px;
         }
         &__subtitle {
+            font-size: 32px;
+            line-height: 41px;
             margin-bottom: 10px;
         }       
         &__text {
@@ -72,6 +74,7 @@
         }    
         &__text {
             font-size: 8px;
+            line-height: 8px;
             margin-bottom: 15px;
         }
     }

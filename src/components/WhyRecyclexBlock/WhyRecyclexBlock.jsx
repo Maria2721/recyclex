@@ -14,7 +14,7 @@ export default function WhyRecyclexBlock() {
                         </div>
                         <div className="whyRecyclex__item whyRecyclex__divider">
                             <h4 className="whyRecyclex__subTitle">Подробный каталог актуальных предложений по всем видам вторичных ресурсов</h4>
-                            <p className="whyRecyclex__text">Находите сырье в заданном регионе, количестве. качестве и цене</p>
+                            <p className="whyRecyclex__text">Находите сырье в заданном регионе, количестве, качестве и цене</p>
                         </div>
                         <div className="whyRecyclex__item whyRecyclex__divider">
                             <h4 className="whyRecyclex__subTitle">Служба поддержки участников биржи</h4>
