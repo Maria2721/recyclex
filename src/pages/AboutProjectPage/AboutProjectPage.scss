@@ -2,7 +2,7 @@
 
 .about {
     margin-top: 115px;
-    margin-bottom: 115px;
+    margin-bottom: 50px;
 
     &__title {
         margin-bottom: 70px;
@@ -22,6 +22,7 @@
 @media (min-width: $ultra) {
     .about {
         margin-top: 170px;
+        margin-bottom: 150px;
         font-size: 30px;
         &__title {
             margin-bottom: 150px;
@@ -42,9 +43,9 @@
 @media (max-width: $tablet)  {
     .about {
         margin-top: 75px;
-        margin-bottom: 40px;      
+        margin-bottom: 50px;      
         &__title {
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
         &__subtitle {
             margin-bottom: 10px;
@@ -59,10 +60,10 @@
 
 @media (max-width: $mobile)  {
     .about {
-        margin-top: 45px;
-        margin-bottom: 60px;
+        margin-top: 35px;
+        margin-bottom: 30px;
         &__title {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         &__subtitle {
             font-size: 14px;

@@ -39,7 +39,7 @@
 
 .contacts__mapWrapper {
   max-height: 400px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .contacts__map {
@@ -89,7 +89,7 @@
 
   .contacts__mapWrapper {
     max-height: 630px;
-    margin-bottom: 250px;
+    margin-bottom: 150px;
   }
   
   .contacts__map {
@@ -170,7 +170,7 @@
 
   .contacts__mapWrapper {
     max-height: 699px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
   .contacts__map {
@@ -185,11 +185,11 @@
 
 @media screen and (max-width: $mobile) {
   .contacts {
-    margin-top: 45px;
+    margin-top: 35px;
   }
 
   .contacts__header {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 
   .contacts__info {
@@ -247,7 +247,7 @@
 
   .contacts__mapWrapper {
     max-height: 280px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
   .contacts__map {
