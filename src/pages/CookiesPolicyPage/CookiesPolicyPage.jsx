@@ -40,7 +40,7 @@ export default function CookiesPolicyPage() {
                             <h2 className="сookies__subtitle">Информация о файлах cookie</h2>
                             <h4 className="сookies__subtitle_h4">PREF</h4>
                             <p className="сookies__text">Большинство пользователей Google имеет в браузерах предпочтительный файл cookie, называемый PREF. Браузер посылает этот файл cookie с запросами на сайты Google. Файл cookie PREF может хранить ваши настройки и другую информацию, в частности предпочитаемый вами язык (например, русский), количество желаемых результатов поиска для отображения на каждой странице (например, 10 или 20) и ваши предпочтения по активации фильтра безопасного поиска Google SafeSearch. <br/>
-                                <a href="https://policies.google.com/technologies/cookies?hl=it&gl=it#types-of-cookies" 
+                                <a href="https://policies.google.com/technologies/cookies?hl=ru" 
                                         target="_blank"
                                         rel="noreferrer"> google.es › types</a></p>
                             <h4 className="сookies__subtitle_h4">_gat</h4>
