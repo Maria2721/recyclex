@@ -28,13 +28,21 @@
   font-weight: 700;
 }
 
-.contacts__numbers {
+.contacts__numbers, #dark .contacts__numbers {
   display: flex;
   flex-direction: column;
+
+  :hover {
+    color: $accentColor;
+  }
 }
 
 #dark .contacts__numbers a {
   color: $textColor_dark;
+
+  :hover {
+    color: $accentColor;
+  }
 }
 
 .contacts__mapWrapper {
