@@ -17,7 +17,7 @@ export default function CookiesPolicyPage() {
                             </ul>
                         </div>
                         <div className="сookies-type__wrapper">
-                            <h2 className="сookies__subtitle">Типы файлов cookie</h2>
+                            <h2 className="сookies__subtitle сookies__subtitle_lower">Типы файлов cookie</h2>
                             <h4 className="сookies__subtitle_h4">Технические файлы cookie:</h4>
                             <p className="сookies__text">Эти файлы cookie необходимы для обеспечения надлежащего функционирования веб-сайта: они позволяют вам зарегистрироваться/войти в систему и получить доступ к зарезервированным для вас функциям, а также позволяют нам контролировать безопасность сайта и повышать его эксплуатационные характеристики, например, сохраняя ваши предпочтения, чтобы оптимизировать ваши последующие посещения.</p>
                             <p className="сookies__list-title">Они делятся на две категории:</p>
