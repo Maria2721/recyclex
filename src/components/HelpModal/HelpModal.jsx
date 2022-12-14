@@ -184,6 +184,7 @@ const handleClick = () => {
     sendData()
     setState(initialState); // возвращаем состояние к началу
     setPhoneValue('');
+    setValid(false);
   }
 };
 
