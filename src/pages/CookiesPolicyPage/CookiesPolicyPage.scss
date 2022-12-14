@@ -8,14 +8,22 @@
 #dark .сookies__link {
     color: $textColor_dark;
 }
+#dark .сookies a {
+    color: $textColor_dark;
+}
+#dark .сookies a:hover {
+    color: $accentColor;
+    transition: color 0.1s ease;
+}
 #dark .сookies_divider {
     border-bottom: 1px solid #ffffff;
 }
 .сookies {
     margin-top: 115px;
-    margin-bottom: 134px;
+    margin-bottom: 50px;
     font-size: 22px;
     line-height: 27px;
+
     &__title {
         margin-bottom: 70px;
     }
@@ -33,13 +41,27 @@
             font-size: 22px;
             text-decoration: underline;
         }
+        a:hover {
+            color: $accentColor;
+            transition: color 0.1s ease;
+        } 
     }
+    
     &__list-title {
         margin-bottom: 60px;
     }
     &__list {
         list-style-type: none;
         margin-bottom: 60px;
+        a {
+            display: inline;
+            font-size: 22px;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: $accentColor;
+            transition: color 0.1s ease;
+        } 
     }
     &__list-item {
         margin-left: 140px;
@@ -55,12 +77,12 @@
     &__subtitle_h3 {
         font-size: 40px;
         font-weight: 700;
-        line-height: 59px;
+        line-height: 49px;
         margin-bottom: 50px;
     }
     &__subtitle_h4 {
-        font-size: 33px;
-        line-height: 40px;
+        font-size: 22px;
+        line-height: 27px;
         font-weight: 700;
     }
     .text_weight700 {
@@ -83,13 +105,16 @@
         column-gap: 6%;
     }
     &__title-link {
-        width: 44%;
+        width: 32%;
     }
     &__link {
         display: inline-block;
         word-wrap: break-word;
-        width: 50%;
+        width: 64%;
         font-size: 18px;
+        line-height: 22px;
+        font-weight: 700;
+        
     }
     &_divider {
         border-bottom: 1px solid #000000;
@@ -102,7 +127,9 @@
 @media (min-width: $ultra) {
     .сookies  {
         margin-top: 170px;
+        margin-bottom: 50px;
         font-size: 30px;
+        line-height: 36px;
         &__title {
             margin-bottom: 150px;
         }
@@ -123,6 +150,9 @@
         &__list {
             list-style-type: none;
             margin-bottom: 65px;
+            a {
+                font-size: 30px;
+            }
         }
         &__list-item {
             margin-left: 200px;
@@ -161,6 +191,7 @@
         }
         &__link {
             font-size: 30px;
+            line-height: 37px;
         }  
     }
 }
@@ -170,9 +201,9 @@
         font-size: 15px;
         line-height: 18px;
         margin-top: 75px;
-        margin-bottom: 70px;
+        margin-bottom: 50px;
         &__title {
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
         &__subtitle {
             font-size: 32px;
@@ -204,6 +235,9 @@
         }
         &__list {
             margin-bottom: 30px;
+            a {
+                font-size: 15px;
+            }
         }
         &__list-item {
             margin-left: 80px;           
@@ -232,15 +266,28 @@
         }
     }
 }
+@media (max-width: 605px) {
+    .сookies {
+        &__item {
+        column-gap: 8%;
+        }
+        &__title-link {
+            width: 28%;
+        }
+        &__link {
+            width: 64%;
+        }
+    }
+}
 
 @media (max-width: $mobile)  {
     .сookies {
         font-size: 8px;
         line-height: 10px;
-        margin-top: 45px;
-        margin-bottom: 25px;
+        margin-top: 35px;
+        margin-bottom: 30px;
         &__title {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         &__subtitle {
             font-size: 14px;
@@ -258,6 +305,9 @@
         }
         &__list {
             margin-bottom: 15px;
+            a {
+                font-size: 8px;
+            }
         }
         &__list-item {
             margin-left: 41px;
@@ -305,11 +355,27 @@
             width: 100%;
             font-size: 8px;
             line-height: 10px;
+            font-weight: 400;           
         }
     }
 }
-@media screen and (orientation:landscape) and (max-width: $horizonMobile) {
+@media screen and (orientation:landscape) and (max-width: $horizonMobile) and (max-height: 600px){
     .сookies {
         margin-top: 20px; 
+
+        /* .list-item_circleList {
+            &::before {
+            -webkit-transform: translateY(4px);
+        } 
+    } */
+}}
+/* @media screen and (orientation:landscape) and (max-device-width: $horizonMobile) and (max-height: 600px) { 
+    .сookies {
+        .list-item_circleList {
+            &::before {
+                -webkit-transform: translateY(4px);
+            } 
+        } 
+        
     }
-}
+} */

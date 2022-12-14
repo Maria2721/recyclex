@@ -16,8 +16,6 @@
 }
 
 .form__checkbox {
-  // max-width: 620px;
-  // width: 100%;
   padding: 51px 24px 40px 54px;
 }
 
@@ -71,8 +69,6 @@
   }
 
   .form__checkbox {
-    // max-width: 580px;
-    // width: 100%;
     padding: 50px 15px 60px 52px;
   }
 
@@ -89,13 +85,10 @@
   }
 
   .form__radio {
-    // width: 580px;
     padding: 63px 50px 36px 50px;
   }
 
   .form__personalData {
-    // max-width: 580px;
-    // width: 100%;
     padding: 56px 20px 60px 20px;
   }
 }
@@ -109,11 +102,6 @@
   .form__header {
     margin-bottom: 30px;
   }
-
-  // .form__checkbox {
-  //   width: 100%;
-  // }
-
 
   .form__checkboxError {
     top: -20px;
@@ -141,6 +129,10 @@
 @media (max-width: $mobile) {
   .form__personalData {
     padding: 30px 23px 15px 22px;
+  }
+
+  .form__checkbox {
+    padding: 26px 15px 25px 30px;
   }
 }
 
@@ -172,12 +164,10 @@
   }
 
   .form__personalData {
-    // width: 1145px;
     padding: 77px 57px 60px 57px;
   }
 
   .form__checkbox {
-    // width: 1140px;
     padding: 150px 30px 143px 150px;
   }
 
@@ -196,7 +186,6 @@
   }
 
   .form__radio {
-    // width: 1005px;
     padding: 91px 108px 113px 108px;
   }
 
@@ -234,4 +223,13 @@
   opacity: 1;
   transition: opacity 200ms;
   transition-delay: 200ms;
+}
+
+
+@media screen and (orientation:landscape)
+and (max-width: $landscape) {
+  .form {
+    margin-top: 20px;
+  }
+  
 }

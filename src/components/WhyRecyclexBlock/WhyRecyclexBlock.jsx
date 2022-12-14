@@ -13,12 +13,12 @@ export default function WhyRecyclexBlock() {
                             <p className="whyRecyclex__text">Это теплая целевая аудитория для ваших предложений</p>
                         </div>
                         <div className="whyRecyclex__item whyRecyclex__divider">
-                            <h4 className="whyRecyclex__subTitle">Подробный каталог актуальных предложений по всем видам вторички</h4>
-                            <p className="whyRecyclex__text">Находите сырье в заданном регионе, количестве. качестве и цене</p>
+                            <h4 className="whyRecyclex__subTitle">Подробный каталог актуальных предложений по всем видам вторсырья</h4>
+                            <p className="whyRecyclex__text">Находите сырье в заданном регионе, количестве, качестве и цене</p>
                         </div>
                         <div className="whyRecyclex__item whyRecyclex__divider">
                             <h4 className="whyRecyclex__subTitle">Служба поддержки участников биржи</h4>
-                            <p className="whyRecyclex__text">Совершайте безпасные сделки с проверенными контрагентами</p>
+                            <p className="whyRecyclex__text">Совершайте безопасные сделки с проверенными контрагентами</p>
                             
                         </div>
                         <div className="whyRecyclex__item whyRecyclex__divider">

@@ -28,6 +28,7 @@
 @media (min-width: $ultra) {
     .agreement {
         margin-top: 170px;
+        margin-bottom: 150px;
         font-size: 30px;
         &__title {
             margin: 0 auto;
@@ -52,9 +53,9 @@
     .agreement {
         font-size: 15px;
         margin-top: 75px;
-        margin-bottom: 70px;      
+        margin-bottom: 50px;      
         &__title {
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }      
         &__list-title {
             margin-bottom: 30px;
@@ -76,10 +77,10 @@
 @media (max-width: $mobile)  {
     .agreement {
         font-size: 8px;
-        margin-top: 45px;
-        margin-bottom: 20px;
+        margin-top: 35px;
+        margin-bottom: 30px;
         &__title {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }       
         &__list-title {
             margin-bottom: 20px;

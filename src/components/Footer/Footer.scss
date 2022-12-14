@@ -29,6 +29,10 @@
     margin-bottom: 40px;
 }
 
+#dark .footer__requisites a {
+    color: $textColor_dark;
+}
+
 .footer__links {
     display: flex;
     flex-direction: column;
@@ -44,12 +48,12 @@
     color: $textColor_dark;
 }
 
-.footer__link:hover {
+.footer__link:hover, .footer__emailLink:hover, .footer__telLink:hover {
     color: $accentColor;
     transition: color 0.1s ease;
 }
 
-#dark .footer__link:hover {
+#dark .footer__link:hover, #dark .footer__emailLink:hover, #dark .footer__telLink:hover {
     color: $accentColor;
     transition: color 0.1s ease;
 }
@@ -117,6 +121,11 @@
     width: 40px;
     fill: $textColor;
     margin-left: 40px;
+
+    & :hover {
+        fill: $accentColor;
+        transition: fill 0.1s ease;
+      }
 }
 
 #dark .footer__icon {

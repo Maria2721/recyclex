@@ -43,7 +43,7 @@
 }
 
 .header__logo {
-    width: 199px;
+    width: 284px;
 }
 
 .header__burger {
@@ -91,7 +91,7 @@
         font-size: 16px;
     }
     .header__logo {
-        width: 171px;
+        width: 250px;
     }
 }
 
@@ -101,7 +101,7 @@
     }
 
     .header__logo {
-        width: 120px;
+        width: 179px;
     }
 }
 
@@ -173,10 +173,6 @@
         background-color: $bgColor_dark;
     }
 
-    .header__logo {
-        width: 108px;
-    }
-
     .header__burger {
         display: block;
         width: 30px;
@@ -203,6 +199,12 @@
     }
 }
 
+@media screen and (max-width: $mobile) {
+        .header__logo {
+        width: 108px;
+    }
+}
+
 @media (min-width: $ultra)  {
     .header__inner {
         height: 200px;
@@ -214,5 +216,13 @@
 
     .header__logo {
         width: 387px;
+    }
+    
+}
+
+@media screen and (orientation:landscape)
+and (max-width: $landscape) and (max-height: 600px) {
+    .header__inner {
+        height: 100px;
     }
 }

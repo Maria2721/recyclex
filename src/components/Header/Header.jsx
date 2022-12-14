@@ -9,7 +9,6 @@ import { useState } from "react";
 import * as cx from "classnames";
 import { useDisableBodyScroll } from "../../hooks/useDisableBodyScroll";
 
-
 export default function Header({toggleTheme, theme}) {
   let [opened, setOpened] = useState(false);
   useDisableBodyScroll(opened)
@@ -45,7 +44,7 @@ export default function Header({toggleTheme, theme}) {
               <Link to="/about-project" onClick={handleClick} className="header__link">О проекте</Link>
               <Link to="/work-scheme" onClick={handleClick} className="header__link">Схема работы</Link>
               <Link to="/contacts" onClick={handleClick} className="header__link">Контакты</Link>
-              <Link to="/form" onClick={handleClick} className="header__link ">Присоединиться</Link>
+              <Link to="/form?index=0" onClick={handleClick} className="header__link ">Присоединиться</Link>
             </div>
           </div>
         </nav>

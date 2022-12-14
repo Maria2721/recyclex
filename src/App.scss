@@ -85,3 +85,34 @@
     right: 24px;
   }
 }
+
+@media (min-width: $ultra)  {
+  .app__chatIcon {
+    bottom: 60px;
+    right: 60px;
+    width: 200px;
+  }
+  
+  .app__chatOnline {
+    width: 35px;
+    bottom: 208px;
+    right: 74px;
+  }
+}
+
+
+
+@media screen and (orientation:landscape)
+and (max-width: $landscape) {
+  .app__chatIcon {
+    bottom: 15px;
+    right: 15px;
+    width: 65px;
+  }
+  
+  .app__chatOnline {
+    width: 6px;
+    bottom: 69px;
+    right: 24px;
+  }
+}

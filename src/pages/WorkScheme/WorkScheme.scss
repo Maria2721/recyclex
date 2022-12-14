@@ -3,8 +3,9 @@
 
 .scheme {
     margin-top: 115px;
-    margin-bottom: 172px;
+    margin-bottom: 50px;
     font-size: 22px;
+
     &_textUp{
         text-transform: uppercase;
     }
@@ -30,11 +31,15 @@
     .text_bottom {
         padding-bottom: 60px;
     }
+    &__icon {
+        width: 22px;
+    }
 }
 
 @media (min-width: $ultra) {
     .scheme {
         margin-top: 170px;
+        margin-bottom: 150px;
         font-size: 30px;
         &__title {
             margin-bottom: 150px;
@@ -60,16 +65,19 @@
         .text_bottom {
             padding-bottom: 45px;
         }
+        &__icon {
+            width: 30px;
+        }
     }
 }
 @media (max-width: $tablet)  {
     .scheme {
         font-size: 15px;
         margin-top: 75px;
-        margin-bottom: 95px;
+        margin-bottom: 50px;
         
         &__title {
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
         &__list-title {
             margin-bottom: 30px;
@@ -93,6 +101,9 @@
         .text_bottom {
             padding-bottom: 30px;
         }
+        &__icon {
+            width: 15px;
+        }
     }
 }
 
@@ -100,10 +111,10 @@
 @media (max-width: $mobile)  {
     .scheme {
         font-size: 8px;
-        margin-top: 45px;
-        margin-bottom: 20px;
+        margin-top: 35px;
+        margin-bottom: 30px;
         &__title {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         &__list-title {
             margin-bottom: 15px;
@@ -127,10 +138,31 @@
         .text_bottom {
             padding-bottom: 15px;
         }
+        &__icon {
+            width: 8px;
+        }
     }
 }
-@media screen and (orientation:landscape) and (max-width: $horizonMobile) {
+@media screen and (orientation:landscape) and (max-width: $horizonMobile) and (max-height: 600px) {
     .scheme {
         margin-top: 20px; 
-    }
+        &__icon {
+            width: 18px;
+        }
+    /*     &__list-item {
+            &::before {
+                -webkit-top: 12px;
+            }
+    } */
 }
+}
+/* this gets chrome */
+/* @media screen and (orientation:landscape) and (max-width: $horizonMobile) and (-webkit-min-device-pixel-ratio:0) and (max-height: 600px){ 
+    .scheme {
+        &__list-item {
+            &::before{
+            top: 12px;
+            } 
+        } 
+    }
+} */

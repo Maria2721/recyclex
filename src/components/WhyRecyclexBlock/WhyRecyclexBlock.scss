@@ -13,7 +13,7 @@
         justify-content: space-between;
     }
     &__items {
-        width: 46%; 
+        width: 50%; 
         padding-left: 4%;
     }
     &__item {
@@ -30,8 +30,8 @@
         }
     }   
     &__img {
-        margin-top: 110px;
-        width: 46%;
+        margin-top: 107px;
+        width: 41%;
     }
     &__subTitle {
         font-size: 24px;
@@ -47,7 +47,7 @@
         border-bottom: 1px solid #000000;
     }
     .wrapper__img {
-        width: 74%;
+        width: 84%;
         height: 100%;
         background-image: url(../../assets/imgs/screen_desktop.png);
         background-size: 100%;
@@ -147,7 +147,7 @@
     .whyRecyclex {
         margin-top: 80px;       
         &__inner{
-            margin-top: 45px;
+            margin-top: 18px;
             flex-direction: column;
             align-items: center;
         }       
