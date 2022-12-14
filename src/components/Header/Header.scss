@@ -1,12 +1,16 @@
 @import "../../styles/vars";
 
+#dark .header {
+    background-color: $bgColor_dark;
+}
+
 .header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 5px;
     width: 100%;
-    height: 120px;
+    height: 130px;
 }
 
 #dark .header__inner {
@@ -200,6 +204,9 @@
 }
 
 @media screen and (max-width: $mobile) {
+    .header__inner {
+        height: 70px;
+    }
         .header__logo {
         width: 108px;
     }

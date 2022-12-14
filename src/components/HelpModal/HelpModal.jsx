@@ -11,7 +11,7 @@ import { ReactComponent as CloseIcon } from "../../assets/imgs/close_icon.svg";
 import { initialState } from "./initialState";
 import { isPossiblePhoneNumber } from 'react-phone-number-input';
 import ButtonSend from "../ButtonSend/ButtonSend";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RemoveScroll } from "react-remove-scroll";
 
 export default function HelpModal({ handleModal, opened, theme }) {
@@ -23,6 +23,13 @@ const [state, setState] = useState(initialState)
 const [phoneValue, setPhoneValue] = useState('');
 const [valid, setValid] = useState(false);
 const {helpSurname, helpName, helpMiddle, helpCompany, helpEmail, helpQuestion} = state;
+
+useEffect(() => {
+  if(!opened) {
+    setState(initialState);
+    setPhoneValue('');
+  }
+}, [opened])
 
   const handleChange = (e, id) => {
     // const value = e.target.value.trimStart().replace(/ +/g, " ");
