@@ -109,10 +109,16 @@
 
 .help__agreement {
   text-decoration: underline;
+  &:hover {
+    color: $accentColor;
+  }
 }
 
 #dark .help__agreement {
   color: $textColor_dark;
+  &:hover {
+    color: $accentColor;
+  }
 }
 
 @media (max-width: $tablet) {
