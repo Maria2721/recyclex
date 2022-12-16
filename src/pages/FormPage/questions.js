@@ -19,7 +19,7 @@ export const questions = [
         id: 'otherGroups'
     }]
 },{
-        question: 'Какой профиль Вашей деятельности?*',
+        question: 'Какой профиль Вашей деятельности?',
         type: "checkbox",
         options: [{
             value: 'Торговая сеть',
