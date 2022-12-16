@@ -16,11 +16,7 @@ import ErrorPage from './pages/ErrorPage/ErrorPage';
 import HelpModal from './components/HelpModal/HelpModal';
 import ThanksModal from './components/ThanksModal/ThanksModal';
 import { createContext, useState, useEffect } from "react";
-// import { ReactComponent as ChatIconWhite} from "./assets/imgs/chat_icon_white.svg";
-// import { ReactComponent as OnlineMark} from "./assets/imgs/online_mark_chat.svg";
-// import { ReactComponent as ChatIconBlack} from "./assets/imgs/chat_icon_black.svg";
 import { useDisableBodyScroll } from './hooks/useDisableBodyScroll';
-
 
 const ThemeContext = createContext(null);
 
