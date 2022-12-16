@@ -1,7 +1,11 @@
 @import "../../styles/vars";
 
-.checkbox:not(:last-child) {
+.checkboxWrapper:not(:last-child) {
   margin-bottom: 26px;
+}
+
+.checkbox {
+  display: inline-block;
 }
 
 .checkbox__input {
@@ -13,7 +17,8 @@
 .checkbox__label {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 20fr;
+  grid-auto-flow: column;
+  // grid-template-columns: 1fr 20fr;
   user-select: none;
 }
 
@@ -45,14 +50,19 @@
 
 .checkbox__input:checked + label .checkbox__mark {
   display: block;
+  cursor: pointer;
 }
 
 .checkbox__input:not(:disabled):not(:checked) + label:hover::before {
   cursor: pointer;
 }
 
+.checkbox__text {
+  cursor: pointer;
+}
+
 @media (max-width: $tablet) {
-  .checkbox:not(:last-child) {
+  .checkboxWrapper:not(:last-child) {
     margin-bottom: 24px;
   }
 
@@ -63,7 +73,7 @@
     width: 19px;
     height: 19px;
     margin-right: 9px;
-    margin-top: 1px;
+    margin-top: 0px;
   }
 
   .checkbox__mark {
@@ -79,7 +89,7 @@
 }
 
 @media (max-width: $mobile) {
-  .checkbox:not(:last-child) {
+  .checkboxWrapper:not(:last-child) {
     margin-bottom: 15px;
   }
 
@@ -93,7 +103,7 @@
     height: 9px;
     border: 1px solid $textColor;
     margin-right: 11px;
-    margin-top: 5px;
+    margin-top: 5.5px;
   }
 
   .checkbox__mark {
@@ -104,7 +114,7 @@
 }
 
 @media (min-width: $ultra) {
-  .checkbox:not(:last-child) {
+  .checkboxWrapper:not(:last-child) {
     margin-bottom: 39px;
   }
 
