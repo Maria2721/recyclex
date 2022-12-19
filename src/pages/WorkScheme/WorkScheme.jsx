@@ -20,7 +20,7 @@ export default function WorkScheme() {
                             <p className="scheme__text text_bottom">Специально для комфортного использования нашего сервиса вы создаете личный кабинет путем регистрации, выбираете нужную категорию и становитесь участником биржи.</p>
                             <p className="scheme__text text_bottom">Помните, что в данный момент идет отработка всех функционалов сайта, поэтому мы предлагаем вам стать первыми участниками и 2 <span className="scheme_textUp">МЕСЯЦА</span> тестировать площадку абсолютно <span className="scheme_textUp">БЕСПЛАТНО</span>!</p>
                             <p className="scheme__text text_bottom">Более того, мы хотим сделать её максимально удобной, поэтому <span className="scheme_textUp"> ЖДЁМ ОТ ВАС </span>отзывы, предложения, идеи и вопросы.</p>
-                            <p className="scheme__text">Ваш помощник в мире отходов, Recyclex<img class="scheme__icon" src={Recycling} width="30px" alt="img recycling"/></p>
+                            <p className="scheme__text">Ваш помощник в мире отходов, Recyclex<img className="scheme__icon" src={Recycling} width="30px" alt="img recycling"/></p>
                         </div>
         </section>
     );

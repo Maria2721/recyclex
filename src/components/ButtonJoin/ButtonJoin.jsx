@@ -17,7 +17,7 @@ export default function ButtonJoin(props) {
     setIsActive(true);
     setTimeout(() => {
       setIsActive(false);
-      navigate('/form');
+      navigate('/form?index=0');
     }, 250);
   };
 
