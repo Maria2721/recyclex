@@ -270,8 +270,16 @@
 
 
 @media screen and (orientation:landscape)
-and (max-width: $landscape) {
+and (max-width: $landscape) and (max-height: 600px) {
   .contacts {
     margin-top: 20px;
   }
+
+  .contacts__mapWrapper {
+    max-height: 100vh;
+}
+
+.contacts__map {
+  height: 100vh;
+}
 }
