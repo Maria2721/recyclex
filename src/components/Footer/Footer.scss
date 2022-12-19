@@ -39,6 +39,10 @@
     justify-content:space-between;
 }
 
+.footer__link {
+    cursor: pointer;
+}
+
 .footer__pages {
     display: flex;
     flex-direction: column;

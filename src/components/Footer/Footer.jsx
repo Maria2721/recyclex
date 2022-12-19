@@ -1,9 +1,17 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import "./Footer.scss";
 import { ReactComponent as TelegramIcon} from "../../assets/imgs/telegram_icon.svg";
 import { ReactComponent as WhatsAppIcon} from "../../assets/imgs/whatsapp_icon.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer({ handleModal }) {
+  const navigate = useNavigate();
+
+  const handleClick = (url) => {
+    navigate(url);
+    window.scrollTo(0, 0);
+  }
+
   return (
     <footer className="footer container">
         <div className="footer__inner container__row">
@@ -14,9 +22,9 @@ export default function Footer({ handleModal }) {
             </div>
             <div className="footer__links">
               <div className="footer__pages">
-                <Link to="/privacy-policy" className="footer__link">Политика конфиденциальности</Link>
-                <Link to="/general-terms" className="footer__link">Общие условия</Link>
-                <Link to="/cookies-policy-page" className="footer__link">Cookies Policy</Link>
+                <span onClick={() => handleClick("/privacy-policy")} className="footer__link">Политика конфиденциальности</span>
+                <span onClick={() => handleClick("/general-terms")} className="footer__link">Общие условия</span>
+                <span onClick={() => handleClick("/cookies-policy-page")} className="footer__link">Cookies Policy</span>
               </div>
               <button className="footer__manager footer__manager_desktop" onClick={handleModal}>Связь с менеджером</button>
             </div>

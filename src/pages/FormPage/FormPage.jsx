@@ -41,7 +41,7 @@ export default function FormPage({ handleModal }) {
   });
 
   // useEffect(() => {
-  //   // setSearchParams({ index: step });
+  //   setSearchParams({ index: step });
   //   // eslint-disable-next-line react-hooks/exhaustive-deps
   // }, []);
 

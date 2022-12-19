@@ -23,6 +23,7 @@ const ThemeContext = createContext(null);
 function App() {
   const [openedHelpModal, setOpenedHelpModal] = useState(false);
   const [openedThanksModal, setOpenedThanksModal] = useState(false);
+  const [key, setKey] = useState(Math.random())
   const currentTheme = localStorage.getItem('theme') || 'light';
   const [theme, setTheme] = useState(currentTheme);
   const {pathname} = useLocation(); 
@@ -49,18 +50,22 @@ function App() {
     setOpenedThanksModal((curr) => !curr);
   }
 
+  const resetState = () => { //для сброса состояния формы при переходе на нее из хедера, если мы в этот момент уже в форме
+    setKey(Math.random())
+  }
+
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
       <div className={`App ${isSetBackground}`} id={theme}>
       <HelpModal handleModal={handleHelpModal} opened={openedHelpModal} theme={theme}/>
       <ThanksModal handleModal={handleThanksModal} opened={openedThanksModal} theme={theme}/>
-        <Header toggleTheme={toggleTheme} theme={theme}/>
+        <Header toggleTheme={toggleTheme} theme={theme} resetState={resetState}/>
           <main className="container">
             <Routes>
                 <Route path='/' element={<MainPage/>}/>
                 <Route path='/about-project' element={<AboutProjectPage/>}/>
                 <Route path='/work-scheme' element={<WorkScheme/>}/>
-                <Route path='/form' element={<FormPage handleModal={handleThanksModal}/>}/>
+                <Route path='/form' element={<FormPage handleModal={handleThanksModal} key={key} />}/>
                 <Route path='/thank-you' element={<FormThankYouPage/>}/>
                 <Route path='/general-terms' element={<GeneralTermsPage/>}/>
                 <Route path='/privacy-policy' element={<PrivacyPolicyPage/>}/>
