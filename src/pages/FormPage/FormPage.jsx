@@ -73,7 +73,7 @@ export default function FormPage({ handleModal }) {
 }, [searchParams]);
 
   useLayoutEffect(() => {
-    if (!$buttonRef.current) {
+    if (!$buttonRef.current || step === 0) {
       return;
     }
     const top = $buttonRef.current.offsetTop - window.innerHeight + 30;
