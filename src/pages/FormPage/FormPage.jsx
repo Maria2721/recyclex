@@ -40,10 +40,10 @@ export default function FormPage({ handleModal }) {
     form__checkboxError_shown: isErrorCheckbox,
   });
 
-  useEffect(() => {
-    setSearchParams({ index: step });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // useEffect(() => {
+  //   // setSearchParams({ index: step });
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   useEffect(() => {
     const index = searchParams.get("index");
