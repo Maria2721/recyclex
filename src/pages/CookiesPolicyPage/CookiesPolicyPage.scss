@@ -5,6 +5,10 @@
     color: $accentColor;
     transition: color 0.1s ease;
 }
+#dark .сookies__link:focus {
+    color: $accentColor;
+    outline: none;
+}
 #dark .сookies__link {
     color: $textColor_dark;
 }
@@ -14,6 +18,10 @@
 #dark .сookies a:hover {
     color: $accentColor;
     transition: color 0.1s ease;
+}
+#dark .сookies a:focus {
+    color: $accentColor;
+    outline: none;
 }
 #dark .сookies_divider {
     border-bottom: 1px solid #ffffff;
@@ -49,6 +57,10 @@
             color: $accentColor;
             transition: color 0.1s ease;
         } 
+        a:focus {
+            color: $accentColor;
+            outline: none;
+        }
     }
     
     &__list-title {
@@ -66,6 +78,10 @@
             color: $accentColor;
             transition: color 0.1s ease;
         } 
+        a:focus {
+            color: $accentColor;
+            outline: none;
+        }
     }
     &__list-item {
         margin-left: 140px;
@@ -132,7 +148,11 @@
     &__link:hover {
         color: $accentColor;
         transition: color 0.1s ease;
-    }   
+    }
+    &__link:focus {
+        color: $accentColor;
+        outline: none;
+    }
 }
 @media (min-width: $ultra) {
     .сookies  {
