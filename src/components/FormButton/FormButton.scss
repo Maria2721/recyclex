@@ -25,7 +25,7 @@
     transition: width 0.2s ease-in-out;
   }
 
-.formButton:hover .formButton__arrowWrapper {
+  .formButton__inner:hover .formButton__arrowWrapper {
     width: 20px;
     transition: width 0.5s ease-in-out;
     overflow: visible;
@@ -43,7 +43,7 @@
 
   }
 
-  .formButton:hover .formButton__arrowWrapper_active {
+  .formButton__inner:hover .formButton__arrowWrapper_active {
     width: 0;
   }
   
@@ -73,7 +73,7 @@
         margin-bottom: 15px;
     }
 
-    .formButton:hover .formButton__arrowWrapper {
+    .formButton__inner:hover .formButton__arrowWrapper {
         width: 0;
         height: 20px;
         overflow: hidden;
@@ -102,7 +102,7 @@
         overflow: hidden;
       }
 
-    .formButton:hover .formButton__arrowWrapper {
+    .formButton__inner:hover .formButton__arrowWrapper {
       width: 0;
       height: 12px;
       overflow: hidden;
@@ -141,7 +141,7 @@
         overflow: hidden;
       }
     
-    .formButton:hover .formButton__arrowWrapper {
+      .formButton__inner:hover .formButton__arrowWrapper {
         width: 45px;
         transition: width 0.2s ease-in-out;
         overflow: visible;
