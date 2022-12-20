@@ -60,6 +60,7 @@
     &::before {
         margin: 0;
         padding: 0;
+        border:0;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         display: block;
@@ -72,6 +73,6 @@
         width: 24px;
         height: 24px;
         border-radius: 100%;
-        background-color: #E88B00;
+        background-color: $accentColor;
     }  
 }
