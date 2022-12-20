@@ -112,7 +112,6 @@
         h4 {
             padding-bottom: 60px;
         }
-        
     }
     &-info__wrapper {
         p:last-child {
@@ -124,6 +123,7 @@
     }
     &__item {
         display: flex;
+        justify-content: space-between;
         align-items: flex-end;
         width: 100%;
         min-height: 75px;
