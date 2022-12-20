@@ -22,6 +22,10 @@ export default function FormPage({ handleModal }) {
   const [phoneValue, setPhoneValue] = useState("");
   const [disabledButton, setDisabledButton] = useState(false);
   const [thirdAnswer, setThirdAnswer] = useState(initialState);
+  const sessionFirstAnswer = JSON.parse(sessionStorage.getItem("firstAnswer"));
+  const sessionSecondAnswer = JSON.parse(sessionStorage.getItem("secondAnswer"));
+  const sessionPhoneValue = JSON.parse(sessionStorage.getItem("phoneValue"));
+  const sessionThirdAnswer = JSON.parse(sessionStorage.getItem("thirdAnswer"));
   const [fourthAnswer, setFourthAnswer] = useState("SMS");
   const [isErrorCheckbox, setIsErrorCheckbox] = useState(false);
   const [valid, setValid] = useState(false);
@@ -58,18 +62,28 @@ export default function FormPage({ handleModal }) {
         setThirdAnswer(initialState);
         break;
       case 1:
+        setFirstAnswer(sessionFirstAnswer)
         setSecondAnswer([]);
         setPhoneValue("");
         setThirdAnswer(initialState);
         break;
       case 2:
+        setFirstAnswer(sessionFirstAnswer);
+        setSecondAnswer(sessionSecondAnswer);
         setPhoneValue("");
         setThirdAnswer(initialState);
         setValid(false)
         break;
+        case 3:
+          setFirstAnswer(sessionFirstAnswer);
+          setSecondAnswer(sessionSecondAnswer);
+          setPhoneValue(sessionPhoneValue);
+          setThirdAnswer(sessionThirdAnswer);
+          break;
       default:
         return;
     }
+    // eslint-disable-next-line 
 }, [searchParams]);
 
   useLayoutEffect(() => {
@@ -256,6 +270,7 @@ export default function FormPage({ handleModal }) {
           setTimeout(() => {
             setStep((step) => step + 1);
             setSearchParams({ index: step + 1 });
+            sessionStorage.setItem("firstAnswer", JSON.stringify(firstAnswer));
           }, 300);
 
           setIsErrorCheckbox(false);
@@ -268,6 +283,7 @@ export default function FormPage({ handleModal }) {
           setTimeout(() => {
             setStep((step) => step + 1);
             setSearchParams({ index: step + 1 });
+            sessionStorage.setItem("secondAnswer", JSON.stringify(secondAnswer));
           }, 300);
 
           setIsErrorCheckbox(false);
@@ -291,6 +307,8 @@ export default function FormPage({ handleModal }) {
           setTimeout(() => {
             setStep((step) => step + 1);
             setSearchParams({ index: step + 1 });
+            sessionStorage.setItem("phoneValue", JSON.stringify(thirdAnswer.phone.value));
+            sessionStorage.setItem("thirdAnswer", JSON.stringify(thirdAnswer));
           }, 300);
         }
         break;
