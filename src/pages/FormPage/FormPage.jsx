@@ -421,7 +421,7 @@ export default function FormPage({ handleModal }) {
               <FormMessage direction="right">
                 Фамилия - {surname.value} <br />
                 Имя - {name.value} <br />
-                {middle.value &&
+                {middle.value.trimStart().replace(/ +/g, " ") &&
                   `Отчество - ${middle.value
                     .trimStart()
                     .replace(/ +/g, " ")}`}{" "}
