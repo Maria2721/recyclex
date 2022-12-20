@@ -22,9 +22,9 @@ export default function Footer({ handleModal }) {
             </div>
             <div className="footer__links">
               <div className="footer__pages">
-                <span onClick={() => handleClick("/privacy-policy")} className="footer__link">Политика конфиденциальности</span>
-                <span onClick={() => handleClick("/general-terms")} className="footer__link">Общие условия</span>
-                <span onClick={() => handleClick("/cookies-policy-page")} className="footer__link">Cookies Policy</span>
+                <span onClick={() => handleClick("/privacy-policy")} onKeyDown={(e) => e.key === "Enter" && handleClick("/privacy-policy")} tabindex={"0"} className="footer__link">Политика конфиденциальности</span>
+                <span onClick={() => handleClick("/general-terms")} onKeyDown={(e) => e.key === "Enter" && handleClick("/general-terms")} tabindex={"0"} className="footer__link">Общие условия</span>
+                <span onClick={() => handleClick("/cookies-policy-page")} onKeyDown={(e) => e.key === "Enter" && handleClick("/cookies-policy-page")} tabindex={"0"} className="footer__link">Cookies Policy</span>
               </div>
               <button className="footer__manager footer__manager_desktop" onClick={handleModal}>Связь с менеджером</button>
             </div>

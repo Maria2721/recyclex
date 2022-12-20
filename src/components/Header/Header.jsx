@@ -38,7 +38,7 @@ export default function Header({toggleTheme, theme, resetState}) {
     <header className="header container">
       <div className="header__inner container__row_wide">
           <BurgerBlack onClick={() => setOpened(!opened)} className="header__burger"/>
-          <span onClick={() => handleClick("/")}>{theme === 'light'? <LogoBlack className="header__logo"/> : <LogoWhite className="header__logo"/>}</span>
+          <span onClick={() => handleClick("/")} onKeyDown={(e) => e.key === "Enter" && handleClick("/")} tabindex={"0"} className="header__logoWrapper">{theme === 'light'? <LogoBlack className="header__logo"/> : <LogoWhite className="header__logo"/>}</span>
           <div className={classOverlay}></div>
         <nav className={classNav} onClick={handleClick}>
           <div className="header__navInner" onClick={e => e.stopPropagation()}>
@@ -48,14 +48,14 @@ export default function Header({toggleTheme, theme, resetState}) {
               </button>
             )}
             <div className="header__links">
-              <span onClick={() => handleClick("/about-project")} className="header__link">О проекте</span>
-              <span onClick={() => handleClick("/work-scheme")}  className="header__link">Схема работы</span>
-              <span onClick={() => handleClick("/contacts")}  className="header__link">Контакты</span>
-              <span onClick={() => handleClick("/form?index=0")}  className="header__link ">Присоединиться</span>
+              <span onClick={() => handleClick("/about-project")} onKeyDown={(e) => e.key === "Enter" && handleClick("/about-project")} tabindex={"0"} className="header__link">О проекте</span>
+              <span onClick={() => handleClick("/work-scheme")}  onKeyDown={(e) => e.key === "Enter" && handleClick("/work-scheme")} tabindex={"0"} className="header__link">Схема работы</span>
+              <span onClick={() => handleClick("/contacts")}  onKeyDown={(e) => e.key === "Enter" && handleClick("/contacts")} tabindex={"0"} className="header__link">Контакты</span>
+              <span onClick={() => handleClick("/form?index=0")} onKeyDown={(e) => e.key === "Enter" && handleClick("/form?index=0")} tabindex={"0"} className="header__link ">Присоединиться</span>
             </div>
           </div>
         </nav>
-        <SwitchTheme toggleTheme={toggleTheme} theme={theme}/>
+        <SwitchTheme toggleTheme={toggleTheme} theme={theme} tabindex={"0"}/>
       </div>
     </header>
   );

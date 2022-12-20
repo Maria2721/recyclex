@@ -35,6 +35,11 @@
   :hover {
     color: $accentColor;
   }
+
+  :focus {
+    color: $accentColor;
+    outline: none;
+}
 }
 
 #dark .contacts__numbers a {
