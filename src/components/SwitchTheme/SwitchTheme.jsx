@@ -1,9 +1,9 @@
 import "./SwitchTheme.scss";
 import ReactSwitch from "react-switch";
 
-export default function SwitchTheme({toggleTheme, theme}) {
+export default function SwitchTheme({toggleTheme, theme, tabindex}) {
   return (
-    <div className="switch">
+    <div className="switch" tabindex={tabindex} onKeyDown={(e) => e.key === "Enter" && toggleTheme()}>
       <ReactSwitch onChange={toggleTheme} checked={theme === 'dark'}
       onColor="#000000"
       onHandleColor="#ffffff"

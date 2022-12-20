@@ -29,18 +29,24 @@
 .header__link {
     cursor: pointer;
     font-size: 20px;
-    &:hover {
+    &:hover, &:focus {
         color: $accentColor;
         transition: color 0.1s ease;
+        outline: none;
     }
 }
 
 #dark .header__link {
     color: $textColor_dark;
-    &:hover {
+    &:hover, &:focus {
         color: $accentColor;
         transition: color 0.1s ease;
+        outline: none;
     }
+}
+
+.header__logoWrapper:focus {
+    outline: none;
 }
 
 .header__logo {
