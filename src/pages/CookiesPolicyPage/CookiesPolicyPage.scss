@@ -397,6 +397,10 @@
 @media screen and (orientation:landscape) and (max-width: $horizonMobile) and (max-height: 600px){
     .сookies {
         margin-top: 20px; 
+        &__subtitle {
+            font-size: 24px;
+            line-height: 26px;
+        }
 
         /* .list-item_circleList {
             &::before {
