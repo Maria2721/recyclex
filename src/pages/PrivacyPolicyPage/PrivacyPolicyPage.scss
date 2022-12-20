@@ -137,3 +137,12 @@
         } 
     }
 }
+@media screen and (orientation:landscape) and (max-width: $horizonMobile) and (-webkit-min-device-pixel-ratio: 3) and (max-height: 600px){ 
+    .privacy {
+        &__list-item {
+            &::before{
+            top: 5px;
+            } 
+        } 
+    }
+}
