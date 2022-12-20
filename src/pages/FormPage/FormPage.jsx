@@ -60,12 +60,14 @@ export default function FormPage({ handleModal }) {
         setSecondAnswer([]);
         setPhoneValue("");
         setThirdAnswer(initialState);
+        setIsErrorCheckbox(false)
         break;
       case 1:
         setFirstAnswer(sessionFirstAnswer)
         setSecondAnswer([]);
         setPhoneValue("");
         setThirdAnswer(initialState);
+        setIsErrorCheckbox(false)
         break;
       case 2:
         setFirstAnswer(sessionFirstAnswer);
