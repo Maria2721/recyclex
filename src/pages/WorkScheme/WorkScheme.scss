@@ -126,7 +126,7 @@
             margin-left: 40px;
 
             &::before {
-                top: 3px;
+                top: 4px;
                 left: -12px;
                 width: 6px;
                 height: 6px;
@@ -149,20 +149,23 @@
         &__icon {
             width: 18px;
         }
-    /*     &__list-item {
-            &::before {
-                -webkit-top: 12px;
-            }
-    } */
 }
 }
-/* this gets chrome */
-/* @media screen and (orientation:landscape) and (max-width: $horizonMobile) and (-webkit-min-device-pixel-ratio:0) and (max-height: 600px){ 
+@media screen and (orientation:landscape) and (max-width: $horizonMobile) and (-webkit-min-device-pixel-ratio: 2) and (max-height: 600px){ 
     .scheme {
-        &__list-item {
+        &__list-item  {
             &::before{
             top: 12px;
             } 
         } 
     }
-} */
+}
+@media screen and (orientation:landscape) and (max-width: $horizonMobile) and (-webkit-min-device-pixel-ratio: 3) and (max-height: 600px){ 
+    .scheme {
+        &__list-item {
+            &::before{
+            top: 6px;
+            } 
+        } 
+    }
+}
