@@ -112,6 +112,10 @@
   &:hover {
     color: $accentColor;
   }
+  &:focus {
+    color: $accentColor;
+    outline: none;
+}
 }
 
 #dark .help__agreement {
@@ -119,6 +123,10 @@
   &:hover {
     color: $accentColor;
   }
+  &:focus {
+    color: $accentColor;
+    outline: none;
+}
 }
 
 @media (max-width: $tablet) {
