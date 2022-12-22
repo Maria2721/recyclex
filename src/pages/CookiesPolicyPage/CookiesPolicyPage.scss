@@ -42,9 +42,7 @@
         text-transform: uppercase;
         margin-bottom: 20px;
     }
-    &__subtitle_lower {
-        text-transform: none;
-    }
+    
     &__text {
         margin-bottom: 60px;
         
@@ -136,7 +134,7 @@
     &__link {
         display: inline-block;
         word-wrap: break-word;
-        width: 60%;
+        width: 59%;
         font-size: 18px;
         line-height: 22px;
         font-weight: 700;
@@ -298,6 +296,7 @@
         &__link {
             font-size: 12px;
             line-height: 12px;
+            width: 60%; //после правок дизайна
         }
     }
 }

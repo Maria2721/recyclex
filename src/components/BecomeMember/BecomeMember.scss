@@ -2,8 +2,9 @@
 @import "../../styles/_mixin.scss";
 
 .member {
-    margin-top: 115px;
-    margin-bottom: 100px;
+    /* margin-top: 115px; */ //до правкок дизайна
+    margin-top: 200px;
+    margin-bottom: 50px;
     
     &__inner {
         display: flex;
@@ -119,7 +120,7 @@
 @media (max-width: $tablet)  {
     .member{
         margin-top: 115px;
-        margin-bottom: 105px;
+        margin-bottom: 50px;
         &__title {
             margin-top: 40px;
             line-height: 38px;
@@ -196,7 +197,7 @@
 @media (max-width: $mobile) {
     .member{
         margin-top: 50px;
-        margin-bottom: 75px;
+        margin-bottom: 30px;
         &__title {
             margin-top: 40px;
             font-size: 12px;

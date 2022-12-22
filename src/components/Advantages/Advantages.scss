@@ -104,7 +104,8 @@
             margin-top: 105px;
         }
         &__item {
-            width: calc(100%/4 - 16px * 3/4);
+           /*  width: calc(100%/4 - 16px * 3/4); */ //до правок дизайна
+            width: calc(100%/4 - 10px * 3/4);
         }
         .item__img {
             height: 120px;

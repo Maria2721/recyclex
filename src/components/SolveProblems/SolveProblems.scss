@@ -19,7 +19,8 @@
         width: 100%; 
     }
     &__item {
-        width: calc(100%/3 - 22px * 2/3); 
+        /* width: calc(100%/3 - 22px * 2/3);  */ //До правок с Яной
+        width: calc(100%/3 - 32px * 2/3); 
         background: #F7F7F7;  
         border-radius: 30px;               
     } 
