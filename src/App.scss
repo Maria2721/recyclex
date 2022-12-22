@@ -44,14 +44,22 @@
 // }
 
 .home__page {
-  background-image: url(./assets/imgs/background_desktop_comp.png);
+  /* background-image: url(./assets/imgs/background_desktop_comp.png); */ //До правок дизайна
+  background-image: url(./assets/imgs/desktop_1440_comp.png); 
   background-size: 100%;
   
   background-repeat: no-repeat;
   background-color: $bgColor;
 
+    @media (min-width: $ultra) {
+      background-image: url(./assets/imgs/desktop_4k_copm.png); 
+      
+    }
+
     @media (max-width: $tablet)  {
-      background-image: url(./assets/imgs/background_table_comp.png); 
+      /* background-image: url(./assets/imgs/background_table_comp.png);  */
+      background-image: url(./assets/imgs/desktop_834_comp.png); 
+      background-position-y: 50px;
 }
     @media (max-width: $mobile)  {
       /* background-image: url(./assets/imgs/background_mobile_comp.png); */
