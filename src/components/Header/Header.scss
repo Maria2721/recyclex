@@ -236,4 +236,16 @@ and (max-width: $landscape) and (max-height: 600px) {
     .header__inner {
         height: 100px;
     }
+    
+}
+@media screen and (orientation:landscape) 
+and (min-width: 651px) and (max-width: $landscape) and (max-height: 600px) { //Поправила баг с размытием от тестеров
+    .header__overlay_active {
+        opacity: 0;
+        background-color: none;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        transition: none;
+    }
+    
 }
