@@ -13,6 +13,7 @@ body {
   background-color: $bgColor;
   color: $textColor;
   font-weight: 400;
+  -webkit-text-size-adjust:none; //Предотвратить масштабирование шрифта в альбомной ориентации, разрешив пользователю масштабирование 
 }
 ol, ul, li {
   border: 0;
