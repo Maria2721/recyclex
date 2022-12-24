@@ -47,7 +47,7 @@ export default function Advantages() {
                         </div>
                         <div className="item__wrapper">
                             <h4 className="item__title">Сообщество</h4>
-                            <p className="item__text">Предприятий, организаций и заинтересованных лиц на одной площадке</p>
+                            <p className="item__text">Предприятия, организации и заинтересованные лица на одной площадке</p>
                         </div>
                     </div>
                 </div>

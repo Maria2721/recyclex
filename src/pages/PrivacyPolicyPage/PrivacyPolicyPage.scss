@@ -128,7 +128,7 @@
         margin-top: 20px;
     }
 }
-@media screen and (orientation:landscape) and (max-width: $horizonMobile) and (-webkit-min-device-pixel-ratio: 2) and (max-height: 600px){ 
+/* @media screen and (orientation:landscape) and (max-width: $horizonMobile) and (-webkit-min-device-pixel-ratio: 2) and (max-height: 600px){ 
     .privacy {
         &__list-item {
             &::before{
@@ -145,4 +145,4 @@
             } 
         } 
     }
-}
+} */

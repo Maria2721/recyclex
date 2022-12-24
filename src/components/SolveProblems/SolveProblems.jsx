@@ -42,7 +42,7 @@ export default function SolveProblems() {
                     </div>
                     <div className="problems__item">
                         <div className="problems__wrapper">
-                            <h4 className="problems__list-title">Переработка <br/> вторсырья</h4>
+                            <h4 className="problems__list-title">Покупателей</h4>
                             <div className="problems__list-items">
                                 <div className="problems__col1">
                                     <p className="problems__list-item">Доставка/качество/объем</p>
