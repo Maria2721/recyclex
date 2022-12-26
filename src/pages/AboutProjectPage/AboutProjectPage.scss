@@ -1,6 +1,10 @@
 @import "../../styles/vars";
 @import "../../styles/mixin";
 
+
+#dark .about__list-item::before  {
+    background-color:#ffffff;
+}
 .about {
     margin-top: 115px;
     margin-bottom: 50px;
@@ -17,28 +21,29 @@
     &__text {
         margin-bottom: 60px;
         font-size: 22px;
-        line-height: 27px;
+        line-height: 24px;
     }
     &__list-title {
-        margin-bottom: 60px;
+       /*  margin-bottom: 60px; */
+        margin-bottom: 5px;
         font-size: 22px;
-        line-height: 27px;
+        line-height: 24px;
     }
     &__list {
         list-style-type: none;
         margin-bottom: 60px;
         font-size: 22px;
-        line-height: 27px;
+        line-height: 24px;
     }
     &__list-item {
         position: relative;
-        margin-left: 140px;
-        @include before_circleList;
+        margin-left: 34px;
+        @include before_circleListBlack;
         z-index: 1;
     }
-    .list-item_bottom {
+    /* .list-item_bottom {
         padding-bottom: 60px;
-    }
+    } */
     .member {
         margin-bottom: 0;
     }
@@ -62,7 +67,7 @@
             line-height: 30px;
         }
         &__list-title {
-            margin-bottom: 50px;
+            /* margin-bottom: 50px; */
             font-size: 30px;
             line-height: 30px;
         }
@@ -71,7 +76,7 @@
             font-size: 30px;
             line-height: 30px;
         }
-        &__list-item {
+        /* &__list-item {
             margin-left: 100px;
             &::before {
                 top: 10px;
@@ -79,10 +84,10 @@
                 width: 20px;
                 height: 20px;
             }
-        }
-        .list-item_bottom {
+        } */
+        /* .list-item_bottom {
             padding-bottom: 45px;
-        }
+        } */
     }
 }
 
@@ -105,27 +110,28 @@
             line-height: 15px;
         }
         &__list-title {
-            margin-bottom: 30px;
+            /* margin-bottom: 30px; */
             font-size: 15px;
             line-height: 15px;
         }
         &__list {
             margin-bottom: 30px;
+            margin-left: 10px;
             font-size: 15px;
             line-height: 15px;
         }
         &__list-item {
-            margin-left: 80px;
+            margin-left: 13px;
             &::before {
-                top: 3px;
-                left: -20px;
-                width: 10px;
-                height: 10px;
+                top: 5px;
+                left: -15px;
+                width: 6px;
+                height: 6px;
             }
         }
-        .list-item_bottom {
+        /* .list-item_bottom {
             padding-bottom: 30px;
-        }
+        } */
     }
 }
 
@@ -148,27 +154,29 @@
             line-height: 11px;
         }
         &__list-title {
-            margin-bottom: 5px;
+           /*  margin-bottom: 5px; */
             font-size: 10px;
             line-height: 11px;
         }
         &__list {
+            margin-left: 28px;
             margin-bottom: 15px;
             font-size: 10px;
             line-height: 11px;
         }
         &__list-item {
-            margin-left: 41px;
+            margin-left: -13px;
             &::before {
-                top: 1px;
-                left: -12px;
-                width: 6px;
-                height: 6px;
+                top: 3px;
+                left: -10px;
+                width: 4px;
+                height: 4px;
             }
         }
-        .list-item_bottom {
+    
+        /* .list-item_bottom {
             padding-bottom: 15px;
-        }
+        } */
     }
 }
 @media screen and (orientation:landscape) and (max-width: $horizonMobile) {
