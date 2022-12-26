@@ -94,20 +94,24 @@
 
 @media (max-width: $mobile)  {
     .privacy {
-        font-size: 8px;
-        line-height: 10px;
+        font-size: 10px;
+        line-height: 11px;
         margin-top: 35px;
         margin-bottom: 30px;
 
         &__title {
             margin-bottom: 30px;
         }
+        &__text {
+            margin-top: 5px;
+        }
         
         &__list-title {
-            margin-bottom: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
         }
         &__list {
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
         &__list-item {
             margin-left: 41px;

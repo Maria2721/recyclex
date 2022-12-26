@@ -110,14 +110,15 @@
 
 @media (max-width: $mobile)  {
     .scheme {
-        font-size: 8px;
+        font-size: 10px;
+        line-height: 11px;
         margin-top: 35px;
         margin-bottom: 30px;
         &__title {
             margin-bottom: 30px;
         }
         &__list-title {
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
         &__list {
             margin-bottom: 15px;
@@ -126,7 +127,7 @@
             margin-left: 40px;
 
             &::before {
-                top: 4px;
+                top: 3px;
                 left: -12px;
                 width: 6px;
                 height: 6px;
