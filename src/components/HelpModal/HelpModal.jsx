@@ -15,6 +15,11 @@ import { useEffect, useState } from "react";
 import { RemoveScroll } from "react-remove-scroll";
 
 export default function HelpModal({ handleModal, opened, theme }) {
+  const [focusIcon, setFocusIcon] = useState(false);
+  console.log(  `focusIcon =${focusIcon}`);
+  const Class_help__cross = cx("help__cross", {
+    "help__cross_focus":  focusIcon,
+  });
   const classModal = cx("help", {
     "help help_show": opened,
   });
@@ -28,6 +33,7 @@ useEffect(() => {
   if(!opened) {
     setState(initialState);
     setPhoneValue('');
+    setFocusIcon(false);
   }
 }, [opened])
 
@@ -239,8 +245,11 @@ if (!opened) {
             ) : (
               <LogoWhite className="help__logo" />
             )}
-            <button className="help__close">
-              <CloseIcon className="help__cross" onClick={handleModal} />
+            <button className="help__close"
+            onClick={handleModal} 
+            onFocus={() => setFocusIcon((focusIcon) => !focusIcon)}
+            onBlur={() => setFocusIcon((focusIcon) => !focusIcon)}>
+              <CloseIcon className={Class_help__cross}/>
             </button>
           </div>
           <div className="help__form">
