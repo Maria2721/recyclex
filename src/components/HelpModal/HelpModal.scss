@@ -67,7 +67,10 @@
 #dark .help__cross {
   fill: $textColor_dark;
 }
-
+//Стили для ховера на иконку
+.help__cross_focus {
+  fill: $accentColor;
+}
 .help__form {
   display: flex;
   flex-direction: column;
