@@ -33,7 +33,6 @@
         color: $accentColor;
         transition: color 0.1s ease;
         outline: none;
-        background: transparent;
     }
 }
 
@@ -57,6 +56,9 @@
 
 .header__burger {
     display: none;
+    & :hover {
+        fill: $accentColor;
+      }
 }
 
 .header__overlay {
