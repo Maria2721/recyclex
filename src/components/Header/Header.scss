@@ -33,6 +33,7 @@
         color: $accentColor;
         transition: color 0.1s ease;
         outline: none;
+        background: transparent;
     }
 }
 
@@ -86,6 +87,9 @@
     cursor: pointer;
     border: none;
     background-color: transparent;
+    & :hover {
+        fill: $accentColor;
+      }
 }
 
 @media (max-width: 1050px)  {
