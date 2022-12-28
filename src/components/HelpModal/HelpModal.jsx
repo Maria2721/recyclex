@@ -16,7 +16,7 @@ import { RemoveScroll } from "react-remove-scroll";
 
 export default function HelpModal({ handleModal, opened, theme }) {
   const [focusIcon, setFocusIcon] = useState(false);
-  console.log(  `focusIcon =${focusIcon}`);
+  
   const Class_help__cross = cx("help__cross", {
     "help__cross_focus":  focusIcon,
   });
