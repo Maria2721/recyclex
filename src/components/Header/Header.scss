@@ -56,9 +56,9 @@
 
 .header__burger {
     display: none;
-    & :hover {
+    &:hover rect {
         fill: $accentColor;
-      }
+    }
 }
 
 .header__overlay {
