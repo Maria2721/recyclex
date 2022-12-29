@@ -99,9 +99,11 @@
 }
 @media (max-width: $tablet)  {
     .advantages { 
-        margin-top: 180px;
+       /*  margin-top: 180px; */ //Идеальный отступ
+        margin-top: 385px;
         &__items {
-            margin-top: 105px;
+            /* margin-top: 105px; */ //Идеальный отспуп
+            margin-top: 70px;
         }
         &__item {
            /*  width: calc(100%/4 - 16px * 3/4); */ //до правок дизайна
@@ -120,7 +122,8 @@
                 line-height: 16px;
         } 
         &__btn {
-            margin-top: 80px; 
+            /* margin-top: 80px;  */ //Идеальный отсуп
+            margin-top: 40px;
         }
     }
 }

@@ -109,9 +109,11 @@
 
 @media (max-width: $tablet)  {
     .whyRecyclex {
-        margin-top: 180px;
+        /* margin-top: 180px; */ //Идеальный отсуп
+        margin-top: 150px; 
         &__inner {
-            margin-top: 105px;
+            /* margin-top: 105px; */ //Идеальный отсуп
+            margin-top: 70px;
         }
         &__items {
             width: 56%;

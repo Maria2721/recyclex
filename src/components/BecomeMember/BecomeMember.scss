@@ -119,7 +119,8 @@
 }
 @media (max-width: $tablet)  {
     .member{
-        margin-top: 115px;
+        /* margin-top: 115px; */ //Идеальный отсуп
+        margin-top: 150px;
         margin-bottom: 50px;
         &__title {
             margin-top: 40px;
