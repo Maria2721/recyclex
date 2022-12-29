@@ -85,6 +85,11 @@
   color: $accentColor;
   outline: none;
 }
+.footer__focusReset{
+  &:focus {
+    outline: none;
+  }
+}
 
 .footer__manager {
   text-align: start;
@@ -176,7 +181,7 @@
 
   & :hover {
     fill: $accentColor;
-    transition: fill 0.1s ease;
+    /* transition: fill 0.1s ease; */
   }
   &:focus {
     fill: $accentColor;
