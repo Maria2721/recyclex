@@ -51,7 +51,8 @@
 
 @media (max-width: $tablet)  {
     .firstScreen {
-        margin-top: 200px;
+       /*  margin-top: 200px; */ //идеальный отступ
+        margin-top: 460px;
         &__title {
             font-size: 48px;
             line-height: 61px;
