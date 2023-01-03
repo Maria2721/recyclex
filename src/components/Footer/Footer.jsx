@@ -23,8 +23,14 @@ export default function Footer({ handleModal }) {
   const navigate = useNavigate();
 
   const handleClick = (url) => {
+    console.log(`click ${url}`);
     navigate(url);
-    window.scrollTo(0, 0);
+    /* window.scrollTo(0, 0);
+    setTimeout(() => { window.scrollTo(0, 0); }, 100); //добавила, чтоб скролить на вверх */
+    window.scrollTo({ // этот код меняет поведение прокрутки на "smooth"
+      top: 0,
+      behavior: "smooth"
+  });
   }
 
   return (
@@ -45,7 +51,7 @@ export default function Footer({ handleModal }) {
             </div>
               <div className="footer__contacts">
                 <div className="footer__email"><a className="footer__emailLink" href="mailto:info@recyclex.online" onClick={() => handleFocus()}  >info@recyclex.online</a></div>
-                <button className="footer__manager footer__manager_mobile" onClick={handleModal}>Связь с менеджером</button>
+                <button className="footer__manager footer__manager_mobile" onClick={()=>{handleModal();handleFocus();}}>Связь с менеджером</button>
                 <div className="footer__social">
                     <a
                       href='https://t.me/+79585787495'
