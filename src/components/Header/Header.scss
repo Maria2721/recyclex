@@ -26,7 +26,7 @@
     gap: 5px;
 }
 
-.header__link {
+/* .header__link {
     cursor: pointer;
     font-size: 20px;
     &:hover, &:focus {
@@ -34,16 +34,74 @@
         transition: color 0.1s ease;
         outline: none;
     }
+} */
+
+.header__link {
+  cursor: pointer; //
+  text-decoration: none;
+  font-size: 20px;// Из свойства Маши header__link
+  &:focus {
+    color: $accentColor;
+    outline: none;
+  }
 }
 
-#dark .header__link {
+@media (hover: hover) {
+  .header__link:hover
+ {
+    cursor: pointer;
+    color: $accentColor;
+    transition: color 0.1s ease;
+  }
+}
+
+@media (hover: none) {
+  .header__link:hover
+{
+    color: inherit;
+  }
+  .header__link:active 
+ {
+    color: $accentColor;
+  }
+}
+
+
+/* #dark .header__link {
     color: $textColor_dark;
     &:hover, &:focus {
         color: $accentColor;
         transition: color 0.1s ease;
         outline: none;
     }
-}
+} */
+#dark .header__link {
+    color: $textColor_dark;
+  &:focus {
+    color: $accentColor;
+    outline: none;
+  }
+  }
+  
+@media (hover: hover) {
+    #dark  .header__link:hover
+    {
+        cursor: pointer; 
+        color: $accentColor;
+        transition: color 0.1s ease;
+    }
+  }
+  
+@media (hover: none) {
+    #dark .header__link:hover
+  {
+      color: inherit;
+    }
+    #dark .header__link:active 
+   {
+      color: $accentColor;
+    }
+  }
 
 .header__logoWrapper:focus {
     outline: none;
