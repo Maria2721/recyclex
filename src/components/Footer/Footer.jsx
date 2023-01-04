@@ -37,7 +37,7 @@ export default function Footer({ handleModal }) {
     <footer className="footer container">
         <div className="footer__inner container__row">
             <div className="footer__requisitesAndRights">
-              <div className="footer__requisites">2021, ООО “Экополимер”<br/>ИНН 2309176846<br/><a href="#" className="footer__focusReset" ref={logoReference} >ТЕЛ: </a><a className="footer__telLink" href="tel:+78003330816"  >+7 (800) 333-08-16</a><br/>АДРЕС: Москва, Пресненская набережная, д. 12, офис 405, помещ. 3
+              <div className="footer__requisites">2021, ООО “Экополимер”<br/>ИНН 2309176846<br/><a href="#" className="footer__focusReset" ref={logoReference} >ТЕЛ: </a><a className="footer__telLink" href="tel:+78003330816" onClick={() => handleFocus()}  >+7 (800) 333-08-16</a><br/>АДРЕС: Москва, Пресненская набережная, д. 12, офис 405, помещ. 3
               </div>
               <div className="footer__rights">Все права защищены</div>
             </div>
