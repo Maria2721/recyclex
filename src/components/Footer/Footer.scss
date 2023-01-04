@@ -40,7 +40,10 @@
   justify-content: space-between;
 }
 
-.footer__link, .footer__manager, .footer__emailLink, #dark .footer__telLink  {
+.footer__link, 
+.footer__manager, 
+.footer__emailLink, 
+.footer__telLink  {
   cursor: pointer; //
   text-decoration: none;
   &:focus {
@@ -58,7 +61,8 @@
 @media (hover: hover) {
   .footer__link:hover,
   .footer__emailLink:hover,
-  .footer__telLink:hover {
+  .footer__telLink:hover,
+  .footer__manager:hover {
     cursor: pointer;
     color: $accentColor;
     transition: color 0.1s ease;
@@ -67,15 +71,17 @@
 
 @media (hover: none) {
   .footer__link:hover,
-.footer__emailLink:hover,
-.footer__telLink:hover, 
-.footer__manager:hover {
+  .footer__emailLink:hover,
+  .footer__telLink:hover, 
+  .footer__manager:hover
+{
     color: inherit;
   }
   .footer__link:active ,
 .footer__emailLink:active ,
 .footer__telLink:active ,
-.footer__manager:active {
+.footer__manager:active
+ {
     color: $accentColor;
   }
 }
@@ -85,7 +91,10 @@
   flex-direction: column;
 }
 
-#dark .footer__link, #dark .footer__manager, #dark .footer__emailLink, #dark .footer__telLink {
+#dark .footer__link, 
+#dark .footer__manager, 
+#dark .footer__emailLink, 
+#dark .footer__telLink {
   color: $textColor_dark;
   &:focus {
     color: $accentColor;
@@ -103,7 +112,8 @@
 @media (hover: hover) {
   #dark .footer__link:hover,
   #dark .footer__emailLink:hover,
-  #dark .footer__telLink:hover {
+  #dark .footer__telLink:hover,
+  #dark .footer__manager:hover {
     cursor: pointer; 
     color: $accentColor;
     transition: color 0.1s ease;
@@ -113,7 +123,7 @@
   #dark .footer__link:hover,
   #dark .footer__emailLink:hover,
   #dark .footer__telLink:hover,
-  #dark .footer__manager {
+  #dark .footer__manager:hover {
     color: inherit;
   }
   #dark .footer__link:active,
@@ -174,14 +184,14 @@
   }
 }
 
-#dark .footer__manager {
+/* #dark .footer__manager {
   color: $textColor_dark;
 
-  /* &:hover {
+  &:hover {
     color: $accentColor;
     transition: color 0.1s ease;
-  } */
-}
+  }
+} */
 
 .footer__contacts {
   display: flex;
@@ -213,59 +223,95 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  & :focus {
+  /* & :focus {
     outline: none;
     fill: $accentColor;
     & .footer__icon {
         fill: $accentColor;
     }
-  }
+  } */
 }
 
-#dark .footer__social {
-    & :focus {
-        outline: none;
-        fill: $accentColor;
-        & .footer__icon {
-            fill: $accentColor;
-        }
-      }
-  }
+
 
 .footer__icon {
   width: 40px;
   fill: $textColor;
   margin-left: 40px;
 
-  & :hover {
+/*   & :hover {
     fill: $accentColor;
-    /* transition: fill 0.1s ease; */
-  }
+    transition: fill 0.1s ease; 
+  } */
+  
   &:focus {
     fill: $accentColor;
     outline: none;
   }
 }
 
+@media (hover: hover) {
+  .footer__icon:hover{
+    cursor: pointer; 
+    fill: $accentColor;
+    transition: color 0.1s ease;
+}
+}
+
+@media (hover: none) {
+  .footer__icon:hover {
+    fill: inherit;
+  }
+  .footer__icon:active {
+    fill: $accentColor;
+  }
+}
+
+#dark .footer__social {
+  /* & :focus {
+      outline: none;
+      fill: $accentColor;
+      & .footer__icon {
+          fill: $accentColor;
+      }
+    } */
+}
+
 #dark .footer__icon {
   fill: $textColor_dark;
-  & :focus {
+  &:focus {
     fill: $accentColor;
     outline: none;
+  } 
+}
+@media (hover: hover) {
+  #dark .footer__icon:hover {
+    cursor: pointer; 
+    fill: $accentColor;
+    transition: color 0.1s ease;
+}
+}
+
+@media (hover: none) {
+  #dark .footer__icon:hover {
+    fill: $textColor_dark;
+  }
+  #dark .footer__icon:active {
+    fill: $accentColor;
   }
 }
 
 .footer__description {
   display: flex;
 }
-@media (hover:hover) {
+/* @media (hover:hover) {
   a:hover {
     color: inherit;
   }
   a:active {
     color:$accentColor;
   }
-}
+} */
 
 @media (max-width: $tablet) {
   .footer {
