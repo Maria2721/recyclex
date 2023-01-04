@@ -267,7 +267,14 @@
   }
 }
 
-#dark .footer__social {
+.footer__social , #dark .footer__social {
+  a{
+    outline:  none;
+  }
+  a:focus > .footer__icon {
+    fill: $accentColor;
+    outline: none; 
+}
   /* & :focus {
       outline: none;
       fill: $accentColor;
@@ -294,7 +301,7 @@
 
 @media (hover: none) {
   #dark .footer__icon:hover {
-    fill: $textColor_dark;
+    fill: n$textColor_dark;
   }
   #dark .footer__icon:active {
     fill: $accentColor;
