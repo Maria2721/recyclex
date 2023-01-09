@@ -13,8 +13,10 @@
         justify-content: space-between;
     }
     &__items {
-        width: 50%; 
-        padding-left: 4%;
+        /* width: 50%; 
+        padding-left: 4%; */
+        width: 49%; 
+        padding-left: 39px;
     }
     &__item {
         padding-top: 20px;
@@ -31,7 +33,7 @@
     }   
     &__img {
         margin-top: 107px;
-        width: 41%;
+        width: 42%;
     }
     &__subTitle {
         font-size: 24px;
@@ -48,7 +50,7 @@
     }
     .wrapper__img {
         /* width: 84%; */ //до правок с Яной
-        width: 83%;
+        width: 81%;
         height: 100%;
         background-image: url(../../assets/imgs/screen_desktop.png);
         background-size: 100%;
