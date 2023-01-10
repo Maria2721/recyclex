@@ -28,7 +28,7 @@ export default function Advantages() {
                         </div>
                         <div className="item__wrapper">
                             <h4 className="item__title">Лучшие цены</h4>
-                            <p className="item__text">Анализ актуальных цен на вторсырье</p> 
+                            <p className="item__text">Анализ актуальных цен на <br/> вторсырье</p> 
                         </div>
                         
                     </div>
