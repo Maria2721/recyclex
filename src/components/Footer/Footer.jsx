@@ -53,7 +53,7 @@ export default function Footer({ handleModal }) {
               <button className="footer__manager footer__manager_desktop" onClick={() => {handleModal();handleFocus();}}>Связь с менеджером</button>
             </div>
               <div className="footer__contacts">
-                <div className="footer__email"><a className="footer__emailLink" href="mailto:info@recyclex.online" onClick={() => handleFocus()}>info@recyclex.online</a></div>
+                <div className="footer__email"><a className="footer__emailLink" href="mailto:info@recyclex.online" onClick={() => handleFocus()} onMouseDown={onHandleRightClick}>info@recyclex.online</a></div>
                 <button className="footer__manager footer__manager_mobile" onClick={()=>{handleModal();handleFocus();}}>Связь с менеджером</button>
                 <div className="footer__social">
                     <a
