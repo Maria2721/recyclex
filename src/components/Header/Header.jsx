@@ -21,7 +21,7 @@ export default function Header({toggleTheme, theme, resetState}) {
   }, [focus]);
 
   const handleFocus = () => {
-    console.log("focus on logo");
+    console.log(`focus on logo ${focus}`);
     setFocus(true);
   };
 
@@ -48,6 +48,11 @@ export default function Header({toggleTheme, theme, resetState}) {
       resetState()
     }
   }
+
+  
+  const onHandleRightClick = (event) => {
+    event.preventDefault();
+}
   
   return (
     <header className="header container">
@@ -63,10 +68,10 @@ export default function Header({toggleTheme, theme, resetState}) {
               </button>
             )}
             <div className="header__links">
-              <Link to="/about-project" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onKeyDown={(e) => e.key === "Enter" && handleClick("/about-project")} tabIndex={"0"} className="header__link">О проекте</Link>
-              <Link to="/work-scheme" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onKeyDown={(e) => e.key === "Enter" && handleClick("/work-scheme")} tabIndex={"0"} className="header__link">Схема работы</Link>
-              <Link to="/contacts" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}}  onKeyDown={(e) => e.key === "Enter" && handleClick("/contacts")} tabIndex={"0"} className="header__link">Контакты</Link>
-              <Link to="/form?index=0" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}}  onKeyDown={(e) => e.key === "Enter" && handleClick("/form?index=0")} tabIndex={"0"} className="header__link ">Присоединиться</Link>
+              <Link to="/about-project" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onMouseDown={onHandleRightClick} onKeyDown={(e) => e.key === "Enter" && handleClick("/about-project")} tabIndex={"0"} className="header__link">О проекте</Link>
+              <Link to="/work-scheme" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onMouseDown={onHandleRightClick} onKeyDown={(e) => e.key === "Enter" && handleClick("/work-scheme")} tabIndex={"0"} className="header__link">Схема работы</Link>
+              <Link to="/contacts" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onMouseDown={onHandleRightClick} onKeyDown={(e) => e.key === "Enter" && handleClick("/contacts")} tabIndex={"0"} className="header__link">Контакты</Link>
+              <Link to="/form?index=0" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onMouseDown={onHandleRightClick} onKeyDown={(e) => e.key === "Enter" && handleClick("/form?index=0")} tabIndex={"0"} className="header__link ">Присоединиться</Link>
             </div>
           </div>
         </nav>
