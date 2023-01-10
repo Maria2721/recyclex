@@ -40,10 +40,12 @@
   cursor: pointer; //
   text-decoration: none;
   font-size: 20px;// Из свойства Маши header__link
+
   &:focus {
     color: $accentColor;
     outline: none;
   }
+  &:link, &:visited { color: $textColor; } /* Непосещённые ссылки */ /* Посещённые ссылки */
 }
 
 @media (hover: hover) {
@@ -64,6 +66,7 @@
  {
     color: $accentColor;
   }
+  
 }
 
 
@@ -80,6 +83,9 @@
   &:focus {
     color: $accentColor;
     outline: none;
+  }
+  &:visited {
+    color: $textColor_dark;
   }
   }
   
