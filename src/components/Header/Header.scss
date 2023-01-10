@@ -40,12 +40,10 @@
   cursor: pointer; //
   text-decoration: none;
   font-size: 20px;// Из свойства Маши header__link
-
   &:focus {
     color: $accentColor;
     outline: none;
   }
-  &:link, &:visited { color: $textColor; } /* Непосещённые ссылки */ /* Посещённые ссылки */
 }
 
 @media (hover: hover) {
@@ -58,12 +56,10 @@
 }
 
 @media (hover: none) {
-  .header__link:hover
-{
+  .header__link:hover{
     color: inherit;
   }
-  .header__link:active 
- {
+  .header__link:active {
     color: $accentColor;
   }
   
@@ -80,34 +76,27 @@
 } */
 #dark .header__link {
     color: $textColor_dark;
-  &:focus {
+    &:focus {
     color: $accentColor;
     outline: none;
-  }
-  &:visited {
-    color: $textColor_dark;
-  }
-  }
-  
+    }
+}
 @media (hover: hover) {
-    #dark  .header__link:hover
-    {
+    #dark  .header__link:hover {
         cursor: pointer; 
         color: $accentColor;
         transition: color 0.1s ease;
     }
-  }
-  
+}
+
 @media (hover: none) {
-    #dark .header__link:hover
-  {
-      color: inherit;
+    #dark .header__link:hover {
+        color: inherit;
     }
-    #dark .header__link:active 
-   {
-      color: $accentColor;
+    #dark .header__link:active {
+        color: $accentColor;
     }
-  }
+}
 
 .header__logoWrapper:focus {
     outline: none;

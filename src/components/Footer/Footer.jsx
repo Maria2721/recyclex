@@ -32,39 +32,42 @@ export default function Footer({ handleModal }) {
       behavior: "smooth"
   });
   }
+  const onHandleRightClick = (event) => {
+    event.preventDefault();
+}
 
   return (
     <footer className="footer container">
         <div className="footer__inner container__row">
             <div className="footer__requisitesAndRights">
-              <div className="footer__requisites">2021, ООО “Экополимер”<br/>ИНН 2309176846<br/><a href="#" className="footer__focusReset" ref={logoReference} >ТЕЛ: </a><a className="footer__telLink" href="tel:+78003330816" onClick={() => handleFocus()}  >+7 (800) 333-08-16</a><br/><div className="footer__address_table">АДРЕС: Москва, Пресненская набережная, д. 12, <div className="footer__address">офис 405, помещ. 3</div></div> 
+              <div className="footer__requisites">2021, ООО “Экополимер”<br/>ИНН 2309176846<br/><a href="#" className="footer__focusReset" ref={logoReference} >ТЕЛ: </a><a className="footer__telLink" href="tel:+78003330816" onClick={() => handleFocus()}  onMouseDown={onHandleRightClick}>+7 (800) 333-08-16</a><br/><div className="footer__address_table">АДРЕС: Москва, Пресненская набережная, д. 12, <div className="footer__address">офис 405, помещ. 3</div></div> 
               </div>
               <div className="footer__rights">Все права защищены</div>
             </div>
             <div className="footer__links">
               <div className="footer__pages">
-                <Link to="/privacy-policy" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onKeyDown={(e) => e.key === "Enter" && handleClick("/privacy-policy")} tabIndex={"0"} className="footer__link">Политика конфиденциальности</Link>
-                <Link to="/general-terms" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onKeyDown={(e) => e.key === "Enter" && handleClick("/general-terms")} tabIndex={"0"} className="footer__link">Общие условия</Link>
-                <Link to="/cookies-policy-page" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onKeyDown={(e) => e.key === "Enter" && handleClick("/cookies-policy-page")} tabIndex={"0"} className="footer__link">Cookies Policy</Link>
+                <Link to="/privacy-policy" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onMouseDown={onHandleRightClick} onKeyDown={(e) => e.key === "Enter" && handleClick("/privacy-policy")} tabIndex={"0"} className="footer__link">Политика конфиденциальности</Link>
+                <Link to="/general-terms" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onMouseDown={onHandleRightClick}  onKeyDown={(e) => e.key === "Enter" && handleClick("/general-terms")} tabIndex={"0"} className="footer__link">Общие условия</Link>
+                <Link to="/cookies-policy-page" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onMouseDown={onHandleRightClick} onKeyDown={(e) => e.key === "Enter" && handleClick("/cookies-policy-page")} tabIndex={"0"} className="footer__link">Cookies Policy</Link>
               </div>
               <button className="footer__manager footer__manager_desktop" onClick={() => {handleModal();handleFocus();}}>Связь с менеджером</button>
             </div>
               <div className="footer__contacts">
-                <div className="footer__email"><a className="footer__emailLink" href="mailto:info@recyclex.online" onClick={() => handleFocus()}  >info@recyclex.online</a></div>
+                <div className="footer__email"><a className="footer__emailLink" href="mailto:info@recyclex.online" onClick={() => handleFocus()}>info@recyclex.online</a></div>
                 <button className="footer__manager footer__manager_mobile" onClick={()=>{handleModal();handleFocus();}}>Связь с менеджером</button>
                 <div className="footer__social">
                     <a
                       href='https://t.me/+79585787495'
                       target="_blank"
                       rel="noreferrer"
-                      onClick={() => handleFocus()} >
+                      onClick={() => handleFocus()} onMouseDown={onHandleRightClick} >
                           <TelegramIcon className="footer__icon" />
                     </a>
                     <a
                       href='https://wa.me/+79585787495'
                       target="_blank"
                       rel="noreferrer"
-                      onClick={() => handleFocus()} >
+                      onClick={() => handleFocus()} onMouseDown={onHandleRightClick} >
                           <WhatsAppIcon className="footer__icon" />
                     </a>
                 </div>
