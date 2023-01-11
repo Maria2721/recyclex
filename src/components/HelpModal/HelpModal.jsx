@@ -112,6 +112,11 @@ const validateForm = () => {
                 }
                 break;
             case 'phone':
+                if (phoneValue.length === 0) {
+                  error = 'Необходимо заполнить';
+                  setValid(false);
+                  break;
+                }
                 if (!isPossiblePhoneNumber(phoneValue)) {
                   console.log(2)
                   error = 'Недопустимая длина';
