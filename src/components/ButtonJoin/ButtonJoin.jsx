@@ -22,7 +22,7 @@ export default function ButtonJoin(props) {
   };
 
   return (
-    <Link className="buttonJoinWrapper btn" onClick={handleClick}>
+    <Link to="/form?index=0" className="buttonJoinWrapper btn" onClick={handleClick}>
       <div className={classButton}>
         {props.children}
         <div className="buttonJoin__arrowWrapper">
