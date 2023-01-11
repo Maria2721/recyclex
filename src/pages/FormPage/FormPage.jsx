@@ -217,6 +217,12 @@ export default function FormPage({ handleModal }) {
           }
           break;
         case "phone":
+          //Добавила проверку на пустоту
+          if (phoneValue.length === 0) {
+            error = 'Необходимо заполнить "Номер телефона"';
+            setValid(false);
+            break;
+          }
           if (!isPossiblePhoneNumber(phoneValue)) {
             error = "Недопустимая длина";
             setValid(false);
