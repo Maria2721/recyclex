@@ -11,10 +11,25 @@ import { ReactComponent as CloseIcon } from "../../assets/imgs/close_icon.svg";
 import { initialState } from "./initialState";
 import { isPossiblePhoneNumber } from 'react-phone-number-input';
 import ButtonSend from "../ButtonSend/ButtonSend";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { RemoveScroll } from "react-remove-scroll";
 
 export default function HelpModal({ handleModal, opened, theme }) {
+  const [focus, setFocus] = useState(false);
+  const logoReference = useRef(null);
+  useEffect(() => {
+    if (focus === true) {
+      logoReference.current.focus();
+      setFocus(false);
+    }
+  }, [focus]);
+
+  const handleFocus = () => {
+    console.log("focus on logo");
+    setFocus(true);
+  };
+
+
   const [focusIcon, setFocusIcon] = useState(false);
   
   const Class_help__cross = cx("help__cross", {
@@ -23,6 +38,9 @@ export default function HelpModal({ handleModal, opened, theme }) {
   const classModal = cx("help", {
     "help help_show": opened,
   });
+  const onHandleRightClick = (event) => {
+    event.preventDefault();
+}
 
 const [state, setState] = useState(initialState)
 const [phoneValue, setPhoneValue] = useState('');
@@ -283,17 +301,19 @@ if (!opened) {
               <div className="help__helper"></div>
                 <div className="help__alertAndButton">
                     <div className="help__alert">
-                      <div>
+                      <a href="#" className="help__focusReset" ref={logoReference}>
                         {theme === "light" ? (
                           <AlertIcon className="help__alertIcon" />
                         ) : (
                           <AlertIconWhite className="help__alertIcon" />
                         )}
-                      </div>
+                      </a>
                       <span>
                         Нажимая «Отправить», вы даете{" "}
                         <Link
                           to="/agreement"
+                          onClick={() => handleFocus()} 
+                          onMouseDown={onHandleRightClick}
                           target="_blank"
                           rel="noreferrer"
                           className="help__agreement">
