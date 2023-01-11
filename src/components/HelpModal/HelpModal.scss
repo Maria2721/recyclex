@@ -109,26 +109,71 @@
   height: 15px;
   margin-right: 5px;
 }
-
+.help__focusReset{
+  &:focus {
+    outline: none;
+  }
+}
 .help__agreement {
   text-decoration: underline;
-  &:hover {
+/*   &:hover {
     color: $accentColor;
   }
   &:focus {
     color: $accentColor;
     outline: none;
+} */
+
+&:focus {
+  color: $accentColor;
+  outline: none;
+}
+}
+
+@media (hover: hover) {
+.help__agreement:hover {
+  cursor: pointer;
+  color: $accentColor;
+  transition: color 0.1s ease;
+}
+}
+@media (hover: none) {
+  .help__agreement:hover {
+  color: inherit;
+}
+.help__agreement:active{
+  color: $accentColor;
 }
 }
 
 #dark .help__agreement {
   color: $textColor_dark;
-  &:hover {
+/*   &:hover {
     color: $accentColor;
   }
   &:focus {
     color: $accentColor;
     outline: none;
+} */
+&:focus {
+  color: $accentColor;
+  outline: none;
+}
+}
+
+@media (hover: hover) {
+#dark .help__agreement:hover {
+  cursor: pointer; 
+  color: $accentColor;
+  transition: color 0.1s ease;
+}
+}
+@media (hover: none) {
+#dark .help__agreement:hover {
+  color: inherit;
+}
+#dark .help__agreement:active{
+  color: $accentColor;
 }
 }
 
