@@ -28,6 +28,7 @@ function App() {
   const [theme, setTheme] = useState(currentTheme);
   const {pathname} = useLocation(); 
   const isHomePage = pathname === "/" ? true : false;
+  const isFormPage = pathname === "/form" ? true : false;
   const isSetBackground = isHomePage ? ' home__page' : '';
   useDisableBodyScroll(openedThanksModal)
   useDisableBodyScroll(openedHelpModal)
@@ -53,6 +54,17 @@ function App() {
   const resetState = () => { //для сброса состояния формы при переходе на нее из хедера, если мы в этот момент уже в форме
     setKey(Math.random())
   }
+  console.log(`isFormPage ${isFormPage}`);
+  console.log(`openedThanksModal ${openedThanksModal}`);
+
+  const transitionHome = (openedThanksModal, isFormPage) => {
+    if (openedThanksModal === "true" && isFormPage === "true") {
+      //Перенаправить через 1 минуту на главную
+      console.log("Пользователь видет окно спасибо");
+    }
+    //Перенаправить на главную
+  }
+  transitionHome();
 
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
