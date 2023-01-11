@@ -32,20 +32,66 @@
   display: flex;
   flex-direction: column;
 
-  :hover {
+/*   :hover {
     color: $accentColor;
   }
 
   :focus {
     color: $accentColor;
     outline: none;
+} */
 }
+.contacts__numbers a {
+  
+/*   :hover {
+    color: $accentColor;
+  } */
+  &:focus {
+    color: $accentColor;
+    outline: none;
+  }
+}
+
+@media (hover: hover) {
+  .contacts__numbers a:hover {
+    cursor: pointer;
+    color: $accentColor;
+    transition: color 0.1s ease;
+}
+}
+@media (hover: none) {
+  .contacts__numbers a:hover {
+    color: inherit;
+  }
+  .contacts__numbers a:active{
+    color: $accentColor;
+  }
 }
 
 #dark .contacts__numbers a {
   color: $textColor_dark;
 
-  :hover {
+/*   :hover {
+    color: $accentColor;
+  } */
+  &:focus {
+    color: $accentColor;
+    outline: none;
+  }
+}
+
+@media (hover: hover) {
+  #dark .contacts__numbers a:hover {
+    cursor: pointer; 
+    color: $accentColor;
+    transition: color 0.1s ease;
+}
+}
+@media (hover: none) {
+  #dark .contacts__numbers a:hover {
+    color: inherit;
+  }
+  #dark .contacts__numbers a:active{
     color: $accentColor;
   }
 }
@@ -64,6 +110,11 @@
 .contacts__workers {
   display: flex;
   gap: 20px;
+}
+.contacts__focusReset{
+  &:focus {
+    outline: none;
+  }
 }
 
 @media screen and (max-width: $desktop) {

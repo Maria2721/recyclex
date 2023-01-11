@@ -2,8 +2,25 @@ import "./Contacts.scss";
 // import Worker from "../../components/Worker/Worker";
 // import WorkerPhoto from "../../assets/imgs/worker.png";
 // import WorkerPhotoForRetina from "../../assets/imgs/worker_2x.png";
+import { useState, useEffect, useRef } from "react";
 
 export default function Contacts() {
+    const [focus, setFocus] = useState(false);
+    const logoReference = useRef(null);
+    useEffect(() => {
+      if (focus === true) {
+        logoReference.current.focus();
+        setFocus(false);
+      }
+    }, [focus]);
+  
+    const handleFocus = () => {
+      console.log("focus on logo");
+      setFocus(true);
+    };
+    const onHandleRightClick = (event) => {
+        event.preventDefault();
+    }
     return (
         <section className="contacts container__row">
             <h1 className="contacts__header">Контакты</h1>
@@ -16,9 +33,9 @@ export default function Contacts() {
                     <span className="contacts__description contacts__adress">Москва,<br/>Пресненская набережная д. 12, офис 405, помещ. 3</span>
                 </div>
                 <div className="contacts__contacts contacts__column">
-                    <span className="contacts__subtitle">Для связи</span>
+                    <span className="contacts__subtitle">Для связи<a href="#" className="contacts__focusReset" ref={logoReference}></a></span>
                     <div className="contacts__numbers contacts__description">
-                        <a href="tel:+78003330816">+7 (800) 333-08-16</a>
+                        <a href="tel:+78003330816" onClick={() => handleFocus()}  onMouseDown={onHandleRightClick}>+7 (800) 333-08-16</a>
                     </div>
                 </div>
                 <div className="contacts__director contacts__column">
