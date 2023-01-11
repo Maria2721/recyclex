@@ -217,7 +217,7 @@ export default function FormPage({ handleModal }) {
           }
           break;
         case "phone":
-          //Добавила проверку на пустоту
+          //
           if (phoneValue.length === 0) {
             error = 'Необходимо заполнить "Номер телефона"';
             setValid(false);
@@ -315,7 +315,7 @@ export default function FormPage({ handleModal }) {
           setTimeout(() => {
             setStep((step) => step + 1);
             setSearchParams({ index: step + 1 });
-            sessionStorage.setItem("phoneValue", JSON.stringify(thirdAnswer.phone.value));
+            sessionStorage.setItem("phoneValue", JSON.stringify(phoneValue)); //sessionStorage.setItem("phoneValue", JSON.stringify(thirdAnswer.phone.value));
             sessionStorage.setItem("thirdAnswer", JSON.stringify(thirdAnswer));
           }, 300);
         }
