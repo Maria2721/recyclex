@@ -151,6 +151,7 @@ export default function FormPage({ handleModal }) {
     setValid(true);
     const regName = /^[A-ZА-ЯЁ\s'-]+$/i;
     const regEmail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
+    const regEmailFirstSign = /^[a-zA-Z0-9]/;
 
     for (const field of formFields) {
       const { rule, id } = field;
@@ -251,6 +252,7 @@ export default function FormPage({ handleModal }) {
           }
           break;
         case "email":
+          
           if (value === undefined) {
             error = 'Необходимо заполнить "E-mail"';
             setValid(false);
@@ -268,6 +270,11 @@ export default function FormPage({ handleModal }) {
           }
           if (value.length > 200) {
             error = "Максимум 200 символов";
+            setValid(false);
+            break;
+          }
+          if (!regEmailFirstSign.test(Array.from(value)[0])) {
+            error = 'Недопустимый формат';
             setValid(false);
             break;
           }
