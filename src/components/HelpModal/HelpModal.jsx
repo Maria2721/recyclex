@@ -81,6 +81,7 @@ const validateForm = () => {
   setValid(true)
   const regName = /^[A-ZА-ЯЁ\s'-]+$/i;
   const regEmail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
+  const regEmailFirstSign = /^[a-zA-Z0-9]/;
   
       for (const field of helpFields) {
           const { rule, id } = field;
@@ -141,13 +142,13 @@ const validateForm = () => {
                   break;
                 }
                 if (!isPossiblePhoneNumber(phoneValue)) {
-                  console.log(2)
                   error = 'Недопустимая длина';
                   setValid(false);
                   break;
                 }
                 break;
             case 'email':
+              console.log(`email ${value}`)
                 if (value.length === 0) {
                   error = 'Необходимо заполнить';
                   setValid(false);
@@ -162,6 +163,11 @@ const validateForm = () => {
                     error = 'Максимум 200 символов';
                     setValid(false);
                     break;
+                }
+                if (!regEmailFirstSign.test(Array.from(value)[0])) {
+                  error = 'Недопустимый формат';
+                  setValid(false);
+                  break;
                 }
                 if (!regEmail.test(value)) {
                     error = 'Недопустимый формат';
