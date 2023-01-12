@@ -130,6 +130,11 @@ const validateForm = () => {
                 }
                 break;
             case 'phone':
+                if (phoneValue === undefined) {
+                  error = 'Необходимо заполнить';
+                  setValid(false);
+                  break;
+                }
                 if (phoneValue.length === 0) {
                   error = 'Необходимо заполнить';
                   setValid(false);
