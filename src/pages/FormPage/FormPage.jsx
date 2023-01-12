@@ -159,7 +159,7 @@ export default function FormPage({ handleModal }) {
 
       switch (rule) {
         case "name":
-          if (phoneValue === undefined) {
+          if (value === undefined) {
             error = 'Необходимо заполнить "Имя"';
             setValid(false);
             break;
@@ -181,7 +181,7 @@ export default function FormPage({ handleModal }) {
           }
           break;
         case "surname":
-          if (phoneValue === undefined) {
+          if (value === undefined) {
             error = 'Необходимо заполнить "Фамилия"';
             setValid(false);
             break;
@@ -203,7 +203,7 @@ export default function FormPage({ handleModal }) {
           }
           break;
         case "company":
-          if (phoneValue === undefined) {
+          if (value === undefined) {
             error = 'Необходимо заполнить "Название организации"';
             setValid(false);
             break;
@@ -233,9 +233,7 @@ export default function FormPage({ handleModal }) {
           break;
         case "phone":
           //
-          console.log(`phoneValue ${phoneValue}`)
           if (phoneValue === undefined) {
-            console.log(`phoneValue undefined ${phoneValue}`);
             error = 'Необходимо заполнить "Номер телефона"';
             setValid(false);
             break;
@@ -253,7 +251,7 @@ export default function FormPage({ handleModal }) {
           }
           break;
         case "email":
-          if (phoneValue === undefined) {
+          if (value === undefined) {
             error = 'Необходимо заполнить "E-mail"';
             setValid(false);
             break;
