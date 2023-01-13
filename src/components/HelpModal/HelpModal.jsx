@@ -80,7 +80,8 @@ useEffect(() => {
 const validateForm = () => {
   setValid(true)
   const regName = /^[A-ZА-ЯЁ\s'-]+$/i;
-  const regEmail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
+  const regEmail = /^[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$/;
+  /* const regEmail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i; */
   const regEmailFirstSign = /^[a-zA-Z0-9]/;
   
       for (const field of helpFields) {
