@@ -24,12 +24,42 @@
     overflow: hidden;
     transition: width 0.2s ease-in-out;
   }
-
-  .formButton__inner:hover .formButton__arrowWrapper {
+//Маша 1
+/*   .formButton__inner:hover .formButton__arrowWrapper {
     width: 20px;
     transition: width 0.5s ease-in-out;
     overflow: visible;
+} */
+//основное устройство ввода пользователя (например мышь) будет расположено над элементами:
+@media (hover: hover) {
+    .formButton__inner:hover .formButton__arrowWrapper {
+      width: 20px;
+      transition: width 0.5s ease-in-out;
+      overflow: visible;
 }
+}
+  //Переопределите все ваши правила наведения для мобильных устройств
+  @media (hover: none) {
+    /* .formButton__inner:hover .formButton__arrowWrapper {
+      width: 0;
+      height: 20px;
+      overflow: hidden;  
+  }  */
+  @media (max-width: $tablet) {
+    .formButton__inner:hover .formButton__arrowWrapper {
+      width: 0;
+      height: 20px;
+      overflow: hidden; 
+  }
+  } 
+  @media (max-width: $mobile){
+    .formButton__inner:hover .formButton__arrowWrapper {
+      width: 0;
+      height: 12px;
+      overflow: hidden;
+  }
+  }
+  }
 
 .formButton__arrow {
     width: 20px;
@@ -42,11 +72,18 @@
     transform: translateX(1000%);
 
   }
-
+//Маша 1
   .formButton__inner:hover .formButton__arrowWrapper_active {
     width: 0;
   }
-  
+
+/*   @media (hover: hover) {
+    .formButton__inner:hover .formButton__arrowWrapper_active {
+      width: 0;
+    }
+  } */
+
+
   .formButton__checkWrapper {
     position: relative;
     display: none;
@@ -72,13 +109,13 @@
     .formButton {
         margin-bottom: 15px;
     }
-
-    .formButton__inner:hover .formButton__arrowWrapper {
+//Маша 1
+    /* .formButton__inner:hover .formButton__arrowWrapper {
         width: 0;
         height: 20px;
         overflow: hidden;
         
-    }
+    } */
 
     .formButton .formButton__arrowWrapper.formButton__arrowWrapper_active {
       width: 20px;
@@ -102,11 +139,11 @@
         overflow: hidden;
       }
 
-    .formButton__inner:hover .formButton__arrowWrapper {
+/*     .formButton__inner:hover .formButton__arrowWrapper {
       width: 0;
       height: 12px;
       overflow: hidden;
-  }
+  } */
 
   .formButton .formButton__arrowWrapper.formButton__arrowWrapper_active {
     width: 12px;
@@ -141,12 +178,19 @@
         overflow: hidden;
       }
     
+    /*   .formButton__inner:hover .formButton__arrowWrapper {
+        width: 45px;
+        transition: width 0.2s ease-in-out;
+        overflow: visible;
+    } */
+    @media (hover: hover) {
       .formButton__inner:hover .formButton__arrowWrapper {
         width: 45px;
         transition: width 0.2s ease-in-out;
         overflow: visible;
     }
-    
+    }
+
     .formButton__arrow {
         width: 45px;
         margin-left: 18px;
@@ -162,7 +206,7 @@
         margin-right: 35px;
       }
 }
-@media screen 
+/* @media screen 
   and (pointer:coarse)
   and (orientation: landscape) 
   and (min-width: 1023px) 
@@ -194,4 +238,4 @@
     margin-right: 0;
   }
 
-  }
+  } */
