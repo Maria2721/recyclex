@@ -96,3 +96,30 @@
     width: 30px;
   }
 }
+@media screen 
+and (orientation: landscape) 
+and (min-width: 1023px) 
+and (max-width: 1367px) 
+and (min-height: 767px) 
+and (max-height: 1025px) {
+  .buttonClose__arrowWrapper {
+    height: 20px;
+  }
+
+  .buttonClose__arrow {
+    width: 20px;
+  }
+
+  .buttonCloseWrapper:hover .buttonClose__arrowWrapper {
+  width: 0;
+  display: none;
+}
+
+.buttonCloseWrapper:active .buttonClose__arrowWrapper {
+  width: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  transition: width 0.1s ease-in-out;
+}
+}
