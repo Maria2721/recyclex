@@ -56,7 +56,8 @@
       
     }
 
-    @media (max-width: $tablet)  {
+    @media (max-width: $tablet), (orientation: portrait) and (min-width: $tablet) and (max-width: 1025px) and (min-height:1024px) and (max-height:1367px), 
+    (orientation: landscape) and (min-width: 1023px) and (max-width: 1367px) and (min-height: 767px) and (max-height: 1025px) {
       /* background-image: url(./assets/imgs/background_table_comp.png);  */
       background-image: url(./assets/imgs/desktop_834_comp.png); 
       background-position-y: 50px;
