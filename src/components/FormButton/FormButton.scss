@@ -163,6 +163,7 @@
       }
 }
 @media screen 
+  and (pointer:coarse)
   and (orientation: landscape) 
   and (min-width: 1023px) 
   and (max-width: 1367px) 
