@@ -45,7 +45,11 @@
       height: 20px;
       overflow: hidden;  
   }  */
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet), (orientation: landscape) 
+  and (min-width: 1023px) 
+  and (max-width: 1367px) 
+  and (min-height: 767px) 
+  and (max-height: 1025px) {
     .formButton__inner:hover .formButton__arrowWrapper {
       width: 0;
       height: 20px;
