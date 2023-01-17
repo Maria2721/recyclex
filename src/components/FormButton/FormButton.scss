@@ -55,6 +55,9 @@
       height: 20px;
       overflow: hidden; 
   }
+  .formButton__inner:active .formButton__arrowWrapper_active {
+    width: 0;
+  }
   } 
   @media (max-width: $mobile){
     .formButton__inner:hover .formButton__arrowWrapper {
@@ -62,6 +65,9 @@
       height: 12px;
       overflow: hidden;
   }
+  }
+  .formButton__inner:active .formButton__arrowWrapper_active {
+    width: 0;
   }
   }
 
