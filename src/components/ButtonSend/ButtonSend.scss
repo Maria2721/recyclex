@@ -64,7 +64,7 @@
   margin-right: 18px;
 }
 
-@media screen and (max-width: $tablet) {
+@media screen and (max-width: $tablet), (orientation: portrait) and (min-width: $tablet) and (max-width: 1025px) and (max-height:1367px)  {
   .buttonSend__arrowWrapper {
         width: 0;
         height: 9px;
