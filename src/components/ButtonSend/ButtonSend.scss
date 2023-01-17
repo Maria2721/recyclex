@@ -110,3 +110,37 @@
     }
   
 }
+@media screen 
+  and (orientation: landscape) 
+  and (min-width: 1023px) 
+  and (max-width: 1367px) 
+  and (min-height: 767px) 
+  and (max-height: 1025px) {
+
+.buttonSend__arrowWrapper {
+        width: 0;
+        height: 9px;
+  }
+
+  .buttonSend:hover .buttonSend__arrowWrapper {
+    display: none;
+    width: 0;
+    height: 9px;
+  }
+
+  .buttonSend:active .buttonSend__arrowWrapper {
+    display: none;
+  }
+  
+  .buttonSend__check {
+    width: 12px;
+    height: 9px;
+    top: -5px;
+    right: -11px;
+  }
+
+  .buttonSend__sendedText {
+    font-weight: 700;
+    margin-right: 5px;
+  }
+  }

@@ -110,4 +110,35 @@
       }
   }
   
-  
+  @media screen 
+  and (orientation: landscape) 
+  and (min-width: 1023px) 
+  and (max-width: 1367px) 
+  and (min-height: 767px) 
+  and (max-height: 1025px) {
+    .buttonJoin__arrowWrapper {
+      height: 20px;
+    }
+
+    .buttonJoin__arrow {
+      width: 20px;
+    }
+
+  .buttonJoinWrapper:hover .buttonJoin__arrowWrapper {
+    width: 0;
+    height: 20px;
+    overflow: hidden;
+    margin-left: 0;
+  }
+
+  .buttonJoinWrapper:active .buttonJoin__arrowWrapper {
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    margin-left: 10px;
+    transition: width 0.1s ease-in-out;
+  }
+  }
