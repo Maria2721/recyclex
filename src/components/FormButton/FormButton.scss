@@ -162,3 +162,35 @@
         margin-right: 35px;
       }
 }
+@media screen 
+  and (orientation: landscape) 
+  and (min-width: 1023px) 
+  and (max-width: 1367px) 
+  and (min-height: 767px) 
+  and (max-height: 1025px) {
+    .formButton {
+      margin-bottom: 15px;
+  }
+
+  .formButton__inner:hover .formButton__arrowWrapper {
+      width: 0;
+      height: 20px;
+      overflow: hidden;
+      
+  }
+
+  .formButton .formButton__arrowWrapper.formButton__arrowWrapper_active {
+    width: 20px;
+    overflow: visible;
+}
+
+  .formButton__check {
+    top: -7px;
+    right: -5px;
+  }
+
+  .formButton__sendedText {
+    margin-right: 0;
+  }
+
+  }
