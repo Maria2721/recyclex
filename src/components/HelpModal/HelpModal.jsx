@@ -80,6 +80,7 @@ useEffect(() => {
 const validateForm = () => {
   setValid(true)
   const regName = /^[A-ZА-ЯЁ\s'-]+$/i;
+  const serchPunycode = /\b@xn--\b/giu;
   const regEmail = /^[a-zA-Z0-9.\-_]+@[a-zA-Z0-9.\-_]+\.[a-zA-Z]{2,63}$/;
   /* const regEmail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i; */
   const regEmailFirstSign = /^[a-zA-Z0-9]/;
@@ -149,7 +150,6 @@ const validateForm = () => {
                 }
                 break;
             case 'email':
-              console.log(`email ${value}`)
                 if (value.length === 0) {
                   error = 'Необходимо заполнить';
                   setValid(false);
@@ -167,6 +167,11 @@ const validateForm = () => {
                 }
                 if (!regEmailFirstSign.test(Array.from(value)[0])) {
                   error = 'Недопустимый формат';
+                  setValid(false);
+                  break;
+                }
+                if (serchPunycode.test(value)){
+                  error = "Недопустимый формат";
                   setValid(false);
                   break;
                 }
