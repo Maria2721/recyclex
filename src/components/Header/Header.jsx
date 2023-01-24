@@ -30,8 +30,7 @@ export default function Header({toggleTheme, theme, resetState}) {
   let [opened, setOpened] = useState(false);
   useDisableBodyScroll(opened)
   const navigate = useNavigate();
-
-  
+//разрешать скрол при активной новигации
   const { width } = useWindowDimensions();
   let toggleOveflowHidden = () => {
     if (width > 651 && opened) {
@@ -52,7 +51,7 @@ export default function Header({toggleTheme, theme, resetState}) {
   });
 
   const classOverlay = cx("header__overlay", {
-    "header__overlay header__overlay_active": opened,
+    "header__overlay header__overlay_active": (opened && (width <= 650)),
   });
 
   const handleClick = (url) => {
