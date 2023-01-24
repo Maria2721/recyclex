@@ -20,7 +20,7 @@ export const useDisableBodyScroll = (open) => {
 };
 
 //Функция расчитывает и возвращает  шируну скроллбара
-const scrollbarWidth = () => {
+export const scrollbarWidth = () => {
 	//Отключить полосы прокрутки в теле
 	document.body.style.overflow = 'hidden';
 	var width = document.body.clientWidth;

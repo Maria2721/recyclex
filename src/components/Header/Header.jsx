@@ -7,8 +7,10 @@ import { ReactComponent as Close } from "../../assets/imgs/close_icon.svg";
 import SwitchTheme from "../SwitchTheme/SwitchTheme";
 import { useState, useEffect, useRef } from "react";
 import * as cx from "classnames";
-import { useDisableBodyScroll } from "../../hooks/useDisableBodyScroll";
+import { useDisableBodyScroll} from "../../hooks/useDisableBodyScroll";
+import { scrollbarWidth } from '../../hooks/useDisableBodyScroll';
 import { useNavigate } from "react-router-dom";
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 export default function Header({toggleTheme, theme, resetState}) {
   const [focus, setFocus] = useState(false);
@@ -29,6 +31,22 @@ export default function Header({toggleTheme, theme, resetState}) {
   useDisableBodyScroll(opened)
   const navigate = useNavigate();
 
+  
+  const { width } = useWindowDimensions();
+  let toggleOveflowHidden = () => {
+    if (width > 651 && opened) {
+      document.body.style.paddingRight = `${scrollbarWidth()}px`; 
+      document.body.style.removeProperty('overflow');   
+      console.log("Больше");
+  } 
+  if (width < 651 && opened) {
+      document.body.style.paddingRight = '0px';
+      document.body.style.overflow = 'hidden'; 
+      console.log("Меньше");
+  }
+  };
+  toggleOveflowHidden ();
+  
   const classNav = cx("header__nav", {
     "header__nav header__nav_active": opened,
   });
