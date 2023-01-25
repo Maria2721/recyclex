@@ -13,6 +13,7 @@ import { isPossiblePhoneNumber } from 'react-phone-number-input';
 import ButtonSend from "../ButtonSend/ButtonSend";
 import { useEffect, useState, useRef } from "react";
 import { RemoveScroll } from "react-remove-scroll";
+import ReactFocusLock from 'react-focus-lock';
 
 export default function HelpModal({ handleModal, opened, theme }) {
   const [focus, setFocus] = useState(false);
@@ -277,14 +278,17 @@ if (!opened) {
   return (
     <RemoveScroll removeScrollBar>
     <div className={classModal}>
+      <ReactFocusLock>
       <div className="help__inner">
         <div className="help__content">
           <div className="help__header">
+            <a href="#" className="help__focusReset" ref={logoReference}>
             {theme === "light" ? (
               <LogoBlack className="help__logo" />
             ) : (
               <LogoWhite className="help__logo" />
             )}
+            </a>
             <button className="help__close"
             onClick={handleModal} 
             onFocus={() => setFocusIcon((focusIcon) => !focusIcon)}
@@ -318,13 +322,11 @@ if (!opened) {
               <div className="help__helper"></div>
                 <div className="help__alertAndButton">
                     <div className="help__alert">
-                      <a href="#" className="help__focusReset" ref={logoReference}>
                         {theme === "light" ? (
                           <AlertIcon className="help__alertIcon" />
                         ) : (
                           <AlertIconWhite className="help__alertIcon" />
                         )}
-                      </a>
                       <span>
                         Нажимая «Отправить», вы даете{" "}
                         <Link
@@ -344,6 +346,7 @@ if (!opened) {
             </div>
         </div>
       </div>
+      </ReactFocusLock>
     </div>
     </RemoveScroll>
   );

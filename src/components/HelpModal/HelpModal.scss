@@ -52,20 +52,25 @@
 .help__close {
   background-color: inherit;
   border: none;
+  &:focus .help__cross rect {
+    fill: $accentColor;
+  }
 }
 
 .help__cross {
   width: 19px;
   height: 19px;
   fill: $textColor;
-
-  & :hover {
+  & :focus rect {
     fill: $accentColor;
   }
 }
 
 #dark .help__cross {
   fill: $textColor_dark;
+  & :hover rect {
+    fill: $accentColor;
+  }
 }
 //Стили для ховера на иконку
 .help__cross_focus {
