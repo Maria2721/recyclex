@@ -13,13 +13,6 @@ import { useNavigate } from "react-router-dom";
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 export default function Header({toggleTheme, theme, resetState}) {
-  useEffect(() => {
-    document.body.style.overflowY = 'hidden';
-    return () =>{
-      document.body.style.overflowY = 'auto';
-    }
-  }, [])
-  
   const [focus, setFocus] = useState(false);
   const logoReference = useRef(null);
   useEffect(() => {
