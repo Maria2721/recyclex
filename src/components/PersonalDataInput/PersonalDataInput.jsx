@@ -37,6 +37,7 @@ export default function PersonalDataInput({
           onChange={handlePhoneValue}
           className={classInput}
           maxLength={25}
+          smartCaret={false}
         />
       )}
 
