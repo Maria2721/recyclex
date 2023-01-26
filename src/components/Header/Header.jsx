@@ -13,6 +13,13 @@ import { useNavigate } from "react-router-dom";
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 export default function Header({toggleTheme, theme, resetState}) {
+  useEffect(() => {
+    document.body.style.overflowY = 'hidden';
+    return () =>{
+      document.body.style.overflowY = 'auto';
+    }
+  }, [])
+  
   const [focus, setFocus] = useState(false);
   const logoReference = useRef(null);
   useEffect(() => {
@@ -35,16 +42,17 @@ export default function Header({toggleTheme, theme, resetState}) {
   let toggleOveflowHidden = () => {
     if (width > 651 && opened) {
       document.body.style.paddingRight = `${scrollbarWidth()}px`; 
-      document.body.style.removeProperty('overflow');   
+      document.body.style.removeProperty('overflow'); 
+      document.body.style.overflow = 'scroll'; 
       console.log("Больше");
   } 
   if (width < 651 && opened) {
       document.body.style.paddingRight = '0px';
-      document.body.style.overflow = 'hidden'; 
+      document.body.style.overflow = ''; 
       console.log("Меньше");
   }
   };
-  toggleOveflowHidden ();
+  toggleOveflowHidden();
   
   const classNav = cx("header__nav", {
     "header__nav header__nav_active": opened,

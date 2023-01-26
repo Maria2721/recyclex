@@ -129,13 +129,7 @@
     pointer-events: none;
 }
 
-.header__overlay_active {
-    opacity: 1;
-    background-color: hsla(0,0%,7%,.36);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    transition: opacity .8s ease,visibility 0s;
-}
+
 
 .header__close {
     display: none;
@@ -187,6 +181,13 @@
 
     .header__nav_active {
         transform: translateX(0);
+    }
+    .header__overlay_active {
+        opacity: 1;
+        background-color: hsla(0,0%,7%,.36);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        transition: opacity .8s ease,visibility 0s;
     }
 
     .header__navInner {
