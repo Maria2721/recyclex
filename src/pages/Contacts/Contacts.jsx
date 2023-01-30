@@ -30,7 +30,7 @@ export default function Contacts() {
                 </div>
                 <div className="contacts__address contacts__column">
                     <span className="contacts__subtitle">Адрес</span>
-                    <span className="contacts__description contacts__adress">Москва,<br/>Пресненская набережная д. 12, офис 405, помещ. 3</span>
+                    <span className="contacts__description contacts__adress">Краснодар,<br/>ул. Уральская,<br/>д. 75/1, помещ.307</span>
                 </div>
                 <div className="contacts__contacts contacts__column">
                     <span className="contacts__subtitle">Для связи<a href="#" className="contacts__focusReset" ref={logoReference}></a></span>
@@ -38,10 +38,10 @@ export default function Contacts() {
                         <a href="tel:+78003330816" onClick={() => handleFocus()}  onMouseDown={onHandleRightClick}>+7 (800) 333-08-16</a>
                     </div>
                 </div>
-                <div className="contacts__director contacts__column">
+                {/* <div className="contacts__director contacts__column">
                     <span className="contacts__subtitle contacts__description">Директор</span>
                     <span>Коверда <br className="contacts__tablet_hidden"/>Вадим Николаевич</span>
-                </div>
+                </div> */}
             </div>
             <div className="contacts__mapWrapper">
             <iframe className="contacts__map"  title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.5081828838265!2d37.53745771007338!3d55.74967387708095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bdcbfd1b72d%3A0x433d48214f76b256!2z0J_RgNC10YHQvdC10L3RgdC60LDRjyDQvdCw0LEuLCAxMiwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEyMzMxNw!5e0!3m2!1sru!2sge!4v1669406101341!5m2!1sru!2sge" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>

@@ -39,7 +39,7 @@ export default function CookiesPolicyPage() {
                             <h2 className="сookies__subtitle">Типы файлов cookie</h2>
                             <h4 className="сookies__subtitle_h4">Технические файлы cookie:</h4>
                             <p className="сookies__text">Эти файлы cookie необходимы для обеспечения надлежащего функционирования веб-сайта: они позволяют вам зарегистрироваться/войти в систему и получить доступ к зарезервированным для вас функциям, а также позволяют нам контролировать безопасность сайта и повышать его эксплуатационные характеристики, например, сохраняя ваши предпочтения, чтобы оптимизировать ваши последующие посещения.</p>
-                            <p className="сookies__list-title">Они делятся на две категории:</p>
+                            <p className="сookies__list-title list-title_bottom">Они делятся на две категории:</p>
                                 <ul className="сookies__list">
                                     <li className="сookies__list-item list-item_bottom"> <span className="text_weight700">постоянные:</span> после закрытия окна браузера они не уничтожаются, а остаются до заданного срока;</li>
                                     <li className="сookies__list-item"> <span className="text_weight700">сессионные:</span> они уничтожаются при каждом закрытии окна браузера.</li>
