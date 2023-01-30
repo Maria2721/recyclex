@@ -24,6 +24,9 @@
         margin-bottom: 40px;
         address {display: inline;}
     }
+    address {
+        font-style: normal;
+    }
 }
 @media (min-width: $ultra) {
     .agreement {

@@ -15,17 +15,18 @@
   gap: 50px;
   margin-bottom: 82px;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 24px;
 }
 
 .contacts__column {
   display: grid;
   grid-template-rows: 1fr 2fr;
-  gap: 28px;
+  gap: 38px;
 }
 
 .contacts__subtitle {
   font-weight: 700;
+  line-height: 38px;
 }
 
 .contacts__numbers, #dark .contacts__numbers {
@@ -137,7 +138,7 @@
   }
 
   .contacts__column {
-    gap: 64px;
+    gap: 84px;
 }
 
   .contacts__subtitle {
@@ -183,7 +184,7 @@
       "address contacts"
       "director director";
     column-gap: 50px;
-    row-gap: 25px;
+    row-gap: 16px;
     font-size: 15px;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 40px;
@@ -196,16 +197,17 @@
 
   .contacts__subtitle {
     font-size: 20px;
+    line-height: 32px;
     margin-bottom: 0;
   }
 
   .contacts__subtitle_bigger {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: -10px;
   }
 
   .contacts__description {
-    line-height: 19px;
+    line-height: 15px;
 }
 
 .contacts__adress {
@@ -278,14 +280,15 @@
 
   .contacts__subtitle {
     font-size: 14px;
+    line-height: 22px;
   }
   
   .contacts__description {
-    line-height: 14px;
+    line-height: 12px;
 }
 
   .contacts__subtitle_bigger {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: -18px;
   }
 
