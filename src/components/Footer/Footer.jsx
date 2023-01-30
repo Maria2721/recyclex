@@ -40,7 +40,7 @@ export default function Footer({ handleModal }) {
     <footer className="footer container">
         <div className="footer__inner container__row">
             <div className="footer__requisitesAndRights">
-              <div className="footer__requisites">2021, ООО “РЕСАЙКЛЕКС”<br/>ИНН 2309176846<br/><a href="#" className="footer__focusReset" ref={logoReference} >ТЕЛ: </a><a className="footer__telLink" href="tel:+78003330816" onClick={() => handleFocus()}  onMouseDown={onHandleRightClick}>+7 (800) 333-08-16</a><br/><div className="footer__address_table">АДРЕС: г. Краснодар, ул. Уральская,<div className="footer__address"> д. 75/1, помещ. 307</div></div> 
+              <div className="footer__requisites">2021, ООО “РЕСАЙКЛЕКС”<br/>ИНН: 2309176846<br/><a href="#" className="footer__focusReset" ref={logoReference} >ТЕЛ: </a><a className="footer__telLink" href="tel:+78003330816" onClick={() => handleFocus()}  onMouseDown={onHandleRightClick}>+7 (800) 333-08-16</a><br/><div className="footer__address_table">АДРЕС: г. Краснодар, ул. Уральская,<div className="footer__address"> д. 75/1, помещ. 307</div></div> 
               </div>
               <div className="footer__rights">Все права защищены</div>
             </div>
