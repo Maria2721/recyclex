@@ -25,17 +25,18 @@
     padding: 6px 14px;
     font-size: 16px;
     line-height: 20px;
-    background-color: #F1F0F0;
+    background-color: #f1f0f0;
     border: 1px solid transparent;
     border-radius: 4px;
     font-family: $generalFont;
     appearance: none;
     -webkit-appearance: none;
-    box-shadow: inset 0 0 0 50px #F1F0F0;
-    -webkit-box-shadow: inset 0 0 0 50px #F1F0F0;
+    box-shadow: inset 0 0 0 50px #f1f0f0;
+    -webkit-box-shadow: inset 0 0 0 50px #f1f0f0;
     &:focus {
         outline: none;
     }
+    caret-color: #000000;
 }
 
 .help__input:-webkit-autofill {
@@ -43,33 +44,37 @@
     -webkit-appearance: none;
     border: none;
 }
-  
+
 .help__row .PhoneInputInput {
     font-family: $generalFont;
     border: none;
     font-size: 16px;
-    background-color: #F1F0F0;
-    box-shadow: inset 0 0 0 50px #F1F0F0;
-    -webkit-box-shadow: inset 0 0 0 50px #F1F0F0;
+    background-color: #f1f0f0;
+    box-shadow: inset 0 0 0 50px #f1f0f0;
+    -webkit-box-shadow: inset 0 0 0 50px #f1f0f0;
     -webkit-text-fill-color: #000;
-  }
-
-#dark .help__row .PhoneInputInput {
-    box-shadow: inset 0 0 0 50px #1A1A1A;
-    -webkit-box-shadow: inset 0 0 0 50px #1A1A1A;
-    -webkit-text-fill-color: $bgColor;
-  }
-
-#dark .help__input {
-    background-color: #1A1A1A;
-    border: 1px solid $bgColor;
-    color: $bgColor;
-    box-shadow: inset 0 0 0 50px #1A1A1A;
-    -webkit-box-shadow: inset 0 0 0 50px #1A1A1A;
-    -webkit-text-fill-color: $bgColor;
+    caret-color: #000000;
 }
 
-.help__input_error, #dark .help__input_error {
+#dark .help__row .PhoneInputInput {
+    box-shadow: inset 0 0 0 50px #1a1a1a;
+    -webkit-box-shadow: inset 0 0 0 50px #1a1a1a;
+    -webkit-text-fill-color: $bgColor;
+    caret-color: #ffffff;
+}
+
+#dark .help__input {
+    background-color: #1a1a1a;
+    border: 1px solid $bgColor;
+    color: $bgColor;
+    box-shadow: inset 0 0 0 50px #1a1a1a;
+    -webkit-box-shadow: inset 0 0 0 50px #1a1a1a;
+    -webkit-text-fill-color: $bgColor;
+    caret-color: #ffffff;
+}
+
+.help__input_error,
+#dark .help__input_error {
     border-width: 3px;
     border-color: $accentColor;
     padding: 4px 12px; // уменьшаем паддинги на 2px из-за разной жирности бордера ошибки
@@ -92,16 +97,16 @@
     margin-bottom: 6px;
 }
 
-@media (max-width: $tablet)  {
+@media (max-width: $tablet) {
     .help__label {
         font-size: 16px;
         width: 40%;
     }
-    
+
     .help__inputWrapper {
         width: 60%;
     }
-    
+
     .help__input {
         width: 280px;
         height: 25px;
@@ -115,14 +120,14 @@
 
     .help__row .PhoneInputInput {
         font-size: 14px;
-      }
-    
+    }
 
     #dark .help__input_error {
         border-width: 3px;
     }
 
-    .help__input_error, #dark .help__input_error {
+    .help__input_error,
+    #dark .help__input_error {
         padding: 3px 12px; // уменьшаем паддинги на 2px из-за разной жирности бордера ошибки
     }
 
@@ -131,7 +136,7 @@
         font-size: 8px;
         line-height: 8px;
     }
-    
+
     .help__row textarea {
         height: 100px;
     }
@@ -139,13 +144,13 @@
     .help__row:not(:last-child) {
         margin-bottom: 20px;
     }
-    
+
     .help__row:last-child {
         margin-bottom: 5px;
     }
 }
 
-@media (max-width: $smallTablet)  {
+@media (max-width: $smallTablet) {
     .help__row {
         display: block;
 
@@ -159,13 +164,13 @@
         line-height: 14px;
         width: 100%;
     }
-    
+
     .help__inputWrapper {
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
     }
-    
+
     .help__input {
         width: 265px;
         max-height: 20px;
@@ -179,7 +184,7 @@
 
     .help__row .PhoneInputInput {
         font-size: 8px;
-      }
+    }
 
     .help__input {
         border-width: 2px;
@@ -196,12 +201,12 @@
         top: 87px;
         left: 84px;
     }
-    
+
     #dark .help__input_error {
         border-width: 2px;
         padding: 1px 9px; // уменьшаем паддинги на 1px из-за разной жирности бордера ошибки
     }
-    
+
     .help__row textarea {
         max-height: 85px;
     }
@@ -211,7 +216,7 @@
     }
 }
 
-@media (max-width: $smallMobile)  {
+@media (max-width: $smallMobile) {
     .help__label {
         font-size: 10px;
         line-height: 12px;
@@ -239,8 +244,7 @@
         top: 73px;
         left: 59px;
     }
-    
-    
+
     .help__row textarea {
         max-height: 70px;
         margin-bottom: 13px;
@@ -255,7 +259,7 @@
     .help__label {
         font-size: 28px;
     }
-    
+
     .help__input {
         width: 520px;
         height: 50px;
@@ -277,11 +281,12 @@
         font-size: 23px;
         background-color: $bgColor;
         box-shadow: inset 0 0 0 50px $bgColor;
-    -webkit-box-shadow: inset 0 0 0 50px $bgColor;
-    -webkit-text-fill-color: #000;
-      }
-    
-    .help__input_error, #dark .help__input_error {
+        -webkit-box-shadow: inset 0 0 0 50px $bgColor;
+        -webkit-text-fill-color: #000;
+    }
+
+    .help__input_error,
+    #dark .help__input_error {
         border-width: 4px;
         border-color: $accentColor;
         padding: 12px 12px; // уменьшаем паддинги на 3px из-за разной жирности бордера ошибки
@@ -302,9 +307,7 @@
     }
 }
 
-
-
-@media (orientation:landscape) and (max-width: $landscape) and (max-height: 600px) {
+@media (orientation: landscape) and (max-width: $landscape) and (max-height: 600px) {
     .help__row {
         display: block;
 
@@ -349,13 +352,13 @@
         line-height: 14px;
         width: 100%;
     }
-    
+
     .help__inputWrapper {
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
     }
-    
+
     .help__input {
         width: 100%;
         max-height: 25px;
@@ -365,12 +368,11 @@
         border-radius: 2px;
         margin-bottom: 0;
         border-width: 2px;
-
     }
 
     .help__row .PhoneInputInput {
         font-size: 8px;
-      }
+    }
 
     .help__input {
         border-width: 2px;
@@ -387,12 +389,12 @@
         top: 87px;
         left: 84px;
     }
-    
+
     #dark .help__input_error {
         border-width: 2px;
         padding: 1px 9px;
     }
-    
+
     .help__row textarea {
         max-height: 50px;
     }
@@ -402,9 +404,9 @@
     }
 
     .help__error {
-    top: -9px;
-    right: 0;
-    left: unset;
+        top: -9px;
+        right: 0;
+        left: unset;
     }
 
     .help__row:last-child .help__error {
@@ -414,8 +416,7 @@
     }
 }
 
-@media (orientation:landscape) and (max-width: $landscapeMiddle) {
-
+@media (orientation: landscape) and (max-width: $landscapeMiddle) {
     .help__header {
         margin-bottom: 0;
     }
@@ -438,15 +439,15 @@
     .help__rows {
         max-width: 491px;
     }
-    
+
     .help__row textarea {
         max-height: 35px;
     }
 
     .help__error {
-    top: -9px;
-    right: 0;
-    left: unset;
+        top: -9px;
+        right: 0;
+        left: unset;
     }
 
     .help__row:last-child .help__error {
@@ -456,7 +457,7 @@
     }
 }
 
-@media (orientation:landscape) and (max-width: $landscapeSmall) {
+@media (orientation: landscape) and (max-width: $landscapeSmall) {
     .help__label {
         font-size: 6px;
         line-height: 9px;
@@ -470,8 +471,8 @@
     }
 
     .help__input {
-    margin-bottom: -7px;
-}
+        margin-bottom: -7px;
+    }
 
     .help__error {
         font-size: 4px;
@@ -498,5 +499,4 @@
         width: 5px;
         height: 5px;
     }
-  }
-  
+}
