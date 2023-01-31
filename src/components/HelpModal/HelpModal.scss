@@ -185,6 +185,9 @@
 }
 
 @media (max-width: $tablet) {
+  .help__space {
+    display: none;
+  }
   .help__content {
     width: 550px;
     padding: 41px 60px 51px 26px;

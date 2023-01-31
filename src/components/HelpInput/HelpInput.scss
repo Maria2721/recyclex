@@ -98,6 +98,7 @@
 }
 
 @media (max-width: $tablet) {
+    
     .help__label {
         font-size: 16px;
         width: 40%;
@@ -175,7 +176,7 @@
         width: 265px;
         max-height: 20px;
         padding: 5px 10px;
-        font-size: 8px;
+        font-size: 10px;
         line-height: 12px;
         border-radius: 2px;
         margin-bottom: 2px;
@@ -183,7 +184,7 @@
     }
 
     .help__row .PhoneInputInput {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .help__input {
@@ -208,7 +209,7 @@
     }
 
     .help__row textarea {
-        max-height: 85px;
+        max-height: 60px;
     }
 
     .help__row:last-child {
@@ -246,7 +247,7 @@
     }
 
     .help__row textarea {
-        max-height: 70px;
+        max-height: 60px;
         margin-bottom: 13px;
     }
 
