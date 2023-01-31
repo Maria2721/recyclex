@@ -41,7 +41,7 @@ export const helpFields = [
         },
         {
             id: 'helpEmail',
-            label: 'E-mail*',
+            label: 'E-mail адрес*',
             name: 'email',
             view: 'input',
             type:'email',

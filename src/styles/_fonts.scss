@@ -36,3 +36,12 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Raleway Medium';
+    src: url('../assets/fonts/Raleway-Medium.woff2') format('woff2'),
+        url('../assets/fonts/Raleway-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -329,7 +329,7 @@ if (!opened) {
                         )}
                       <span>
                         Нажимая «Отправить», вы даете{" "}
-                        <Link
+                        <br></br><Link
                           to="/agreement"
                           onClick={() => handleFocus()} 
                           onMouseDown={onHandleRightClick}
