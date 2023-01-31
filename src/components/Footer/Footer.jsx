@@ -46,16 +46,17 @@ export default function Footer({ handleModal }) {
             </div>
             <div className="footer__links">
               <div className="footer__pages">
-                <Link to="/privacy-policy" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onMouseDown={onHandleRightClick} onKeyDown={(e) => e.key === "Enter" && handleClick("/privacy-policy")} tabIndex={"0"} className="footer__link">Политика конфиденциальности</Link>
-                <Link to="/general-terms" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onMouseDown={onHandleRightClick}  onKeyDown={(e) => e.key === "Enter" && handleClick("/general-terms")} tabIndex={"0"} className="footer__link">Общие условия</Link>
-                <Link to="/cookies-policy-page" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onMouseDown={onHandleRightClick} onKeyDown={(e) => e.key === "Enter" && handleClick("/cookies-policy-page")} tabIndex={"0"} className="footer__link">Cookies Policy</Link>
+                <span><Link to="/privacy-policy" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onMouseDown={onHandleRightClick} onKeyDown={(e) => e.key === "Enter" && handleClick("/privacy-policy")} tabIndex={"0"} className="footer__link">Политика конфиденциальности</Link></span>
+                <span><Link to="/general-terms" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onMouseDown={onHandleRightClick}  onKeyDown={(e) => e.key === "Enter" && handleClick("/general-terms")} tabIndex={"0"} className="footer__link">Общие условия</Link></span>
+                <span><Link to="/cookies-policy-page" onClick={(e) => {handleClick(e.target.pathname);handleFocus();}} onMouseDown={onHandleRightClick} onKeyDown={(e) => e.key === "Enter" && handleClick("/cookies-policy-page")} tabIndex={"0"} className="footer__link">Cookies Policy</Link></span>
               </div>
-              <button className="footer__manager footer__manager_desktop" onClick={() => {handleModal();handleFocus();}}>Связь с менеджером</button>
+              <span><button className="footer__manager footer__manager_desktop" onClick={() => {handleModal();handleFocus();}}>Связь с менеджером</button></span>
             </div>
               <div className="footer__contacts">
                 <div className="footer__email"><a className="footer__emailLink" href="mailto:info@recyclex.online" onClick={() => handleFocus()} onMouseDown={onHandleRightClick}>info@recyclex.online</a></div>
                 <button className="footer__manager footer__manager_mobile" onClick={()=>{handleModal();handleFocus();}}>Связь с менеджером</button>
                 <div className="footer__social">
+                  
                     <a
                       href='https://t.me/+79585787495'
                       target="_blank"
@@ -63,6 +64,8 @@ export default function Footer({ handleModal }) {
                       onClick={() => handleFocus()} onMouseDown={onHandleRightClick} >
                           <TelegramIcon className="footer__icon" />
                     </a>
+                  
+                  
                     <a
                       href='https://wa.me/+79585787495'
                       target="_blank"
@@ -70,6 +73,7 @@ export default function Footer({ handleModal }) {
                       onClick={() => handleFocus()} onMouseDown={onHandleRightClick} >
                           <WhatsAppIcon className="footer__icon" />
                     </a>
+                    
                 </div>
               </div>
         </div>
