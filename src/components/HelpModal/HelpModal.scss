@@ -9,6 +9,8 @@
   width: 100%;
   height: 100%;
   z-index: 10000;
+  font-family: $modalFont;
+  font-weight: 500;
 }
 
 #dark .help {
@@ -27,7 +29,7 @@
 }
 
 .help__content {
-  padding: 31px 35px 58px 35px;
+  padding: 31px 35px 30px 35px;
   background-color: $bgColor;
   width: 850px;
   max-height: 700px;
@@ -42,11 +44,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 26px;
+  margin-bottom: 39px;
 }
 
 .help__logo {
-  width: 240px;
+  width: 251px;
 }
 
 .help__close {
