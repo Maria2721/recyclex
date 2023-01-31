@@ -35,7 +35,7 @@ export default function Contacts() {
                 <div className="contacts__contacts contacts__column">
                     <span className="contacts__subtitle">Для связи<a href="#" className="contacts__focusReset" ref={logoReference}></a></span>
                     <div className="contacts__numbers contacts__description">
-                        <a href="tel:+78003330816" onClick={() => handleFocus()}  onMouseDown={onHandleRightClick}>+7 (800) 333-08-16</a>
+                        <span><a href="tel:+78003330816" onClick={() => handleFocus()}  onMouseDown={onHandleRightClick}>+7 (800) 333-08-16</a></span>
                     </div>
                 </div>
                 {/* <div className="contacts__director contacts__column">
