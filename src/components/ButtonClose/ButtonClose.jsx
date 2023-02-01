@@ -2,7 +2,7 @@ import "./ButtonClose.scss";
 import * as cx from "classnames";
 import { ReactComponent as Arrow } from "../../assets/imgs/arrow_button.svg";
 import { useState } from "react";
-import { useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function ButtonClose({ handleModal }) {
   const [isActive, setIsActive] = useState(false);
@@ -16,9 +16,9 @@ export default function ButtonClose({ handleModal }) {
   const handleClick = () => {
     setIsActive(true);
     setDisabledButton(true);
-    
+
     setTimeout(() => {
-      handleModal()
+      handleModal();
       navigate('/');
       setIsActive(false);
     }, 250);
