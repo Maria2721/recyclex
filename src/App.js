@@ -46,6 +46,21 @@ function App() {
     navigate("/", { replace: true });
   }, [openedThanksModal]);
 
+  useLayoutEffect(() => {
+    window.onpopstate = () => {
+      console.log("Click on back");
+      if (openedHelpModal === true) {
+        setOpenedHelpModal(false);
+        return;
+      }
+      if (openedThanksModal === true) {
+        setOpenedThanksModal(false);
+        navigate(-3); // -4 - до главной
+        return;
+      }
+    };
+  }, [openedHelpModal, openedThanksModal]);
+
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
