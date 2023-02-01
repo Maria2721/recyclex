@@ -39,10 +39,14 @@
     caret-color: #000000;
 }
 
-.help__input:-webkit-autofill {
+.help__input:-webkit-autofill,
+.help__input:-webkit-autofill:hover,
+.help__input:-webkit-autofill:focus {
     appearance: none;
     -webkit-appearance: none;
-    border: none;
+    -webkit-box-shadow: inset 0 0 0 50px #f1f0f0;
+    background-color: #f1f0f0 !important;
+    border-width: 0px;
 }
 
 .help__row .PhoneInputInput {
@@ -79,6 +83,17 @@
     border-color: $accentColor;
     padding: 4px 12px; // уменьшаем паддинги на 2px из-за разной жирности бордера ошибки
 }
+.help__input_error:-webkit-autofill,
+.help__input_error:-webkit-autofill:hover,
+.help__input_error:-webkit-autofill:focus {
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-box-shadow: inset 0 0 0 50px #f1f0f0;
+    background-color: #f1f0f0 !important;
+    border-width: 3px;
+    border-color: $accentColor;
+    padding: 4px 12px;
+}
 
 .help__error {
     position: absolute;
@@ -98,7 +113,6 @@
 }
 
 @media (max-width: $tablet) {
-    
     .help__label {
         font-size: 16px;
         width: 40%;

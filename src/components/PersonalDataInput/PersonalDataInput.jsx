@@ -17,7 +17,7 @@ export default function PersonalDataInput({
   handlePhoneValue,
 }) {
   const classInput = cx("personalDataInput__input", {
-    personalDataInput__input_error: errorMessage && isDirty,
+    "personalDataInput__input_error": errorMessage && isDirty,
   });
 
   return (
