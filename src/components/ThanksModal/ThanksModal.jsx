@@ -20,7 +20,7 @@ export default function ThanksModal({ handleModal, opened }) {
             <ReactFocusLock>
             <div className="thanksModal__inner">
                 <div className="thanksModal__content">
-                    <h1 className="thanksModal__header">Спасибо</h1>
+                    <h1 className="thanksModal__header">Спасибо!</h1>
                     <Thanks className="thanksModal__image"/>
                     <p className="thanksModal__description">Ваша заявка успешно отправлена!<br/>Ожидайте сообщения!</p>
                     <ButtonClose handleModal={handleModal}/>
