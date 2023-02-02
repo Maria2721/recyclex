@@ -1,10 +1,14 @@
 @import "../../styles/vars";
 
 .help {
-  display: none;
   position: fixed;
   left: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
@@ -15,10 +19,6 @@
 
 #dark .help {
   background-color: rgb(87 85 85 / 40%);
-}
-
-.help_show {
-  display: block;
 }
 
 .help__inner {
@@ -116,14 +116,14 @@
   height: 15px;
   margin-right: 5px;
 }
-.help__focusReset{
+.help__focusReset {
   &:focus {
     outline: none;
   }
 }
 .help__agreement {
   text-decoration: underline;
-/*   &:hover {
+  /*   &:hover {
     color: $accentColor;
   }
   &:focus {
@@ -131,57 +131,57 @@
     outline: none;
 } */
 
-&:focus {
-  color: $accentColor;
-  outline: none;
-}
+  &:focus {
+    color: $accentColor;
+    outline: none;
+  }
 }
 
 @media (hover: hover) {
-.help__agreement:hover {
-  cursor: pointer;
-  color: $accentColor;
-  transition: color 0.1s ease;
-}
+  .help__agreement:hover {
+    cursor: pointer;
+    color: $accentColor;
+    transition: color 0.1s ease;
+  }
 }
 @media (hover: none) {
   .help__agreement:hover {
-  color: inherit;
-}
-.help__agreement:active{
-  color: $accentColor;
-}
+    color: inherit;
+  }
+  .help__agreement:active {
+    color: $accentColor;
+  }
 }
 
 #dark .help__agreement {
   color: $textColor_dark;
-/*   &:hover {
+  /*   &:hover {
     color: $accentColor;
   }
   &:focus {
     color: $accentColor;
     outline: none;
 } */
-&:focus {
-  color: $accentColor;
-  outline: none;
-}
+  &:focus {
+    color: $accentColor;
+    outline: none;
+  }
 }
 
 @media (hover: hover) {
-#dark .help__agreement:hover {
-  cursor: pointer; 
-  color: $accentColor;
-  transition: color 0.1s ease;
-}
+  #dark .help__agreement:hover {
+    cursor: pointer;
+    color: $accentColor;
+    transition: color 0.1s ease;
+  }
 }
 @media (hover: none) {
-#dark .help__agreement:hover {
-  color: inherit;
-}
-#dark .help__agreement:active{
-  color: $accentColor;
-}
+  #dark .help__agreement:hover {
+    color: inherit;
+  }
+  #dark .help__agreement:active {
+    color: $accentColor;
+  }
 }
 
 @media (max-width: $tablet) {
@@ -368,7 +368,7 @@
 
   .help__close {
     top: 0;
-}
+  }
 }
 
 @media screen and (orientation: landscape) and (max-width: $landscapeMiddle) {
@@ -408,4 +408,3 @@
     padding: 10px 10px 10px 10px;
   }
 }
-
