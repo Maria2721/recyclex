@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, useSearchParams } from "react-router-dom";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -34,6 +34,7 @@ function App() {
   useDisableBodyScroll(openedThanksModal);
   useDisableBodyScroll(openedHelpModal);
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -55,11 +56,24 @@ function App() {
       }
       if (openedThanksModal === true) {
         setOpenedThanksModal(false);
-        navigate(-3); // -4 - до главной
+        navigate(-2); // -4 - до главной
         return;
       }
     };
   }, [openedHelpModal, openedThanksModal]);
+
+  /* useLayoutEffect(() => {
+    window.onpopstate = () => {
+      const index = searchParams.get("index");
+      const newStep = Number(index);
+      console.log(`newStep is ${newStep}`);
+      if (isFormPage === true && newStep === 0) {
+        console.log("Click on back from form index 0");
+        navigate(-1);
+        return;
+      }
+    };
+  }, [isFormPage]); */
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
