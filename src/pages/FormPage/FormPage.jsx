@@ -494,7 +494,7 @@ export default function FormPage({ handleModal }) {
                 {middle.value.trimStart().replace(/ +/g, " ") && <br />}
                 Название организации -{" "}
                 {company.value.trimStart().replace(/ +/g, " ")} <br />
-                Контактный номер телефона -{" "}
+                Номер телефона -{" "}
                 {phoneValue.trimStart().replace(/ +/g, " ")} <br />
                 {email.value &&
                   `Ваш e-mail - ${email.value.trimStart().replace(/ +/g, " ")}`}

@@ -17,7 +17,16 @@
 }
 .footer__address {
   line-height: 16px;
+  display: inline;
+
 }
+.footer__address_table {
+  display: inline;
+  br {
+    display: none;
+  }
+}
+
 
 #dark .footer__inner {
   border-color: $textColor_dark;
@@ -344,12 +353,7 @@
     margin-bottom: 25px;
   
   }
-  .footer__address_table {
-    display: inline;
-  }
-  .footer__address {
-    display: inline;
-  }
+
   .footer__manager {
     font-size: 10px;
   }
@@ -404,11 +408,17 @@
   .footer__requisites {
     margin-bottom: 0;
   }
+  .footer__requisites_spaceMob {
+    display: none;
+  }
   .footer__address_table {
-    display: block;
+    /* display: block; */
+    br {
+      display: block;
+    }
   }
   .footer__address {
-    display: block;
+   /*  display: block; */
     font-size: 8px;
     line-height: 1.6;
   }
