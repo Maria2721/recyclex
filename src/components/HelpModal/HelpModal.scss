@@ -63,6 +63,9 @@
   width: 19px;
   height: 19px;
   fill: $textColor;
+  & :hover rect {
+    fill: $accentColor;
+  }
   & :focus rect {
     fill: $accentColor;
   }
