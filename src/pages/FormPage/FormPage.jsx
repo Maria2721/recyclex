@@ -418,6 +418,7 @@ export default function FormPage({ handleModal }) {
   return (
     <section className="form container__row">
       <div className="form__inner">
+        <div className="form__wrapper">
         <h1 className="form__header">Шаг {step + 1} из 4</h1>
         <FormMessage direction="left">
           С какими группами отходов Вы работаете?
@@ -516,6 +517,7 @@ export default function FormPage({ handleModal }) {
           </div>
         </CSSTransition>
 
+        </div>
         <div className="form__answer">
           <FormAnswer>
             {stepData.type === "checkbox" && (
