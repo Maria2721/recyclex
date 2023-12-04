@@ -40,6 +40,18 @@ function App() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
+  // сброс зума при открытии новой страницы
+  useEffect(() => {
+    console.log(`pathname is ${pathname}`);
+    setZoom();
+  }, [pathname]);
+
+  const setZoom = () => {
+    console.log("set zoom");
+    document.body.style.zoom = "100%";
+  };
+
+  // открытие главной страницы вместо страницы с шагами формы при успешной отправке данных
   useLayoutEffect(() => {
     if (openedThanksModal === false && (pathname === "/" ? true : false)) {
       return;
@@ -47,6 +59,7 @@ function App() {
     navigate("/", { replace: true });
   }, [openedThanksModal]);
 
+  // открытие страницы с первым шагом формы при переключении по кнопкам вперед/назад
   useLayoutEffect(() => {
     window.onpopstate = () => {
       console.log("Click on back");
