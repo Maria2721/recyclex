@@ -7,6 +7,9 @@
 
 https://maria2721.github.io/recyclex/
 
+<img src="src/assets/imgs/recyclex_preview.png" alt="preview" title="preview"/>
+<img src="src/assets/imgs/recyclex_main.png" alt="main" title="main"/>
+
 ## Technologies
 
 <div>
